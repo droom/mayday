@@ -1,0 +1,31 @@
+body
+html
+  box-sizing: border-box
+*
+  box-sizing: inherit
+  &:before, &:after
+    box-sizing: inherit
+
+::selection
+  background: white
+  color: red
+
+html
+  font-family: $serif
+
+body
+  margin: 0
+  padding: 0
+  color: $copy
+  background: $bg
+  counter-reset: cards
+  min-width: 300px
+
+figure
+  margin: 0 auto
+  padding: 0
+  line-height: 0
+
+hr
+  display: none
+

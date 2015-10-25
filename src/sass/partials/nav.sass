@@ -1,0 +1,50 @@
+body
+  &.profile
+    li.profile
+      a
+        color: red
+
+  &.work
+    li.work
+      color: red
+      a
+        color: red
+
+nav
+  float: right
+
+  ol, li
+    padding: 0
+    line-height: 1.7em
+    list-style: none
+    a
+      color: $copy
+      text-decoration: none
+      font-weight: bold
+      font-size: 16px
+  ol
+    vertical-align: top
+    margin-top: -0.25em
+  li
+    display: inline
+    margin: 0
+  li + li
+    display: inline
+    margin-left: 25px
+
+a.move
+  height: 100%
+  width: 50%
+  position: absolute
+  top: 0
+  z-index: 0
+
+  &.move-left
+    left: 0
+    cursor: url('../img/components/arrow-nav-prev.svg'), w-resize
+
+  &.move-right
+    right: 0
+    cursor: url('../img/components/arrow-nav-next.svg'), e-resize
+
+

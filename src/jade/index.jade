@@ -1,0 +1,43 @@
+doctype html
+html(lang="en")
+  head
+    include partials/_head
+
+  body.profile
+    include partials/_nav
+
+    .band.head.relative.hr
+      a(href="index.html" data-rel="Back to \'Work\'").move-left
+
+      .segment.type
+        h2
+          = "Chris Droom is a Designer "
+          span.accent &amp;&amp;
+          = " Front-end Developer based in Bristol "
+          span.accent.slim ||
+          = " London "
+          span.accent.slim ||
+          = " KL"
+    hr
+    main(role="main")
+
+      .segment.offset
+        figure
+          img(src="img/editorial/desk.jpg", alt="Workspace, 2015")
+
+      .segment.type
+        h3 Hello
+
+        p I am a friendly and driven Digital Designer from England — currently living in Damansara Perdana, Kuala Lumpur. I return on 30th October 2015. I enjoy making websites using HTML, CSS and as little else as possible (but no less).
+
+        p
+          = "You can find me on "
+          a(href="https://twitter.com/drooooom") Twitter
+          = ", "
+          a(href="https://github.com/droom") GitHub
+          = " or "
+          a(href="http://codepen.io/droom") CodePen
+          = "."
+
+    include partials/_footer
+    include partials/_scripts

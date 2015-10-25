@@ -1,0 +1,59 @@
+doctype html
+html(lang="en")
+  head
+    include partials/_head
+
+  body.work
+    include partials/_nav
+
+    .band.head.hr.relative
+
+      a(href="work-gg.html").back.move.move-left
+
+      .segment.type
+        h2 Ideahouse
+
+        dl.credits
+          dt Client
+          dd Ideahouse
+          dt Studio
+          dd DROOM&plus;TZY
+          dt Date
+          dd December 2015
+          dt Stage
+          dd.stage
+            a(href="#") droom.name/clients/ih
+
+      a(href="work-doobie.html").move.move-right
+
+    hr
+
+    aside.project(role="complementary")
+      .segment.type
+          dl.credits
+            dt Role
+            dd UX &plus; UI
+            dd Front-End
+
+          dl.credits
+            dt Stack
+            dd Adobe&copy; Photoshop
+            dd HTML Jade
+            dd Sass (Semantic UI)
+
+    main(role="main")
+      .segment.type
+        h3 A responsive, mobile-first site, tailor made for Ideahouse's registered agents.
+
+      .segment.blueprint
+        figure
+          //- img(src="img/")
+          figcaption For speed, I relied heavily on Semantic UI's native components, adjusting them as nessecary.
+
+      .segment.blueprint
+        figure
+          //- img(src="img/")
+          figcaption Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis aperiam itaque obcaecati tempora a voluptate possimus, soluta consequuntur rem sit, ad aut incidunt amet dicta? Nostrum nam esse tenetur beatae.
+
+    include partials/_footer
+    include partials/_scripts

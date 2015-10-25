@@ -1,0 +1,133 @@
+h1
+  text-transform: uppercase
+  margin: -0.1em 0 30px 0
+  padding: 0
+  letter-spacing: 0.06em
+  font-size: 1rem
+  display: inline-block
+  vertical-align: top
+
+h2
+  letter-spacing: -0.035em
+  line-height: 1.2em
+  font-size: 3rem
+  color: $copy
+  margin: 0
+  padding: 0 0 0.15em 0
+  min-height: 2.5em
+  margin-left: -0.03em
+
+  & + small
+    margin-top: 40px
+    display: block
+
+  & + dl.credits
+    margin-top: 40px
+    display: block
+    background red
+
+
+@media (max-width: $phone-max)
+  h2
+    font-size: 1.8rem
+    line-height: 1.212em
+
+h3, .h3
+  font-size: 1.8rem
+  font-weight: 600
+  line-height: 1.3em
+  letter-spacing: -0.02em
+  margin: 10px 0 30px 0
+
+@media (max-width: $phone-max)
+  h3, .h3
+    margin: 0
+
+
+a.plain
+  text-decoration: none
+  color: $copy
+
+
+sup.note
+  vertical-align: top
+  a
+    vertical-align: top
+    font-size: 0.5em
+
+p
+  line-height: 1.5em
+  font-size: 1rem
+
+.tiles
+  line-height: 0
+
+
+hr
+  height: 1px
+  border: 0
+  margin: 0
+  padding: 0
+  background: 0
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2)
+
+code,
+pre
+  background: white
+  padding: 10px 15px
+  font-size: 15px
+  line-height: 19px
+  border-radius: 1px
+  font-family: inconsolata, monospace
+  word-wrap: break-word
+  color: $blue
+
+
+figcaption
+  text-align: left
+  font-weight: 200
+  font-size: 12px
+  font-family: $sans
+  line-height: 1.65em
+  letter-spacing: 0.02em
+  // padding: 20px 20px 25px 20px
+  max-width: 400px
+  counter-increment: cards
+
+figcaption:before
+  content: "fig. " counter(cards)
+  display: block
+
+blockquote
+  font-size: 20px
+  font-weight: 600
+  letter-spacing: -0.025em
+blockquote::before
+  content: ""
+
+
+/* Dressing */
+.ndash
+  position: relative
+  top: -0.09em
+  padding: 0 0.1em
+
+.accent
+  color: $blue
+  font-weight: 400
+
+.accent.slim
+  letter-spacing: -0.2em
+  margin-right: 0.2em
+
+
+/* Adjustments */
+
+.br
+  display: block
+
+.hide-desktop
+  display: none
+@media (max-width: $phone-max)
+  .hide-desktop
+    display: block
