@@ -131,3 +131,14 @@ blockquote::before
 @media (max-width: $phone-max)
   .hide-desktop
     display: block
+
+
+h1
+  .hide-mobile
+    opacity: 1
+    transition: $transition
+
+@media (max-width: 360px)
+  h1
+    .hide-mobile
+      opacity: 0
