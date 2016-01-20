@@ -3,16 +3,13 @@ html(lang="en")
   head
     include partials/_head
 
-  body.work
+  body.work.iso
     include partials/_banner
 
     .band.head.hr.relative
-
-      a(href="work.html").back.move.move-left
-
+      a(href="work.html" aria-label="Return to previous page").move.move-left
       .segment.type
         h2 GiveReceipt Web/App
-
         dl.credits
           dt Client
           dd GiveReceipt
@@ -20,16 +17,12 @@ html(lang="en")
           dd SixLeaves
           dt Date
           dd July 2015
-          dt Live
-          dd.live
-            a(href="#") GiveReceipt.com
           dt Repo
-          dd.source
-            a(href="#") github.com/droom/gr-web
-          dd.source
-            a(href="#") github.com/droom/gr-app
-
-      a(href="work-gg.html").move.move-right
+          dd (Private)
+          dt Live
+          dd.asia
+            a(href="http://www.givereceipt.com/" aria-label="Visit GiveReceipt") givereceipt.com
+      a(href="work-gg.html" aria-label="View project: GoGet").move.move-right
 
     hr
 
@@ -38,9 +31,8 @@ html(lang="en")
         dl.credits
           dt Role
           dd Identity
-          dd UX
-          dd UI
-          dd Front-End
+          dd UX &plus; UI
+          dd Front-end build
 
         dl.credits
           dt Stack
@@ -48,47 +40,55 @@ html(lang="en")
           dd Adobe&copy; Photoshop
           dd Adobe&copy; InDesign
           dd Ruby Slim
-          dd Sass
+          dd Sass (&plus;Bootstap)
+
+
 
     main(role="main")
       .segment.type
-        h3 GiveReceipt is an invoicing tool for small businesses, designed to be in sympathy with new tax regulations in Malaysia.
+        h3 GiveReceipt is an invoicing tool designed for small businesses, to be in sympathy with new (2015) tax regulations in Malaysia.
+        p
+          = "GiveReceipt is straightforward Software as Service that allows SMEs to easily document transactions. CEO's David Sin and Belinda So "
+            a(href="https://www.youtube.com/watch?v=ay4PJQxgrqM") explain the benefits in more depth on The Edge
+          = "."
 
-      .segment.blueprint
+
+      .segment.blueprint.relative
         figure
           img(src="img/projects/gr-wire.png")
-          figcaption Trade Gothic Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam asperiores, labore, odit repudiandae voluptate necessitatibus ipsa pariatur ducimus velit vel minima facere obcaecati officia, iste dolor modi dolorem voluptates quidem!
-
-      .segment.type
-        p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia ut ratione sequi inventore laboriosam fugit. Soluta perspiciatis pariatur non, asperiores et architecto nostrum tenetur eos. Iste, ipsa explicabo vero voluptatem.
+          figcaption User flow for the web app. We decided early on to prompt users to enter company information after the registration process to reduce cognitive load and friction.
 
       .segment.blueprint
         figure
           img(src="img/projects/gr-id.png")
-          figcaption Lorem ipsum dolor sit amet
-
-      .segment.type
-        p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia ut ratione sequi inventore laboriosam fugit. Soluta perspiciatis pariatur non, asperiores et architecto nostrum tenetur eos. Iste, ipsa explicabo vero voluptatem.
+          figcaption Initital explorations of the GiveReceipt identity. Its application won't be limited to screens so will need to work on print materials and clothing. This is set in Trade Gothic.
 
       .segment.surface
         figure
           img(src="img/projects/gr-invoice.png")
-          figcaption Lorem ipsum dolor sit amet
-
-      .segment.type
-        p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia ut ratione sequi inventore laboriosam fugit. Soluta perspiciatis pariatur non, asperiores et architecto nostrum tenetur eos. Iste, ipsa explicabo vero voluptatem.
+          figcaption Premium subscriptions give the option of different print layouts.
 
       .segment.surface
         figure
           img(src="img/projects/gr-cards.png")
-          figcaption Lorem ipsum dolor sit amet
+          figcaption
+            = "20mm "
+            &times;
+            = " 230mm, 240gsm"
+            br
+            = "Namecards. These were die-cut to show off our corrigated motif."
 
       .segment.type
         dl.credits
           dt Ref.
-          dd Vulcan post
-          dd Yahoo Singapore
-          dd Producky
+          dd
+            a(href="https://www.digitalnewsasia.com/startups/givereceipt-gets-CIP500-grant-only-3mths-after-going-live") GiveReceipt gets CIP 500 grant only 3mths after going live
+          dd
+            a(href="https://www.youtube.com/watch?v=ay4PJQxgrqM") The Edge TV (YouTube)
+          dd
+            a(href="https://vulcanpost.my/168215/givereceipt-online-business-transactions/") Vulcan post
+          dd
+            a(href="https://www.digitalnewsasia.com/startups/givereceipt-gets-CIP500-grant-only-3mths-after-going-live") GiveReceipt gets CIP 500 grant only 3mths after going live (Digital News Asia)
 
     include partials/_footer
     include partials/_scripts

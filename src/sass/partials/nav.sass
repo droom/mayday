@@ -1,34 +1,40 @@
-body
-  &.profile
-    li.profile
-      a
-        color: red
-
-  &.work
-    li.work
-      a
-        color: red
 nav
-  float: right
-
-  ol, li
-    padding: 0
-    line-height: 1.7em
-    list-style: none
-    a
-      color: $copy
-      font-weight: bold
-      font-size: 16px
-
   ol
-    vertical-align: top
-    margin-top: -0.25em
-  li
-    display: inline
     margin: 0
-  li + li
-    display: inline
-    margin-left: 25px
+    padding: 0
+    li
+      font-size: 1rem
+      font-weight: bold
+      width: 50%
+      padding: 0
+      margin: 0
+      display: inline-block
+      a
+        border-bottom: $copy solid 2px
+        &.profile
+          text-transform: uppercase
+          letter-spacing: 0.06em
+          border-bottom: none
+
+        &.profile::after
+          content: ".name"
+
+      &:nth-child(2)
+        text-align: right
+
+nav
+  z-index: 2
+  position: relative
+  padding-top: 0
+  padding-bottom: 0
+  ol
+    li
+      a
+        padding-top: 20px
+        padding-bottom: 20px
+        width: 100%
+        display: block
+        border-bottom: none
 
 a.move
   height: 100%
@@ -36,6 +42,7 @@ a.move
   position: absolute
   top: 0
   z-index: 0
+  border-bottom: none
 
   &.move-left
     left: 0
@@ -45,4 +52,90 @@ a.move
     right: 0
     cursor: url('../img/components/arrow-nav-next.svg'), e-resize
 
+
+a.move-up
+  // outline: 1px solid red
+  height: 100%
+  width: 50%
+  position: absolute
+  right: 0
+  top: 0
+  border-bottom: none
+  // transition: all 1s ease
+  z-index: 1
+  background: $yellow
+
+
+a.move-up:hover + nav ol li a.work
+  color: red
+
+
+
+a.move-out
+  // outline: 1px solid blue
+  height: 100%
+  width: 50%
+  position: absolute
+  left: 0
+  top: 0
+  border-bottom: none
+  // transition: all 1s ease
+  z-index: 1
+  background: $yellow
+
+a.move-out:hover + nav ol li a.profile
+  color: red
+
+
+a.move-up:hover
+  cursor: url('../img/components/arrow-nav-return.svg'), n-resize
+nav
+  a.work:hover
+    cursor: url('../img/components/arrow-nav-return.svg'), n-resize
+
+a.move-out:hover
+  cursor: url('../img/components/arrow-nav-exit.svg'), n-resize
+nav
+  a.profile:hover
+    cursor: url('../img/components/arrow-nav-exit.svg'), n-resize
+
+
+
+body.profile
+  a.profile
+    color: red
+    border-bottom-color: red
+    border-bottom: none
+
+body.work
+  a.work
+    color: red
+    border-bottom-color: red
+    border-bottom: none
+
+body.work.iso
+  a.work
+    color: $copy
+    &:hover
+      color: red
+      border-bottom-color: red
+
+  a.work::before
+    content: "Back to "
+
+
+@media (max-width: $phone-max)
+  nav
+    ol
+      li
+        a
+          font-size: 0.85rem
+          padding-top: 0
+
+@media (max-width: 355px)
+  nav
+    ol
+      li
+        a.profile::after
+          content: ""
 

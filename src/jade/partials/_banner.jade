@@ -1,14 +1,10 @@
-.band.head
-  a(name="top")
-  header(role="banner")
-    h1
-      = "droom"
-      span.hide-mobile .name
-
-    nav(role="navigation")
-      ol
-        li.profile
-          a(href="index.html") Profile
-        li.work
-          a(href="work.html") Work
+.band.head.fixed
+  a(href="work.html" tabindex="-1").move-up
+  nav(role="navigation")
+    ol
+      li
+        a(href="index.html").profile droom
+      li
+        a(href="work.html").work Case Studies
+  a(href="index.html" tabindex="-1").move-out
   hr

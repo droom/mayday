@@ -1,13 +1,8 @@
-h1
-  text-transform: uppercase
-  margin: -0.1em 0 30px 0
-  padding: 0
-  letter-spacing: 0.06em
-  font-size: 1rem
-  display: inline-block
-  vertical-align: top
+h1, h2, h3, .h3
+  font-family: $serif
 
 h2
+  font-weight: 700
   letter-spacing: -0.035em
   line-height: 1.2em
   font-size: 3rem
@@ -17,6 +12,9 @@ h2
   min-height: 2.5em
   margin-left: -0.03em
 
+  // font-weight: 700
+
+
   & + small
     margin-top: 40px
     display: block
@@ -24,13 +22,14 @@ h2
   & + dl.credits
     margin-top: 40px
     display: block
-    background red
-
+    // background red
 
 @media (max-width: $phone-max)
   h2
     font-size: 1.8rem
     line-height: 1.212em
+    padding: 0
+    max-width: 320px
 
 h3, .h3
   font-size: 1.8rem
@@ -39,17 +38,22 @@ h3, .h3
   letter-spacing: -0.02em
   margin: 10px 0 30px 0
 
+h4, .h4
+  margin: 0px 0 20px 0
+
 @media (max-width: $phone-max)
   h3, .h3
-    margin: 0
+    margin: 0 0 10px 0
+    font-size: 1.2rem
 
 
 a.plain
   text-decoration: none
   color: $copy
+  &:hover
+    color: $copy
 
-
-sup.note
+sup
   vertical-align: top
   a
     vertical-align: top
@@ -59,9 +63,9 @@ p
   line-height: 1.5em
   font-size: 1rem
 
-.tiles
-  line-height: 0
-
+.bind
+  p
+    max-width: 400px
 
 hr
   height: 1px
@@ -69,30 +73,45 @@ hr
   margin: 0
   padding: 0
   background: 0
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2)
+  border-bottom: $faint-border
 
-code,
-pre
-  background: white
-  padding: 10px 15px
-  font-size: 15px
-  line-height: 19px
+pre,
+pre.comment
+  margin: 0
+  font-size: 14px
+  line-height: 21px
   border-radius: 1px
-  font-family: inconsolata, monospace
+  font-family: 'InputMonoNarrow-Regular', 'InputMonoNarrow-Thin', georgia, inconsolata, monospace
   word-wrap: break-word
-  color: $blue
+  color: #08bfca
+  text-align: left
+
+pre.comment
+  color: grey
+
+pre + pre.comment,
+  padding-top: 15px
 
 
+small
+  font-family: $serif
+  font-size: 11px
+  line-height: 16px
+  display: inline-block
+
+a.view-large,
 figcaption
   text-align: left
   font-weight: 200
-  font-size: 12px
-  font-family: $sans
+  font-size: 11px
+  font-family: $serif
+  letter-spacing: 0.04em
   line-height: 1.65em
   letter-spacing: 0.02em
-  // padding: 20px 20px 25px 20px
   max-width: 400px
   counter-increment: cards
+
+  opacity: 0.9
 
 figcaption:before
   content: "fig. " counter(cards)
