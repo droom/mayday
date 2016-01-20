@@ -2,33 +2,31 @@ doctype html
 html(lang="en")
   head
     include partials/_head
-
-  body.work
+  body.work.iso
     include partials/_banner
-
     .band.head.hr.relative
-
-      a(href="work-gr.html").back.move.move-left
-
+      a(href="work-gr.html").move.move-left
       .segment.type
         h2 GoGet
-
         dl.credits
           dt Client
           dd GoGet
           dt Studio
-          dd VLT
-
+          dd VLT Labs
+          dt Repo
+          dd (Private)
+          dt Live
+          dd.live
+            a(href="http://www.goget.my/" aria-label="Visit GoGet") goget.my
       a(href="work-ih.html").move.move-right
-
     hr
-
-    aside.project(role="complementary")
+    aside.project(role="complementary").excuse
       .segment.type
         dl.credits
           dt Role
           dd Identity
           dd UX &plus; UI
+          //- dd Front-End (Public face)
 
         dl.credits
           dt Stack
@@ -39,52 +37,79 @@ html(lang="en")
           dd Adobe© InDesign
           dd InVision
 
-
     main(role="main")
+
       .segment.type
-        h3 Goget Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam quibusdam non ea eligendi, quae incidunt porro cumque similique voluptatum earum eum placeat dolore culpa nesciunt minus sint autem, ad hic.
-        p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio doloribus, laboriosam quasi numquam aut dicta ex repellat nulla illo perspiciatis rerum sit dolores dolore, veniam vero, iure ipsam a asperiores.
+        h3 GoGet is a community focused errands and delivery service currently operating in Kuala Lumpur.
+
+        p
+          = "I used a "
+          a(href="https://gist.github.com/droom/96381e758de1a927671b") modified verion
+          = " of the Design Sprint methoolody developed by Google Ventures to tackle this problem."
+
+        p This was an interesting problem in that there were two seperate user experiences, with the ability for the user to switch between both.
+
+      .segment.type.notice
+        p
+          em
+            = "There is one Medium article accosiated with this project:"
+          //- br
+          ol
+            li
+              a(href="https://medium.com/p/5fd245753f08/edit") A practical use for CSS columns
+
+
+      //- .segment.type.notice
+      //-   p
+      //-     em
+      //-       = "Please note: my capacity for this was project was "
+      //-       strong Branding
+      //-       = ", "
+      //-       strong User Interface
+      //-       = " and "
+      //-       strong User Experience
+      //-       = " . Front-End hasn't been implemented in a way I would like and I've arranged with the GoGet team to spend time on this in December 2015."
 
       .segment.blueprint
         figure
           img(src="img/projects/gg-wire.png")
-          figcaption Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia excepturi totam suscipit esse ratione natus quos, aut molestias eligendi delectus consequuntur voluptas sapiente in quae quisquam amet possimus illum. Eum.
+          figcaption Initial exploration of wordmarks. Things I needed to communicate
+            ul
+              li Safety (Trustworthy)
+              li Speed (Reliable, Efficient)
+              li A sense of community (Friendly)
 
-      .segment.type
-        p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio doloribus, laboriosam quasi numquam aut dicta ex repellat nulla illo perspiciatis rerum sit dolores dolore, veniam vero, iure ipsam a asperiores.
+      //- .segment.layout
+      //-   video(autoplay loop muted)
+      //-     source(src="mov/atop.ogg" type="video/ogg")
+      //-     source(src="mov/atop.mp4" type="video/mp4")
+      //-     p Your browser does not support the <code>video</code> element.
+
 
       .segment.blueprint
         figure
           img(src="img/projects/gg-id.png")
-          figcaption  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia excepturi totam suscipit esse ratione natus quos, aut molestias eligendi delectus consequuntur voluptas sapiente in quae quisquam amet possimus illum. Eum.
-
-      .segment.type
-        p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio doloribus, laboriosam quasi numquam aut dicta ex repellat nulla illo perspiciatis rerum sit dolores dolore, veniam vero, iure ipsam a asperiores.
-
+          figcaption Initial exploration of wordmarks. Things I needed to communicate
+            ul
+              li Safety (Trustworthy)
+              li Speed (Reliable, Efficient)
+              li A sense of community (Friendly)
 
       .segment.blueprint
         figure
           img(src="img/projects/gg-ui.png")
-          figcaption  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia excepturi totam suscipit esse ratione natus quos, aut molestias eligendi delectus consequuntur voluptas sapiente in quae quisquam amet possimus illum. Eum.
-
-      .segment.type
-        p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio doloribus, laboriosam quasi numquam aut dicta ex repellat nulla illo perspiciatis rerum sit dolores dolore, veniam vero, iure ipsam a asperiores.
+          figcaption UI based on transport markings found around Malaysia.
 
       .segment.blueprint
         figure
-          img(src="img/projects/goget/gg-notify-desktop.png")
-          figcaption Lorem ipsum dolor sit amet
+          img(src="img/projects/gg-ui-notify.png")
+          figcaption In-app notifications
 
-      .segment.type
-        p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia ut ratione sequi inventore laboriosam fugit. Soluta perspiciatis pariatur non, asperiores et architecto nostrum tenetur eos. Iste, ipsa explicabo vero voluptatem.
-
-      .segment.blueprint
+      .segment.layout
         figure
-          img(src="img/gg-wire.png")
-          figcaption Lorem ipsum dolor sit amet
-
-
-
+          img(src="img/projects/gg-layout-desktop.jpg").desktop
+          img(src="img/projects/gg-layout-mobile.jpg").mobile
+          figcaption Public face redesign
 
     include partials/_footer
     include partials/_scripts

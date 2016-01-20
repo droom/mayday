@@ -2,10 +2,9 @@ ul.work-list
   margin: 0
   padding: 0
   list-style-type: none
-
-  li:hover
-    background: rgba(255, 255, 255, 0.4)
-
+  li
+    &:hover
+      background-color: rgba(255, 255, 255, 0.4)
 
 ol
   &.footnotes
@@ -21,42 +20,68 @@ dl.credits
   line-height: 18px
   overflow: visible
 
+  font-family: $serif
+  font-size: 11px
+  line-height: 16px
   dd
     display: inline
     margin: 0
 
   dd + dd
+    display: block
     margin-left: 52px
 
   dd:after
     display: block
     content: ''
+
   dt
     display: inline-block
     min-width: 52px
     font-weight: bold
 
+  // work index
   dt.hide
     display: none
   dd.project
     margin: 0 0 45px 0
     display: block
+  // work iso
+  dd.asia::after
+    display: inline-block
+    content: "\e900"
+    font-family: 'icomoon' !important
+    speak: none
+    font-size: 13px
+    font-style: normal
+    font-weight: normal
+    font-variant: normal
+    text-transform: none
+    line-height: 1
+    vertical-align: middle
+    margin-left: 5px
+    opacity: 0.8
 
-  dd.live
-    overflow: visible
-    background: url("../img/components/globe.svg") 100% 64% no-repeat
-    background-size: 11px 11px
-    a
-      overflow: visible
-      padding: 0 18px 0 0
+  dd.stage::after
+    display: inline-block
+    content: "\e905"
+    font-family: 'icomoon' !important
+    speak: none
+    font-size: 14px
+    font-style: normal
+    font-weight: normal
+    font-variant: normal
+    text-transform: none
+    line-height: 1
+    vertical-align: middle
+    margin-left: 7px
 
-  dd.stage
-    overflow: visible
-    background: url("../img/editorial/stage.svg") 100% 64% no-repeat
-    background-size: 11px 11px
-    a
-      overflow: visible
-      padding: 0 14px 0 0
+@media (max-width: $phone-max)
+  dl.credits
+    dd.project
+      margin: 0 0 25px 0
+
+
 
 
 aside.project
@@ -65,9 +90,9 @@ aside.project
 
   dl.credits
     vertical-align: top
-    margin: 0
-    font-size: 13px
-    line-height: 18px
+    // margin: 0
+    // font-size: 13px
+    // line-height: 18px
     display: inline-block
     min-width: 210px
 

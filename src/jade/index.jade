@@ -7,37 +7,41 @@ html(lang="en")
     include partials/_banner
 
     .band.head.relative.hr
-      a(href="index.html" data-rel="Back to \'Work\'").move-left
-
       .segment.type
         h2
           = "Chris Droom is a Designer "
           span.accent &amp;&amp;
-          = " Front-end Developer based in Bristol "
+          = " Client-side Developer based in London "
           span.accent.slim ||
-          = " London "
+          = " Berlin"
+          &nbsp;
           span.accent.slim ||
-          = " KL"
+          &nbsp;
+          = "KL"
     hr
     main(role="main")
 
       .segment.offset
         figure
-          img(src="img/editorial/desk.jpg", alt="Workspace, 2015")
+          img(src="img/editorial/chris-droom-desk.jpg", alt="Workspace, 2015")
 
-      .segment.type
-        h3 Hello
-
-        p I am a friendly and driven Digital Designer from England &mdash; currently living in Damansara Perdana, Kuala Lumpur. I return on 30th October 2015. I enjoy making websites using HTML, CSS and as little else as possible (but no less).
-
+      .segment.type.bind
         p
-          = "You can find me on "
+          = "Hello. I'm a friendly and ambitious Digital Designer from South London, England. You can find me on "
           a(href="https://twitter.com/drooooom") Twitter
           = ", "
           a(href="https://github.com/droom") GitHub
           = " or "
           a(href="http://codepen.io/droom") CodePen
+          = ". You can view my work history and testimonials on "
+          a(href="http://uk.linkedin.com/in/chrisdroom") LinkedIn
           = "."
+
+        p
+          a(href="work.html")
+            = "View work"
+          = " "
+          &rarr;
 
     include partials/_footer
     include partials/_scripts

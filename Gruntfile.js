@@ -9,7 +9,11 @@ module.exports = function(grunt) {
         livereload: true,
       },
       sass: {
-        files: ['src/sass/*.sass', 'src/sass/partials/*.sass'],
+        files: [
+                'src/sass/*.sass',
+                'src/sass/partials/*.sass',
+                'src/sass/projects/*.sass'
+                ],
         tasks: ['sass'],
       },
 
@@ -34,7 +38,13 @@ module.exports = function(grunt) {
         separator: ';',
       },
       dist: {
-        src: ['src/lib/jquery.min.js', 'src/js/nav.js'],
+        src: [
+              'src/lib/jquery.min.js',
+              'src/lib/noframework.waypoints.js',
+              'src/lib/animsition.js',
+              'src/js/project-atop.js',
+              'src/js/nav.js'
+              ],
         dest: 'src/js/main.js',
       },
     },
@@ -63,7 +73,11 @@ module.exports = function(grunt) {
     jade: {
       compile: {
         options: {
-          data: {}
+          pretty: false,
+          data: {
+            debug: true,
+            timestamp: "<%= new Date().getTime() %>"
+          }
         },
         files: [{
           expand: true,

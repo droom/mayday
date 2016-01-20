@@ -5,7 +5,6 @@ html(lang="en")
 
   body.work
     include partials/_banner
-
     .band.head.hr.relative
       .segment.type
         h2
@@ -13,43 +12,90 @@ html(lang="en")
         small 2012&ndash;2015
 
     hr
-    main(role="main")
-      .segment.type
-        h3 Case studies to be added 27/10/2015.
 
-      //- ul.work-list
-      //-   li.band.hr
-      //-     a(href="work-gr.html" aria-title="View project: GiveReceipt Web/App").plain
-      //-       .segment.type.work
-      //-         dl.credits
-      //-           dt.hide Project name
-      //-           dd.project.h3 GiveReceipt Web/App
-      //-           dt Client
-      //-           dd DVG Web
-      //-           dt Studio
-      //-           dd Six Leaves
+    main(role='main')
 
-      //-   li.band.hr
-      //-     a(href="work-gg.html").plain
-      //-       .segment.type.work
-      //-         dl.credits
-      //-           dt.hide Project name
-      //-           dd.project.h3 GoGet Malaysia
-      //-           dt Client
-      //-           dd The Co.
-      //-           dt Studio
-      //-           dd VLT
+      //- .excuse
+      //-   .segment.type
+      //-     h3
+      //-       = "I'll be adding more recent on the week starting 30th November 2015. For previous advertising work, please "
+      //-       a(href="http://droom.name/2014/" aria-title="View advertising work") click here
+      //-       = "."
 
-      //-   li.band.hr
-      //-     a(href="work-ih.html").plain
-      //-       .segment.type.work
-      //-         dl.credits
-      //-           dt.hide Project name
-      //-           dd.project.h3 Ideahouse
-      //-           dt Client
-      //-           dd Ideahouse
-      //-           dt Studio
-      //-           dd DROOM&plus;TZY
+
+      ul.work-list
+        li.band.hr
+          a.plain(href="work-mayday.html")
+            .segment.type.work
+              dl.credits
+                dt.hide Project name
+                dd.project.h3 Mayday
+                dt Client
+                dd Reformist
+                dt Studio
+                dd Reformist
+
+
+      ul.work-list
+        li.band.hr
+          a.plain(href="work-post.html")
+            .segment.type.work
+              dl.credits
+                dt.hide Project name
+                dd.project.h3 Post Office
+                dt Client
+                dd &mdash;
+                dt Studio
+                dd DROOM+TZY
+
+
+
+      ul.work-list
+        li.band.hr
+          a.plain(href="work-atop.html")
+            .segment.type.work
+              dl.credits
+                dt.hide Project name
+                dd.project.h3 ATOP Web
+                dt Client
+                dd ATOP Watches
+                dt Studio
+                dd DROOM+TZY
+
+
+      ul.work-list
+        li.band.hr
+          a.plain(href="work-gr.html")
+            .segment.type.work
+              dl.credits
+                dt.hide Project name
+                dd.project.h3 GiveReceipt Web/App
+                dt Client
+                dd DVG Web
+                dt Studio
+                dd Six Leaves
+
+        li.band.hr
+          a.plain(href="work-gg.html")
+            .segment.type.work
+              dl.credits
+                dt.hide Project name
+                dd.project.h3 GoGet Malaysia
+                dt Client
+                dd GoGet
+                dt Studio
+                dd VLT
+
+        li.band.hr
+          a.plain(href='work-ih.html')
+            .segment.type.work
+              dl.credits
+                dt.hide Project name
+                dd.project.h3 Ideahouse
+                dt Client
+                dd Ideahouse
+                dt Studio
+                dd DROOM&plus;TZY
 
 
     include partials/_footer

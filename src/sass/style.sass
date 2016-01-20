@@ -1,20 +1,59 @@
-$blue:    #2199E7
-$yellow:  #fbf395
-$copy:    rgba(0, 0, 0, 0.85)
-$bg:      #f1f1f1
+$blue:            #2199E7
+$yellow:          #fbf395
+$copy:            rgba(0, 0, 0, 0.85)
+$bg:              #f1f1f1
+$blueDark:        #406da8
+$slate:           #333
 
-$serif:   'Noto Serif', georgia, serif
-$sans:    'Noto Sans', arial, helvetica, sans-serif
+$phone-max:       500px
+$transition:      all 300ms ease
+$faint-border:    1px solid rgba(0, 0, 0, 0.2)
+$gutter-phone:    12px
+$gutter-desktop:  20px
 
-$phone-max: 500px
+$serif:           'Merriweather', "Noto Serif", Georgia, serif
+$serif:           "Noto Serif", Georgia, serif
 
-$transition: all 200ms ease
+$sans:            "HelveticaNeue",'Interstate-Regular','IstokWeb-Bold', 'Helvetica-Narrow-Bold', 'AvenirLTStd-Heavy', 'Utopia Std Bold Display', arial, serif
 
+$wide-unit:       1098px
 
+@import "partials/includes.sass"
 @import "partials/base.sass"
 @import "partials/type.sass"
 @import "partials/lists.sass"
-
-@import "partials/nav.sass"
-@import "partials/section.sass"
+@import "partials/segment.sass"
 @import "partials/image.sass"
+@import "partials/buttons.sass"
+@import "partials/links.sass"
+@import "partials/nav.sass"
+@import "partials/motion.sass"
+@import "projects/atop.sass"
+
+
+.fixed
+  position: relative
+  z-index: 1
+
+.half
+  width: 50%
+  display: inline-block
+  vertical-align: top
+  padding-right: 30px
+.half:nth-child(2)
+  border-left: 1px solid rgba(0, 0, 0, 0.1)
+  padding-left: 30px
+  padding-right: 0
+
+.turn
+  .ceiling
+    padding-top: 0
+    padding-bottom: 0
+    .half
+      padding-top: $gutter-desktop
+      padding-bottom: $gutter-desktop
+    .half:nth-child(2)
+      text-align: right
+
+
+
