@@ -10,6 +10,7 @@ $( document ).ready(function() {
 
   // $('a').css({'cursor': 'url(/cursors/customMoveCursor.cur), default'});
 
+
   $( "a" ).click(function(event ) {
     $('body').fadeOut(150);
   });

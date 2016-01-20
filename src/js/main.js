@@ -1204,6 +1204,7 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
 
   // $('a').css({'cursor': 'url(/cursors/customMoveCursor.cur), default'});
 
+
   $( "a" ).click(function(event ) {
     $('body').fadeOut(150);
   });
