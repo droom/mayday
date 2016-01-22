@@ -18,7 +18,6 @@ $( document ).ready(function() {
     var seconds = theDate.getSeconds();
     var secondsConv = (seconds * 6);
 
-
     // console.log("hours24 is "+hours24);
     // console.log("hours12 is "+hours12);
     // console.log("deg is "+deg);
@@ -42,9 +41,6 @@ $( document ).ready(function() {
     setInterval(hello, 1000);
 
 
-
-
-
     function setTime(){
       $(".hand-small").css("transform", "rotate("+deg+"deg)");
       $(".hand-large").css("transform", "rotate("+degMinutes+"deg)");
@@ -52,11 +48,6 @@ $( document ).ready(function() {
       $(".seconds").css("transform", "rotate("+secondsConv+"deg)");
 
     }
-  }
-
-
-
-
 
 
   // waypoints
@@ -68,6 +59,16 @@ $( document ).ready(function() {
     },
     offset: 300
   })
+
+
+  }
+
+
+
+
+
+
+
 
 
 

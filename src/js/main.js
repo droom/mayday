@@ -1137,7 +1137,6 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
     var seconds = theDate.getSeconds();
     var secondsConv = (seconds * 6);
 
-
     // console.log("hours24 is "+hours24);
     // console.log("hours12 is "+hours12);
     // console.log("deg is "+deg);
@@ -1161,9 +1160,6 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
     setInterval(hello, 1000);
 
 
-
-
-
     function setTime(){
       $(".hand-small").css("transform", "rotate("+deg+"deg)");
       $(".hand-large").css("transform", "rotate("+degMinutes+"deg)");
@@ -1171,11 +1167,6 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
       $(".seconds").css("transform", "rotate("+secondsConv+"deg)");
 
     }
-  }
-
-
-
-
 
 
   // waypoints
@@ -1189,6 +1180,16 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
   })
 
 
+  }
+
+
+
+
+
+
+
+
+
 
 
 });
@@ -1196,17 +1197,24 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
 
   // console.log(window.location.pathname);
   // console.log($(location).attr('href'));
-
   // $( "a.back" ).click(function( event ) {
   //   event.preventDefault();
   //   history.go(-1);
   // });
-
   // $('a').css({'cursor': 'url(/cursors/customMoveCursor.cur), default'});
 
-  $( "a" ).click(function(event ) {
-    $('body').fadeOut(150);
-  });
+  // var beep = $("#beep")[0];
+  // $("a.plain")
+  // .mouseenter(function() {
+  //   beep.pause();
+  //   beep.play();
+  //   console.log("hi")
+  // });
+
+
+  // $( "a" ).click(function(event ) {
+  //   $('body').fadeOut(150);
+  // });
 
 
 });

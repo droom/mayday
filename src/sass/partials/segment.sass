@@ -7,8 +7,6 @@ nav,
   padding: $gutter-desktop 20px 25px $gutter-desktop
 
 
-
-
 .band
   &.hr
     border-top: 1px solid rgba(0, 0, 0, 0.1)
@@ -25,6 +23,21 @@ nav,
 
 .relative
   position: relative
+
+.fixed
+  position: relative
+  z-index: 1
+.half
+  width: 50%
+  display: inline-block
+  vertical-align: top
+  padding-right: 30px
+.half:nth-child(2)
+  border-left: 1px solid rgba(0, 0, 0, 0.1)
+  padding-left: 30px
+  padding-right: 0
+
+
 
 .segment
   margin: auto
@@ -110,9 +123,6 @@ nav,
   &.type
     position: relative
     z-index: 1
-    // &.intro
-      // p
-        // font-weight: bold
 
   &.work
     background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNi4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iNjBweCIgaGVpZ2h0PSI1NnB4IiB2aWV3Qm94PSI2OC4wNjYgNzQuODU1IDYwIDU2IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDY4LjA2NiA3NC44NTUgNjAgNTYiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGc+DQoJPHBvbHlnb24gZmlsbD0iIzJDMjIyNSIgcG9pbnRzPSIxMjguMDY2LDEwMi45NzEgOTcuMTU3LDEzMC44NTUgOTcuMDk1LDEzMC43ODEgOTcuMDY1LDEzMC44MDggOTUuNjA5LDEyOS4wMTkgOTMuMzUzLDEyNi4zNDUgDQoJCTkzLjM5NywxMjYuMzA1IDkzLjM1MywxMjYuMjQ4IDExNi40MjcsMTA1LjgyOSA2OC4wNjYsMTA1LjgyOSA2OC4wNjYsOTkuNDg2IDExNS44MzQsOTkuNDg2IDkzLjM1Myw3OS42ODggOTMuNTIsNzkuNDc4IA0KCQk5My4zNTMsNzkuMzMzIDk3LjE1Nyw3NC44NTUgMTI4LjA2NCwxMDIuODY5IDEyOC4wNjQsMTAyLjk3MSAxMjguMDY2LDEwMi45NzEgCSIvPg0KPC9nPg0KPC9zdmc+DQo=")
