@@ -29,19 +29,23 @@ nav
         text-align: right
 
 @media (max-width: $phone-max)
-  nav
-    ol
-      li
-        a
-          font-size: 0.85rem
-          padding-top: 0
+  nav ol li
+    padding-top: 7px
+    a
+      font-size: 0.85rem
 
 @media (max-width: 355px)
-  nav
-    ol
-      li
-        a.profile::after
-          content: ""
+  nav ol li a.profile::after
+    content: ""
+
+ul.work-list li.band.hr a.plain:hover > .segment.type.work
+  background-position: 100% 50%
+
+
+@media (max-width: $phone-max)
+  ul.work-list li.band.hr a.plain:hover > .segment.type.work
+    background-position: 95% 20%
+
 
 a.move
   height: 100%

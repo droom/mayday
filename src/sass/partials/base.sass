@@ -6,10 +6,6 @@ html
   &:before, &:after
     box-sizing: inherit
 
-pre::selection
-  background: #08bfca
-  color: white
-
 html
   font-family: $serif
 
@@ -29,3 +25,13 @@ figure
 hr
   display: none
 
+::selection
+  background-color: #9ee8cf
+
+
+pre::selection
+  background: #08bfca
+  color: white
+
+.unselect
+  user-select: none

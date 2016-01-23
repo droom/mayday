@@ -4,14 +4,14 @@ nav,
 .type
   max-width: 800px
   margin: auto
-  padding: $gutter-desktop 20px 25px $gutter-desktop
-
+  padding: $gutter-desktop $gutter-desktop 25px $gutter-desktop
 
 .band
   &.hr
     border-top: 1px solid rgba(0, 0, 0, 0.1)
   &.head
     background: $yellow
+    background: #B0EAEC
     user-select: none
   &.profile
     background: #aec1c0
@@ -19,24 +19,8 @@ nav,
     background: #aec1c0
   &.turn
     background: rgba(200,200,200,0.1)
-
-
-.relative
-  position: relative
-
-.fixed
-  position: relative
-  z-index: 1
-.half
-  width: 50%
-  display: inline-block
-  vertical-align: top
-  padding-right: 30px
-.half:nth-child(2)
-  border-left: 1px solid rgba(0, 0, 0, 0.1)
-  padding-left: 30px
-  padding-right: 0
-
+  &.relative
+    position: relative
 
 
 .segment
@@ -49,70 +33,47 @@ nav,
     background: url('../img/components/tile-blue.gif') repeat $blueDark
     text-align: center
     max-width: $wide-unit
-
     figure
-      padding: 20px
+      padding: $gutter-desktop
       figcaption
-        margin-top: 20px
+        margin-top: $gutter-desktop
         color: white
       img
         max-width: 100%
 
-  &.offset
-    text-align: left
-    max-width: 950px
-    figure
-      figcaption
-        margin-top: 20px
-        padding-left: 20px
-
-  &.layout
-    max-width: $wide-unit
-    background: #333
-
-    figure
-      padding: 20px
-      color: white
-      img
-        vertical-align: top
-      img.desktop
-        width: 75%
-        padding-right: 20px
-
-      img.mobile
-        width: 25%
-
   &.surface
     figure
-      padding: 20px
+      padding: 0 0 $gutter-desktop 0
       img + img
-        margin-top: 20px
+        margin-top: $gutter-desktop
       figcaption
-        margin-top: 20px
+        margin-top: $gutter-desktop
+        padding-left: $gutter-desktop
+        padding-right: $gutter-desktop
 
     max-width: $wide-unit
     background: #E7E7E7
     text-align: center
 
   &.code
-    padding: 35px 38px
+    padding: $gutter-desktop
     background: $slate
     max-width: $wide-unit
     transition: 700ms all ease
 
-  &.page
-    max-width: $wide-unit
+  &.offset
+    text-align: left
+    max-width: 950px
     figure
       figcaption
-        display: block
-        padding: 20px 0
-        color: $copy
+        margin-top: $gutter-desktop
+        padding-left: $gutter-desktop
 
   &.notice
     background: white
     border: rgba(0,0,0,0.2) 1px dotted
     border-radius: 3px
-    padding-bottom: 20px
+    padding-bottom: $gutter-desktop
     margin-bottom: 40px
     p
       padding: 0
@@ -129,32 +90,28 @@ nav,
     background-repeat: no-repeat
     background-position: 95% 50%
     transition: 200ms all ease
-    user-select: none
-    &:hover
-      background-position: 100% 50%
 
-
-@media (min-width: 1140px)
-  .segment
-    &.code
-      border-radius: 4px
-
-
+  .half
+    width: 50%
+    display: inline-block
+    vertical-align: top
+    padding-right: $gutter-desktop
+  .half:nth-child(2)
+    border-left: 1px solid rgba(0, 0, 0, 0.1)
+    padding-left: $gutter-desktop
 
 @media (max-width: $phone-max)
   header,
   footer,
   nav,
   .segment.type
-    padding: $gutter-phone 12px 16px $gutter-phone
+    padding: $gutter-phone $gutter-phone 16px $gutter-phone
   header
     padding-bottom: 0
   .segment
     &.work
       background-position: 95% 20%
       background-size: 30px
-      &:hover
-        background-position: 95% 20%
     .h3
       margin: 0
       max-width: 77%

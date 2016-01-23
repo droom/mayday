@@ -1132,19 +1132,9 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
     var deg = (hours24andminutes * 30);
     var degMinutes = (minutes * 6);
     var day = (hours24 * 15);
-
     var theDate = new Date();
     var seconds = theDate.getSeconds();
     var secondsConv = (seconds * 6);
-
-    // console.log("hours24 is "+hours24);
-    // console.log("hours12 is "+hours12);
-    // console.log("deg is "+deg);
-    // console.log("minutes is "+minutes);
-    // console.log("minutesDecimal is "+minutesDecimal);
-    // console.log("degMinutes is "+degMinutes);
-    // console.log("hours24andminutes is "+hours24andminutes);
-    // console.log("day is "+day);
 
     function hello(){
       var theDate = new Date();
@@ -1159,7 +1149,6 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
     }
     setInterval(hello, 1000);
 
-
     function setTime(){
       $(".hand-small").css("transform", "rotate("+deg+"deg)");
       $(".hand-large").css("transform", "rotate("+degMinutes+"deg)");
@@ -1168,10 +1157,9 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
 
     }
 
-
   // waypoints
   var waypoint = new Waypoint({
-    element: document.getElementById('basic-waypoint'),
+    element: document.getElementById('waypoint-atop'),
     handler: function() {
       console.log('waypoint');
       setTime();
@@ -1179,14 +1167,7 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
     offset: 300
   })
 
-
   }
-
-
-
-
-
-
 
 
 
@@ -1194,27 +1175,45 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
 
 });
 ;$( document ).ready(function() {
-
   // console.log(window.location.pathname);
   // console.log($(location).attr('href'));
   // $( "a.back" ).click(function( event ) {
   //   event.preventDefault();
   //   history.go(-1);
   // });
-  // $('a').css({'cursor': 'url(/cursors/customMoveCursor.cur), default'});
+// localStorage.company = $('#company').val();
+// localStorage.currency = $('#currency').val();
+// localStorage.salutation = $('#salutation').val();
 
-  // var beep = $("#beep")[0];
-  // $("a.plain")
-  // .mouseenter(function() {
-  //   beep.pause();
-  //   beep.play();
-  //   console.log("hi")
-  // });
+var project = [
+
+["ATOP Watches", "Ideahouse", "DROOM+TZY"],
+["mary", 42, "female"],
+["jason", 21, "male"],
+]
 
 
-  // $( "a" ).click(function(event ) {
-  //   $('body').fadeOut(150);
-  // });
+var project = [];
+var link = [];
+var client = [];
+var studio = [];
 
+$( "ul.work-list li dd.project" ).each(function( index ) {
+  project.push( $(this).html() );
+});
+$( "ul.work-list li dd.client'" ).each(function( index ) {
+  client.push( $(this).html() );
+});
+$( "ul.work-list li dd.studio'" ).each(function( index ) {
+  studio.push( $(this).html() );
+});
+$( "ul.work-list li a.plain" ).each(function( index ) {
+  link.push( $(this).attr('href') );
+});
+
+console.log(project);
+console.log(link);
+console.log(client);
+console.log(studio);
 
 });

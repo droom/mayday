@@ -13,19 +13,9 @@ $( document ).ready(function() {
     var deg = (hours24andminutes * 30);
     var degMinutes = (minutes * 6);
     var day = (hours24 * 15);
-
     var theDate = new Date();
     var seconds = theDate.getSeconds();
     var secondsConv = (seconds * 6);
-
-    // console.log("hours24 is "+hours24);
-    // console.log("hours12 is "+hours12);
-    // console.log("deg is "+deg);
-    // console.log("minutes is "+minutes);
-    // console.log("minutesDecimal is "+minutesDecimal);
-    // console.log("degMinutes is "+degMinutes);
-    // console.log("hours24andminutes is "+hours24andminutes);
-    // console.log("day is "+day);
 
     function hello(){
       var theDate = new Date();
@@ -40,7 +30,6 @@ $( document ).ready(function() {
     }
     setInterval(hello, 1000);
 
-
     function setTime(){
       $(".hand-small").css("transform", "rotate("+deg+"deg)");
       $(".hand-large").css("transform", "rotate("+degMinutes+"deg)");
@@ -49,10 +38,9 @@ $( document ).ready(function() {
 
     }
 
-
   // waypoints
   var waypoint = new Waypoint({
-    element: document.getElementById('basic-waypoint'),
+    element: document.getElementById('waypoint-atop'),
     handler: function() {
       console.log('waypoint');
       setTime();
@@ -60,14 +48,7 @@ $( document ).ready(function() {
     offset: 300
   })
 
-
   }
-
-
-
-
-
-
 
 
 
