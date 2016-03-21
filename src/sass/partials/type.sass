@@ -5,7 +5,7 @@ h1, h2, h3, .h1, .h2, .h3
 nav ol li
   font-family: $sans
 
-h2
+h2, .h2
   font-weight: 700
   letter-spacing: -0.035em
   line-height: 1.2em
@@ -22,7 +22,7 @@ h2
     display: block
 
 @media (max-width: $phone-max)
-  h2
+  h2, .h2
     font-size: 1.8rem
     line-height: 1.212em
     padding: 0
@@ -31,19 +31,16 @@ h2
 h3, .h3
   font-size: 1.8rem
   font-weight: 600
-  line-height: 1.3em
+  line-height: 1.2em
   letter-spacing: -0.02em
-  margin: 20px 0 30px 0
+  margin: 0
 
 @media (max-width: $phone-max)
   h3, .h3
-    margin: 20px 0
     font-size: 1.2rem
-
 
 h4, .h4
   margin: 0px 0 20px 0
-
 
 sup
   vertical-align: top
@@ -51,20 +48,28 @@ sup
     vertical-align: top
     font-size: 0.5em
 
-p, li
-  line-height: 1.5em
-  font-size: 1rem
 
-// li + li
-//   margin-top: 15px
+.segment.type
+  p, li
+    line-height: 1.5em
+    font-size: 1rem
+    margin: 0
 
-// ul
-//   margin-top: 30px
+  ul
+    li + li
+      margin-top: 1em 
+  p + p
+    margin-top: 1em 
+  h3 + p
+    margin-top: 1.5em 
+  p + h3
+    margin-top: 1.5em 
 
 
-.bind
-  p
-    max-width: 400px
+
+
+p.bind
+  max-width: 400px
 
 hr
   height: 1px
@@ -103,15 +108,7 @@ figcaption
   text-align: left
   font-weight: 200
   font-size: 11px
-  // font-family: $sans
   letter-spacing: 0.04em
-  
-  // line-height: 1.65em
-  // letter-spacing: 0.02em
-  // max-width: 400px
-  // counter-increment: cards
-  // opacity: 0.9
-
   line-height: 1.62em
   letter-spacing: .03em
   max-width: 400px

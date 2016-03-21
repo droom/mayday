@@ -34,7 +34,6 @@
 
   &.surface
     figure
-      padding: 0 0 $gttr-dt 0
       img.half
         width: calc(50%)
       img.half:nth-child(1)
@@ -43,7 +42,7 @@
         border-left: 4px transparent solid
 
       figcaption
-        margin-top: 10px
+        margin: 10px 0 1em 0
         padding-left: $gttr-dt
         padding-right: $gttr-dt
 
@@ -55,7 +54,12 @@
     background: $slate
     max-width: $wide-unit
     transition: 700ms all ease
-
+  
+  &.half
+    display: flex
+    .slice
+      width: 50%
+      
   &.offset
     text-align: left
     max-width: 950px
@@ -65,26 +69,13 @@
         padding-left: $gttr-dt
 
   &.notice
-    background: white
-    border: rgba(0,0,0,0.2) 1px dotted
-    border-radius: 3px
-    padding-bottom: $gttr-dt
-    margin-bottom: 40px
-    p
-      padding: 0
-      margin: 0
-    li
-      line-height: 1.6em
-
-  @media (max-width: 800px)
-    &.notice
-      border-left: none
-      border-right: none
+    background: rgba(0,0,0,0.03)
+    p, li
+      font-size: 14px
 
   &.type
     position: relative
     z-index: 1
-
     aside.project
       display: block
       opacity: 0.7
@@ -103,7 +94,6 @@ nav,
   margin: auto
   padding: $gttr-dt-top $gttr-dt $gttr-dt $gttr-dt 
   
-
 .segment.type + .segment.type
   padding-top: 0
 
@@ -114,10 +104,8 @@ nav,
   padding-top: $gttr-dt
 
 
-
 @media (max-width: $phone-max)
   header,
-  footer,
   nav,
   .segment.type
     padding: $gttr-ph
@@ -140,6 +128,10 @@ nav,
     &.type + .segment.type.notice
       padding-top: $gttr-ph
 
-
-
+    &.notice
+      padding-top: 25px
+      padding-bottom: 25px
+      
+      li
+        font-size: 14px
 
