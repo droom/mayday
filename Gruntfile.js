@@ -73,7 +73,7 @@ module.exports = function(grunt) {
     jade: {
       compile: {
         options: {
-          pretty: false,
+          pretty: true,
           data: {
             debug: true,
             timestamp: "<%= new Date().getTime() %>"

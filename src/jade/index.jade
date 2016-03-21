@@ -12,18 +12,17 @@ html(lang="en")
           = "Chris Droom is a Designer "
           span.accent &amp;&amp;
           = " Client-side Developer based in London "
-          span.accent.slim ||
+          span.accent.slim &#124;&#124;
           = " Berlin"
           &nbsp;
-          span.accent.slim ||
+          span.accent.slim &#124;&#124;
           &nbsp;
           = "KL"
     hr
     main(role="main")
-
       .segment.offset
         figure
-          img(src="img/editorial/red.gif", alt="Workspace, 2015")
+          img(src="img/editorial/me.gif", alt="Workspace, 2015")
 
       .segment.type.bind
         p
@@ -36,12 +35,6 @@ html(lang="en")
           = ". You can view my work history and testimonials on "
           a(href="http://uk.linkedin.com/in/chrisdroom") LinkedIn
           = "."
-
-        p
-          a(href="work.html")
-            = "View work"
-          = " "
-          &rarr;
 
     include partials/_footer
     include partials/_scripts

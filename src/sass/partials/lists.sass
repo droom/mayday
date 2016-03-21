@@ -2,17 +2,17 @@ ul.work-list
   margin: 0
   padding: 0
   list-style-type: none
+
   li
     &:hover
       background-color: rgba(255, 255, 255, 0.4)
-
-ol
-  &.footnotes
-    font-size: 13px
-    padding: 0
-    li
+    & + li
       margin: 0
-      padding: 0
+    
+
+// .segment.notice
+//   ol
+//     margin-bottom: 0
 
 dl.credits
   margin: 0
@@ -23,13 +23,18 @@ dl.credits
   font-family: $serif
   font-size: 11px
   line-height: 16px
+
+  vertical-align: top
+  display: inline-block
+  min-width: 210px
+
   dd
     display: inline
     margin: 0
 
   dd + dd
     display: block
-    margin-left: 52px
+    margin-left: 4.955555em
 
   dd:after
     display: block
@@ -40,60 +45,37 @@ dl.credits
     min-width: 52px
     font-weight: bold
 
-  // work index
   dt.hide
     display: none
   dd.project
     margin: 0 0 45px 0
     display: block
-  // work iso
-  dd.asia::after
-    display: inline-block
-    content: "\e900"
-    font-family: 'icomoon' !important
-    speak: none
-    font-size: 13px
-    font-style: normal
-    font-weight: normal
-    font-variant: normal
-    text-transform: none
-    line-height: 1
-    vertical-align: middle
-    margin-left: 5px
-    opacity: 0.8
 
-  dd.stage::after
-    display: inline-block
-    content: "\e905"
-    font-family: 'icomoon' !important
-    speak: none
-    font-size: 14px
-    font-style: normal
-    font-weight: normal
-    font-variant: normal
-    text-transform: none
-    line-height: 1
-    vertical-align: middle
-    margin-left: 7px
+  dd.asia:after
+    content: url('../img/components/asia-small.svg')
+    display: inline
+    position: absolute
+    margin-top: 0.38%
+    margin-left: 0.8%
+    opacity: 0.7
+
 
 @media (max-width: $phone-max)
   dl.credits
     dd.project
       margin: 0 0 25px 0
+  dl.credits + dl.credits
+    margin-bottom: 20px
 
 
 
 
-aside.project
-  display: block
-  opacity: 0.7
-
-  dl.credits
-    vertical-align: top
-    // margin: 0
-    // font-size: 13px
-    // line-height: 18px
-    display: inline-block
-    min-width: 210px
 
 
+ol
+  &.footnotes
+    font-size: 13px
+    padding: 0
+    li
+      margin: 0
+      padding: 0

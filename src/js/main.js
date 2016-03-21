@@ -1119,42 +1119,24 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
 }));
 ;$( document ).ready(function() {
 
-
-  if (top.location.pathname === '/Users/droom/GIT/ucl/dist/work-atop.html')
+  if (top.location.pathname === '/Users/droom/GIT/mayday/dist/work-atop.html')
   {
 
     var theDate = new Date();
     var hours24 = theDate.getHours();
-    var minutes = theDate.getMinutes();
     var hours12 = ((hours24 + 11) % 12 + 1);
+
+    var minutes = theDate.getMinutes();
     var minutesDecimal = (minutes / 100);
     var hours24andminutes = hours12 + minutesDecimal;
     var deg = (hours24andminutes * 30);
     var degMinutes = (minutes * 6);
     var day = (hours24 * 15);
-    var theDate = new Date();
-    var seconds = theDate.getSeconds();
-    var secondsConv = (seconds * 6);
-
-    function hello(){
-      var theDate = new Date();
-      var seconds = theDate.getSeconds();
-      var secondsConv = (seconds * 6);
-
-      console.log("seconds is "+seconds);
-      console.log("secondsConv is "+secondsConv);
-
-      $(".seconds").css("transform", "rotate("+secondsConv+"deg)");
-
-    }
-    setInterval(hello, 1000);
 
     function setTime(){
       $(".hand-small").css("transform", "rotate("+deg+"deg)");
       $(".hand-large").css("transform", "rotate("+degMinutes+"deg)");
       $(".day").css("transform", "rotate("+day+"deg)");
-      $(".seconds").css("transform", "rotate("+secondsConv+"deg)");
-
     }
 
   // waypoints
@@ -1166,15 +1148,62 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
     },
     offset: 300
   })
+  }
 
+});
+;$( document ).ready(function() {
+
+
+
+
+
+var scrollDiv = document.createElement("div");
+scrollDiv.className = "scrollbar-measure";
+document.body.appendChild(scrollDiv);
+// Get the scrollbar width
+var scrollbarWidth = scrollDiv.offsetWidth - scrollDiv.clientWidth;
+console.warn(scrollbarWidth); // Mac:  15
+// Delete the DIV
+document.body.removeChild(scrollDiv);
+  // moves out of scrollbar's way
+  if ($(document).height() > $(window).height()) {
+    console.log("scrollbar present");
+    $('body.work.iso a.move.move-right').css('margin-right', scrollbarWidth);
   }
 
 
 
 
 
+  var project = [
+  [],
+  [],
+  [],
+  []
+  ]
+
+  var project = new Array();
+
+
+
+  $( "ul.work-list li" ).each(function( index ) {
+    project[0].push( $(this).find('.project').html() );
+    project[1].push( $(this).find('.client').html() );
+    project[2].push( $(this).find('.studio').html() );
+    project[3].push( $(this).find('.plain').attr('href') );
+
+    localStorage["project"] = JSON.stringify( $(this).find('.project').html() );
+  });
+
+
+  console.log(project);
+
 });
-;$( document ).ready(function() {
+
+
+
+
+
   // console.log(window.location.pathname);
   // console.log($(location).attr('href'));
   // $( "a.back" ).click(function( event ) {
@@ -1184,36 +1213,17 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
 // localStorage.company = $('#company').val();
 // localStorage.currency = $('#currency').val();
 // localStorage.salutation = $('#salutation').val();
-
-var project = [
-
-["ATOP Watches", "Ideahouse", "DROOM+TZY"],
-["mary", 42, "female"],
-["jason", 21, "male"],
-]
-
-
-var project = [];
-var link = [];
-var client = [];
-var studio = [];
-
-$( "ul.work-list li dd.project" ).each(function( index ) {
-  project.push( $(this).html() );
-});
-$( "ul.work-list li dd.client'" ).each(function( index ) {
-  client.push( $(this).html() );
-});
-$( "ul.work-list li dd.studio'" ).each(function( index ) {
-  studio.push( $(this).html() );
-});
-$( "ul.work-list li a.plain" ).each(function( index ) {
-  link.push( $(this).attr('href') );
-});
-
-console.log(project);
-console.log(link);
-console.log(client);
-console.log(studio);
-
-});
+ // console.log("localStorage called");
+ // var workArray =  $( "dd.project.h3" );
+ // console.log("workArray is "+ workArray);
+ // console.log("localStorage.auth is "+localStorage.auth);
+ // function pageState(){
+ //   console.log("localStorage.auth is "+localStorage.auth);
+ //   localStorage.name = $('#name').val();
+ //   localStorage.company = $('#company').val();
+ //   localStorage.currency = $('#currency').val();
+ //   localStorage.salutation = $('#salutation').val();
+ //   localStorage.language = $('#language').val();
+ //   localStorage.telephone = $('#telephone').val();
+ //   localStorage.state = $('#state').val();
+ // }

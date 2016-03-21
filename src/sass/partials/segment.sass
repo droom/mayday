@@ -1,18 +1,8 @@
-header,
-footer,
-nav,
-.type
-  max-width: 800px
-  margin: auto
-  padding: $gutter-desktop $gutter-desktop 25px $gutter-desktop
-
 .band
   &.hr
     border-top: 1px solid rgba(0, 0, 0, 0.1)
   &.head
-    background: $yellow
-    background: #B0EAEC
-    user-select: none
+    background: $blueSky
   &.profile
     background: #aec1c0
   &.page
@@ -21,7 +11,6 @@ nav,
     background: rgba(200,200,200,0.1)
   &.relative
     position: relative
-
 
 .segment
   margin: auto
@@ -34,29 +23,35 @@ nav,
     text-align: center
     max-width: $wide-unit
     figure
-      padding: $gutter-desktop
       figcaption
-        margin-top: $gutter-desktop
-        color: white
+        padding: $gttr-dt
+        color: rgba(255,255,255,0.9)
+        a
+          color: white
+          border-color: white
       img
         max-width: 100%
 
   &.surface
     figure
-      padding: 0 0 $gutter-desktop 0
-      img + img
-        margin-top: $gutter-desktop
+      padding: 0 0 $gttr-dt 0
+      img.half
+        width: calc(50%)
+      img.half:nth-child(1)
+        border-right: 4px transparent solid
+      img.half:nth-child(2)
+        border-left: 4px transparent solid
+
       figcaption
-        margin-top: $gutter-desktop
-        padding-left: $gutter-desktop
-        padding-right: $gutter-desktop
+        margin-top: 10px
+        padding-left: $gttr-dt
+        padding-right: $gttr-dt
 
     max-width: $wide-unit
-    background: #E7E7E7
     text-align: center
 
   &.code
-    padding: $gutter-desktop
+    padding: $gttr-dt
     background: $slate
     max-width: $wide-unit
     transition: 700ms all ease
@@ -66,14 +61,14 @@ nav,
     max-width: 950px
     figure
       figcaption
-        margin-top: $gutter-desktop
-        padding-left: $gutter-desktop
+        margin-top: $gttr-dt
+        padding-left: $gttr-dt
 
   &.notice
     background: white
     border: rgba(0,0,0,0.2) 1px dotted
     border-radius: 3px
-    padding-bottom: $gutter-desktop
+    padding-bottom: $gttr-dt
     margin-bottom: 40px
     p
       padding: 0
@@ -81,9 +76,18 @@ nav,
     li
       line-height: 1.6em
 
+  @media (max-width: 800px)
+    &.notice
+      border-left: none
+      border-right: none
+
   &.type
     position: relative
     z-index: 1
+
+    aside.project
+      display: block
+      opacity: 0.7
 
   &.work
     background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNi4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iNjBweCIgaGVpZ2h0PSI1NnB4IiB2aWV3Qm94PSI2OC4wNjYgNzQuODU1IDYwIDU2IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDY4LjA2NiA3NC44NTUgNjAgNTYiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGc+DQoJPHBvbHlnb24gZmlsbD0iIzJDMjIyNSIgcG9pbnRzPSIxMjguMDY2LDEwMi45NzEgOTcuMTU3LDEzMC44NTUgOTcuMDk1LDEzMC43ODEgOTcuMDY1LDEzMC44MDggOTUuNjA5LDEyOS4wMTkgOTMuMzUzLDEyNi4zNDUgDQoJCTkzLjM5NywxMjYuMzA1IDkzLjM1MywxMjYuMjQ4IDExNi40MjcsMTA1LjgyOSA2OC4wNjYsMTA1LjgyOSA2OC4wNjYsOTkuNDg2IDExNS44MzQsOTkuNDg2IDkzLjM1Myw3OS42ODggOTMuNTIsNzkuNDc4IA0KCQk5My4zNTMsNzkuMzMzIDk3LjE1Nyw3NC44NTUgMTI4LjA2NCwxMDIuODY5IDEyOC4wNjQsMTAyLjk3MSAxMjguMDY2LDEwMi45NzEgCSIvPg0KPC9nPg0KPC9zdmc+DQo=")
@@ -91,28 +95,51 @@ nav,
     background-position: 95% 50%
     transition: 200ms all ease
 
-  .half
-    width: 50%
-    display: inline-block
-    vertical-align: top
-    padding-right: $gutter-desktop
-  .half:nth-child(2)
-    border-left: 1px solid rgba(0, 0, 0, 0.1)
-    padding-left: $gutter-desktop
+
+header,
+nav,
+.type
+  max-width: 800px
+  margin: auto
+  padding: $gttr-dt-top $gttr-dt $gttr-dt $gttr-dt 
+  
+
+.segment.type + .segment.type
+  padding-top: 0
+
+.segment.offset + .segment.type
+  padding-top: 0
+
+.segment.type + .segment.type.notice
+  padding-top: $gttr-dt
+
+
 
 @media (max-width: $phone-max)
   header,
   footer,
   nav,
   .segment.type
-    padding: $gutter-phone $gutter-phone 16px $gutter-phone
+    padding: $gttr-ph
   header
     padding-bottom: 0
   .segment
     &.work
       background-position: 95% 20%
       background-size: 30px
-    .h3
-      margin: 0
-      max-width: 77%
+
+    &.blueprint
+      figure
+        figcaption
+          padding: $gttr-ph
+
+    &.surface
+      figure
+        padding: 0 0 $gttr-ph 0
+
+    &.type + .segment.type.notice
+      padding-top: $gttr-ph
+
+
+
 
