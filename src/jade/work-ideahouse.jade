@@ -1,0 +1,145 @@
+- var project   = "Ideahouse"
+- var prevTitle = "GiveReceipt Web/App"
+- var prevURL   = "work-givereceipt.html"
+- var nextTitle = "Ideahouse"
+- var nextURL   = "work-foreign.html"
+
+doctype html
+html(lang="en")
+  head
+    include partials/_head
+
+  body.work.iso(data-project="ideahouse")
+    include partials/_banner
+    .band.head.hr.relative
+      a(href=prevURL tabindex="-1").move.move-left
+      .segment.type
+        h2
+          = project
+        dl.credits
+          dt Client
+          dd Ideahouse
+          dt Studio
+          dd DROOM&plus;TZY
+          dt Date
+          dd December 2015
+          dt Repo
+          dd.repo
+            a(href="http://www.github.com/droom/ideahouse-web") github.com/droom/ideahouse-web
+          dt Stage
+          dd.stage
+            a(href="http://www.droom.name/clients/ih") droom.name/clients/ih
+
+      a(href=nextURL tabindex="-1").move.move-right
+
+    hr
+
+    aside.project(role="complementary")#what
+      .segment.type
+          dl.credits
+            dt Role
+            dd UX &plus; UI
+            dd Front-End build
+
+          dl.credits
+            dt Stack
+            dd Adobe&copy; Photoshop
+            dd HTML Jade
+            dd Sass (Semantic UI)
+
+          dl.credits
+            dt With
+            dd
+              a(href="https://www.instagram.com/_jessicatzy/") Jessica Tzy
+              = " (Icons, Colours)"
+            dd Bon Woo Meng (Back-End)
+
+    main(role="main")
+
+      .segment.type
+        h3 A responsive, mobile-first site, tailor made for both Ideahouse's existing agents and prospective ones.
+        p The existing site had been in operation for a number of years. Whilst we wanted to onboard new users (referred to from now on as agents), we were careful not to alientate the loyal and exiting base. No-one wants their cheese moved but it was important to iron out a few of the UX kinks if we were to grow.
+
+      .segment.blueprint
+        figure
+          img(src="img/projects/ih-ui-app.png")
+          figcaption For speed, I relied heavily on Semantic UI's native components, adjusting them as nessecary.
+
+      .segment.code.half
+        .slice
+          pre.comment.
+            // four tiles per row
+            // @media (min-width: 416px)
+          pre.
+            body
+              .tiles
+                &.browse
+                  .ui.card
+                    width: calc(100%/4)
+
+                    &:nth-child(12n+1),
+                    &:nth-child(12n+2),
+                    &:nth-child(12n+3),
+                    &:nth-child(12n+4),
+                      .image
+                        background: $yellow
+
+                    &:nth-child(12n+5),
+                    &:nth-child(12n+6),
+                    &:nth-child(12n+7),
+                    &:nth-child(12n+8)
+                      .image
+                        background: $green
+
+                    &:nth-child(12n+9),
+                    &:nth-child(12n+10),
+                    &:nth-child(12n+11),
+                    &:nth-child(12n+12)
+                      .image
+                        background: $blue
+        .slice
+          pre.comment.
+            // three tiles per row
+          pre.
+            @media (max-width: 415px)
+              body
+                .tiles
+                  &.browse
+                    .ui.card
+                      width: calc(100%/3)
+
+                      &:nth-child(9n+1),
+                      &:nth-child(9n+2),
+                      &:nth-child(9n+3)
+                        .image
+                          background: $yellow
+
+                      &:nth-child(9n+4),
+                      &:nth-child(9n+5),
+                      &:nth-child(9n+6)
+                        .image
+                          background: $green
+
+                      &:nth-child(9n+7),
+                      &:nth-child(9n+8),
+                      &:nth-child(9n+9)
+                        .image
+                          background: $blue
+
+      .segment.surface
+        figure
+          img(src="img/projects/atop-tiles.png")
+
+      .segment.type
+        p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum corporis vel deleniti, corrupti officia nesciunt, tempore officiis eveniet, numquam consequatur at? Repudiandae necessitatibus, dolor quas ad! Animi dolorem dolor, explicabo!
+    
+    .band.ref
+      .segment.type
+        ol.ref
+          li
+            a(href="https://medium.com/@drooooom/625d23ba4114") Post Office desktop/mobile layout (Behance)
+          li
+            a(href="") Post Office desktop/mobile
+
+    include partials/_footer
+    include partials/_scripts

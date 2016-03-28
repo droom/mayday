@@ -1,0 +1,28 @@
+doctype html
+html(lang="en")
+  head
+    include partials/_head
+
+  body.profile
+    include partials/_banner
+
+    .band.head.relative.hr
+      .segment.type
+        h2
+          = "Wrong turn"
+    hr
+    main(role="main")
+      .segment.type
+        p.bind
+          = "Hello. I'm a friendly and ambitious Digital Designer from South London, England. You can find me on "
+          a(href="https://twitter.com/droomio") Twitter
+          = ", "
+          a(href="https://github.com/droom") GitHub
+          = " or "
+          a(href="http://codepen.io/droom") CodePen
+          = ". You can view my work history and testimonials on "
+          a(href="http://uk.linkedin.com/in/chrisdroom") LinkedIn
+          = "."
+
+    include partials/_footer
+    include partials/_scripts
