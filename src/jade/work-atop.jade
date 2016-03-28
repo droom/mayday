@@ -1,3 +1,10 @@
+- var project = "Atop Watches"
+- var prevTitle = "Foreign"
+- var prevURL   = "work-foreign.html"
+- var nextTitle = "GiveReceipt Web/App"
+- var nextURL   = "work-givereceipt.html"
+
+
 doctype html
 html(lang="en")
   head
@@ -8,7 +15,8 @@ html(lang="en")
       a(href="work-gr.html" title="View GiveReceipt project" tabindex="-1").tooltip.move.move-left
 
       .segment.type
-        h2 Atop Watches
+        h2
+          = project
         dl.credits
           dt Client
           dd SaltyCustom
@@ -21,10 +29,10 @@ html(lang="en")
 
       a(href="work-ih.html" title="View Ideahouse project" tabindex="-1").tooltip.move.move-right
 
-    hr
 
-    aside.project(role="complementary")
+    aside.project(role="complementary")#what
       .segment.type
+
         dl.credits
           dt Role
           dd Identity
@@ -41,23 +49,29 @@ html(lang="en")
 
     main(role="main")
 
-      .segment.type.intro
+      .segment.type
         h3 A campaign site for Taiwanese watch manufacturer ATOP.
-        p Before I discovered the joys of MacBooks, I used to put together my own Windows builds because I am a huge dweeb.
-        p A key component of any PC is its motherboard. This is like the central nevous system of a computer and therefore one of its most important parts. A trusted name in mid-level motherboards at the time was ASUS — a manufacturer from Taiwan. This is all I knew about Taiwan until I came across these watches.
-        p Before I discovered the joys of MacBooks, I used to put together my own Windows builds because I am a huge dweeb. A key component of any PC is its motherboard. This is like the central nervous system of a computer and therefore one of its most important parts. A trusted name in mid-level motherboards at the time was ASUS — a manufacturer from Taiwan. This is all I knew about Taiwan until I came across these watches. There are two distinguishing factors to these watches — it’s colours and the time zones. I hit on the changing the site’s theme colour quite early on.
+        p Before I discovered the joys of MacBooks, I used to put together my own Windows builds because I am a huge dweeb. A key component of any PC is its motherboard. This is like the central nevous system of a computer and therefore one of its most important parts. A trusted name in mid-level motherboards at the time was ASUS, a manufacturer from Taiwan. This is all I knew about Taiwan until I came across these watches.
 
-        h3 SVG
-        p In 2010, there was a lot of hype around SVG, primarily because of retina screens. Here we had an image format that could. We had a list of watches  12 in total–we needed a way to keep track of them and extend if necessary. The most straight forward to keep track of all this data was to bung it in a JSON object.
+      .segment.surface
+        figure
+          img(src="img/projects/atop-layout.png")
+          figcaption  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus a quas non veritatis placeat veniam nihil consequatur, qui rem doloremque tenetur, nostrum, est quidem. Numquam fugiat impedit explicabo optio voluptatum.
+
 
       .segment.surface(id="waypoint-atop")
-        .atop-live
-          .face
-          .hand-large
-          .hand-small
-          .seconds
-          .unit
-          .day
+        figure
+          .atop-live
+            .face
+            .hand-large
+            .hand-small
+            .seconds
+            .unit
+            .day
+
+          figcaption Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem veritatis cumque veniam dolor recusandae, enim impedit aut. Eveniet adipisci eius, architecto dolore commodi dicta reiciendis tempora repellat maiores. Atque, eius.
+
+
 
       .segment.code
         pre.comment.
@@ -81,11 +95,12 @@ html(lang="en")
             var productHex = productArr[productChoice-1].hex;
             $('.logo').attr('fill', '#'+productHex);
           });
-      .segment.type.intro
-        p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab similique cumque a labore at culpa ad, voluptates, inventore vel doloribus vero facilis nesciunt reprehenderit necessitatibus obcaecati corporis eligendi et esse.
-        p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab similique cumque a labore at culpa ad, voluptates, inventore vel doloribus vero facilis nesciunt reprehenderit necessitatibus obcaecati corporis eligendi et esse.
 
 
+
+      .segment.type
+        h3 SVG
+        p In 2010, there was a lot of hype around SVG, primarily because of retina screens. Here we had an image format that could. We had a list of watches  12 in total–we needed a way to keep track of them and extend if necessary. The most straight forward to keep track of all this data was to bung it in a JSON object.
 
     include partials/_footer
     include partials/_scripts

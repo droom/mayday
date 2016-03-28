@@ -21,18 +21,19 @@ nav
       pointer-events: none
       a
         pointer-events: auto
-        // border: none
         &.profile
           text-transform: uppercase
           letter-spacing: 0.06em
         &.profile::after
           content: ".io"
+          
+          
       &:nth-child(2)
         text-align: right
 
 @media (max-width: $phone-max)
   nav ol li
-    padding-top: 7px
+    padding: 1em 0
     a
       font-size: 0.85rem
 
@@ -41,11 +42,11 @@ nav
     content: ""
 
 
-ul.work-list li.band a.plain:hover > .segment.type.work
+a.plain:hover > .segment.type.work
   background-position: 100% 50%
 
 @media (max-width: $phone-max)
-  ul.work-list li.band a.plain:hover > .segment.type.work
+  a.plain:hover > .segment.type.work
     background-position: 95% 20%
 
 
@@ -69,80 +70,16 @@ body.work.iso
       width: 100%
       &:hover
         cursor: url('../img/components/arrow-nav-return.svg'), n-resize
+    &.move-top
+      left: 0
+      width: 100%
+      &:hover
+        cursor: url('../img/components/arrow-nav-top.svg'), n-resize
 
 
-
-
-
-
-
-// nav
-//   z-index: 2
-//   position: relative
-//   padding-top: 0
-//   padding-bottom: 0
-//   pointer-events: none
-//   ol
-//     margin: 0
-//     padding: 0
-//     pointer-events: none
-//     li
-//       font-size: 1rem
-//       font-weight: bold
-//       width: 50%
-//       padding: 0
-//       margin: 0
-//       display: inline-block
-//       padding-top: 20px
-//       padding-bottom: 20px
-//       pointer-events: none
-//       a
-//         pointer-events: auto
-//         &.profile
-//           text-transform: uppercase
-//           letter-spacing: 0.06em
-//         &.profile::after
-//           content: ".io"
-//       &:nth-child(2)
-//         text-align: right
-
-// @media (max-width: $phone-max)
-//   nav ol li
-//     padding-top: 7px
-//     a
-//       font-size: 0.85rem
-
-// @media (max-width: 355px)
-//   nav ol li a.profile::after
-//     content: ""
-
-
-// ul.work-list li.band a.plain:hover > .segment.type.work
-//   background-position: 100% 50%
-
-// @media (max-width: $phone-max)
-//   ul.work-list li.band a.plain:hover > .segment.type.work
-//     background-position: 95% 20%
-
-
-// body.work.iso
-//   a.move
-//     height: 100%
-//     position: absolute
-//     top: 0
-//     z-index: 0
-//     border-bottom: none
-//     &.move-left
-//       left: 0
-//       cursor: url('../img/components/arrow-nav-prev.svg'), w-resize
-//       width: 50%
-//     &.move-right
-//       right: 0
-//       cursor: url('../img/components/arrow-nav-next.svg'), e-resize
-//       width: 50%
-//     &.move-up
-//       left: 0
-//       width: 100%
-//       &:hover
-//         cursor: url('../img/components/arrow-nav-return.svg'), n-resize
-
+.scrollbar-measure
+  width: 100px
+  height: 100px
+  overflow: scroll
+  position: absolute
+  top: -9999px

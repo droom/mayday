@@ -31,4 +31,26 @@ $( document ).ready(function() {
   })
   }
 
+
+
+  var hello2 = new Waypoint({
+  element: document.getElementById('what'),
+  handler: function(direction) {
+    console.log('I am 20px from the top of the window')
+      $(".band.head.relative.unselect.hello").css("top", "0px");
+  }
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
 });

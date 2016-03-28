@@ -11,14 +11,21 @@ html(lang="en")
           = "Selected Work"
         small 2012&ndash;2015
 
-    hr
-
-
-    main(role='main')
+    main(role='main')#what
 
       ul.work-list
+        li
+          a.plain(href="work-goget.html")
+            .segment.type.work
+              dl.credits
+                dt.hide Project name
+                dd.project.h3 GoGet App
+                dt Client
+                dd.client GoGet
+                dt Studio
+                dd.studio VLT
 
-        li.band
+        li
           a.plain(href="work-foreign.html")
             .segment.type.work
               dl.credits
@@ -30,7 +37,7 @@ html(lang="en")
                 dd.studio Reformist.io
 
 
-        li.band.hr
+        li
           a.plain(href="work-atop.html")
             .segment.type.work
               dl.credits
@@ -41,20 +48,7 @@ html(lang="en")
                 dt Studio
                 dd.studio DROOM+TZY
 
-        li.band.hr
-          a.plain(href="work-goget.html")
-            .segment.type.work
-              dl.credits
-                dt.hide Project name
-                dd.project.h3 GoGet App
-                dt Client
-                dd.client GoGet
-                dt Studio
-                dd.studio VLT
-
-
-
-        li.band.hr
+        li
           a.plain(href="work-givereceipt.html")
             .segment.type.work
               dl.credits
@@ -65,7 +59,7 @@ html(lang="en")
                 dt Studio
                 dd.studio Six Leaves
 
-        li.band.hr
+        li
           a.plain(href='work-ideahouse.html')
             .segment.type.work
               dl.credits

@@ -1,9 +1,10 @@
-h1, h2, h3, .h1, .h2, .h3
-  font-family: $serif
-  font-family: $sans
+body
+  h1, h2, h3, h4, nav, nav ol li, .h1, .h2, .h3, .h4
+    font-family: sans-serif
 
-nav ol li
-  font-family: $sans
+body.circular
+  h1, h2, h3, h4, nav, nav ol li, .h1, .h2, .h3, .h4
+    font-family: $sans
 
 h2, .h2
   font-weight: 700
@@ -33,68 +34,43 @@ h3, .h3
   font-weight: 600
   line-height: 1.2em
   letter-spacing: -0.02em
-  margin: 0
 
 @media (max-width: $phone-max)
   h3, .h3
-    font-size: 1.2rem
+    font-size: 1.5rem
 
 h4, .h4
-  margin: 0px 0 20px 0
+  margin: 0
+  padding-top: 0px
+  padding-bottom: 0px
 
+p 
+  font-size: 1em
+  line-height: 1.5em
+
+  &.bind
+    max-width: 400px
+    
 sup
-  vertical-align: top
-  a
-    vertical-align: top
-    font-size: 0.5em
+  vertical-align: center
+  font-size: 10px
+  padding: 0 3px 0 0px
 
-
-.segment.type
-  p, li
-    line-height: 1.5em
-    font-size: 1rem
-    margin: 0
-
-  ul
-    li + li
-      margin-top: 1em 
-  p + p
-    margin-top: 1em 
-  h3 + p
-    margin-top: 1.5em 
-  p + h3
-    margin-top: 1.5em 
-
-
-
-
-p.bind
-  max-width: 400px
-
-hr
-  height: 1px
-  border: 0
+pre
+  font-family: $mono
   margin: 0
-  padding: 0
-  background: 0
-  border-bottom: $faint-border
-
-pre,
-pre.comment
-  margin: 0
-  font-size: 14px
+  font-size: 13px
   line-height: 21px
   border-radius: 1px
-  font-family: 'InputMonoNarrow-Regular', 'InputMonoNarrow-Thin', georgia, inconsolata, monospace
   word-wrap: break-word
   color: #08bfca
   text-align: left
 
-pre.comment
-  color: grey
+  &.comment
+    color: grey
 
-pre + pre.comment,
-  padding-top: 15px
+  & + pre.comment
+    padding-top: 15px
 
 
 small
@@ -115,7 +91,6 @@ figcaption
   counter-increment: cards
   opacity: 1
 
-
 figcaption:before
   content: "fig. " counter(cards)
   display: block
@@ -128,6 +103,7 @@ blockquote::before
   content: ""
 
 /* Dressing */
+
 .ndash
   position: relative
   top: -0.09em
@@ -136,27 +112,29 @@ blockquote::before
   color: $blue
   font-weight: 400
   text-rendering: optimizeLegibility
-  
-// .accent.slim
-//   letter-spacing: -0.2em
-//   margin-right: 0.2em
-
-/* Adjustments */
 .br
   display: block
 
 .hide-desktop
   display: none
-@media (max-width: $phone-max)
-  .hide-desktop
-    display: block
 
-h1
-  .hide-mobile
-    opacity: 1
-    transition: $transition
+.pull
+  margin: 0 0 0 -0.07em
+  
 
-@media (max-width: 360px)
-  h1
-    .hide-mobile
-      opacity: 0
+
+
+
+// h1
+//   .hide-mobile
+//     opacity: 1
+//     transition: $transition
+
+// @media (max-width: $phone-max)
+//   .hide-desktop
+//     display: block
+
+// @media (max-width: 360px)
+//   h1
+//     .hide-mobile
+//       opacity: 0

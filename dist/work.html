@@ -8,16 +8,26 @@
     <link rel="stylesheet" media="screen" type="text/css" href="https://fonts.googleapis.com/css?family=Noto+Serif:400,400italic,700,700italic">
     <link rel="stylesheet" media="screen" type="text/css" href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700">
     <link rel="stylesheet" media="screen" type="text/css" href="css/style.css">
+    <script src="js/modernizr.js"></script>
   </head>
   <body class="work">
-    <div class="band head relative unselect">
+    <div id="head" class="band head relative unselect"><a href="work.html" tabindex="-1" class="move move-up"></a>
       <nav role="navigation">
         <ol>
           <li><a href="index.html" class="profile">droom</a></li>
           <li><a href="work.html" class="work">Case Studies</a></li>
         </ol>
-      </nav><a href="work.html" tabindex="-1" class="move move-up"></a>
-      <hr>
+      </nav>
+    </div>
+    
+    <div class="band head relative unselect hello"><a href="#head" tabindex="-1" class="move move-top"></a>
+      <nav>
+        <ol>
+          <li class="profile">droom.io</li>
+          <li class="work">
+          </li>
+        </ol>
+      </nav>
     </div>
     <div class="band head hr relative">
       <div class="segment type">
@@ -25,32 +35,9 @@
         </h2><small>2012&ndash;2015</small>
       </div>
     </div>
-    <hr>
-    <main role="main">
+    <main role="main" id="what">
       <ul class="work-list">
-        <li class="band"><a href="work-foreign.html" class="plain">
-            <div class="segment type work">
-              <dl class="credits">
-                <dt class="hide">Project name</dt>
-                <dd class="project h3">Foreign Office (tumblr)</dd>
-                <dt>Client</dt>
-                <dd class="client">&mdash;</dd>
-                <dt>Studio</dt>
-                <dd class="studio">Reformist.io</dd>
-              </dl>
-            </div></a></li>
-        <li class="band hr"><a href="work-atop.html" class="plain">
-            <div class="segment type work">
-              <dl class="credits">
-                <dt class="hide">Project name</dt>
-                <dd class="project h3">ATOP Watches</dd>
-                <dt>Client</dt>
-                <dd class="client">ATOP Watches</dd>
-                <dt>Studio</dt>
-                <dd class="studio">DROOM+TZY</dd>
-              </dl>
-            </div></a></li>
-        <li class="band hr"><a href="work-goget.html" class="plain">
+        <li><a href="work-goget.html" class="plain">
             <div class="segment type work">
               <dl class="credits">
                 <dt class="hide">Project name</dt>
@@ -61,7 +48,29 @@
                 <dd class="studio">VLT</dd>
               </dl>
             </div></a></li>
-        <li class="band hr"><a href="work-givereceipt.html" class="plain">
+        <li><a href="work-foreign.html" class="plain">
+            <div class="segment type work">
+              <dl class="credits">
+                <dt class="hide">Project name</dt>
+                <dd class="project h3">Foreign Office (tumblr)</dd>
+                <dt>Client</dt>
+                <dd class="client">&mdash;</dd>
+                <dt>Studio</dt>
+                <dd class="studio">Reformist.io</dd>
+              </dl>
+            </div></a></li>
+        <li><a href="work-atop.html" class="plain">
+            <div class="segment type work">
+              <dl class="credits">
+                <dt class="hide">Project name</dt>
+                <dd class="project h3">ATOP Watches</dd>
+                <dt>Client</dt>
+                <dd class="client">ATOP Watches</dd>
+                <dt>Studio</dt>
+                <dd class="studio">DROOM+TZY</dd>
+              </dl>
+            </div></a></li>
+        <li><a href="work-givereceipt.html" class="plain">
             <div class="segment type work">
               <dl class="credits">
                 <dt class="hide">Project name</dt>
@@ -72,7 +81,7 @@
                 <dd class="studio">Six Leaves</dd>
               </dl>
             </div></a></li>
-        <li class="band hr"><a href="work-ideahouse.html" class="plain">
+        <li><a href="work-ideahouse.html" class="plain">
             <div class="segment type work">
               <dl class="credits">
                 <dt class="hide">Project name</dt>
@@ -87,12 +96,11 @@
     </main>
     <footer role="contentinfo" class="band hr">
       <div class="segment type">
-        <p><a href="#top" aria-label="Back to top">Back to top</a></p>
-        <p>Made by Chris Droom &copy;2016<br><a href="http://github.com/droom" aria-label="View code on GitHub">Judge code</a>
+        <p>Made by Chris Droom <sup>&copy;</sup>2016<br><a href="https://github.com/droom/mayday" aria-label="View code on GitHub" class="pull">Inspect code</a>
         </p>
       </div>
     </footer>
-    <script src="js/main.min.js"></script><script src="https://use.typekit.net/zrt7mas.js"></script>
-    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+    <script src="js/main.min.js"></script>
+    
   </body>
 </html>
