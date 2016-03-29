@@ -4,11 +4,12 @@
 - var nextTitle = "Ideahouse"
 - var nextURL   = "work-foreign.html"
 
-
 doctype html
-html(lang="en")
+include partials/_html
+
   head
     include partials/_head
+    
   body.work.iso(data-project="givereceipt")
     include partials/_banner
     .band.head.hr.relative
@@ -30,8 +31,7 @@ html(lang="en")
           dd.asia
             a(href="http://www.givereceipt.com/" aria-label="Visit GiveReceipt") givereceipt.com
 
-
-      a(href="work-ideahouse.html" aria-label="View project: Ideahouse").move.move-right
+      a(href=nextURL aria-label="View project: Ideahouse").move.move-right
 
     aside.project(role="complementary")#what
       .segment.type

@@ -1,26 +1,6 @@
 $( document ).ready(function() {
 
 
-  var noto = new FontFaceObserver('Noto Serif');
-
-  noto.load(null, 5000).then(function () {
-    $('body').addClass('noto')
-  }, function () {
-    console.log('Font is not available after waiting 5 seconds');
-  });
-
-
-  var circ = new FontFaceObserver('CircularStd-Bold');
-
-  circ.load(null, 5000).then(function () {
-    $('body').addClass('circular')
-  }, function () {
-    console.log('Font is not available after waiting 5 seconds');
-  });
-
-
-
-
   $(function() {
     $('a[href*=#]:not([href=#])').click(function() {
       if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
@@ -42,8 +22,6 @@ $( document ).ready(function() {
 
 
 
-
-
   var hello3 = new Waypoint({
     element: document.getElementById('what'),
     handler: function(direction) {
@@ -56,24 +34,16 @@ $( document ).ready(function() {
 
 
 
-
-
-
   var scrollDiv = document.createElement("div");
   scrollDiv.className = "scrollbar-measure";
   document.body.appendChild(scrollDiv);
-// Get the scrollbar width
-var scrollbarWidth = scrollDiv.offsetWidth - scrollDiv.clientWidth;
-console.warn(scrollbarWidth); // Mac:  15
-// Delete the DIV
-document.body.removeChild(scrollDiv);
-  // moves out of scrollbar's way
+  var scrollbarWidth = scrollDiv.offsetWidth - scrollDiv.clientWidth;
+  console.warn(scrollbarWidth); 
+  document.body.removeChild(scrollDiv);
   if ($(document).height() > $(window).height()) {
     console.log("scrollbar present");
     $('body.work.iso .band.head.hr.relative a.move.move-right').css('margin-right', scrollbarWidth);
   }
-
-
 
 
 
@@ -86,8 +56,6 @@ document.body.removeChild(scrollDiv);
 
   var project = new Array();
 
-
-
   $( "ul.work-list li" ).each(function( index ) {
     project[0].push( $(this).find('.project').html() );
     project[1].push( $(this).find('.client').html() );
@@ -97,7 +65,6 @@ document.body.removeChild(scrollDiv);
     localStorage["project"] = JSON.stringify( $(this).find('.project').html() );
   });
 
-
   console.log(project);
 
 });
@@ -106,26 +73,3 @@ document.body.removeChild(scrollDiv);
 
 
 
-  // console.log(window.location.pathname);
-  // console.log($(location).attr('href'));
-  // $( "a.back" ).click(function( event ) {
-  //   event.preventDefault();
-  //   history.go(-1);
-  // });
-// localStorage.company = $('#company').val();
-// localStorage.currency = $('#currency').val();
-// localStorage.salutation = $('#salutation').val();
- // console.log("localStorage called");
- // var workArray =  $( "dd.project.h3" );
- // console.log("workArray is "+ workArray);
- // console.log("localStorage.auth is "+localStorage.auth);
- // function pageState(){
- //   console.log("localStorage.auth is "+localStorage.auth);
- //   localStorage.name = $('#name').val();
- //   localStorage.company = $('#company').val();
- //   localStorage.currency = $('#currency').val();
- //   localStorage.salutation = $('#salutation').val();
- //   localStorage.language = $('#language').val();
- //   localStorage.telephone = $('#telephone').val();
- //   localStorage.state = $('#state').val();
- // }

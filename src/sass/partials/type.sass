@@ -1,15 +1,11 @@
 body
   h1, h2, h3, h4, nav, nav ol li, .h1, .h2, .h3, .h4
-    font-family: sans-serif
-
-body.circular
-  h1, h2, h3, h4, nav, nav ol li, .h1, .h2, .h3, .h4
     font-family: $sans
 
 h2, .h2
   font-weight: 700
   letter-spacing: -0.035em
-  line-height: 1.2em
+  line-height: 1.15em
   font-size: 3rem
   color: $copy
   margin: 0
@@ -52,9 +48,9 @@ p
     max-width: 400px
     
 sup
-  vertical-align: center
-  font-size: 10px
-  padding: 0 3px 0 0px
+  vertical-align: middle
+  font-size: 11px
+  padding: 0 
 
 pre
   font-family: $mono
@@ -119,22 +115,6 @@ blockquote::before
   display: none
 
 .pull
-  margin: 0 0 0 -0.07em
-  
+  margin: 0 0 0 -0.09em
+  // outline: red 1px solid
 
-
-
-
-// h1
-//   .hide-mobile
-//     opacity: 1
-//     transition: $transition
-
-// @media (max-width: $phone-max)
-//   .hide-desktop
-//     display: block
-
-// @media (max-width: 360px)
-//   h1
-//     .hide-mobile
-//       opacity: 0

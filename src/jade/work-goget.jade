@@ -4,11 +4,12 @@
 - var nextTitle = "Foreign Office"
 - var nextURL   = "work-foreign.html"
 
-
 doctype html
-html(lang="en")
+include partials/_html
+
   head
     include partials/_head
+
   body.work.iso(data-project="goget")
     include partials/_banner
     .band.head.hr.relative
@@ -48,11 +49,8 @@ html(lang="en")
     main(role="main")
       .segment.type
         h3 GoGet is a community focused errands and delivery service, currently operating in Kuala Lumpur.
-        
         p When I met the founders, Fran and Fung had version 1 of their site up and running. A (Twitter) bootstrapped, no-frills but just about functional site.
-        
         p This was a bit tricker than it seemed at first glance. There were two separate user journeys, GoGetter (I run errands) and Poster (I want someone to run an errand) with the ability for the user to switch between the two.
-
         p I used a modified version of Google Ventures’ Design Sprint methodology to tackle this problem.
 
 
@@ -61,9 +59,17 @@ html(lang="en")
           img(src="img/projects/gg-sprint.jpg")
           figcaption  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum sint deserunt totam harum fuga accusamus facilis eos reiciendis quod, odio ex aperiam sequi quia, odit maxime officia ipsa, laborum enim.
 
-      .segment.blueprint
+      .segment.blueprint.wire
+        .yoyo
+          small.warn 
+            | This screen is too small :(
+            br
+            | To view this image fullscreen.
 
-        
+        figure
+          img(src="img/projects/gr-wire.png")
+          figcaption Initial exploration of wordmarks. Things I needed to communicate. Safety (Trustworthy), Speed (Reliable, Efficient), A sense of community (Friendly)
+
 
 
       .segment.surface
@@ -72,10 +78,10 @@ html(lang="en")
           img(src="img/projects/gg-research-2.jpg").half
           figcaption  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod quae in odit enim, voluptatibus quidem deleniti minus quisquam, consequuntur soluta libero cum iusto molestiae nobis culpa sed similique accusantium ab. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore neque molestiae sed adipisci ipsum hic commodi, praesentium excepturi laboriosam sequi ab, architecto quasi inventore perferendis magnam illum alias, recusandae minus.
 
-      //- .segment.blueprint
-      //-   figure
-      //-     img(src="img/projects/gg-views-small.png")
-      //-     figcaption Premium subscriptions give the option of different print layouts.
+      .segment.blueprint
+        figure
+          img(src="img/projects/gg-marks.png")
+          figcaption Initial exploration of wordmarks. Things I needed to communicate. Safety (Trustworthy), Speed (Reliable, Efficient), A sense of community (Friendly)
 
       .segment.surface
         figure
@@ -88,17 +94,12 @@ html(lang="en")
 
       .segment.blueprint
         figure
-          img(src="img/projects/gg-id.png")
-          figcaption Initial exploration of wordmarks. Things I needed to communicate. Safety (Trustworthy), Speed (Reliable, Efficient), A sense of community (Friendly)
-
-      .segment.blueprint
-        figure
           img(src="img/projects/gg-ui.png")
           figcaption UI based on transport markings found around Malaysia.
 
       .segment.blueprint
         figure
-          img(src="img/projects/gg-notice.svg")
+          img(src="img/projects/gg-notice.png")
           figcaption In-app notifications
 
 

@@ -27,7 +27,7 @@ ul.page,
     text-align: center
     figure
       img
-        background: url('../img/components/tile-graph.png') repeat 50% 50% $blueDark
+        background: url('../img/components/tile-graph.gif') repeat 50% 50% $blueDark
       figcaption
         padding-left: $gttr-dt
         padding-right: $gttr-dt
@@ -58,7 +58,6 @@ ul.page,
   &.offset
     text-align: left
     max-width: 950px
-
        
   &.type
     position: relative
@@ -86,13 +85,44 @@ ul.page,
 
  
 
- 
+
+.segment.blueprint.wire
+  position: relative
+
+  .yoyo
+    position: absolute
+    left: 0
+    top: 0
+    z-index: 5
+    background: #2e4dd2
+    // width: 50%
+
+    .warn
+      padding: $gttr-ph 30px 30px $gttr-ph
+      margin: 0
+      color: white
+      text-align: left
+
+
+
+@media (max-width: $phone-max)
+  .segment
+    &.blueprint.wire
+      .warn
+        display: block
+        
+      figure
+        img
+          // outline: 3px solid green
+          opacity: 0.4
+
+
+
 header,
 nav,
 ul.page li a,
 .segment.type
   padding: $gttr-dt-top $gttr-dt $gttr-dt $gttr-dt 
-
 
 
 @media (max-width: $phone-max)
