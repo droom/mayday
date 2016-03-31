@@ -1391,7 +1391,6 @@ a;q()});y(p,J(c,'"'+c.family+'",monospace'))})})};window.FontFaceObserver=B;wind
 });
 ;$( document ).ready(function() {
 
-
   $(function() {
     $('a[href*=#]:not([href=#])').click(function() {
       if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
@@ -1412,15 +1411,11 @@ a;q()});y(p,J(c,'"'+c.family+'",monospace'))})})};window.FontFaceObserver=B;wind
   });
 
 
-
-
   var hello3 = new Waypoint({
     element: document.getElementById('what'),
     handler: function(direction) {
       console.log('I am 20px from the top of the window')
       $(".band.head.relative.unselect.hello").css("top", "-70px");
-
-
     }, offset: 56
   })
 
@@ -1437,29 +1432,55 @@ a;q()});y(p,J(c,'"'+c.family+'",monospace'))})})};window.FontFaceObserver=B;wind
     $('body.work.iso .band.head.hr.relative a.move.move-right').css('margin-right', scrollbarWidth);
   }
 
+  
+
+});
 
 
 
 
-  var project = [
-  [],
-  [],
-  [],
-  []
-  ]
 
-  var project = new Array();
+;$( document ).ready(function() {
 
-  $( "ul.work-list li" ).each(function( index ) {
-    project[0].push( $(this).find('.project').html() );
-    project[1].push( $(this).find('.client').html() );
-    project[2].push( $(this).find('.studio').html() );
-    project[3].push( $(this).find('.plain').attr('href') );
+	function cover(){
+	// console.log( 'window is ' + $(window).height() )
+	// console.log( '.belly-title is ' + $('.belly-title').height() )
+	// console.log( '.belly-aside is ' + $('.belly-aside').height() )
 
-    localStorage["project"] = JSON.stringify( $(this).find('.project').html() );
-  });
+	var hWindow       =  $(window).height();
+	var wWindow       =  $(window).width();
+	var hBellyTitle   =  $('.belly-title').height();
+	var hBellyAside   =  $('.belly-aside').height();
+	var hBellyPhoto   =  $('.belly-photo').height();
 
-  console.log(project);
+	var hCombined     =  parseInt(hBellyTitle + hBellyAside + hBellyPhoto);
+
+	var hSum          =  hWindow - parseInt(hBellyTitle + hBellyAside);
+	var hSup 		  =  parseInt(hWindow - hBellyTitle);
+
+	console.log( 'wWindow', wWindow );
+	// console.log( 'hCombined', hCombined );
+
+
+	if (wWindow > 600) {
+		$('.belly-photo').css('height', hSup);
+	} else {
+		$('.belly-photo').css('height', hSum);
+	}
+
+
+}
+
+
+
+$( window ).resize(function() {
+	cover();
+});
+
+
+
+cover();
+
 
 });
 

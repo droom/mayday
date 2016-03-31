@@ -4,37 +4,51 @@ include partials/_html
     include partials/_head
 
   body.profile
-    include partials/_banner
+    .belly-title
+      include partials/_banner
+      .band.head.relative.hr
+        .segment.type
+          h2
+            = "Chris Droom is a Designer "
+            span.accent &amp;&amp;
+            = " Client-side Developer based in London "
+            span.accent.slim &#124;&#124;
+            = " Berlin"
+            &nbsp;
+            span.accent.slim &#124;&#124;
+            &nbsp;
+            = "KL"
 
-    .band.head.relative.hr
-      .segment.type
-        h2
-          = "Chris Droom is a Designer "
-          span.accent &amp;&amp;
-          = " Client-side Developer based in London "
-          span.accent.slim &#124;&#124;
-          = " Berlin"
-          &nbsp;
-          span.accent.slim &#124;&#124;
-          &nbsp;
-          = "KL"
+    .belly-photo.me
 
-    main(role="main")
-      .segment.offset
-        figure
-          img(src="img/editorial/me.gif", alt="Workspace, 2015")
+    .belly-aside
+      aside.project(role="complementary")#what
+        .segment.type
+          p.bind
+            strong 
+              = "Hello."
+            = " I'm a friendly and ambitious Digital Designer from South London, England. You can find me on "
+            a(href="https://twitter.com/droomio") Twitter
+            = ", "
+            a(href="https://github.com/droom") GitHub
+            = " or "
+            a(href="http://codepen.io/droom") CodePen
+            = ". You can view my work history and testimonials on "
+            a(href="http://uk.linkedin.com/in/chrisdroom") LinkedIn
+            = "."
 
-      .segment.type
-        p.bind
-          = "Hello. I'm a friendly and ambitious Digital Designer from South London, England. You can find me on "
-          a(href="https://twitter.com/droomio") Twitter
-          = ", "
-          a(href="https://github.com/droom") GitHub
-          = " or "
-          a(href="http://codepen.io/droom") CodePen
-          = ". You can view my work history and testimonials on "
-          a(href="http://uk.linkedin.com/in/chrisdroom") LinkedIn
-          = "."
+    //- main(role="main")
+      //- .segment.type
+      //-   p.bind
+      //-     = "Hello. I'm a friendly and ambitious Digital Designer from South London, England. You can find me on "
+      //-     a(href="https://twitter.com/droomio") Twitter
+      //-     = ", "
+      //-     a(href="https://github.com/droom") GitHub
+      //-     = " or "
+      //-     a(href="http://codepen.io/droom") CodePen
+      //-     = ". You can view my work history and testimonials on "
+      //-     a(href="http://uk.linkedin.com/in/chrisdroom") LinkedIn
+      //-     = "."
 
     include partials/_footer
     include partials/_scripts

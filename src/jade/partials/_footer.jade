@@ -1,20 +1,36 @@
 if project
   .band.hr.relative.turn
-    a(href=prevURL tabindex="-1").move.move-left
+    //- a(href=prevURL tabindex="-1")
+
     ul.page
       li
-        a(href=prevURL)
-          small Previous project
-          if prevTitle
-            h3
-              = prevTitle
+        a.plain(href=prevURL)
+          .segment.type
+            dl.credits
+              dt.hide Project name
+              dd.project.h4
+                = prevTitle
+              dt.client Client
+              dd.client DVG Web
+              dt.studio Studio
+              dd.studio Six Leaves
+
+
+
       li
-        a(href=nextURL)
-          small Next project
-          if nextTitle
-            h3 
-              = nextTitle
-    a(href=nextURL tabindex="-1").move.move-right
+        a.plain(href=nextURL)
+          .segment.type
+            dl.credits
+              dt.hide Project name
+              dd.project.h4
+                = nextTitle
+              dt.client Client
+              dd.client DVG Web
+              dt.studio Studio
+              dd.studio Six Leaves
+
+
+    //- a(href=nextURL tabindex="-1")
 
 
 footer(role="contentinfo").band.hr

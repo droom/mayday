@@ -1,6 +1,5 @@
 header,
 nav,
-ul.page,
 .type
   max-width: $narrow-unit
   margin: auto
@@ -10,25 +9,40 @@ ul.page,
     border-top: $border
   &.head
     background: $blueSky
-  &.turn
   &.ref
     background: rgba(200,200,200,0.1)
+    padding: 0 0 1em 0
   &.relative
     position: relative
-    
+  &.cover
+    &.fo
+      background: #2d3423
+    &.gr
+      height: 300px
+      background: url("../img/projects/gr-cover.jpg") 50% 0 no-repeat
+
+
 .segment
   margin: auto
   img,
   video
     max-width: 100%
 
-  &.blueprint
+  &.cover
     max-width: $wide-unit
     text-align: center
     figure
       img
-        background: url('../img/components/tile-graph.gif') repeat 50% 50% $blueDark
+        max-width: 100%
+
+  &.blueprint
+    max-width: $wide-unit
+    text-align: center
+    figure
+      background: url('../img/components/tile-graph.gif') repeat 50% 50% $blueDark
       figcaption
+        width: 100%
+        background: $bg
         padding-left: $gttr-dt
         padding-right: $gttr-dt
       img
@@ -47,13 +61,14 @@ ul.page,
       figcaption
         padding-left: $gttr-dt
         padding-right: $gttr-dt
-
+        max-width: 340px
 
   &.code
     padding: $gttr-dt
     background: $slate
     max-width: $wide-unit
     transition: 700ms all ease
+    overflow: hidden
       
   &.offset
     text-align: left
@@ -83,9 +98,6 @@ ul.page,
       padding-left: 40px
 
 
- 
-
-
 .segment.blueprint.wire
   position: relative
 
@@ -95,14 +107,12 @@ ul.page,
     top: 0
     z-index: 5
     background: #2e4dd2
-    // width: 50%
 
     .warn
       padding: $gttr-ph 30px 30px $gttr-ph
       margin: 0
       color: white
       text-align: left
-
 
 
 @media (max-width: $phone-max)
@@ -113,14 +123,11 @@ ul.page,
         
       figure
         img
-          // outline: 3px solid green
           opacity: 0.4
-
 
 
 header,
 nav,
-ul.page li a,
 .segment.type
   padding: $gttr-dt-top $gttr-dt $gttr-dt $gttr-dt 
 
@@ -128,7 +135,6 @@ ul.page li a,
 @media (max-width: $phone-max)
   header,
   nav,
-  ul.page li a,
   .segment.type
     padding: $gttr-ph
     

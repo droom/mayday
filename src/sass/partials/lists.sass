@@ -35,32 +35,7 @@ ul.work-list
     & + li
       margin: 0
 
-ul.page
-  display: flex
-  margin: 0
-  padding: 0
-  width: 100%
-  li
-    z-index: 10000 
-    width: 50%
-    display: block
-    pointer-events: none
-    padding: 10px 0
-    a
-      pointer-events: none
-      padding: 0
-      display: block 
-      border: none
-      small
-        text-transform: uppercase
-        letter-spacing: 0.1em
-      small + h3  
-        margin: 0.1em 0 0 0 
-  li:nth-child(2)
-    text-align: right
-    border-left: $border
-  li + li
-    margin-top: 0
+
 
 
 dl.credits
@@ -96,6 +71,7 @@ dl.credits
 
   dt.hide
     display: none
+    
   dd.project
     margin: 0 0 45px -1px
     display: block
@@ -110,12 +86,10 @@ dl.credits
 
 
 @media (max-width: $phone-max)
-  dl.credits
-    dd.project
-      margin: 0 0 25px 0
-  dl.credits + dl.credits
-    margin-bottom: 20px
-
-
-
+  ul.work-list
+    dl.credits
+      width: 75%
+      padding: 0 0 3em 0
+      dd.project
+        margin: 0px 0 1em 0 
 

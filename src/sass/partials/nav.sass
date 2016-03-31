@@ -25,59 +25,168 @@ nav
         text-transform: uppercase
         letter-spacing: 0.06em
       &.profile::after
-        content: "beta"
-        margin-left: 7px
-        color: white
+        content: ""
+        margin-left: 10px
+        padding: 2px 5px
+        color: $blueSky
         border: none
-        opacity: 0.7
         letter-spacing: 0.06em
       &:nth-child(2)
         text-align: right
 
 @media (max-width: $phone-max)
   nav ol li
-    padding: 1em 0
-    a
-      font-size: 0.85rem
+    padding: 0.9em 0 1.1em 0 
+    padding: 1.2em 0 1.3em 0 
+    
+    font-size: 0.85rem
 
-@media (max-width: 355px)
-  nav ol li a.profile::after
-    content: ""
+    &.profile::after
+      content: ""
 
 
-a.plain:hover > .segment.type.work
-  background-position: 100% 50%
+ul.work-list
+  .segment.work
+    background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNi4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iNjBweCIgaGVpZ2h0PSI1NnB4IiB2aWV3Qm94PSI2OC4wNjYgNzQuODU1IDYwIDU2IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDY4LjA2NiA3NC44NTUgNjAgNTYiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGc+DQoJPHBvbHlnb24gZmlsbD0iIzJDMjIyNSIgcG9pbnRzPSIxMjguMDY2LDEwMi45NzEgOTcuMTU3LDEzMC44NTUgOTcuMDk1LDEzMC43ODEgOTcuMDY1LDEzMC44MDggOTUuNjA5LDEyOS4wMTkgOTMuMzUzLDEyNi4zNDUgDQoJCTkzLjM5NywxMjYuMzA1IDkzLjM1MywxMjYuMjQ4IDExNi40MjcsMTA1LjgyOSA2OC4wNjYsMTA1LjgyOSA2OC4wNjYsOTkuNDg2IDExNS44MzQsOTkuNDg2IDkzLjM1Myw3OS42ODggOTMuNTIsNzkuNDc4IA0KCQk5My4zNTMsNzkuMzMzIDk3LjE1Nyw3NC44NTUgMTI4LjA2NCwxMDIuODY5IDEyOC4wNjQsMTAyLjk3MSAxMjguMDY2LDEwMi45NzEgCSIvPg0KPC9nPg0KPC9zdmc+DQo=")
+    background-repeat: no-repeat
+    background-size: 50px
+    background-position: 96% 50%
+    transition: 300ms all ease
+
+  a.plain:hover > .segment.type.work
+    background-position: 100% 50%
+
 
 @media (max-width: $phone-max)
-  a.plain:hover > .segment.type.work
-    background-position: 95% 20%
+  ul.work-list
+    .segment.work
+      background-image: url('../img/components/arrow-nav-next.svg') 
+      background-repeat: no-repeat 
+      background-size: 28px
+      background-position: 96% 18% 
+
+    a.plain:hover > .segment.type.work
+      background-position: 100% 18%
 
 
-body.work.iso
-  a.move
-    height: 100%
-    position: absolute
-    top: 0
-    z-index: 0
-    border-bottom: none
-    &.move-left
-      left: 0
-      cursor: url('../img/components/arrow-nav-prev.svg'), w-resize
-      width: 50%
-    &.move-right
-      right: 0
-      cursor: url('../img/components/arrow-nav-next.svg'), e-resize
-      width: 50%
-    &.move-up
-      left: 0
+
+ul.page
+  display: flex
+  margin: 0
+  padding: 0
+  width: 100%
+  overflow: visible
+  li
+    width: 50%
+    overflow: visible
+    list-style: none
+    transition: 200ms all ease
+    
+    a.plain
+      display: block 
+      border: none
+      .segment.type
+        // padding: 10px
+        dl.credits
+          min-width: auto
+          width: 100%
+
+          dt.client,
+          dt.studio
+            display: none
+
+          dd.project
+            width: 70% !important
+            min-height: 4em
+            margin: 0
+            display: block
+
+          dd.project,
+          dd.client,
+          dd.studio
+            text-align: left
+            display: block
+            width: 100%
+
+  li:nth-child(1)
+    text-align: right
+    a.plain
+      .segment.type
+        background-image: url('../img/components/arrow-nav-prev.svg') 
+        background-repeat: no-repeat 
+        background-size: 28px
+        background-position: 7% 21%
+          
+        dl.credits
+          dd.project,
+          dd.client,
+          dd.studio
+            text-align: right
+            display: inherit
+
+    a.plain:hover
+      .segment.type
+        background-position: 0% 21%
+        
+  li:nth-child(2)
+    border-left: $border
+    a.plain
+      .segment.type
+        background-image: url('../img/components/arrow-nav-next.svg') 
+        background-repeat: no-repeat 
+        background-size: 28px
+        background-position: 93% 21% 
+    a.plain:hover
+      .segment.type
+        background-position: 100% 21%
+
+  li + li
+    margin-top: 0
+  
+
+@media (max-width: 450px)
+  ul.page
+    display: flex
+    width: 100%
+    flex-flow: row wrap
+
+    li:nth-child(1),
+    li:nth-child(2)
       width: 100%
-      &:hover
-        cursor: url('../img/components/arrow-nav-return.svg'), n-resize
-    &.move-top
-      left: 0
-      width: 100%
-      &:hover
-        cursor: url('../img/components/arrow-nav-top.svg'), n-resize
+      text-align: left
+      border-left: none
+      transition: 300ms all ease
+      a.plain
+        display: block 
+        border: none
+
+        .segment.type
+          background-image: url('../img/components/arrow-nav-next.svg') 
+          background-repeat: no-repeat 
+          background-size: 28px
+          background-position: 96% 18% 
+          
+          dl.credits
+            dd.project,
+            dd.client,
+            dd.studio
+              text-align: left
+              width: 100%
+              display: block
+
+      a.plain:hover
+        .segment.type
+          background-position: 96% 18%
+          
+    li:nth-child(2)
+      order: 1
+
+    li:nth-child(1)
+      order: 2
+      border-top: $border
+      a.plain
+        .segment.type
+          background-image: url('../img/components/arrow-nav-prev.svg') 
 
 
 .scrollbar-measure
