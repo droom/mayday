@@ -1335,7 +1335,7 @@ h=p.a.offsetWidth,q();G=setTimeout(F,50)}}var e=new w(m),n=new w(m),p=new w(m),f
 a;q()});y(p,J(c,'"'+c.family+'",monospace'))})})};window.FontFaceObserver=B;window.FontFaceObserver.prototype.check=window.FontFaceObserver.prototype.load=B.prototype.load;"undefined"!==typeof module&&(module.exports=window.FontFaceObserver);}());
 ;$( document ).ready(function() {
 
-  if (top.location.pathname === '/Users/droom/GIT/mayday/dist/work-atop.html')
+  if (top.location.pathname === '/Users/droom/GIT/mayday/dist/project-atop.html')
   {
 
     var theDate = new Date();

@@ -1,6 +1,6 @@
 $( document ).ready(function() {
 
-  if (top.location.pathname === '/Users/droom/GIT/mayday/dist/work-atop.html')
+  if (top.location.pathname === '/Users/droom/GIT/mayday/dist/project-atop.html')
   {
 
     var theDate = new Date();
