@@ -1,48 +1,70 @@
+ol.reset,
+ol.reset li  
+  margin: 0 
+  padding: 0
+
+.nav
+  font-size: 1rem
+  font-weight: bold
+
+.nolist
+  list-style: none
+
+.space
+  letter-spacing: 0.06em
+
+.caps
+  text-transform: uppercase
+
+.ghost
+  pointer-events: none
+  
+.target
+  pointer-events: auto
+  
 nav
   z-index: 2
   position: relative
-  padding-top: 0
-  padding-bottom: 0
-  pointer-events: none
   ol
-    margin: 0
-    padding: 0
-    pointer-events: none
     display: flex
     li
-      font-size: 1rem
-      font-weight: bold
       width: 50%
-      padding: 0
-      margin: 0
-      list-style: none
       padding-top: 20px
       padding-bottom: 20px
-      pointer-events: none
-      a
-        pointer-events: auto
-      &.profile
-        text-transform: uppercase
-        letter-spacing: 0.06em
       &.profile::after
-        content: ""
+        content: "Beta"
         margin-left: 10px
-        padding: 2px 5px
-        color: $blueSky
+        letter-spacing: 0.16em
+        color: rgba(255,255,255,0.75)
         border: none
-        letter-spacing: 0.06em
+      &:nth-child(2)
+        text-align: right
+      
+
+#return
+  position: fixed
+  width: 100%
+  z-index: 10
+  top: -70px
+  transition: $transition-quick
+  background: rgba(176,234,236, 0.6)
+
+  ol.reset.ghost.nav
+    display: flex
+    li
+      width: 50%
       &:nth-child(2)
         text-align: right
 
+
+
 @media (max-width: $phone-max)
   nav ol li
-    padding: 0.9em 0 1.1em 0 
     padding: 1.2em 0 1.3em 0 
-    
     font-size: 0.85rem
-
     &.profile::after
       content: ""
+
 
 
 ul.work-list
@@ -68,9 +90,4 @@ ul.work-list
       background-position: 100% 18%
 
 
-.scrollbar-measure
-  width: 100px
-  height: 100px
-  overflow: scroll
-  position: absolute
-  top: -9999px
+

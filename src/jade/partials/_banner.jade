@@ -1,12 +1,11 @@
 .band.head.relative.unselect#head
   a(href="work.html" tabindex="-1").move.move-up
-  nav(role="navigation")
-    ol
-      li.profile
-        a(href="index.html") DROOM.IO
-      li.work
-        a(href="work.html") Case Studies
-
+  nav(role="navigation").ghost
+    ol.reset.ghost
+      li.ghost.nolist.space.profile.caps
+        a(href="index.html").target Droom.io
+      li.ghost.nolist.work
+        a(href="work.html").target Case Studies
 
 .band.js.hr
   .segment.type
@@ -15,15 +14,13 @@
       a(href="http://enable-javascript.com/") View instructions
       | .
 
-
-.band.head.relative.unselect.hello
+.band.head.relative#return
   a(href="#head" tabindex="-1").move.move-top
-  nav
-    ol
-      li DROOM.IO
-      li
+  .segment.type.ghost
+    ol.reset.ghost.nav
+      li.ghost.nolist.space.caps Droom.io
+      li.ghost.nolist
         = project
-
 
 
 

@@ -1402,7 +1402,7 @@ a;q()});y(p,J(c,'"'+c.family+'",monospace'))})})};window.FontFaceObserver=B;wind
             scrollTop: target.offset().top
           }, 300, 'easeOutExpo');
 
-          $(".band.head.relative.unselect.hello").css("top", "-70px");
+          $("#return").css("top", "-70px");
           
           return false;
         }
@@ -1415,10 +1415,9 @@ a;q()});y(p,J(c,'"'+c.family+'",monospace'))})})};window.FontFaceObserver=B;wind
     element: document.getElementById('what'),
     handler: function(direction) {
       console.log('I am 20px from the top of the window')
-      $(".band.head.relative.unselect.hello").css("top", "-70px");
+      $("#return").css("top", "-70px");
     }, offset: 56
   })
-
 
 
   var scrollDiv = document.createElement("div");
@@ -1435,7 +1434,6 @@ a;q()});y(p,J(c,'"'+c.family+'",monospace'))})})};window.FontFaceObserver=B;wind
   
 
 });
-
 
 
 

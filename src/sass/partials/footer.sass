@@ -59,43 +59,46 @@ ul.page
   li + li
     margin-top: 0
   
-// @media (max-width: 450px)
-  // ul.page
-    // display: flex
-    // width: 100%
-    // flex-flow: row wrap
-    // li:nth-child(1),
-    // li:nth-child(2)
-    //   width: 100%
-    //   text-align: left
-    //   border-left: none
-    //   transition: 300ms all ease
-    //   a.plain
-    //     display: block 
-    //     border: none
-    //     .segment.type
-    //       background-image: url('../img/components/arrow-nav-next.svg') 
-    //       background-repeat: no-repeat 
-    //       background-size: 28px
-    //       background-position: 96% 18% 
-    //       dl.credits
-    //         dd.project,
-    //         dd.client,
-    //         dd.studio
-    //           text-align: left
-    //           width: 100%
-    //           display: block
-    //   a.plain:hover
-    //     .segment.type
-    //       background-position: 96% 18%
-    // li:nth-child(2)
-    //   order: 1
-    // li:nth-child(1)
-    //   order: 2
-    //   border-top: $border
-    //   a.plain
-    //     .segment.type
-    //       background-image: url('../img/components/arrow-nav-prev.svg') 
 
 
 
+
+ul.page
+  li:nth-child(1)
+    text-align: right
+    a.plain
+      .segment.type
+        background-image: url('../img/components/arrow-nav-prev.svg') 
+        background-repeat: no-repeat 
+        background-size: 28px
+        background-position: 7% 21%
+          
+        dl.credits
+          dd.project,
+          dd.client,
+          dd.studio
+            text-align: right
+            display: inherit
+
+    a.plain:hover
+      .segment.type
+        background-position: 0% 21%
+        
+  li:nth-child(2)
+    border-left: $border
+    a.plain
+      .segment.type
+        background-image: url('../img/components/arrow-nav-next.svg') 
+        background-repeat: no-repeat 
+        background-size: 28px
+        background-position: 93% 21% 
+    a.plain:hover
+      .segment.type
+        background-position: 100% 21%
+
+  li + li
+    margin-top: 0
+    
+
+
+    

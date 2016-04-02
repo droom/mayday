@@ -19,7 +19,8 @@ $serif:       "Noto Serif", Georgia, serif
 $sans:        "CircularStd-Bold", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serfif
 $mono:        "InputMonoNarrow-Regular", "InputMonoNarrow-Thin", monospace
 
-$transition:  all 300ms ease
+$transition:        all 300ms ease
+$transition-quick:  all 300ms ease
 
 $wide-unit:   1098px
 $narrow-unit: 780px
@@ -41,95 +42,21 @@ $phone-max:   500px
 @import "partials/rhythm.sass"
 @import "partials/fallback.sass"
 @import "partials/smooth.sass"
+@import "partials/cursor.sass"
+@import "partials/cover.sass"
 
 // projects
 @import "projects/atop.sass"
 
 
-.band.head.relative.unselect.hello
+#return
   position: fixed
   width: 100%
   z-index: 10
   top: -70px
-  transition: all ease 250ms
-  background: rgba(255,255,255,0.8)
-  background: rgba(176,234,236,0.8)
-  a
-    width: 100%
-  
-  nav
-    ol
-      li.profile
-        text-transform: uppercase
-      li
-        opacity: 0.6
-        letter-spacing: 0.06em
-
-figure
-  img.faint
-    padding: 30px
-    opacity: 0.4
-
-.belly-photo
-  background: #ddd
-  min-height: 350px
-
-  &.gg
-    background: url("../img/projects/gg-cover.jpg") 50% 0 no-repeat #e8b373
-  &.gr
-    background: url("../img/projects/gr-cover.jpg") 50% 70% no-repeat #e8b373
-  &.me
-    background: url("../img/editorial/cover.gif") 50% 101% no-repeat #e4b071
-  &.atop
-    background: url("../img/projects/atop-cover.jpg") 50% 100% no-repeat #e7e7e7
-  &.fo
-    background: url("../img/projects/fo-cover.jpg") 50% 10% no-repeat #e7e7e7
+  transition: $transition-quick
+  background: rgba(176,234,236, 0.6)
 
 
-@media (max-height: 800px)
-  .belly-photo
-    &.me
-      background: url("../img/editorial/cover.gif") 100% 101% no-repeat #e4b071
-      background-size: 900px
-
-@media (max-height: 700px)
-  .belly-photo
-    &.me
-      background: url("../img/editorial/cover.gif") 100% 101% no-repeat #e4b071
-      background-size: 650px
-
-@media (max-width: 615px)
-  .belly-photo
-    min-height: 280px
-    &.me
-      background: url("../img/editorial/cover.gif") 0% 101% no-repeat #e4b071
-      background-size: 500px
-
-
-.work.iso
-  a.move
-    height: 100%
-    position: absolute
-    top: 0
-    z-index: 0
-    border-bottom: none
-    &.move-left
-      left: 0
-      cursor: url('../img/components/arrow-nav-prev.svg'), w-resize
-      width: 50%
-    &.move-right
-      right: 0
-      cursor: url('../img/components/arrow-nav-next.svg'), e-resize
-      width: 50%
-    &.move-up
-      left: 0
-      width: 100%
-      &:hover
-        cursor: url('../img/components/arrow-nav-return.svg'), n-resize
-    &.move-top
-      left: 0
-      width: 100%
-      &:hover
-        cursor: url('../img/components/arrow-nav-top.svg'), n-resize
 
 
