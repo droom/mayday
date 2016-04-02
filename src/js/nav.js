@@ -20,15 +20,6 @@ $( document ).ready(function() {
   });
 
 
-  var hello3 = new Waypoint({
-    element: document.getElementById('what'),
-    handler: function(direction) {
-      console.log('I am 20px from the top of the window')
-      $("#return").css("top", "-70px");
-    }, offset: 56
-  })
-
-
   var scrollDiv = document.createElement("div");
   scrollDiv.className = "scrollbar-measure";
   document.body.appendChild(scrollDiv);
@@ -40,7 +31,6 @@ $( document ).ready(function() {
     $('body.work.iso .band.head.hr.relative a.move.move-right').css('margin-right', scrollbarWidth);
   }
 
-  
 
 });
 

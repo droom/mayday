@@ -22,7 +22,7 @@ include partials/_html
     .belly-photo.me
 
     .belly-aside
-      aside.project(role="complementary")#what
+      main(role="main")#what
         .segment.type
           p.bind
             strong 
@@ -36,19 +36,6 @@ include partials/_html
             = ". You can view my work history and testimonials on "
             a(href="http://uk.linkedin.com/in/chrisdroom") LinkedIn
             = "."
-
-    //- main(role="main")
-      //- .segment.type
-      //-   p.bind
-      //-     = "Hello. I'm a friendly and ambitious Digital Designer from South London, England. You can find me on "
-      //-     a(href="https://twitter.com/droomio") Twitter
-      //-     = ", "
-      //-     a(href="https://github.com/droom") GitHub
-      //-     = " or "
-      //-     a(href="http://codepen.io/droom") CodePen
-      //-     = ". You can view my work history and testimonials on "
-      //-     a(href="http://uk.linkedin.com/in/chrisdroom") LinkedIn
-      //-     = "."
 
     include partials/_footer
     include partials/_scripts

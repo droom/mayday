@@ -1,4 +1,12 @@
+ol.reset,
+ol.reset li  
+  margin: 0 
+  padding: 0
 
+ul.reset,
+ul.reset li  
+  margin: 0 
+  padding: 0
 
 ol.ref
   margin: 0 
@@ -22,20 +30,6 @@ ol.return
     padding: 20px 0
     pointer-events: none
 
-ul.work-list
-  margin: 0
-  padding: 0
-  list-style-type: none
-
-  li
-    border-top: $border
-    
-    &:first-child
-      border-top: none
-    &:hover
-      background-color: rgba(255, 255, 255, 0.4)
-    & + li
-      margin: 0
 
 
 dl.credits
@@ -84,6 +78,22 @@ dl.credits
     margin-left: 0.8%
     opacity: 0.7
 
+
+
+ul.work-list
+  margin: 0
+  padding: 0
+  list-style-type: none
+
+  li
+    border-top: $border
+    
+    &:first-child
+      border-top: none
+    &:hover
+      background-color: rgba(255, 255, 255, 0.4)
+    & + li
+      margin: 0
 
 @media (max-width: $phone-max)
   ul.work-list

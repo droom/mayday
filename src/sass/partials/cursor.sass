@@ -6,31 +6,45 @@
   top: -9999px
 
 
-a.move
-  position: absolute
-  top: 0
-  z-index: 0
-  height: 100%
-  border: none
+body.work.iso
+  a.move
+    position: absolute
+    top: 0
+    z-index: 0
+    height: 100%
+    border: none
 
-  &.move-left
-    left: 0
-    cursor: url('../img/components/arrow-nav-prev.svg'), w-resize
-    width: 50%
-  &.move-right
-    right: 0
-    cursor: url('../img/components/arrow-nav-next.svg'), e-resize
-    width: 50%
-  &.move-up
-    left: 0
-    width: 100%
-    &:hover
-      cursor: url('../img/components/arrow-nav-return.svg'), n-resize
-  &.move-top
-    left: 0
-    width: 100%
-    &:hover
-      cursor: url('../img/components/arrow-nav-top.svg'), n-resize
+    &.move-left
+      left: 0
+      cursor: url('../img/components/arrow-nav-prev.svg'), w-resize
+      width: 50%
+    &.move-right
+      right: 0
+      cursor: url('../img/components/arrow-nav-next.svg'), e-resize
+      width: 50%
+    &.move-up
+      left: 0
+      width: 100%
+      &:hover
+        cursor: url('../img/components/arrow-nav-return.svg'), n-resize
+    &.move-top
+      left: 0
+      width: 100%
+      &:hover
+        cursor: url('../img/components/arrow-nav-top.svg'), n-resize
 
+body.work
+  a.move
+    position: absolute
+    top: 0
+    z-index: 0
+    height: 100%
+    border: none
+
+    &.move-top
+      left: 0
+      width: 100%
+      &:hover
+        cursor: url('../img/components/arrow-nav-top.svg'), n-resize
 
 

@@ -1,6 +1,5 @@
 ul.page
   display: flex
-  padding: 0
   width: 100%
   overflow: visible
   li
@@ -12,6 +11,10 @@ ul.page
       display: block 
       border: none
       .segment.type
+        // max-width: 400px
+        margin: 0
+        background-repeat: no-repeat 
+        background-size: 28px
         dl.credits
           min-width: auto
           width: 100%
@@ -19,7 +22,7 @@ ul.page
           dt.studio
             display: none
           dd.project
-            width: 70% !important
+            width: 70%
             min-height: 4em
             margin: 0
             display: block
@@ -30,75 +33,44 @@ ul.page
             display: block
             width: 100%
 
-  li:nth-child(1)
-    border-left: $border
-    a.plain
-      .segment.type
-        background-image: url('../img/components/arrow-nav-prev.svg') 
-        background-repeat: no-repeat 
-        background-size: 28px
-        background-position: 93% 14% 
-    a.plain:hover
-      .segment.type
-        background-position: 93% 14%
-    
-  li:nth-child(2)
-    border-left: $border
-    border-right: $border
+    & + li
+      margin-top: 0
+      
+    &:nth-child(1)
+      text-align: right
+      border-right: $border
+      
+      a.plain
+        position: relative
+        width: 100%
 
-    a.plain
-      .segment.type
-        background-image: url('../img/components/arrow-nav-next.svg') 
-        background-repeat: no-repeat 
-        background-size: 28px
-        background-position: 93% 14% 
-    a.plain:hover
-      .segment.type
-        background-position: 93% 14%
-
-  li + li
-    margin-top: 0
-  
-
-
-
-
-ul.page
-  li:nth-child(1)
-    text-align: right
-    a.plain
-      .segment.type
-        background-image: url('../img/components/arrow-nav-prev.svg') 
-        background-repeat: no-repeat 
-        background-size: 28px
-        background-position: 7% 21%
+        .segment.type
+          // text-align: right
+          // position: absolute
+          // right: 0
+          // top: 0
           
-        dl.credits
-          dd.project,
-          dd.client,
-          dd.studio
+          // outline: 1px solid red
+          background-image: url('../img/components/arrow-nav-prev.svg') 
+          background-position: 7% 21%
+          dl.credits
             text-align: right
-            display: inherit
+            
+            dd.project,
+            dd.client,
+            dd.studio
+              text-align: right
+              display: inherit
+      a.plain:hover
+        .segment.type
+          background-position: 0% 21%
 
-    a.plain:hover
-      .segment.type
-        background-position: 0% 21%
-        
-  li:nth-child(2)
-    border-left: $border
-    a.plain
-      .segment.type
-        background-image: url('../img/components/arrow-nav-next.svg') 
-        background-repeat: no-repeat 
-        background-size: 28px
-        background-position: 93% 21% 
-    a.plain:hover
-      .segment.type
-        background-position: 100% 21%
+    &:nth-child(2)
+      a.plain
+        .segment.type
+          background-image: url('../img/components/arrow-nav-next.svg') 
+          background-position: 93% 21% 
+      a.plain:hover
+        .segment.type
+          background-position: 100% 21%
 
-  li + li
-    margin-top: 0
-    
-
-
-    

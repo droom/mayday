@@ -89,6 +89,7 @@ module.exports = function(grunt) {
         'src/lib/fontfaceobserver.standalone.js',
         'src/js/project-atop.js',
         'src/js/nav.js',
+        'src/js/waypoints.js',
         'src/js/cover.js'
         ],
         dest: 'src/js/droomio.js',
