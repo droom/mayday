@@ -81,7 +81,7 @@ module.exports = function(grunt) {
       },
       dist: {
         src: [
-        'src/lib/modernizr-2.8.3.min.js',
+        // 'src/lib/modernizr-2.8.3.min.js',
         'src/lib/jquery.min.js',
         'src/lib/easing.js',
         'src/lib/noframework.waypoints.js',

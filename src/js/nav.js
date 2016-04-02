@@ -11,7 +11,7 @@ $( document ).ready(function() {
             scrollTop: target.offset().top
           }, 300, 'easeOutExpo');
 
-          $(".band.head.relative.unselect.hello").css("top", "-70px");
+          $("#return").css("top", "-70px");
           
           return false;
         }
@@ -24,10 +24,9 @@ $( document ).ready(function() {
     element: document.getElementById('what'),
     handler: function(direction) {
       console.log('I am 20px from the top of the window')
-      $(".band.head.relative.unselect.hello").css("top", "-70px");
+      $("#return").css("top", "-70px");
     }, offset: 56
   })
-
 
 
   var scrollDiv = document.createElement("div");
@@ -44,7 +43,6 @@ $( document ).ready(function() {
   
 
 });
-
 
 
 

@@ -1,48 +1,70 @@
+ol.reset,
+ol.reset li  
+  margin: 0 
+  padding: 0
+
+.nav
+  font-size: 1rem
+  font-weight: bold
+
+.nolist
+  list-style: none
+
+.space
+  letter-spacing: 0.06em
+
+.caps
+  text-transform: uppercase
+
+.ghost
+  pointer-events: none
+  
+.target
+  pointer-events: auto
+  
 nav
   z-index: 2
   position: relative
-  padding-top: 0
-  padding-bottom: 0
-  pointer-events: none
   ol
-    margin: 0
-    padding: 0
-    pointer-events: none
     display: flex
     li
-      font-size: 1rem
-      font-weight: bold
       width: 50%
-      padding: 0
-      margin: 0
-      list-style: none
       padding-top: 20px
       padding-bottom: 20px
-      pointer-events: none
-      a
-        pointer-events: auto
-      &.profile
-        text-transform: uppercase
-        letter-spacing: 0.06em
       &.profile::after
-        content: ""
+        content: "Beta"
         margin-left: 10px
-        padding: 2px 5px
-        color: $blueSky
+        letter-spacing: 0.16em
+        color: rgba(255,255,255,0.75)
         border: none
-        letter-spacing: 0.06em
+      &:nth-child(2)
+        text-align: right
+      
+
+#return
+  position: fixed
+  width: 100%
+  z-index: 10
+  top: -70px
+  transition: $transition-quick
+  background: rgba(176,234,236, 0.6)
+
+  ol.reset.ghost.nav
+    display: flex
+    li
+      width: 50%
       &:nth-child(2)
         text-align: right
 
+
+
 @media (max-width: $phone-max)
   nav ol li
-    padding: 0.9em 0 1.1em 0 
     padding: 1.2em 0 1.3em 0 
-    
     font-size: 0.85rem
-
     &.profile::after
       content: ""
+
 
 
 ul.work-list
@@ -55,7 +77,6 @@ ul.work-list
 
   a.plain:hover > .segment.type.work
     background-position: 100% 50%
-
 
 @media (max-width: $phone-max)
   ul.work-list
@@ -70,128 +91,3 @@ ul.work-list
 
 
 
-ul.page
-  display: flex
-  margin: 0
-  padding: 0
-  width: 100%
-  overflow: visible
-  li
-    width: 50%
-    overflow: visible
-    list-style: none
-    transition: 200ms all ease
-    
-    a.plain
-      display: block 
-      border: none
-      .segment.type
-        // padding: 10px
-        dl.credits
-          min-width: auto
-          width: 100%
-
-          dt.client,
-          dt.studio
-            display: none
-
-          dd.project
-            width: 70% !important
-            min-height: 4em
-            margin: 0
-            display: block
-
-          dd.project,
-          dd.client,
-          dd.studio
-            text-align: left
-            display: block
-            width: 100%
-
-  li:nth-child(1)
-    text-align: right
-    a.plain
-      .segment.type
-        background-image: url('../img/components/arrow-nav-prev.svg') 
-        background-repeat: no-repeat 
-        background-size: 28px
-        background-position: 7% 21%
-          
-        dl.credits
-          dd.project,
-          dd.client,
-          dd.studio
-            text-align: right
-            display: inherit
-
-    a.plain:hover
-      .segment.type
-        background-position: 0% 21%
-        
-  li:nth-child(2)
-    border-left: $border
-    a.plain
-      .segment.type
-        background-image: url('../img/components/arrow-nav-next.svg') 
-        background-repeat: no-repeat 
-        background-size: 28px
-        background-position: 93% 21% 
-    a.plain:hover
-      .segment.type
-        background-position: 100% 21%
-
-  li + li
-    margin-top: 0
-  
-
-@media (max-width: 450px)
-  ul.page
-    display: flex
-    width: 100%
-    flex-flow: row wrap
-
-    li:nth-child(1),
-    li:nth-child(2)
-      width: 100%
-      text-align: left
-      border-left: none
-      transition: 300ms all ease
-      a.plain
-        display: block 
-        border: none
-
-        .segment.type
-          background-image: url('../img/components/arrow-nav-next.svg') 
-          background-repeat: no-repeat 
-          background-size: 28px
-          background-position: 96% 18% 
-          
-          dl.credits
-            dd.project,
-            dd.client,
-            dd.studio
-              text-align: left
-              width: 100%
-              display: block
-
-      a.plain:hover
-        .segment.type
-          background-position: 96% 18%
-          
-    li:nth-child(2)
-      order: 1
-
-    li:nth-child(1)
-      order: 2
-      border-top: $border
-      a.plain
-        .segment.type
-          background-image: url('../img/components/arrow-nav-prev.svg') 
-
-
-.scrollbar-measure
-  width: 100px
-  height: 100px
-  overflow: scroll
-  position: absolute
-  top: -9999px

@@ -1,0 +1,104 @@
+ul.page
+  display: flex
+  padding: 0
+  width: 100%
+  overflow: visible
+  li
+    width: 50%
+    overflow: visible
+    list-style: none
+    transition: 200ms all ease
+    a.plain
+      display: block 
+      border: none
+      .segment.type
+        dl.credits
+          min-width: auto
+          width: 100%
+          dt.client,
+          dt.studio
+            display: none
+          dd.project
+            width: 70% !important
+            min-height: 4em
+            margin: 0
+            display: block
+          dd.project,
+          dd.client,
+          dd.studio
+            text-align: left
+            display: block
+            width: 100%
+
+  li:nth-child(1)
+    border-left: $border
+    a.plain
+      .segment.type
+        background-image: url('../img/components/arrow-nav-prev.svg') 
+        background-repeat: no-repeat 
+        background-size: 28px
+        background-position: 93% 14% 
+    a.plain:hover
+      .segment.type
+        background-position: 93% 14%
+    
+  li:nth-child(2)
+    border-left: $border
+    border-right: $border
+
+    a.plain
+      .segment.type
+        background-image: url('../img/components/arrow-nav-next.svg') 
+        background-repeat: no-repeat 
+        background-size: 28px
+        background-position: 93% 14% 
+    a.plain:hover
+      .segment.type
+        background-position: 93% 14%
+
+  li + li
+    margin-top: 0
+  
+
+
+
+
+ul.page
+  li:nth-child(1)
+    text-align: right
+    a.plain
+      .segment.type
+        background-image: url('../img/components/arrow-nav-prev.svg') 
+        background-repeat: no-repeat 
+        background-size: 28px
+        background-position: 7% 21%
+          
+        dl.credits
+          dd.project,
+          dd.client,
+          dd.studio
+            text-align: right
+            display: inherit
+
+    a.plain:hover
+      .segment.type
+        background-position: 0% 21%
+        
+  li:nth-child(2)
+    border-left: $border
+    a.plain
+      .segment.type
+        background-image: url('../img/components/arrow-nav-next.svg') 
+        background-repeat: no-repeat 
+        background-size: 28px
+        background-position: 93% 21% 
+    a.plain:hover
+      .segment.type
+        background-position: 100% 21%
+
+  li + li
+    margin-top: 0
+    
+
+
+    
