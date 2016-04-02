@@ -2,7 +2,7 @@ if project
   .band.hr.relative.turn
     ul.reset.page
       li
-        a.plain(href=prevURL)
+        a(href=prevURL tabindex="-1" data-animsition-out-class="fade-out-right-sm" data-animsition-out-duration="400").animsition-link.plain.move-left
           .segment.type
             dl.credits
               dt.hide Project name
@@ -14,7 +14,7 @@ if project
               dd.studio Six Leaves
 
       li
-        a.plain(href=nextURL)
+        a(href=nextURL tabindex="-1" data-animsition-out-class="fade-out-left-sm" data-animsition-out-duration="400").animsition-link.plain.move-right
           .segment.type
             dl.credits
               dt.hide Project name

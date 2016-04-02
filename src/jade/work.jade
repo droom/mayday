@@ -4,29 +4,19 @@ include partials/_html
   head
     include partials/_head
 
-  body.work(class="mscene")
+  body.work.animsition
     include partials/_banner
     .band.head.hr.relative
       .segment.type
         h2
           = "Selected Work"
         small 2012&ndash;2015
-
+        
     main(role='main')#what
       ul.work-list
+
         li
-          a.plain(href="project-givereceipt.html")
-            .segment.type.work
-              dl.credits
-                dt.hide Project name
-                dd.project.h3 GiveReceipt Web
-                dt.client Client
-                dd.client DVG Web
-                dt.studio Studio
-                dd.studio Six Leaves
-        
-        li
-          a.plain(href="project-goget.html")
+          a.plain(href="project-goget.html").animsition-link
             .segment.type.work
               dl.credits
                 dt.hide Project name
@@ -37,7 +27,19 @@ include partials/_html
                 dd.studio VLT
 
         li
-          a.plain(href="project-foreign.html")
+          a.plain(href="project-givereceipt.html").animsition-link
+            .segment.type.work
+              dl.credits
+                dt.hide Project name
+                dd.project.h3 GiveReceipt Web
+                dt.client Client
+                dd.client DVG Web
+                dt.studio Studio
+                dd.studio Six Leaves
+        
+
+        li
+          a.plain(href="project-foreign.html").animsition-link
             .segment.type.work
               dl.credits
                 dt.hide Project name
@@ -47,27 +49,27 @@ include partials/_html
                 dt.studio Studio
                 dd.studio Reformist.io
 
-        li
-          a.plain(href="project-atop.html")
-            .segment.type.work
-              dl.credits
-                dt.hide Project name
-                dd.project.h3 ATOP Watches
-                dt.client Client
-                dd.client ATOP Watches
-                dt.studio Studio
-                dd.studio DROOM+TZY
+        //- li
+        //-   a.plain(href="project-atop.html")
+        //-     .segment.type.work
+        //-       dl.credits
+        //-         dt.hide Project name
+        //-         dd.project.h3 ATOP Watches
+        //-         dt.client Client
+        //-         dd.client ATOP Watches
+        //-         dt.studio Studio
+        //-         dd.studio DROOM+TZY
 
-        li
-          a.plain(href='project-ideahouse.html')
-            .segment.type.work
-              dl.credits
-                dt.hide Project name
-                dd.project.h3 Ideahouse
-                dt.client Client
-                dd.client Ideahouse
-                dt.studio Studio
-                dd.studio DROOM&plus;TZY
+        //- li
+        //-   a.plain(href='project-ideahouse.html')
+        //-     .segment.type.work
+        //-       dl.credits
+        //-         dt.hide Project name
+        //-         dd.project.h3 Ideahouse
+        //-         dt.client Client
+        //-         dd.client Ideahouse
+        //-         dt.studio Studio
+        //-         dd.studio DROOM&plus;TZY
 
 
     include partials/_footer

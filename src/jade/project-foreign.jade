@@ -1,8 +1,10 @@
 - var project   = "Foreign Office (tumblr)"
-- var prevTitle = "GoGet App"
-- var prevURL   = "project-goget.html"
-- var nextTitle = "ATOP"
-- var nextURL   = "project-atop.html"
+
+- var prevTitle = "project-givereceipt.html"
+- var nextTitle = "project-goget.html"
+
+- var prevURL   = "project-givereceipt.html"
+- var nextURL   = "project-goget.html"
 
 doctype html
 include partials/_html
@@ -10,12 +12,12 @@ include partials/_html
   head
     include partials/_head
     
-  body.work.iso(data-project="foreign" class="mscene")#main
+  body.work.iso(data-project="foreign" data-animsition-in-class="" data-animsition-in-duration="400").animsition
+  
     .belly-title
-
       include partials/_banner
       .band.head.hr.relative.move
-        a(href=prevURL).move.move-left
+        a(href=prevURL tabindex="-1" data-animsition-out-class="fade-out-right-sm" data-animsition-out-duration="400").animsition-link.move.move-left
         .segment.type.relative
           h2
             = project
@@ -31,7 +33,7 @@ include partials/_html
             dt Live
             dd.asia
               a(href="http://blog.droom.name/" aria-label="Visit Blog") blog.droom.name
-        a(href=nextURL).move.move-right
+        a(href=nextURL tabindex="-1" data-animsition-out-class="fade-out-left-sm" data-animsition-out-duration="400").animsition-link.move.move-right
 
     .belly-photo.fo#what
 

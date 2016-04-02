@@ -82,7 +82,9 @@ module.exports = function(grunt) {
       dist: {
         src: [
         // 'src/lib/modernizr-2.8.3.min.js',
-        'src/lib/jquery.min.js',
+        // 'https://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js',
+        // 'src/lib/jquery.min.js',
+        'src/lib/jquery.js',
         'src/lib/easing.js',
         'src/lib/noframework.waypoints.js',
         'src/lib/animsition.js',

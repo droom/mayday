@@ -9,11 +9,10 @@ include partials/_html
 
   head
     include partials/_head
-
-  body.work.iso(data-project="ideahouse")
+  body.work.iso(data-project="ideahouse" data-animsition-in-class="" data-animsition-in-duration="400").animsition
     include partials/_banner
     .band.head.hr.relative
-      a(href=prevURL tabindex="-1").move.move-left
+      a(href=prevURL tabindex="-1" data-animsition-out-class="fade-out-right-sm" data-animsition-out-duration="400").animsition-link.move.move-left
       .segment.type
         h2
           = project
@@ -31,7 +30,7 @@ include partials/_html
           dd.stage
             a(href="http://www.droom.name/clients/ih") droom.name/clients/ih
 
-      a(href=nextURL tabindex="-1").move.move-right
+      a(href=nextURL tabindex="-1" data-animsition-out-class="fade-out-left-sm" data-animsition-out-duration="400").animsition-link.move.move-right
 
     hr
 

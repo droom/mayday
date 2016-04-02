@@ -1,8 +1,10 @@
-- var project   = "GoGet App"
-- var prevTitle = "Ideahouse"
-- var prevURL   = "project-ideahouse.html"
-- var nextTitle = "Foreign Office"
-- var nextURL   = "project-foreign.html"
+- var project   = "GoGet Web/App"
+
+- var prevTitle = "Foreign Office"
+- var nextTitle = "GiveReceipt"
+
+- var prevURL   = "project-foreign.html"
+- var nextURL   = "project-givereceipt.html"
 
 doctype html
 include partials/_html
@@ -10,16 +12,16 @@ include partials/_html
   head
     include partials/_head
 
-  body.work.iso(data-project="goget" class="mscene")#main
+  body.work.iso(data-project="goget" data-animsition-in-class="" data-animsition-in-duration="400").animsition
 
     .belly-title
       include partials/_banner
       .band.head.hr.relative
-        a(href="project-atop.html" tabindex="-1").move.move-left
+        a(href=prevURL tabindex="-1" data-animsition-out-class="fade-out-right-sm" data-animsition-out-duration="400").animsition-link.move.move-left
         .segment.type.relative
           h2 
             = project
-            
+
           dl.credits
             dt Client
             dd GoGet
@@ -30,7 +32,7 @@ include partials/_html
             dt Live
             dd.live
               a(href="http://www.goget.my/" aria-label="Visit GoGet") goget.my
-        a(href="project-givereceipt.html" tabindex="-1").move.move-right
+        a(href=nextURL tabindex="-1" data-animsition-out-class="fade-out-left-sm" data-animsition-out-duration="400").animsition-link.move.move-right
 
     .belly-photo.gg#what
 
@@ -51,7 +53,13 @@ include partials/_html
             dd Adobe© InDesign
             dd InVision
 
+
+
     main(role="main")
+
+
+
+
 
       .segment.type
         h3.intro GoGet is a community focused errands and delivery service, currently operating in Kuala Lumpur.

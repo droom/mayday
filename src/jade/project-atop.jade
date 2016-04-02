@@ -9,13 +9,11 @@ include partials/_html
 
   head
     include partials/_head
-    
-  body.work.iso#main
+  body.work.iso(data-project="atop" data-animsition-in-class="" data-animsition-in-duration="400").animsition
     .belly-title
       include partials/_banner
       .band.head.hr.relative.move
-        a(href="work-gr.html" title="View GiveReceipt project" tabindex="-1").tooltip.move.move-left
-
+        a(href=prevURL tabindex="-1" data-animsition-out-class="fade-out-right-sm" data-animsition-out-duration="400").animsition-link.move.move-left
         .segment.type
           h2
             = project
@@ -29,7 +27,7 @@ include partials/_html
             dt Repo
             dd (Private)
 
-        a(href="work-ih.html" title="View Ideahouse project" tabindex="-1").tooltip.move.move-right
+        a(href=nextURL tabindex="-1" data-animsition-out-class="fade-out-left-sm" data-animsition-out-duration="400").animsition-link.move.move-right
 
     .belly-photo.atop#what
 
