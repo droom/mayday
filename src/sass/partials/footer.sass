@@ -1,5 +1,6 @@
 ul.page
   display: flex
+  max-width: 100%
   width: 100%
   overflow: visible
   li
@@ -11,18 +12,16 @@ ul.page
       display: block 
       border: none
       .segment.type
-        // max-width: 400px
         margin: 0
         background-repeat: no-repeat 
         background-size: 28px
         dl.credits
           min-width: auto
-          width: 100%
+          width: 50% !important
           dt.client,
           dt.studio
             display: none
           dd.project
-            width: 70%
             min-height: 4em
             margin: 0
             display: block
@@ -45,12 +44,6 @@ ul.page
         width: 100%
 
         .segment.type
-          // text-align: right
-          // position: absolute
-          // right: 0
-          // top: 0
-          
-          // outline: 1px solid red
           background-image: url('../img/components/arrow-nav-prev.svg') 
           background-position: 7% 21%
           dl.credits

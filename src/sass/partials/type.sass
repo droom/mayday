@@ -1,9 +1,16 @@
 body
   h1, h2, h3, h4, h5, h6, nav, nav ol li, .h1, .h2, .h3, .h4, .h5, .h6, .nav
     font-family: $sans
+    font-weight: normal !important
+
+nav, .nav
+  font-size: 1rem
+
+@media (max-width: $phone-max)
+  nav, .nav
+    font-size: 0.85rem
 
 h2, .h2
-  font-weight: 700
   letter-spacing: -0.035em
   line-height: 1.15em
   font-size: 3rem
@@ -107,7 +114,6 @@ blockquote
 blockquote::before
   content: ""
 
-/* Dressing */
 
 .ndash
   position: relative
@@ -128,3 +134,17 @@ blockquote::before
 .pull
   margin: 0 0 0 -0.09em
 
+.nolist
+  list-style: none
+
+.space
+  letter-spacing: 0.06em
+
+.caps
+  text-transform: uppercase
+
+.ghost
+  pointer-events: none
+  
+.target
+  pointer-events: auto

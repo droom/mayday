@@ -4,73 +4,72 @@ include partials/_html
   head
     include partials/_head
 
-  body.work.animsition
-    include partials/_banner
-    .band.head.hr.relative
-      .segment.type
-        h2
-          = "Selected Work"
-        small 2012&ndash;2015
-        
-    main(role='main')#what
-      ul.work-list
+  body.work(itemscope itemtype="http://schema.org/WebPage" data-project="work")
+    div.js-animsition.animsition(data-animsition-in-class="fade-in" data-animsition-in-duration="300")
+      include partials/_banner
+      .band.head.hr.relative
+        .segment.type
+          h2
+            = "Selected Work"
+          small 2012&ndash;2015
+          
+      main(role='main')#what
+        ul.work-list
+          li
+            a(href="project-goget.html").plain
+              .segment.type.work
+                dl.credits
+                  dt.hide Project name
+                  dd.project.h3 GoGet App
+                  dt.client Client
+                  dd.client GoGet
+                  dt.studio Studio
+                  dd.studio VLT
 
-        li
-          a.plain(href="project-goget.html").animsition-link
-            .segment.type.work
-              dl.credits
-                dt.hide Project name
-                dd.project.h3 GoGet App
-                dt.client Client
-                dd.client GoGet
-                dt.studio Studio
-                dd.studio VLT
+          li
+            a.plain(href="project-givereceipt.html").animsition-link
+              .segment.type.work
+                dl.credits
+                  dt.hide Project name
+                  dd.project.h3 GiveReceipt Web
+                  dt.client Client
+                  dd.client DVG Web
+                  dt.studio Studio
+                  dd.studio Six Leaves
+          
+          li
+            a.plain(href="project-foreign.html").animsition-link
+              .segment.type.work
+                dl.credits
+                  dt.hide Project name
+                  dd.project.h3 Foreign Office (tumblr)
+                  dt.client Client
+                  dd.client &mdash;
+                  dt.studio Studio
+                  dd.studio Reformist.io
 
-        li
-          a.plain(href="project-givereceipt.html").animsition-link
-            .segment.type.work
-              dl.credits
-                dt.hide Project name
-                dd.project.h3 GiveReceipt Web
-                dt.client Client
-                dd.client DVG Web
-                dt.studio Studio
-                dd.studio Six Leaves
-        
+          li
+            a.plain(href="project-atop.html").animsition-link
+              .segment.type.work
+                dl.credits
+                  dt.hide Project name
+                  dd.project.h3 ATOP Watches
+                  dt.client Client
+                  dd.client ATOP Watches
+                  dt.studio Studio
+                  dd.studio DROOM+TZY
 
-        li
-          a.plain(href="project-foreign.html").animsition-link
-            .segment.type.work
-              dl.credits
-                dt.hide Project name
-                dd.project.h3 Foreign Office (tumblr)
-                dt.client Client
-                dd.client &mdash;
-                dt.studio Studio
-                dd.studio Reformist.io
-
-        //- li
-        //-   a.plain(href="project-atop.html")
-        //-     .segment.type.work
-        //-       dl.credits
-        //-         dt.hide Project name
-        //-         dd.project.h3 ATOP Watches
-        //-         dt.client Client
-        //-         dd.client ATOP Watches
-        //-         dt.studio Studio
-        //-         dd.studio DROOM+TZY
-
-        //- li
-        //-   a.plain(href='project-ideahouse.html')
-        //-     .segment.type.work
-        //-       dl.credits
-        //-         dt.hide Project name
-        //-         dd.project.h3 Ideahouse
-        //-         dt.client Client
-        //-         dd.client Ideahouse
-        //-         dt.studio Studio
-        //-         dd.studio DROOM&plus;TZY
+          li
+            a.plain(href='project-ideahouse.html').animsition-link
+              .segment.type.work
+                dl.credits
+                  dt.hide Project name
+                  dd.project.h3 Ideahouse
+                  dt.client Client
+                  dd.client Ideahouse
+                  dt.studio Studio
+                  dd.studio DROOM&plus;TZY
 
 
-    include partials/_footer
-    include partials/_scripts
+      include partials/_footer
+      include partials/_scripts

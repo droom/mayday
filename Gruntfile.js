@@ -27,6 +27,11 @@ module.exports = function(grunt) {
         tasks: ['concat']
       },
 
+      postcss: {
+        files: ['dist/css/style.css'],
+        tasks: ['postcss']
+      },
+
       uglify: {
         files: ['src/js/*.js'],
         tasks: ['uglify']
@@ -42,6 +47,28 @@ module.exports = function(grunt) {
         files: {
           'dist/css/style.css': 'src/sass/style.sass',
         }
+      }
+    },
+
+
+    postcss: {
+      options: {
+      map: true, // inline sourcemaps
+
+      // or
+      map: {
+          inline: false, // save all sourcemaps as separate files...
+          annotation: 'dist/css/maps/' // ...to the specified directory
+        },
+
+        processors: [
+        require('pixrem')(), // add fallbacks for rem units
+        require('autoprefixer')({browsers: 'last 2 versions'}), // add vendor prefixes
+        require('cssnano')() // minify the result
+        ]
+      },
+      dist: {
+        src: 'dist/css/style.css'
       }
     },
 
@@ -81,42 +108,47 @@ module.exports = function(grunt) {
       },
       dist: {
         src: [
-        // 'src/lib/modernizr-2.8.3.min.js',
-        // 'https://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js',
-        // 'src/lib/jquery.min.js',
         'src/lib/jquery.js',
+        'src/lib/modernizr-2.8.3.min.js',
         'src/lib/easing.js',
         'src/lib/noframework.waypoints.js',
-        'src/lib/animsition.js',
-        'src/lib/fontfaceobserver.standalone.js',
+        // 'src/lib/animsition-docs.js', 
         'src/js/project-atop.js',
-        'src/js/nav.js',
         'src/js/waypoints.js',
+        // 'src/js/fluff.js'
+        'src/js/nav.js',
         'src/js/cover.js'
+
+
         ],
-        dest: 'src/js/droomio.js',
+        dest: 'dist/js/droomio.js',
       },
     },
+
+
 
     uglify: {
       options: {
         banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
       },
       build: {
-        src: 'src/js/droomio.js',
+        src: 'dist/js/droomio.js',
         dest: 'dist/js/droomio.min.js'
       }
     }
 
   });
 
-grunt.loadNpmTasks('grunt-contrib-watch');
-grunt.loadNpmTasks('grunt-contrib-jade');
-grunt.loadNpmTasks('grunt-contrib-uglify');
-grunt.loadNpmTasks('grunt-contrib-sass');
-grunt.loadNpmTasks('grunt-contrib-concat');
-grunt.loadNpmTasks('grunt-contrib-imagemin');
+  grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-contrib-jade');
+  grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-contrib-sass');
+  grunt.loadNpmTasks('grunt-contrib-concat');
+  grunt.loadNpmTasks('grunt-contrib-imagemin');
+  grunt.loadNpmTasks('grunt-autoprefixer');
+  grunt.loadNpmTasks('grunt-postcss');
 
-grunt.registerTask('default', [ 'concat', 'uglify', 'jade', 'sass', 'imagemin' ]);
+
+  grunt.registerTask('default', [ 'concat', 'uglify', 'jade', 'sass', 'postcss', 'imagemin' ]);
 
 };

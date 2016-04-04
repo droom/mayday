@@ -12,109 +12,105 @@ include partials/_html
   head
     include partials/_head
     
-  body.work.iso(data-project="givereceipt" data-animsition-in-class="" data-score=50 data-animsition-in-duration="400").animsition
+  body.work.iso(data-project="givereceipt")
   
-    .belly-title
-      include partials/_banner
-      .band.head.hr.relative
-        a(href=prevURL tabindex="-1" data-animsition-out-class="fade-out-right-sm" data-animsition-out-duration="400").animsition-link.move.move-left
+    div.js-animsition.animsition(data-animsition-in-class="" data-animsition-in-duration="400")
+
+      .belly-title
+        include partials/_banner
+        .band.head.hr.relative
+          a(href=prevURL tabindex="-1" data-animsition-out-class="fade-out-right-sm" data-animsition-out-duration="400").animsition-link.move.move-left
+          .segment.type
+            h2
+              = project
+            dl.credits
+              dt Client
+              dd GiveReceipt
+              dt Studio
+              dd SixLeaves
+              dt Date
+              dd July 2015
+              dt Repo
+              dd (Private)
+              dt Live
+              dd.asia
+                a(href=nextURL aria-label="Visit GiveReceipt") givereceipt.com
+
+          a(href=nextURL tabindex="-1" data-animsition-out-class="fade-out-left-sm" data-animsition-out-duration="400").animsition-link.move.move-right
+
+      .belly-photo.gr#what
+
+      .belly-aside
+        aside.project(role="complementary")
+          .segment.type
+            dl.credits
+              dt Role
+              dd Identity
+              dd UX &plus; UI
+              dd Front-end build
+
+            dl.credits
+              dt Stack
+              dd Adobe&copy; Illustrator
+              dd Adobe&copy; Photoshop
+              dd Adobe&copy; InDesign
+              dd Ruby Slim
+              dd Sass (&plus;Bootstap)
+
+              
+      main(role="main")
+
         .segment.type
-          h2
-            = project
-          dl.credits
-            dt Client
-            dd GiveReceipt
-            dt Studio
-            dd SixLeaves
-            dt Date
-            dd July 2015
-            dt Repo
-            dd (Private)
-            dt Live
-            dd.asia
-              a(href=nextURL aria-label="Visit GiveReceipt") givereceipt.com
+          h3 GiveReceipt is an invoicing tool designed for small businesses, to be in sympathy with new (2015) tax regulations in Malaysia.
+          p
+            = "GiveReceipt is straightforward Software as Service that allows SMEs to easily document transactions. CEO's David Sin and Belinda So "
+              a(href="https://www.youtube.com/watch?v=ay4PJQxgrqM") explain the benefits in more depth on The Edge
+            = "."
 
-        a(href=nextURL tabindex="-1" data-animsition-out-class="fade-out-left-sm" data-animsition-out-duration="400").animsition-link.move.move-right
+        .segment.blueprint.relative
+          figure
+            img(src="img/projects/gr-wire.png")
+            figcaption User flow for the web app. We decided early on to prompt users to enter company information after the registration process to reduce cognitive load and friction.
 
-    .belly-photo.gr#what
+        .segment.blueprint
+          figure
+            img(src="img/projects/gr-id.png")
+            figcaption Initital explorations of the GiveReceipt identity. Its application won't be limited to screens so will need to work on print materials and clothing. This is set in Trade Gothic.
 
-    .belly-aside
-      aside.project(role="complementary")
+        .segment.surface
+          figure
+            img(src="img/projects/gr-invoice.png")
+            figcaption Premium subscriptions give the option of different print layouts.
+
+        .segment.surface
+          figure
+            img(src="img/projects/gr-cards.png")
+            figcaption
+              = "20mm "
+              &times;
+              = " 230mm, 240gsm"
+              br
+              = "Namecards. These were die-cut to show off our corrigated motif."
+
         .segment.type
-          dl.credits
-            dt Role
-            dd Identity
-            dd UX &plus; UI
-            dd Front-end build
-
-          dl.credits
-            dt Stack
-            dd Adobe&copy; Illustrator
-            dd Adobe&copy; Photoshop
-            dd Adobe&copy; InDesign
-            dd Ruby Slim
-            dd Sass (&plus;Bootstap)
-
-            
-    main(role="main")
-
-      .segment.type
-        h3 GiveReceipt is an invoicing tool designed for small businesses, to be in sympathy with new (2015) tax regulations in Malaysia.
-        p
-          = "GiveReceipt is straightforward Software as Service that allows SMEs to easily document transactions. CEO's David Sin and Belinda So "
-            a(href="https://www.youtube.com/watch?v=ay4PJQxgrqM") explain the benefits in more depth on The Edge
-          = "."
-
-            
-      .segment.surface
-        figure
-          img(src="img/projects/gr-types.jpg")
-          figcaption Premium subscriptions give the option of different print layouts.
-
-      .segment.blueprint.relative
-        figure
-          img(src="img/projects/gr-wire.png")
-          figcaption User flow for the web app. We decided early on to prompt users to enter company information after the registration process to reduce cognitive load and friction.
-
-      .segment.blueprint
-        figure
-          img(src="img/projects/gr-id.png")
-          figcaption Initital explorations of the GiveReceipt identity. Its application won't be limited to screens so will need to work on print materials and clothing. This is set in Trade Gothic.
-
-      .segment.surface
-        figure
-          img(src="img/projects/gr-invoice.png")
-          figcaption Premium subscriptions give the option of different print layouts.
-
-      .segment.surface
-        figure
-          img(src="img/projects/gr-cards.png")
-          figcaption
-            = "20mm "
-            &times;
-            = " 230mm, 240gsm"
-            br
-            = "Namecards. These were die-cut to show off our corrigated motif."
-
-      .segment.type
-        p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum, quae soluta molestiae nulla harum magnam ad, eaque non rem quasi beatae sint nesciunt suscipit deleniti illo quo, veniam, eligendi voluptatibus? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione eaque veritatis cumque corporis suscipit voluptatem. Optio ipsa fuga excepturi eligendi distinctio recusandae voluptates mollitia sit! Possimus sapiente beatae dignissimos nam.
+          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum, quae soluta molestiae nulla harum magnam ad, eaque non rem quasi beatae sint nesciunt suscipit deleniti illo quo, veniam, eligendi voluptatibus? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione eaque veritatis cumque corporis suscipit voluptatem. Optio ipsa fuga excepturi eligendi distinctio recusandae voluptates mollitia sit! Possimus sapiente beatae dignissimos nam.
 
 
-    .band.ref
-      .segment.type
-        ol.ref
-          li
-            a(href="https://medium.com/p/5fd245753f08/edit") A practical use for CSS columns
-          li
-            a(href="https://www.digitalnewsasia.com/startups/givereceipt-gets-CIP500-grant-only-3mths-after-going-live") GiveReceipt gets CIP 500 grant only 3mths after going live
-          li
-            a(href="https://www.youtube.com/watch?v=ay4PJQxgrqM") The Edge TV (YouTube)
-          li
-            a(href="https://vulcanpost.my/168215/givereceipt-online-business-transactions/") Vulcan post
-          li
-            a(href="https://www.digitalnewsasia.com/startups/givereceipt-gets-CIP500-grant-only-3mths-after-going-live") GiveReceipt gets CIP 500 grant only 3mths after going live (Digital News Asia)
+      .band.ref
+        .segment.type
+          ol.ref
+            li
+              a(href="https://medium.com/p/5fd245753f08/edit") A practical use for CSS columns
+            li
+              a(href="https://www.digitalnewsasia.com/startups/givereceipt-gets-CIP500-grant-only-3mths-after-going-live") GiveReceipt gets CIP 500 grant only 3mths after going live
+            li
+              a(href="https://www.youtube.com/watch?v=ay4PJQxgrqM") The Edge TV (YouTube)
+            li
+              a(href="https://vulcanpost.my/168215/givereceipt-online-business-transactions/") Vulcan post
+            li
+              a(href="https://www.digitalnewsasia.com/startups/givereceipt-gets-CIP500-grant-only-3mths-after-going-live") GiveReceipt gets CIP 500 grant only 3mths after going live (Digital News Asia)
 
 
 
-    include partials/_footer
-    include partials/_scripts
+      include partials/_footer
+      include partials/_scripts

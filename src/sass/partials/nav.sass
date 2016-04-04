@@ -1,51 +1,20 @@
-.nav
-  font-size: 1rem
-  font-weight: bold
-
-.nolist
-  list-style: none
-
-.space
-  letter-spacing: 0.06em
-
-.caps
-  text-transform: uppercase
-
-.ghost
-  pointer-events: none
-  
-.target
-  pointer-events: auto
-  
 nav
   z-index: 2
   position: relative
   ol
     display: flex
+    flex-flow: nowrap
     li
       width: 50%
-      padding-top: 20px
-      padding-bottom: 20px
-      &.profile::after
-        content: "Beta"
-        margin-left: 10px
-        letter-spacing: 0.16em
-        color: rgba(255,255,255,0.75)
-        border: none
       &:nth-child(2)
         text-align: right
-      
-
-
 
 
 @media (max-width: $phone-max)
-  nav ol li
-    padding: 1.2em 0 1.3em 0 
-    font-size: 0.85rem
-    &.profile::after
-      content: ""
-
+  nav 
+    ol 
+      li
+        padding: 1.2em 0 1.3em 0 
 
 
 ul.work-list

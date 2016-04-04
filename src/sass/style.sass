@@ -8,13 +8,10 @@ $red:         #ff6876
 $slate:       #333
 $orange:      #e4b071
 
-
 $border:      1px solid rgba(0, 0, 0, 0.08)
 $gttr-ph:     15px
-
 $gttr-dt:     26px
 $gttr-dt-top:	22px
-
 
 $serif:       "Noto Serif", Georgia, serif
 $sans:        "CircularStd-Bold", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serfif
@@ -39,27 +36,12 @@ $phone-max:   500px
 @import "partials/nav.sass"
 @import "partials/footer.sass"
 @import "partials/motion.sass"
-@import "partials/tooltip.sass"
 @import "partials/rhythm.sass"
-@import "partials/fallback.sass"
-@import "partials/smooth.sass"
 @import "partials/cursor.sass"
 @import "partials/cover.sass"
 
 // projects
 @import "projects/atop.sass"
-
-// body
-  // background: $blueSky
-
-
-// main,
-// footer,
-// ul.work-list,
-// aside.project
-//   background: $bg
-
-
 
 .segment.blueprint.wire
   position: relative
@@ -75,20 +57,21 @@ $phone-max:   500px
       color: white
       text-align: left
 
-
-
-#return
-  opacity: 0
+#level-up
   position: fixed
+  top: -70px
+  left: 0
+  opacity: 0
   width: 100%
   z-index: 10
-  top: -70px
   transition: $transition-quick
   background: rgba(176,234,236, 0.6)
-
   ol.reset.ghost.nav
     display: flex
     li
       width: 50%
       &:nth-child(2)
         text-align: right
+
+
+

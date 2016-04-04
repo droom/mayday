@@ -1,8 +1,6 @@
 - var project   = "GoGet Web/App"
-
 - var prevTitle = "Foreign Office"
-- var nextTitle = "GiveReceipt"
-
+- var nextTitle = "Give Receipt"
 - var prevURL   = "project-foreign.html"
 - var nextURL   = "project-givereceipt.html"
 
@@ -12,125 +10,117 @@ include partials/_html
   head
     include partials/_head
 
-  body.work.iso(data-project="goget" data-animsition-in-class="" data-animsition-in-duration="400").animsition
+  body.work.iso(data-project="goget" itemscope itemtype="http://schema.org/WebPage")
+    div.js-animsition.animsition
+      .belly-title
+        include partials/_banner
+        .band.head.hr.relative
+          a(href=prevURL tabindex="-1" data-animsition-out-class="fade-out-right-sm" data-animsition-out-duration="400").animsition-link.move.move-left
+          .segment.type.relative
+            h2 
+              = project
 
-    .belly-title
-      include partials/_banner
-      .band.head.hr.relative
-        a(href=prevURL tabindex="-1" data-animsition-out-class="fade-out-right-sm" data-animsition-out-duration="400").animsition-link.move.move-left
-        .segment.type.relative
-          h2 
-            = project
+            dl.credits
+              dt Client
+              dd GoGet
+              dt Studio
+              dd VLT Labs
+              dt Repo
+              dd (Private)
+              dt Live
+              dd.live
+                a(href="http://www.goget.my/" aria-label="Visit GoGet") goget.my
+          a(href=nextURL tabindex="-1" data-animsition-out-class="fade-out-left-sm" data-animsition-out-duration="400").animsition-link.move.move-right
 
-          dl.credits
-            dt Client
-            dd GoGet
-            dt Studio
-            dd VLT Labs
-            dt Repo
-            dd (Private)
-            dt Live
-            dd.live
-              a(href="http://www.goget.my/" aria-label="Visit GoGet") goget.my
-        a(href=nextURL tabindex="-1" data-animsition-out-class="fade-out-left-sm" data-animsition-out-duration="400").animsition-link.move.move-right
+      .belly-photo.gg#what
 
-    .belly-photo.gg#what
+      .belly-aside
+        aside.project(role="complementary")
+          .segment.type
+            dl.credits
+              dt Role
+              dd Identity
+              dd UX &plus; UI
 
-    .belly-aside
-      aside.project(role="complementary")
+            dl.credits
+              dt Stack
+              dd Balsamiq
+              dd Paper
+              dd Adobe© Illustrator
+              dd Adobe© Photoshop
+              dd Adobe© InDesign
+              dd InVision
+
+
+
+      main(role="main")
+
+
         .segment.type
-          dl.credits
-            dt Role
-            dd Identity
-            dd UX &plus; UI
+          h3.intro GoGet is a community focused errands and delivery service, currently operating in Kuala Lumpur.
+          p When I met the founders, Fran and Fung had version 1 of their site up and running. A (Twitter) bootstrapped, no-frills but just about functional site.
+          p This was a bit tricker than it seemed at first glance. There were two separate user journeys, GoGetter (I run errands) and Poster (I want someone to run an errand) with the ability for the user to switch between the two.
+          p I used a modified version of Google Ventures’ Design Sprint methodology to tackle this problem.
 
-          dl.credits
-            dt Stack
-            dd Balsamiq
-            dd Paper
-            dd Adobe© Illustrator
-            dd Adobe© Photoshop
-            dd Adobe© InDesign
-            dd InVision
+        .segment.surface
+          figure
+            img(src="img/projects/gg-sprint.jpg")
+            figcaption  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum sint deserunt totam harum fuga accusamus facilis eos reiciendis quod, odio ex aperiam sequi quia, odit maxime officia ipsa, laborum enim.
 
+        .segment.blueprint.wire
+          .yoyo
+            small.warn 
+              | This screen is too small :(
+              br
+              | To view this image fullscreen.
 
+          figure
+            img(src="img/projects/gr-wire.png")
+            figcaption Initial exploration of wordmarks. Things I needed to communicate. Safety (Trustworthy), Speed (Reliable, Efficient), A sense of community (Friendly)
 
-    main(role="main")
+        .segment.surface
+          figure
+            img(src="img/projects/gg-research-1.jpg").half
+            img(src="img/projects/gg-research-2.jpg").half
+            figcaption  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod quae in odit enim, voluptatibus quidem deleniti minus quisquam, consequuntur soluta libero cum iusto molestiae nobis culpa sed similique accusantium ab. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore neque molestiae sed adipisci ipsum hic commodi, praesentium excepturi laboriosam sequi ab, architecto quasi inventore perferendis magnam illum alias, recusandae minus.
 
+        .segment.blueprint
+          figure
+            img(src="img/projects/gg-marks.png")
+            figcaption Initial exploration of wordmarks. Things I needed to communicate. Safety (Trustworthy), Speed (Reliable, Efficient), A sense of community (Friendly)
 
+        .segment.surface
+          figure
+            img(src="img/projects/gg-types.jpg")
+            figcaption Initial exploration of wordmarks. Things I needed to communicate
+              ul
+                li Safety (Trustworthy)
+                li Speed (Reliable, Efficient)
+                li A sense of community (Friendly)
 
+        .segment.blueprint
+          figure
+            img(src="img/projects/gg-ui.png")
+            figcaption UI based on transport markings found around Malaysia.
 
-
-      .segment.type
-        h3.intro GoGet is a community focused errands and delivery service, currently operating in Kuala Lumpur.
-        p When I met the founders, Fran and Fung had version 1 of their site up and running. A (Twitter) bootstrapped, no-frills but just about functional site.
-        p This was a bit tricker than it seemed at first glance. There were two separate user journeys, GoGetter (I run errands) and Poster (I want someone to run an errand) with the ability for the user to switch between the two.
-        p I used a modified version of Google Ventures’ Design Sprint methodology to tackle this problem.
-
-      .segment.surface
-        figure
-          img(src="img/projects/gg-sprint.jpg")
-          figcaption  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum sint deserunt totam harum fuga accusamus facilis eos reiciendis quod, odio ex aperiam sequi quia, odit maxime officia ipsa, laborum enim.
-
-      .segment.blueprint.wire
-        .yoyo
-          small.warn 
-            | This screen is too small :(
-            br
-            | To view this image fullscreen.
-
-        figure
-          img(src="img/projects/gr-wire.png")
-          figcaption Initial exploration of wordmarks. Things I needed to communicate. Safety (Trustworthy), Speed (Reliable, Efficient), A sense of community (Friendly)
-
-
-
-      .segment.surface
-        figure
-          img(src="img/projects/gg-research-1.jpg").half
-          img(src="img/projects/gg-research-2.jpg").half
-          figcaption  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod quae in odit enim, voluptatibus quidem deleniti minus quisquam, consequuntur soluta libero cum iusto molestiae nobis culpa sed similique accusantium ab. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore neque molestiae sed adipisci ipsum hic commodi, praesentium excepturi laboriosam sequi ab, architecto quasi inventore perferendis magnam illum alias, recusandae minus.
-
-      .segment.blueprint
-        figure
-          img(src="img/projects/gg-marks.png")
-          figcaption Initial exploration of wordmarks. Things I needed to communicate. Safety (Trustworthy), Speed (Reliable, Efficient), A sense of community (Friendly)
-
-      .segment.surface
-        figure
-          img(src="img/projects/gg-types.jpg")
-          figcaption Initial exploration of wordmarks. Things I needed to communicate
-            ul
-              li Safety (Trustworthy)
-              li Speed (Reliable, Efficient)
-              li A sense of community (Friendly)
-
-      .segment.blueprint
-        figure
-          img(src="img/projects/gg-ui.png")
-          figcaption UI based on transport markings found around Malaysia.
-
-      .segment.blueprint
-        figure
-          img(src="img/projects/gg-notice.png")
-          figcaption In-app notifications
+        .segment.blueprint
+          figure
+            img(src="img/projects/gg-notice.png")
+            figcaption In-app notifications
 
 
-      //- .segment.type.notice
-      //-   p
-      //-     em
-      //-       = "There is one Medium article associated with this project:"
-      //-     ol
-      //-       li
-      //-         a(href="https://medium.com/p/5fd245753f08/edit") A practical use for CSS columns
+        //- .segment.type.notice
+        //-   p
+        //-     em
+        //-       = "There is one Medium article associated with this project:"
+        //-     ol
+        //-       li
+        //-         a(href="https://medium.com/p/5fd245753f08/edit") A practical use for CSS columns
 
 
-      .segment.type
-        p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam eum sint deleniti veniam eveniet facilis itaque quaerat rerum, id, incidunt libero quia delectus temporibus dignissimos numquam placeat quo, minus omnis!
+        .segment.type
+          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam eum sint deleniti veniam eveniet facilis itaque quaerat rerum, id, incidunt libero quia delectus temporibus dignissimos numquam placeat quo, minus omnis!
 
 
-
-
-
-    include partials/_footer
-    include partials/_scripts
+      include partials/_footer
+      include partials/_scripts
