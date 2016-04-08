@@ -1,20 +1,17 @@
-body
-  h1, h2, h3, h4, h5, h6, nav, nav ol li, .h1, .h2, .h3, .h4, .h5, .h6, .nav
-    font-family: $sans
-    font-weight: normal !important
+h1, h2, h3, h4, h5, h6, nav, nav ol li, .h1, .h2, .h3, .h4, .h5, .h6, .nav
+  font-family: $sans
+  font-weight: normal !important
 
 h1, .h1,
 nav, .nav
   font-size: 1rem
+  margin: 0
+  padding: 0
 
 @media (max-width: $phone-max)
   h1, .h1,
   nav, .nav
     font-size: 0.85rem
-
-h1, .h1
-  margin: 0
-  padding: 0
 
 h2, .h2
   letter-spacing: -0.035em
@@ -22,14 +19,9 @@ h2, .h2
   font-size: 3rem
   color: $copy
   margin: 0
-  padding: 0 0 0.15em 0
+  padding: 0 0 105px 0
   min-height: 2.5em
   margin-left: -0.03em
-
-  & + small,
-  & + dl.credits
-    margin-top: 40px
-    display: block
 
 @media (max-width: $phone-max)
   h2, .h2

@@ -16,22 +16,22 @@ include partials/_html
         include partials/_banner
         .band.head.hr.relative
           a(href=prevURL tabindex="-1" data-animsition-out-class="fade-out-right-sm" data-animsition-out-duration="300").animsition-link.move.move-left
-          .segment.type
-            h2
-              = project
-            dl.reset.credits
-              dt Client
-              dd Ideahouse
-              dt Studio
-              dd DROOM&plus;TZY
-              dt Date
-              dd December 2015
-              dt Repo
-              dd.repo
-                a(href="http://www.github.com/droom/ideahouse-web") github.com/droom/ideahouse-web
-              dt Stage
-              dd.stage
-                a(href="http://www.droom.name/clients/ih") droom.name/clients/ih
+          .segment.type.relative
+            header
+              h2=project
+              dl.reset.credits
+                dt Client
+                dd Ideahouse
+                dt Studio
+                dd DROOM&plus;TZY
+                dt Date
+                dd December 2015
+                dt Repo
+                dd.repo
+                  a(href="http://www.github.com/droom/ideahouse-web") github.com/droom/ideahouse-web
+                dt Stage
+                dd.stage
+                  a(href="http://www.droom.name/clients/ih") droom.name/clients/ih
 
           a(href=nextURL tabindex="-1" data-animsition-out-class="fade-out-left-sm" data-animsition-out-duration="300").animsition-link.move.move-right
 

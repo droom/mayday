@@ -16,19 +16,19 @@ include partials/_html
         include partials/_banner
         .band.head.hr.relative
           a(href=prevURL tabindex="-1" data-animsition-out-class="fade-out-right-sm" data-animsition-out-duration="300").animsition-link.move.move-left
-          .segment.type
-            h2
-              = project
-              
-            dl.reset.credits
-              dt Client
-              dd SaltyCustom
-              dt Studio
-              dd VLT Labs
-              dt Date
-              dd July 2015
-              dt Repo
-              dd (Private)
+          .segment.type.relative
+
+            header
+              h2=project
+              dl.reset.credits
+                dt Client
+                dd SaltyCustom
+                dt Studio
+                dd VLT Labs
+                dt Date
+                dd July 2015
+                dt Repo
+                dd (Private)
 
           a(href=nextURL tabindex="-1" data-animsition-out-class="fade-out-left-sm" data-animsition-out-duration="300").animsition-link.move.move-right
 

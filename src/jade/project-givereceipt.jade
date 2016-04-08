@@ -16,22 +16,22 @@ include partials/_html
         include partials/_banner
         .band.head.hr.relative
           a(href=prevURL tabindex="-1" data-animsition-out-class="fade-out-right-sm" data-animsition-out-duration="300").animsition-link.move.move-left
-          .segment.type
-            h2
-              = project
+          .segment.type.relative
             
-            dl.reset.credits
-              dt Client
-              dd GiveReceipt
-              dt Studio
-              dd SixLeaves
-              dt Date
-              dd July 2015
-              dt Repo
-              dd (Private)
-              dt Live
-              dd.asia
-                a(href=nextURL aria-label="Visit GiveReceipt") givereceipt.com
+            header
+              h2=project
+              dl.reset.credits
+                dt Client
+                dd GiveReceipt
+                dt Studio
+                dd SixLeaves
+                dt Date
+                dd July 2015
+                dt Repo
+                dd (Private)
+                dt Live
+                dd.asia
+                  a(href=nextURL aria-label="Visit GiveReceipt") givereceipt.com
 
           a(href=nextURL tabindex="-1" data-animsition-out-class="fade-out-left-sm" data-animsition-out-duration="300").animsition-link.move.move-right
 
@@ -67,27 +67,33 @@ include partials/_html
         .segment.blueprint.relative
           figure
             img(src="img/projects/gr-wire.png")
-            figcaption User flow for the web app. We decided early on to prompt users to enter company information after the registration process to reduce cognitive load and friction.
+            figcaption 
+              small User flow for the web app. We decided early on to prompt users to enter company information after the registration process to reduce cognitive load and friction.
 
         .segment.blueprint
           figure
             img(src="img/projects/gr-id.png")
-            figcaption Initital explorations of the GiveReceipt identity. Its application won't be limited to screens so will need to work on print materials and clothing. This is set in Trade Gothic.
+            figcaption 
+              small Initital explorations of the GiveReceipt identity. Its application won't be limited to screens so will need to work on print materials and clothing. This is set in Trade Gothic.
 
         .segment.surface
           figure
             img(src="img/projects/gr-invoice.png")
-            figcaption Premium subscriptions give the option of different print layouts.
+            figcaption
+              small Premium subscriptions give the option of different print layouts.
 
         .segment.surface
           figure
             img(src="img/projects/gr-cards.png")
-            figcaption
-              = "20mm "
-              &times;
-              = " 230mm, 240gsm"
-              br
-              = "Namecards. These were die-cut to show off our corrigated motif."
+            figcaption  
+              small
+                = "20mm "
+                &times;
+                = " 230mm, 240gsm"
+                br
+                = "Namecards. These were die-cut to show off our corrigated motif."
+
+
 
         .segment.type
           p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum, quae soluta molestiae nulla harum magnam ad, eaque non rem quasi beatae sint nesciunt suscipit deleniti illo quo, veniam, eligendi voluptatibus? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione eaque veritatis cumque corporis suscipit voluptatem. Optio ipsa fuga excepturi eligendi distinctio recusandae voluptates mollitia sit! Possimus sapiente beatae dignissimos nam.

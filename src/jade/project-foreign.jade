@@ -1,8 +1,6 @@
 - var project   = "Foreign Office (tumblr)"
-
 - var prevTitle = "project-givereceipt.html"
 - var prevURL   = "project-givereceipt.html"
-
 - var nextTitle = "project-ideahouse.html"
 - var nextURL   = "project-ideahouse.html"
 
@@ -19,20 +17,22 @@ include partials/_html
         .band.head.hr.relative.move
           a(href=prevURL tabindex="-1" data-animsition-out-class="fade-out-right-sm" data-animsition-out-duration="300").animsition-link.move.move-left
           .segment.type.relative
-            h2
-              = project
-            dl.reset.credits
-              dt Client
-              dd SaltyCustom
-              dt Studio
-              dd VLT Labs
-              dt Date
-              dd July 2015
-              dt Repo
-              dd (Private)
-              dt Live
-              dd.asia
-                a(href="http://blog.droom.name/" aria-label="Visit Blog") blog.droom.name
+
+            header
+              h2=project
+              dl.reset.credits
+                dt Client
+                dd SaltyCustom
+                dt Studio
+                dd VLT Labs
+                dt Date
+                dd July 2015
+                dt Repo
+                dd (Private)
+                dt Live
+                dd.asia
+                  a(href="http://blog.droom.name/" aria-label="Visit Blog") blog.droom.name
+          
           a(href=nextURL tabindex="-1" data-animsition-out-class="fade-out-left-sm" data-animsition-out-duration="300").animsition-link.move.move-right
 
       .belly-photo.fo#what

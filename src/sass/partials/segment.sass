@@ -1,9 +1,3 @@
-header,
-nav,
-.type
-  max-width: $narrow-unit
-  margin: auto
-
 .band
   &.hr
     border-top: $border
@@ -17,113 +11,71 @@ nav,
 
 .segment
   margin: auto
-  img,
-  video
-    max-width: 100%
-
-  &.cover
-    max-width: $wide-unit
-    text-align: center
-    figure
-      img
-        max-width: 100%
-
-  &.blueprint
-    max-width: $wide-unit
-    text-align: center
-    figure
-      background: url('../img/components/tile-graph.gif') repeat 50% 50% $blueDark
-      figcaption
-        width: 100%
-        background: $bg
-        padding-left: $gttr-dt
-        padding-right: $gttr-dt
-      img
-        max-width: 100%
-        &.faint
-          padding: 30px
-          opacity: 0.4
-
-  &.surface
-    max-width: $wide-unit
-    text-align: center
-    figure
-      img.half
-        width: calc(50%)
-      img.half:nth-child(1)
-        border-right: 4px transparent solid
-      img.half:nth-child(2)
-        border-left: 4px transparent solid
-      figcaption
-        padding-left: $gttr-dt
-        padding-right: $gttr-dt
+  figure
+    img
+      max-width: 100%
+    figcaption
+      background: $bg
+      padding-left: $gttr-dt
+      padding-right: $gttr-dt
+      width: 100%
+      small
         max-width: 340px
 
+  &.center
+    text-align: center
+    
+  &.relative
+    position: relative
+
+  &.blueprint
+    figure
+      background: url('../img/components/tile-graph.gif') repeat 50% 50% $blueDark
+
+  &.code
+    background: $slate
+
+  &.type,
   &.code
     padding: $gttr-dt
-    background: $slate
-    max-width: $wide-unit
-    transition: 700ms all ease
-    overflow: hidden
-      
-  &.offset
-    text-align: left
-    max-width: 950px
-       
+
   &.type
-    position: relative
+    max-width: $narrow-unit
     z-index: 1
 
-  &.work
-    background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNi4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iNjBweCIgaGVpZ2h0PSI1NnB4IiB2aWV3Qm94PSI2OC4wNjYgNzQuODU1IDYwIDU2IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDY4LjA2NiA3NC44NTUgNjAgNTYiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGc+DQoJPHBvbHlnb24gZmlsbD0iIzJDMjIyNSIgcG9pbnRzPSIxMjguMDY2LDEwMi45NzEgOTcuMTU3LDEzMC44NTUgOTcuMDk1LDEzMC43ODEgOTcuMDY1LDEzMC44MDggOTUuNjA5LDEyOS4wMTkgOTMuMzUzLDEyNi4zNDUgDQoJCTkzLjM5NywxMjYuMzA1IDkzLjM1MywxMjYuMjQ4IDExNi40MjcsMTA1LjgyOSA2OC4wNjYsMTA1LjgyOSA2OC4wNjYsOTkuNDg2IDExNS44MzQsOTkuNDg2IDkzLjM1Myw3OS42ODggOTMuNTIsNzkuNDc4IA0KCQk5My4zNTMsNzkuMzMzIDk3LjE1Nyw3NC44NTUgMTI4LjA2NCwxMDIuODY5IDEyOC4wNjQsMTAyLjk3MSAxMjguMDY2LDEwMi45NzEgCSIvPg0KPC9nPg0KPC9zdmc+DQo=")
-    background-repeat: no-repeat
-    background-position: 96% 50%
-    transition: 200ms all ease
-  
-  &.half
-    display: flex
-    .slice
-      width: 50%
-      list-style: none
-      align-self: flex-start
-      vertical-align: top
-    .slice:nth-child(1)
-      padding-right: 40px
-      text-align: left
-    .slice:nth-child(2)
-      padding-left: 40px
+  &.code,
+  &.surface,
+  &.blueprint
+    max-width: $wide-unit
 
+    
+.half
+  display: flex
+  
+  .slice
+    width: 50%
+    align-self: flex-start
+    
+  .slice:nth-child(1)
+    padding-right: 5px
+    text-align: left
+  
+  .slice:nth-child(2)
+    padding-left: 5px
 
 
 @media (max-width: $phone-max)
   .segment
+    &.type
+      padding: $gttr-ph
+
     &.blueprint.wire
       .warn
         display: block
-        
       figure
         img
           opacity: 0.4
 
-header,
-nav,
-.segment.type
-  padding: $gttr-dt-top $gttr-dt $gttr-dt $gttr-dt 
-
-
-@media (max-width: $phone-max)
-  header,
-  nav,
-  .segment.type
-    padding: $gttr-ph
-    
-  header
-    padding-bottom: 0
-    
-  .segment
-    &.work
-      background-position: 95% 20%
-      background-size: 30px
 
     &.blueprint
       figure

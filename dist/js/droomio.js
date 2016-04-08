@@ -993,16 +993,14 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
   var returnShow = new Waypoint({
     element: document.getElementById('what'),
     handler: function(direction) {
-      $("#level-up").css("top", "0");
-      $("#level-up").css("opacity", "1");
+      $("#top").addClass("show");
     }, offset: 0
   })
 
   var returnHide = new Waypoint({
     element: document.getElementById('what'),
     handler: function(direction) {
-      $("#level-up").css("top", "-70px");
-      $("#level-up").css("opacity", "0");
+      $("#top").removeClass("show");
     }, offset: 1
   })
 
@@ -1072,7 +1070,7 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
 
           }, 300, 'easeOutExpo');
           
-          $("#return").css("top", "-70px");
+          $("#top").css("top", "-70px");
           return false;
         
         }

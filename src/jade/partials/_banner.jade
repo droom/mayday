@@ -1,19 +1,17 @@
-.band.head.relative.unselect#head
-
-  if contents
+.band.head.relative#head
+  if worklist
     a(href="index.html" tabindex="-1" data-animsition-out-class="fade-out-up-sm" data-animsition-out-duration="300").move.move-up.animsition-link
   else    
     a(href="work.html" tabindex="-1" data-animsition-out-class="fade-out-up-sm" data-animsition-out-duration="300").move.move-up.animsition-link
 
-
-
   nav(role="navigation").ghost
-    ol.reset.ghost
-      li.ghost.nolist.space.profile.caps
-        h1
-          a(href="index.html").target Droom.io
-      li.ghost.nolist.work
-        a(href="work.html").target Case Studies
+    .segment.type.ghost
+      ol.nav.reset.ghost
+        li.ghost.nolist.space.profile.caps
+          h1
+            a(href="index.html").target Droom.io
+        li.ghost.nolist.work
+          a(href="work.html").target Case Studies
 
 
 .band.js.hr
@@ -24,10 +22,10 @@
       | .
 
 
-.band.head.relative#level-up
+.band.head.relative#top
   a(href="#head" tabindex="-1").move.move-top
   .segment.type.ghost
-    ol.reset.ghost.nav
+    ol.nav.reset.ghost
       li.ghost.nolist.space.caps droom.io
       li.ghost.nolist
         = project

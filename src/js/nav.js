@@ -11,7 +11,7 @@ $(document).ready(function() {
 
           }, 300, 'easeOutExpo');
           
-          $("#return").css("top", "-70px");
+          $("#top").css("top", "-70px");
           return false;
         
         }

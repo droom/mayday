@@ -14,8 +14,6 @@ $gttr-ph:     15px
 $gttr-dt:     26px
 $gttr-dt-top:	22px
 
-
-
 $serif:       "Noto Serif", Georgia, serif
 $sans:        "CircularStd-Bold", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serfif
 $mono:        "InputMonoNarrow-Regular", "InputMonoNarrow-Thin", monospace
@@ -26,7 +24,6 @@ $transition-quick:  all 200ms ease
 $wide-unit:   1098px
 $narrow-unit: 780px
 $phone-max:   500px
-
 
 $font-small: 11px
 
@@ -42,43 +39,36 @@ $font-small: 11px
 @import "partials/footer.sass"
 @import "partials/motion.sass"
 @import "partials/rhythm.sass"
-// @import "partials/cursor.sass"
 @import "partials/cover.sass"
 @import "partials/fallback.sass"
 
 // projects
 @import "projects/atop.sass"
 
+img.faint
+	padding: 30px
+	opacity: 0.4
 
-.segment.blueprint.wire
-  position: relative
-  .yoyo
-    position: absolute
-    left: 0
-    top: 0
-    z-index: 5
-    background: #2e4dd2
-    .warn
-      padding: $gttr-ph 30px 30px $gttr-ph
-      margin: 0
-      color: white
-      text-align: left
 
-#level-up
-  position: fixed
-  top: -70px
-  left: 0
-  opacity: 0
-  width: 100%
-  z-index: 10
-  transition: $transition-quick
-  background: rgba(176,234,236, 0.6)
-  ol.reset.ghost.nav
-    display: flex
-    li
-      width: 50%
-      &:nth-child(2)
-        text-align: right
+.segment.code
+	overflow: hidden
+  
+
+// .segment.blueprint.wire
+//   position: relative
+//   .yoyo
+//     position: absolute
+//     left: 0
+//     top: 0
+//     z-index: 5
+//     background: #2e4dd2
+//     .warn
+//       padding: $gttr-ph 30px 30px $gttr-ph
+//       margin: 0
+//       color: white
+//       text-align: left
+
+
 
 
 
