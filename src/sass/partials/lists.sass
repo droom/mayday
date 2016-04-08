@@ -1,47 +1,25 @@
-ol.reset,
-ol.reset li  
+.reset
   margin: 0 
   padding: 0
+  li
+    margin: 0 
+    padding: 0
 
-ul.reset,
-ul.reset li  
-  margin: 0 
-  padding: 0
+ul.pure
+  list-style: none
 
 ol.ref
-  margin: 0 
-  padding: 0
   li
-    font-size: 11px
+    font-size: $font-small
     line-height: 1.62em
-
-ol.return
-  margin: 0 auto
-  padding: 0
-  pointer-events: none
-  display: flex
-  width: $narrow-unit
-  li
-    font-size: 1rem
-    width: 50%
-    padding: 0
-    margin: 0
-    list-style: none
-    padding: 20px 0
-    pointer-events: none
-
 
 
 dl.credits
-  margin: 0
-  font-size: 13px
-  line-height: 18px
-  overflow: visible
-
+  // margin: 0
+  // overflow: visible
   font-family: $serif
-  font-size: 11px
+  font-size: $font-small
   line-height: 16px
-
   vertical-align: top
   display: inline-block
   min-width: 210px
@@ -80,26 +58,4 @@ dl.credits
 
 
 
-ul.work-list
-  margin: 0
-  padding: 0
-  list-style-type: none
-
-  li
-    border-top: $border
-    
-    &:first-child
-      border-top: none
-    &:hover
-      background-color: rgba(255, 255, 255, 0.4)
-    & + li
-      margin: 0
-
-@media (max-width: $phone-max)
-  ul.work-list
-    dl.credits
-      width: 75%
-      padding: 0 0 3em 0
-      dd.project
-        margin: 0px 0 1em 0 
 

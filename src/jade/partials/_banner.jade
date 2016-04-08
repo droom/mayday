@@ -1,27 +1,34 @@
 .band.head.relative.unselect#head
-  a(href="work.html" tabindex="-1" data-animsition-out-class="fade-out-up-sm" data-animsition-out-duration="300").move.move-up.animsition-link
+
+  if contents
+    a(href="index.html" tabindex="-1" data-animsition-out-class="fade-out-up-sm" data-animsition-out-duration="300").move.move-up.animsition-link
+  else    
+    a(href="work.html" tabindex="-1" data-animsition-out-class="fade-out-up-sm" data-animsition-out-duration="300").move.move-up.animsition-link
+
+
 
   nav(role="navigation").ghost
     ol.reset.ghost
       li.ghost.nolist.space.profile.caps
-        a(href="index.html").target Droom.io
+        h1
+          a(href="index.html").target Droom.io
       li.ghost.nolist.work
         a(href="work.html").target Case Studies
 
 
-//- .band.js.hr
-//-   .segment.type
-//-     h4 
-//-       | Hey there. There are some features on here that need JavaScript to work. Please enable it for the full experience. 
-//-       a(href="http://enable-javascript.com/") View instructions
-//-       | .
+.band.js.hr
+  .segment.type
+    h4 
+      | Hey there. There are some features on here that need JavaScript to work. Please enable it for the full experience. 
+      a(href="http://enable-javascript.com/") View instructions
+      | .
 
 
 .band.head.relative#level-up
   a(href="#head" tabindex="-1").move.move-top
   .segment.type.ghost
     ol.reset.ghost.nav
-      li.ghost.nolist.space.caps Droom.io
+      li.ghost.nolist.space.caps droom.io
       li.ghost.nolist
         = project
 

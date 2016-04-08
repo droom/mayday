@@ -3,12 +3,18 @@ body
     font-family: $sans
     font-weight: normal !important
 
+h1, .h1,
 nav, .nav
   font-size: 1rem
 
 @media (max-width: $phone-max)
+  h1, .h1,
   nav, .nav
     font-size: 0.85rem
+
+h1, .h1
+  margin: 0
+  padding: 0
 
 h2, .h2
   letter-spacing: -0.035em
@@ -50,7 +56,7 @@ h4, .h4
   padding-top: 0px
   padding-bottom: 0px
   
-p 
+p, .p
   font-size: 1em
   line-height: 1.5em
 
@@ -84,11 +90,10 @@ pre
 
 small
   font-family: $serif
-  font-size: 11px
+  font-size: $font-small
   line-height: 16px
   display: inline-block
 
-a.view-large,
 figcaption
   text-align: left
   font-weight: 200

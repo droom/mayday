@@ -1,60 +1,50 @@
 a
   color: $copy
   text-decoration: none
-  border-bottom-color: $copy
-  border-bottom-style: solid
-  border-bottom-width: 0.14em
+  border-bottom: $copy solid 0.14em
+  outline: 0
 
-  &:active,
-  &:focus
-    outline: 0
+  &:focus,
   &:hover
-    background-color: rgba( 255, 255, 255, 0.6)
+    background-color: $hover
 
+  &.move
+    position: absolute
+    top: 0
+    z-index: 0
+    height: 100%
+    border: none
 
-.band.head
-  a.move-left,
-  a.move-right,
-  a.move-top
-    &:hover
-      background: none
+    &.move-left,
+    &.move-up,
+    &.move-top
+      left: 0
+      
+    &.move-up,
+    &.move-top
+      width: 100%
 
-a.plain
-  text-decoration: none
-  color: $copy
-  &:hover
-    color: $copy
-
-
-a.view-large
-  background: $copy
-  color: $bg
-  padding: 10px
-  position: absolute
-  right: 0
-  top: 0
-  text-decoration: none
-
-footer,
-main
-  .type
-    a
-      color: $copy
-      text-decoration: none
-      border-bottom: none
-      background: white
-      padding: 0 0.2em
-
-      &:active,
-      &:focus
-        outline: 0
-
+    &.move-left,
+    &.move-right
+      width: 50%
       &:hover
-        background-color: $orange
+        background: none
 
-                
+    &.move-left
+      &:hover
+        cursor: url('../img/components/arrow-nav-prev.svg'), w-resize
 
-
-
+    &.move-right
+      right: 0
+      &:hover
+        cursor: url('../img/components/arrow-nav-next.svg'), e-resize
+      
+    &.move-up
+      &:hover
+        cursor: url('../img/components/arrow-nav-return.svg'), n-resize
+        
+    &.move-top
+      &:hover
+        cursor: url('../img/components/arrow-nav-top.svg'), n-resize
 
 

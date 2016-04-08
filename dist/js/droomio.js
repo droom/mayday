@@ -1010,33 +1010,76 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
 
 
 ;$(document).ready(function() {
-    
-    $('a[href*=#]:not([href=#])').click(function() {
-      if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-        var target = $(this.hash);
-        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-        if (target.length) {
-          $('html,body').animate({
 
-            scrollTop: target.offset().top
-          }, 300, 'easeOutExpo');
+  console.log('localStorage.context', localStorage.context);
 
-          $("#return").css("top", "-70px");
-          
-          return false;
+  if (localStorage.context === "backwards"){
+    $( "#yoyo" ).attr('data-animsition-in-class','fade-in-left-sm');
+  };
 
-        }
-      }
-    });
+  if (localStorage.context === "forwards"){
+    $( "#yoyo" ).attr('data-animsition-in-class','fade-in-right-sm');
+  };
+
+  if (localStorage.context === "upwards"){
+    $( "#yoyo" ).attr('data-animsition-in-class','fade-in-up-sm');
+  };
+
+  if (localStorage.context === "normal"){
+    $( "#yoyo" ).attr('data-animsition-in-class','fade-in');
+  };
+
+
+  $(".move-left").click(function(){
+    localStorage.context = "backwards";
+    console.log(".move-left");
+  })
+
+  $(".move-right").click(function(){
+    localStorage.context = "forwards";
+    console.log(".move-right");
+  })
+
+  $(".move-up").click(function(){
+    localStorage.context = "upwards";
+    console.log(".move-up");
+  })
+
+  $("a.plain").click(function(){
+    localStorage.context = "normal";
+    console.log(".ul.work-list a.plain");
+  })
+
+  $("a.target").click(function(){
+    localStorage.context = "normal";
+    console.log(".ul.work-list a.plain");
+  })
 
 
 
 });
 
-
-
-
 ;$(document).ready(function() {
+
+    $('a.move-top').click(function() {
+
+      if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+        if (target.length) {
+          $('html, body').animate({
+            scrollTop: target.offset().top
+
+          }, 300, 'easeOutExpo');
+          
+          $("#return").css("top", "-70px");
+          return false;
+        
+        }
+      }
+    });
+
+});;$(document).ready(function() {
 	function cover(){
 		var hWindow       =  $(window).height();
 		var wWindow       =  $(window).width();

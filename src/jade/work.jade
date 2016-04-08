@@ -1,3 +1,5 @@
+- var contents = true
+
 doctype html
 include partials/_html
 
@@ -5,20 +7,20 @@ include partials/_html
     include partials/_head
 
   body.work(itemscope itemtype="http://schema.org/WebPage" data-project="work")
-    div.js-animsition.animsition(data-animsition-in-class="fade-in" data-animsition-in-duration="300")
+    div.js-animsition.animsition(data-animsition-in-duration="500" data-animsition-in-class="fade-in-up-sm")#yoyo
       include partials/_banner
       .band.head.hr.relative
         .segment.type
           h2
             = "Selected Work"
           small 2012&ndash;2015
-          
+      
       main(role='main')#what
-        ul.work-list
+        ul.work-list.reset.pure
           li
             a(href="project-goget.html").plain
               .segment.type.work
-                dl.credits
+                dl.reset.credits
                   dt.hide Project name
                   dd.project.h3 GoGet App
                   dt.client Client
@@ -27,9 +29,9 @@ include partials/_html
                   dd.studio VLT
 
           li
-            a.plain(href="project-givereceipt.html").animsition-link
+            a(href="project-givereceipt.html").plain
               .segment.type.work
-                dl.credits
+                dl.reset.credits
                   dt.hide Project name
                   dd.project.h3 GiveReceipt Web
                   dt.client Client
@@ -38,9 +40,9 @@ include partials/_html
                   dd.studio Six Leaves
           
           li
-            a.plain(href="project-foreign.html").animsition-link
+            a(href="project-foreign.html").plain
               .segment.type.work
-                dl.credits
+                dl.reset.credits
                   dt.hide Project name
                   dd.project.h3 Foreign Office (tumblr)
                   dt.client Client
@@ -49,9 +51,9 @@ include partials/_html
                   dd.studio Reformist.io
 
           li
-            a.plain(href="project-atop.html").animsition-link
+            a(href="project-atop.html").plain
               .segment.type.work
-                dl.credits
+                dl.reset.credits
                   dt.hide Project name
                   dd.project.h3 ATOP Watches
                   dt.client Client
@@ -60,9 +62,9 @@ include partials/_html
                   dd.studio DROOM+TZY
 
           li
-            a.plain(href='project-ideahouse.html').animsition-link
+            a(href='project-ideahouse.html').plain
               .segment.type.work
-                dl.credits
+                dl.reset.credits
                   dt.hide Project name
                   dd.project.h3 Ideahouse
                   dt.client Client

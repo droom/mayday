@@ -1,8 +1,6 @@
 - var project   = "GiveReceipt Web/App"
-
 - var prevTitle = "GoGet"
 - var nextTitle = "project-foreign"
-
 - var nextURL   = "project-foreign.html"
 - var prevURL   = "project-goget.html"
 
@@ -13,17 +11,16 @@ include partials/_html
     include partials/_head
     
   body.work.iso(data-project="givereceipt")
-  
-    div.js-animsition.animsition(data-animsition-in-class="" data-animsition-in-duration="400")
-
+    div(data-animsition-in-class="fade-in" data-animsition-in-duration="500").js-animsition.animsition#yoyo
       .belly-title
         include partials/_banner
         .band.head.hr.relative
-          a(href=prevURL tabindex="-1" data-animsition-out-class="fade-out-right-sm" data-animsition-out-duration="400").animsition-link.move.move-left
+          a(href=prevURL tabindex="-1" data-animsition-out-class="fade-out-right-sm" data-animsition-out-duration="300").animsition-link.move.move-left
           .segment.type
             h2
               = project
-            dl.credits
+            
+            dl.reset.credits
               dt Client
               dd GiveReceipt
               dt Studio
@@ -36,20 +33,20 @@ include partials/_html
               dd.asia
                 a(href=nextURL aria-label="Visit GiveReceipt") givereceipt.com
 
-          a(href=nextURL tabindex="-1" data-animsition-out-class="fade-out-left-sm" data-animsition-out-duration="400").animsition-link.move.move-right
+          a(href=nextURL tabindex="-1" data-animsition-out-class="fade-out-left-sm" data-animsition-out-duration="300").animsition-link.move.move-right
 
       .belly-photo.gr#what
 
       .belly-aside
         aside.project(role="complementary")
           .segment.type
-            dl.credits
+            dl.reset.credits
               dt Role
               dd Identity
               dd UX &plus; UI
               dd Front-end build
 
-            dl.credits
+            dl.reset.credits
               dt Stack
               dd Adobe&copy; Illustrator
               dd Adobe&copy; Photoshop

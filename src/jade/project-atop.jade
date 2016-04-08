@@ -1,4 +1,4 @@
-- var project = "Atop Watches"
+- var project   = "Atop Watches"
 - var prevTitle = "Foreign Office"
 - var prevURL   = "project-foreign.html"
 - var nextTitle = "GiveReceipt Web/App"
@@ -9,16 +9,18 @@ include partials/_html
 
   head
     include partials/_head
+
   body.work.iso(data-project="atop")
-    div.js-animsition.animsition(data-animsition-in-duration="100")
+    div(data-animsition-in-class="fade-in" data-animsition-in-duration="500").js-animsition.animsition#yoyo
       .belly-title
         include partials/_banner
-        .band.head.hr.relative.move
-          a(href=prevURL tabindex="-1" data-animsition-out-class="fade-out-right-sm" data-animsition-out-duration="400").animsition-link.move.move-left
+        .band.head.hr.relative
+          a(href=prevURL tabindex="-1" data-animsition-out-class="fade-out-right-sm" data-animsition-out-duration="300").animsition-link.move.move-left
           .segment.type
             h2
               = project
-            dl.credits
+              
+            dl.reset.credits
               dt Client
               dd SaltyCustom
               dt Studio
@@ -28,18 +30,18 @@ include partials/_html
               dt Repo
               dd (Private)
 
-          a(href=nextURL tabindex="-1" data-animsition-out-class="fade-out-left-sm" data-animsition-out-duration="400").animsition-link.move.move-right
+          a(href=nextURL tabindex="-1" data-animsition-out-class="fade-out-left-sm" data-animsition-out-duration="300").animsition-link.move.move-right
 
       .belly-photo.atop#what
 
       .belly-aside
         aside.project(role="complementary")
           .segment.type
-            dl.credits
+            dl.reset.credits
               dt Role
               dd Identity
               dd UX &plus; UI
-            dl.credits
+            dl.reset.credits
               dt Stack
               dd Balsamiq
               dd Paper

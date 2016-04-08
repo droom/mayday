@@ -112,14 +112,11 @@ module.exports = function(grunt) {
         'src/lib/modernizr-2.8.3.min.js',
         'src/lib/easing.js',
         'src/lib/noframework.waypoints.js',
-        // 'src/lib/animsition-docs.js', 
         'src/js/project-atop.js',
         'src/js/waypoints.js',
-        // 'src/js/fluff.js'
+        'src/js/fluff.js',
         'src/js/nav.js',
         'src/js/cover.js'
-
-
         ],
         dest: 'dist/js/droomio.js',
       },

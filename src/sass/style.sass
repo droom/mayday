@@ -7,23 +7,28 @@ $blueDark:    #406da8
 $red:         #ff6876
 $slate:       #333
 $orange:      #e4b071
+$hover:       rgba(255, 255, 255, 0.4)
 
 $border:      1px solid rgba(0, 0, 0, 0.08)
 $gttr-ph:     15px
 $gttr-dt:     26px
 $gttr-dt-top:	22px
 
+
+
 $serif:       "Noto Serif", Georgia, serif
 $sans:        "CircularStd-Bold", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serfif
 $mono:        "InputMonoNarrow-Regular", "InputMonoNarrow-Thin", monospace
 
 $transition:        all 300ms ease
-$transition-quick:  all 300ms ease
+$transition-quick:  all 200ms ease
 
 $wide-unit:   1098px
 $narrow-unit: 780px
 $phone-max:   500px
 
+
+$font-small: 11px
 
 // partials
 @import "partials/includes.sass"
@@ -37,11 +42,13 @@ $phone-max:   500px
 @import "partials/footer.sass"
 @import "partials/motion.sass"
 @import "partials/rhythm.sass"
-@import "partials/cursor.sass"
+// @import "partials/cursor.sass"
 @import "partials/cover.sass"
+@import "partials/fallback.sass"
 
 // projects
 @import "projects/atop.sass"
+
 
 .segment.blueprint.wire
   position: relative
