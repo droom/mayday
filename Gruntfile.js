@@ -114,7 +114,7 @@ module.exports = function(grunt) {
         'src/lib/noframework.waypoints.js',
         'src/js/project-atop.js',
         'src/js/waypoints.js',
-        'src/js/fluff.js',
+        'src/js/context.js',
         'src/js/nav.js',
         'src/js/cover.js'
         ],

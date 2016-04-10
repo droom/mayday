@@ -1,3 +1,5 @@
+- var workiso = true
+
 - var project   = "GoGet Web/App"
 - var prevTitle = "Foreign Office"
 - var nextTitle = "Give Receipt"
@@ -11,7 +13,7 @@ include partials/_html
     include partials/_head
 
   body.work.iso(data-project="goget")
-    div(data-animsition-in-class="fade-in" data-animsition-in-duration="500").js-animsition.animsition#yoyo
+    div(data-animsition-in-class="fade-in" data-animsition-in-duration="500").js-animsition.animsition#context
       .belly-title
         include partials/_banner
         .band.head.hr.relative
@@ -33,7 +35,7 @@ include partials/_html
 
           a(href=nextURL tabindex="-1" data-animsition-out-class="fade-out-left-sm" data-animsition-out-duration="300").animsition-link.move.move-right
 
-      .belly-photo.gg#what
+      .belly-photo.gg#checkpoint-nav
 
       .belly-aside
         aside.project(role="complementary")

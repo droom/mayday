@@ -3,19 +3,19 @@ $(document).ready(function() {
   console.log('localStorage.context', localStorage.context);
 
   if (localStorage.context === "backwards"){
-    $( "#yoyo" ).attr('data-animsition-in-class','fade-in-left-sm');
+    $( "#context" ).attr('data-animsition-in-class','fade-in-left-sm');
   };
 
   if (localStorage.context === "forwards"){
-    $( "#yoyo" ).attr('data-animsition-in-class','fade-in-right-sm');
+    $( "#context" ).attr('data-animsition-in-class','fade-in-right-sm');
   };
 
   if (localStorage.context === "upwards"){
-    $( "#yoyo" ).attr('data-animsition-in-class','fade-in-up-sm');
+    $( "#context" ).attr('data-animsition-in-class','fade-in-up-sm');
   };
 
   if (localStorage.context === "normal"){
-    $( "#yoyo" ).attr('data-animsition-in-class','fade-in');
+    $( "#context" ).attr('data-animsition-in-class','fade-in');
   };
 
 

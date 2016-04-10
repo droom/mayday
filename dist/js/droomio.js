@@ -988,43 +988,24 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
 
 
 });
-;$( document ).ready(function() {
-
-  var returnShow = new Waypoint({
-    element: document.getElementById('what'),
-    handler: function(direction) {
-      $("#top").addClass("show");
-    }, offset: 0
-  })
-
-  var returnHide = new Waypoint({
-    element: document.getElementById('what'),
-    handler: function(direction) {
-      $("#top").removeClass("show");
-    }, offset: 1
-  })
-
-});
-
-
 ;$(document).ready(function() {
 
   console.log('localStorage.context', localStorage.context);
 
   if (localStorage.context === "backwards"){
-    $( "#yoyo" ).attr('data-animsition-in-class','fade-in-left-sm');
+    $( "#context" ).attr('data-animsition-in-class','fade-in-left-sm');
   };
 
   if (localStorage.context === "forwards"){
-    $( "#yoyo" ).attr('data-animsition-in-class','fade-in-right-sm');
+    $( "#context" ).attr('data-animsition-in-class','fade-in-right-sm');
   };
 
   if (localStorage.context === "upwards"){
-    $( "#yoyo" ).attr('data-animsition-in-class','fade-in-up-sm');
+    $( "#context" ).attr('data-animsition-in-class','fade-in-up-sm');
   };
 
   if (localStorage.context === "normal"){
-    $( "#yoyo" ).attr('data-animsition-in-class','fade-in');
+    $( "#context" ).attr('data-animsition-in-class','fade-in');
   };
 
 
@@ -1067,15 +1048,28 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
         if (target.length) {
           $('html, body').animate({
             scrollTop: target.offset().top
-
           }, 300, 'easeOutExpo');
-          
-          $("#top").css("top", "-70px");
           return false;
-        
         }
       }
     });
+
+
+  var returnShow = new Waypoint({
+    element: document.getElementById('checkpoint-nav'),
+    handler: function(direction) {
+      $("#top").addClass("show");
+    }, offset: 0
+  });
+
+  var returnHide = new Waypoint({
+    element: document.getElementById('checkpoint-nav'),
+    handler: function(direction) {
+      $("#top").removeClass("show");
+    }, offset: 56
+  });
+
+
 
 });;$(document).ready(function() {
 	function cover(){

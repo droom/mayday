@@ -1,3 +1,5 @@
+- var workiso = true
+
 - var project   = "Ideahouse"
 - var prevTitle = "GiveReceipt Web/App"
 - var prevURL   = "project-givereceipt.html"
@@ -11,7 +13,7 @@ include partials/_html
     include partials/_head
     
   body.work.iso(data-project="ideahouse")
-    div(data-animsition-in-class="fade-in" data-animsition-in-duration="500").js-animsition.animsition#yoyo
+    div(data-animsition-in-class="fade-in" data-animsition-in-duration="500").js-animsition.animsition#context
       .belly-title
         include partials/_banner
         .band.head.hr.relative
@@ -35,10 +37,10 @@ include partials/_html
 
           a(href=nextURL tabindex="-1" data-animsition-out-class="fade-out-left-sm" data-animsition-out-duration="300").animsition-link.move.move-right
 
-      .belly-photo.ih#what
+      .belly-photo.ih#checkpoint-nav
 
       .belly-aside
-        aside.project(role="complementary")#what
+        aside.project(role="complementary")#checkpoint-nav
           .segment.type
               dl.reset.credits
                 dt Role
@@ -60,78 +62,19 @@ include partials/_html
 
       main(role="main")
         .segment.type
-          h3 A responsive, mobile-first site, tailor made for both Ideahouse's existing agents and prospective ones.
+          h3 A responsive, uncluttered site, tailor made for both Ideahouse's existing agents and prospective ones.
           p The existing site had been in operation for a number of years. Whilst we wanted to onboard new users (referred to from now on as agents), we were careful not to alientate the loyal and exiting base. No-one wants their cheese moved but it was important to iron out a few of the UX kinks if we were to grow.
 
+          p The scope changed.
+
+
+   
         .segment.blueprint
           figure
             img(src="img/projects/ih-ui-app.png")
             figcaption For speed, I relied heavily on Semantic UI's native components, adjusting them as nessecary.
 
-        .segment.code.half
-          .slice
-            pre.comment.
-              // four tiles per row
-              // @media (min-width: 416px)
-            pre.
-              body
-                .tiles
-                  &.browse
-                    .ui.card
-                      width: calc(100%/4)
 
-                      &:nth-child(12n+1),
-                      &:nth-child(12n+2),
-                      &:nth-child(12n+3),
-                      &:nth-child(12n+4),
-                        .image
-                          background: $yellow
-
-                      &:nth-child(12n+5),
-                      &:nth-child(12n+6),
-                      &:nth-child(12n+7),
-                      &:nth-child(12n+8)
-                        .image
-                          background: $green
-
-                      &:nth-child(12n+9),
-                      &:nth-child(12n+10),
-                      &:nth-child(12n+11),
-                      &:nth-child(12n+12)
-                        .image
-                          background: $blue
-          .slice
-            pre.comment.
-              // three tiles per row
-            pre.
-              @media (max-width: 415px)
-                body
-                  .tiles
-                    &.browse
-                      .ui.card
-                        width: calc(100%/3)
-
-                        &:nth-child(9n+1),
-                        &:nth-child(9n+2),
-                        &:nth-child(9n+3)
-                          .image
-                            background: $yellow
-
-                        &:nth-child(9n+4),
-                        &:nth-child(9n+5),
-                        &:nth-child(9n+6)
-                          .image
-                            background: $green
-
-                        &:nth-child(9n+7),
-                        &:nth-child(9n+8),
-                        &:nth-child(9n+9)
-                          .image
-                            background: $blue
-
-        .segment.surface
-          figure
-            img(src="img/projects/atop-tiles.png")
 
         .segment.type
           p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum corporis vel deleniti, corrupti officia nesciunt, tempore officiis eveniet, numquam consequatur at? Repudiandae necessitatibus, dolor quas ad! Animi dolorem dolor, explicabo!

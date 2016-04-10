@@ -1,5 +1,4 @@
-- var worklist  = true
-- var page      = worklist
+- var workiso = false
 
 doctype html
 include partials/_html
@@ -9,6 +8,7 @@ include partials/_html
 
   body.work(itemscope itemtype="http://schema.org/WebPage" data-project="work")
     div.js-animsition.animsition(data-animsition-in-duration="500" data-animsition-in-class="fade-in-up-sm")#yoyo
+
       include partials/_banner
       .band.head.hr.relative
         .segment.type
@@ -16,7 +16,7 @@ include partials/_html
             = "Selected Work"
           small 2012&ndash;2015
       
-      main(role='main')#what
+      main(role='main')#checkpoint-nav
         ul.work-list.reset.pure
           li
             a(href="project-goget.html").plain

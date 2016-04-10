@@ -1,3 +1,5 @@
+- var workiso = true
+
 - var project   = "Atop Watches"
 - var prevTitle = "Foreign Office"
 - var prevURL   = "project-foreign.html"
@@ -11,7 +13,7 @@ include partials/_html
     include partials/_head
 
   body.work.iso(data-project="atop")
-    div(data-animsition-in-class="fade-in" data-animsition-in-duration="500").js-animsition.animsition#yoyo
+    div(data-animsition-in-class="fade-in" data-animsition-in-duration="500").js-animsition.animsition#context
       .belly-title
         include partials/_banner
         .band.head.hr.relative
@@ -32,7 +34,7 @@ include partials/_html
 
           a(href=nextURL tabindex="-1" data-animsition-out-class="fade-out-left-sm" data-animsition-out-duration="300").animsition-link.move.move-right
 
-      .belly-photo.atop#what
+      .belly-photo.atop#checkpoint-nav
 
       .belly-aside
         aside.project(role="complementary")
@@ -53,15 +55,15 @@ include partials/_html
 
       main(role="main")
 
-        .segment.surface(id="waypoint-atop")
-          figure
-            .atop-live
-              .face
-              .hand-large
-              .hand-small
-              .seconds
-              .unit
-              .day
+        .segment(id="waypoint-atop").relative.center
+          .atop-live
+            .face
+            .hand-large
+            .hand-small
+            .seconds
+            .unit
+            .day
+
 
         .segment.type
           h3 A campaign site for Taiwanese watch manufacturer ATOP.

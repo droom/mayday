@@ -1,3 +1,5 @@
+- var workiso = true
+
 - var project   = "Foreign Office (tumblr)"
 - var prevTitle = "project-givereceipt.html"
 - var prevURL   = "project-givereceipt.html"
@@ -11,7 +13,7 @@ include partials/_html
     include partials/_head
     
   body.work.iso(data-project="foreign")
-    div(data-animsition-in-class="fade-in" data-animsition-in-duration="500").js-animsition.animsition#yoyo
+    div(data-animsition-in-class="fade-in" data-animsition-in-duration="500").js-animsition.animsition#context
       .belly-title
         include partials/_banner
         .band.head.hr.relative.move
@@ -35,10 +37,10 @@ include partials/_html
           
           a(href=nextURL tabindex="-1" data-animsition-out-class="fade-out-left-sm" data-animsition-out-duration="300").animsition-link.move.move-right
 
-      .belly-photo.fo#what
+      .belly-photo.fo#checkpoint-nav
 
       .belly-aside
-        aside.project(role="complementary")#what
+        aside.project(role="complementary")
           .segment.type
             dl.reset.credits
               dt Role
