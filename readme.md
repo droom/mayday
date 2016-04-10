@@ -5,8 +5,7 @@ Libraries
 - `jQuery`
 
 Plugins
-— `Modernizer`
-
-— `Waypoints`
+- `Modernizer`
+- `Waypoints`
 - `Easing.js`
 - `Animsition.js`
