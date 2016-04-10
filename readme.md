@@ -2,10 +2,11 @@
 Deployed to `droom.io` 
 
 Libraries
-- jQuery
+- `jQuery`
 
 Plugins
-— Modernizer
-— Waypoints
-— Easing.js
-— Animsition.js
+— `Modernizer`
+
+— `Waypoints`
+- `Easing.js`
+- `Animsition.js`
