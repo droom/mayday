@@ -13,14 +13,11 @@
   margin: auto
   figure
     img
-      max-width: 100%
     figcaption
-      background: $bg
+      // background: $bg
       padding-left: $gttr-dt
       padding-right: $gttr-dt
-      width: 100%
-      small
-        max-width: 340px
+      max-width: 340px
 
   &.center
     text-align: center
@@ -28,9 +25,23 @@
   &.relative
     position: relative
 
+  &.surface
+    max-width: 100%
+    overflow: hidden
+    // figure
+      // img
+        // width: 100%
+
   &.blueprint
+    max-width: 100%
+    overflow: hidden
     figure
       background: url('../img/components/tile-graph.gif') repeat 50% 50% $blueDark
+
+  &.drag
+    .notice
+      display: block
+      background: rgba(176,234,236, 0.6)   
 
   &.code
     background: $slate
@@ -38,6 +49,9 @@
   &.type,
   &.code
     padding: $gttr-dt
+
+  &.code
+    overflow: hidden
 
   &.type
     max-width: $narrow-unit
@@ -69,21 +83,10 @@
     &.type
       padding: $gttr-ph
 
-    &.blueprint.wire
-      .warn
-        display: block
-      figure
-        img
-          opacity: 0.4
-
-
+    &.surface,
     &.blueprint
       figure
         figcaption
           padding: $gttr-ph
+          
 
-    &.surface
-      figure
-        figcaption
-          padding: $gttr-ph
-          margin-top: 0

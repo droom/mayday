@@ -11,6 +11,7 @@ module.exports = function(grunt) {
       sass: {
         files: [
         'src/sass/*.sass',
+        'src/sass/lib/*.sass',
         'src/sass/partials/*.sass',
         'src/sass/projects/*.sass'
         ],
@@ -111,12 +112,16 @@ module.exports = function(grunt) {
         'src/lib/jquery.js',
         'src/lib/modernizr-2.8.3.min.js',
         'src/lib/easing.js',
+        'src/lib/jquery-ui.js',
         'src/lib/noframework.waypoints.js',
+        'src/lib/jquery.ui.touch-punch.min.js',
         'src/js/project-atop.js',
         'src/js/waypoints.js',
         'src/js/context.js',
         'src/js/nav.js',
-        'src/js/cover.js'
+        'src/js/cover.js',
+        'src/js/index.js'
+
         ],
         dest: 'dist/js/droomio.js',
       },

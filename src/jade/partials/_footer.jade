@@ -1,33 +1,17 @@
 //- if project
-//-   .band.hr.relative.turn
-//-     ul.reset.page
-//-       li
-//-         a(href=prevURL tabindex="-1" data-animsition-out-class="fade-out-right-sm" data-animsition-out-duration="400").animsition-link.plain.move-left
-//-           .segment.type
-//-             dl.reset.credits
-//-               dt.hide Project name
-//-               dd.project.h4
-//-                 = prevTitle
-//-               dt.client Client
-//-               dd.client DVG Web
-//-               dt.studio Studio
-//-               dd.studio Six Leaves
+//-   .band.hr.turn.relative.pager
+//-     .segment.type
+//-       a(href=prevURL tabindex="-1" data-animsition-out-class="fade-out-right-sm" data-animsition-out-duration="400").move.move-left.animsition-link
+//-       a(href=nextURL tabindex="-1" data-animsition-out-class="fade-out-left-sm" data-animsition-out-duration="400").move.move-right.animsition-link
+//-       ul.reset.page.ghost
+//-         li.ghost
+//-           a(href=prevURL tabindex="-1" data-animsition-out-class="fade-out-right-sm" data-animsition-out-duration="400").h4.animsition-link.ghost=prevTitle
+//-         li.ghost
+//-           a(href=nextURL tabindex="-1" data-animsition-out-class="fade-out-left-sm" data-animsition-out-duration="400").h4.animsition-link.ghost=nextTitle
 
-//-       li
-//-         a(href=nextURL tabindex="-1" data-animsition-out-class="fade-out-left-sm" data-animsition-out-duration="400").animsition-link.plain.move-right
-//-           .segment.type
-//-             dl.reset.credits
-//-               dt.hide Project name
-//-               dd.project.h4
-//-                 = nextTitle
-//-               dt.client Client
-//-               dd.client DVG Web
-//-               dt.studio Studio
-//-               dd.studio Six Leaves
 
 
 footer(role="contentinfo").band.hr
-
   .segment.type
     p
       = "Made by Chris Droom "

@@ -41,35 +41,38 @@ $font-small: 11px
 @import "partials/rhythm.sass"
 @import "partials/cover.sass"
 @import "partials/fallback.sass"
-
+@import "partials/stacking.sass"
+// @import "partials/disable.sass"
 // lib
-@import "lib/animisition.sass"
+// @import "lib/animisition.sass"
 
 // projects
 @import "projects/atop.sass"
 
-img.faint
-	padding: 30px
-	opacity: 0.4
+
+a.pan
+  font-family: helvetica
+  background: blue
+  color: white
+  position: absolute
+  top: 0
+  left: 0
+  padding: 10px
+  z-index: 99999
+  text-decoration: none
+  border: none
+  &:hover
+    background: blue
 
 
-.segment.code
-	overflow: hidden
-  
 
-// .segment.blueprint.wire
-//   position: relative
-//   .yoyo
-//     position: absolute
-//     left: 0
-//     top: 0
-//     z-index: 5
-//     background: #2e4dd2
-//     .warn
-//       padding: $gttr-ph 30px 30px $gttr-ph
-//       margin: 0
-//       color: white
-//       text-align: left
+.drag:hover
+  cursor: col-resize
+
+
+// caption
+
+
 
 
 

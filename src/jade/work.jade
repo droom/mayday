@@ -6,18 +6,30 @@ include partials/_html
   head
     include partials/_head
 
-  body.work(itemscope itemtype="http://schema.org/WebPage" data-project="work")
-    div.js-animsition.animsition(data-animsition-in-duration="500" data-animsition-in-class="fade-in-up-sm")#yoyo
+  body.work(data-project="work")
+    div.js-animsition.animsition(data-animsition-in-duration="500" data-animsition-in-class="fade-in")#context
 
       include partials/_banner
       .band.head.hr.relative
         .segment.type
-          h2
-            = "Selected Work"
+          h2 Selected Work
           small 2012&ndash;2015
-      
+
+
       main(role='main')#checkpoint-nav
         ul.work-list.reset.pure
+
+          li
+            a(href="project-foreign.html").plain
+              .segment.type.work
+                dl.reset.credits
+                  dt.hide Project name
+                  dd.project.h3 Foreign Office (tumblr)
+                  dt.client Client
+                  dd.client &mdash;
+                  dt.studio Studio
+                  dd.studio Reformist.io
+          
           li
             a(href="project-goget.html").plain
               .segment.type.work
@@ -39,17 +51,6 @@ include partials/_html
                   dd.client DVG Web
                   dt.studio Studio
                   dd.studio Six Leaves
-          
-          li
-            a(href="project-foreign.html").plain
-              .segment.type.work
-                dl.reset.credits
-                  dt.hide Project name
-                  dd.project.h3 Foreign Office (tumblr)
-                  dt.client Client
-                  dd.client &mdash;
-                  dt.studio Studio
-                  dd.studio Reformist.io
 
           li
             a(href="project-atop.html").plain

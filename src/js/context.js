@@ -34,6 +34,9 @@ $(document).ready(function() {
     console.log(".move-up");
   })
 
+
+  
+
   $("a.plain").click(function(){
     localStorage.context = "normal";
     console.log(".ul.work-list a.plain");

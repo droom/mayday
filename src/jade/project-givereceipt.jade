@@ -1,8 +1,8 @@
 - var workiso = true
 
 - var project   = "GiveReceipt Web/App"
-- var prevTitle = "GoGet"
-- var nextTitle = "project-foreign"
+- var prevTitle = "GoGet Brand/Web"
+- var nextTitle = "Foreign Office"
 - var nextURL   = "project-foreign.html"
 - var prevURL   = "project-goget.html"
 
@@ -55,38 +55,34 @@ include partials/_html
               dd Adobe&copy; InDesign
               dd Ruby Slim
               dd Sass (&plus;Bootstap)
-
               
       main(role="main")
-
         .segment.type
           h3 GiveReceipt is an invoicing tool designed for small businesses, to be in sympathy with new (2015) tax regulations in Malaysia.
-          p
-            = "GiveReceipt is straightforward Software as Service that allows SMEs to easily document transactions. CEO's David Sin and Belinda So "
-              a(href="https://www.youtube.com/watch?v=ay4PJQxgrqM") explain the benefits in more depth on The Edge
-            = "."
+          p GiveReceipt is straightforward Software as Service that allows SMEs to easily document transactions. CEO's David Sin and Belinda So explain the benefits in more depth on The Edge
 
         .segment.blueprint.relative
+          a(href="#").pan PAN IMAGE
           figure
-            img(src="img/projects/gr-wire.png")
-            figcaption 
-              small User flow for the web app. We decided early on to prompt users to enter company information after the registration process to reduce cognitive load and friction.
-
-        .segment.blueprint
-          figure
-            img(src="img/projects/gr-id.png")
-            figcaption 
-              small Initital explorations of the GiveReceipt identity. Its application won't be limited to screens so will need to work on print materials and clothing. This is set in Trade Gothic.
-
-        .segment.surface
-          figure
-            img(src="img/projects/gr-invoice.png")
+            img(src="img/projects/gr-wire.png").drag#yope
             figcaption
-              small Premium subscriptions give the option of different print layouts.
+              span.notice Lorem ipsum dolor sit amet drag
+              | User flow for the web app. We decided early on to prompt users to enter company information after the registration process to reduce cognitive load and friction.
+
+        .segment.blueprint.relative
+          .safety
+          figure
+            img(src="img/projects/gr-id.png").yope
+            figcaption 
+ 
+        .segment.surface
+          figure
+            img(src="img/projects/gr-invoice.png").yope
+            figcaption
 
         .segment.surface
           figure
-            img(src="img/projects/gr-cards.png")
+            img(src="img/projects/gr-cards.png").drag
             figcaption  
               small
                 = "20mm "
@@ -96,16 +92,9 @@ include partials/_html
                 = "Namecards. These were die-cut to show off our corrigated motif."
 
 
-
-        .segment.type
-          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum, quae soluta molestiae nulla harum magnam ad, eaque non rem quasi beatae sint nesciunt suscipit deleniti illo quo, veniam, eligendi voluptatibus? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione eaque veritatis cumque corporis suscipit voluptatem. Optio ipsa fuga excepturi eligendi distinctio recusandae voluptates mollitia sit! Possimus sapiente beatae dignissimos nam.
-
-
       .band.ref
         .segment.type
           ol.ref
-            li
-              a(href="https://medium.com/p/5fd245753f08/edit") A practical use for CSS columns
             li
               a(href="https://www.digitalnewsasia.com/startups/givereceipt-gets-CIP500-grant-only-3mths-after-going-live") GiveReceipt gets CIP 500 grant only 3mths after going live
             li

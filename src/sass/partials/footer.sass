@@ -2,73 +2,24 @@
   footer.band.hr
     border-top: 0
 
+.pager
+  a
+    z-index: 1
 
-ul.page
-  display: flex
-  max-width: 100%
-  width: 100%
-  overflow: visible
-  li
-    width: 50%
-    overflow: visible
-    list-style: none
-    transition: 200ms all ease
-    a.plain
-      display: block 
-      border: none
-      .segment.type
-        margin: 0
-        background-repeat: no-repeat 
-        background-size: 28px
-        dl.credits
-          min-width: auto
-          width: 50% !important
-          dt.client,
-          dt.studio
-            display: none
-          dd.project
-            min-height: 4em
-            margin: 0
-            display: block
-          dd.project,
-          dd.client,
-          dd.studio
-            text-align: left
-            display: block
-            width: 100%
+  a:nth-child(1)
+    border-right: $border
+    
+  ul.reset.page.ghost
+    display: flex
+    overflow: hidden
+    width: 100%
 
-    & + li
-      margin-top: 0
-      
-    &:nth-child(1)
+    li.ghost
+      width: 50%
+      z-index: 2
+      a
+        border: none
+        
+    li.ghost:nth-child(2)
       text-align: right
-      border-right: $border
-      
-      a.plain
-        position: relative
-        width: 100%
-
-        .segment.type
-          background-image: url('../img/components/arrow-nav-prev.svg') 
-          background-position: 7% 21%
-          dl.credits
-            text-align: right
-            
-            dd.project,
-            dd.client,
-            dd.studio
-              text-align: right
-              display: inherit
-      a.plain:hover
-        .segment.type
-          background-position: 0% 21%
-
-    &:nth-child(2)
-      a.plain
-        .segment.type
-          background-image: url('../img/components/arrow-nav-next.svg') 
-          background-position: 93% 21% 
-      a.plain:hover
-        .segment.type
-          background-position: 100% 21%
 
