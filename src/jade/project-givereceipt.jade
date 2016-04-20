@@ -1,10 +1,18 @@
-- var workiso = true
+- var workiso   = true
 
 - var project   = "GiveReceipt Web/App"
+- var client    = "DVG Web"
+- var studio    = "SixLeaves"
+- var date      = "July 2015"
+- var repo      = "Private"
+
+- var URLShort  = "givereceipt.com"
+- var URLLong   = "http://www.givereceipt.com"
+
 - var prevTitle = "GoGet Brand/Web"
 - var nextTitle = "Foreign Office"
-- var nextURL   = "project-foreign.html"
-- var prevURL   = "project-goget.html"
+- var URLNext   = "project-foreign.html"
+- var URLPrev   = "project-goget.html"
 
 doctype html
 include partials/_html
@@ -15,27 +23,8 @@ include partials/_html
   body.work.iso(data-project="givereceipt")
     div(data-animsition-in-class="fade-in" data-animsition-in-duration="500").js-animsition.animsition#context
       .belly-title
-        include partials/_banner
-        .band.head.hr.relative
-          a(href=prevURL tabindex="-1" data-animsition-out-class="fade-out-right-sm" data-animsition-out-duration="300").animsition-link.move.move-left
-          .segment.type.relative
-            
-            header
-              h2=project
-              dl.reset.credits
-                dt Client
-                dd GiveReceipt
-                dt Studio
-                dd SixLeaves
-                dt Date
-                dd July 2015
-                dt Repo
-                dd (Private)
-                dt Live
-                dd.asia
-                  a(href=nextURL aria-label="Visit GiveReceipt") givereceipt.com
-
-          a(href=nextURL tabindex="-1" data-animsition-out-class="fade-out-left-sm" data-animsition-out-duration="300").animsition-link.move.move-right
+        include partials/_nav
+        include partials/_mast
 
       .belly-photo.gr#checkpoint-nav
 
@@ -57,17 +46,14 @@ include partials/_html
               dd Sass (&plus;Bootstap)
               
       main(role="main")
-        .segment.type
-          h3 GiveReceipt is an invoicing tool designed for small businesses, to be in sympathy with new (2015) tax regulations in Malaysia.
-          p GiveReceipt is straightforward Software as Service that allows SMEs to easily document transactions. CEO's David Sin and Belinda So explain the benefits in more depth on The Edge
+
 
         .segment.blueprint.relative
           a(href="#").pan PAN IMAGE
           figure
             img(src="img/projects/gr-wire.png").drag#yope
             figcaption
-              span.notice Lorem ipsum dolor sit amet drag
-              | User flow for the web app. We decided early on to prompt users to enter company information after the registration process to reduce cognitive load and friction.
+              span We decided early on to prompt users to enter company information after the registration process to reduce cognitive load and friction.
 
         .segment.blueprint.relative
           .safety

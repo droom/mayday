@@ -1,13 +1,14 @@
 - var workiso   = true
 
+- var project   = "Foreign Office (tumblr)"
 - var client    = "Reformist.io"
 - var studio    = "Reformist.io"
 - var date      = "July 2012"
 - var repo      = "—"
 
+- var URLShort  = "givereceipt.com"
+- var URLLong   = "http://www.givereceipt.com"
 
-
-- var project   = "Foreign Office (tumblr)"
 - var prevTitle = "project-givereceipt.html"
 - var prevURL   = "project-givereceipt.html"
 - var nextTitle = "project-ideahouse.html"
@@ -22,28 +23,8 @@ include partials/_html
   body.work.iso(data-project="foreign")
     div(data-animsition-in-class="fade-in" data-animsition-in-duration="500").js-animsition.animsition#context
       .belly-title
-        include partials/_banner
-        .band.head.hr.relative.move
-
-          //- a(href=prevURL tabindex="-1" data-animsition-out-class="fade-out-right-sm" data-animsition-out-duration="300").animsition-link.move.move-left
-
-          .segment.type.relative
-            header
-              h2=project
-              dl.reset.credits
-                dt Client
-                dd=client 
-                dt Studio
-                dd=studio
-                dt Date
-                dd=date
-                dt Repo
-                dd=repo
-                dt Live
-                dd.asia
-                  a(href="http://blog.droom.name/" aria-label="Visit Blog") blog.droom.name
-          
-          //- a(href=nextURL tabindex="-1" data-animsition-out-class="fade-out-left-sm" data-animsition-out-duration="300").animsition-link.move.move-right
+        include partials/_nav
+        include partials/_mast
 
       .belly-photo.fo#checkpoint-nav
 
@@ -54,14 +35,12 @@ include partials/_html
               dt Role
               dd Identity
               dd UX &plus; UI
+              dd Front-End
             dl.reset.credits
               dt Stack
-              dd Balsamiq
-              dd Paper
               dd Adobe© Illustrator
               dd Adobe© Photoshop
-              dd Adobe© InDesign
-              dd InVision
+              dd Sublime
         
       main(role="main")
 
@@ -70,7 +49,7 @@ include partials/_html
             img(src="img/projects/fo-baseline.png")
             figcaption
               small
-                = "Hanging puncutation wasn't a big thing in 2010 and I honestly don't recall a single template that used it. Fast-forward to 2015 and it's more common — the biggest one being on Medium. I need to credit the excellent Designer "
+                = "Hanging puncutation wasn't a big thing in 2010 and I honestly don't recall a single template that used it. Fast-forward to 2015 and it's more common — the biggest one being on Medium. Credit to the excellent typographer "
                 a(href="http://www.markboulton.co.uk/journal/five-simple-steps-to-better-typography-part-2") Mark Boulton
                 = " for bringing this to my attention in the first place in 2005."
 
@@ -78,18 +57,11 @@ include partials/_html
           figure
             img(src="img/projects/fo-reflow.gif").faint
             figcaption
-              small Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod quae in odit enim, voluptatibus quidem deleniti minus quisquam.
-
 
         .segment.center.blueprint
           figure
             img(src="img/projects/fo-georgia.png")
             figcaption
-              small
-                = "Hanging puncutation wasn't a big thing in 2010 and I honestly don't recall a single template that used it. Fast-forward to 2015 and it's more common — the biggest one being on Medium. I need to credit the excellent Designer "
-                a(href="http://www.markboulton.co.uk/journal/five-simple-steps-to-better-typography-part-2") Mark Boulton
-                = " for bringing this to my attention in the first place in 2005."
-
 
       include partials/_footer
       include partials/_scripts

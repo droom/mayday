@@ -1,6 +1,14 @@
 - var workiso = true
 
 - var project   = "GoGet Brand/Web"
+- var client    = "GoGet"
+- var studio    = "VLT Labs"
+- var date      = "March 2015"
+- var repo      = "Private"
+
+- var URLShort  = "givereceipt.com"
+- var URLLong   = "http://www.givereceipt.com"
+
 - var prevTitle = "Foreign Office"
 - var nextTitle = "Give Receipt"
 - var prevURL   = "project-foreign.html"
@@ -15,25 +23,8 @@ include partials/_html
   body.work.iso(data-project="goget")
     div(data-animsition-in-class="fade-in" data-animsition-in-duration="500").js-animsition.animsition#context
       .belly-title
-        include partials/_banner
-        .band.head.hr.relative
-          a(href=prevURL tabindex="-1" data-animsition-out-class="fade-out-right-sm" data-animsition-out-duration="300").animsition-link.move.move-left
-          .segment.type.relative
-
-            header
-              h2=project
-              dl.reset.credits
-                dt Client
-                dd GoGet
-                dt Studio
-                dd VLT Labs
-                dt Repo
-                dd (Private)
-                dt Live
-                dd.live
-                  a(href="http://www.goget.my/" aria-label="Visit GoGet") goget.my
-
-          a(href=nextURL tabindex="-1" data-animsition-out-class="fade-out-left-sm" data-animsition-out-duration="300").animsition-link.move.move-right
+        include partials/_nav
+        include partials/_mast
 
       .belly-photo.gg#checkpoint-nav
 
@@ -53,6 +44,9 @@ include partials/_html
               dd Adobe© Photoshop
               dd Adobe© InDesign
               dd InVision
+
+
+
 
 
       main(role="main")

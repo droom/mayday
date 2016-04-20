@@ -1,5 +1,11 @@
 - var workiso = true
 
+- var client    = "GoGet"
+- var studio    = "VLT Labs"
+- var date      = "March 2015"
+- var repo      = "Private"
+- var live      = "givereceipt.com"
+
 - var project   = "Ideahouse"
 - var prevTitle = "GiveReceipt Web/App"
 - var prevURL   = "project-givereceipt.html"
@@ -15,34 +21,14 @@ include partials/_html
   body.work.iso(data-project="ideahouse")
     div(data-animsition-in-class="fade-in" data-animsition-in-duration="500").js-animsition.animsition#context
       .belly-title
-        include partials/_banner
-        .band.head.hr.relative
-          a(href=prevURL tabindex="-1" data-animsition-out-class="fade-out-right-sm" data-animsition-out-duration="300").animsition-link.move.move-left
-          .segment.type.relative
-            header
-              h2=project
-              dl.reset.credits
-                dt Client
-                dd Ideahouse
-                dt Studio
-                dd DROOM&plus;TZY
-                dt Date
-                dd December 2015
-                dt Repo
-                dd.repo
-                  a(href="http://www.github.com/droom/ideahouse-web") github.com/droom/ideahouse-web
-                dt Stage
-                dd.stage
-                  a(href="http://www.droom.name/clients/ih") droom.name/clients/ih
-
-          a(href=nextURL tabindex="-1" data-animsition-out-class="fade-out-left-sm" data-animsition-out-duration="300").animsition-link.move.move-right
+        include partials/_nav
+        include partials/_mast
 
       .belly-photo.ih#checkpoint-nav
         .segment.type
           dl.reset.credits
             dt Photo
-            dd 
-              a(href="#").plain Winnie Tzp
+            dd Winnie Tzp
 
 
       .belly-aside
