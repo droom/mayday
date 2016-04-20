@@ -17671,7 +17671,6 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
 
 
   $('a.move-top').click(function() {
-
     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
       var target = $(this.hash);
       target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
@@ -17689,7 +17688,6 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
     element: document.getElementById('checkpoint-nav'),
     handler: function(direction) {
       $("#top").addClass("show");
-      console.log("show!");
     }, offset: 0
   });
 
