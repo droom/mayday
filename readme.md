@@ -23,6 +23,8 @@ Deployed to `droom.io`. I'm going to turn this into a Jekyll theme at some point
 - `"grunt-postcss": "^0.8.0"`
 
 
+##License
+
 Copyright (c) 2016
 MIT License
 
