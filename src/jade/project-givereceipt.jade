@@ -23,13 +23,13 @@ include partials/_html
     
   body.work.iso(data-project="givereceipt")
     div(data-animsition-in-class="fade-in" data-animsition-in-duration="500").js-animsition.animsition#context
-      .belly-title
+      .cover-title
         include partials/_nav
         include partials/_mast
 
-      .belly-photo.gr#checkpoint-nav
+      .cover-photo.gr#checkpoint-nav
 
-      .belly-aside
+      .cover-aside
         aside.project(role="complementary")
           .segment.type
             dl.reset.credits
@@ -50,26 +50,29 @@ include partials/_html
 
 
         .segment.blueprint.relative
-          a(href="#").pan PAN IMAGE
+          a(href="#").pan
+            img(src="img/components/pan.png")
+
+
           figure
-            img(src="img/projects/gr-wire.png").drag#yope
+            img(src="img/projects/gr/gr-wire.png").drag#yope
             figcaption
               span We decided early on to prompt users to enter company information after the registration process to reduce cognitive load and friction.
 
         .segment.blueprint.relative
           .safety
           figure
-            img(src="img/projects/gr-id.png").yope
+            img(src="img/projects/gr/gr-id.png").yope
             figcaption 
  
         .segment.surface
           figure
-            img(src="img/projects/gr-invoice.png").yope
+            img(src="img/projects/gr/gr-invoice.png").yope
             figcaption
 
         .segment.surface
           figure
-            img(src="img/projects/gr-cards.png").drag
+            img(src="img/projects/gr/gr-cards.png").drag
             figcaption  
               small
                 = "20mm "

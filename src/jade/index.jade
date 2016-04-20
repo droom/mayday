@@ -7,7 +7,7 @@ include partials/_html
 
   body.profile(itemscope itemtype="http://schema.org/WebPage" data-project="profile")
     div.js-animsition.animsition(data-animsition-in-duration="500" data-animsition-in-class="fade-in")#context
-      .belly-title
+      .cover-title
         include partials/_nav
         .band.head.relative.hr
           .segment.type
@@ -23,15 +23,16 @@ include partials/_html
                 &nbsp;
                 = "KL"
 
-      .belly-photo.me
+      .cover-photo.me
         
-      .belly-aside
+      .cover-aside
         main(role="main")#checkpoint-nav
           .segment.type
             p.bind
               strong 
                 = "Hello"
-              = ", I'm a friendly and ambitious Digital Designer from South London, England. You can find me on "
+              &mdash;
+              = "I'm a friendly and ambitious Digital Designer from South London, England. You can find me on "
 
               a(href="http://codepen.io/droom") CodePen
 

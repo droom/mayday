@@ -17705,17 +17705,17 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
 	function cover(){
 		var hWindow       =  $(window).height();
 		var wWindow       =  $(window).width();
-		var hBellyTitle   =  $('.belly-title').height();
-		var hBellyAside   =  $('.belly-aside').height();
-		var hBellyPhoto   =  $('.belly-photo').height();
+		var hBellyTitle   =  $('.cover-title').height();
+		var hBellyAside   =  $('.cover-aside').height();
+		var hBellyPhoto   =  $('.cover-photo').height();
 		var hCombined     =  parseInt(hBellyTitle + hBellyAside + hBellyPhoto);
 		var hSum          =  hWindow - parseInt(hBellyTitle + hBellyAside);
 		var hSup 		  =  parseInt(hWindow - hBellyTitle);
 
 		if (wWindow > 600) {
-			$('.belly-photo').css('height', hSup);
+			$('.cover-photo').css('height', hSup);
 		} else {
-			$('.belly-photo').css('height', hSum);
+			$('.cover-photo').css('height', hSum);
 		}
 	}
 
@@ -17734,10 +17734,6 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
 ;$(document).ready(function() {
 
   var worklist = $('ul.work-list li')
-
-  // var workLinks = worklist.find("a");
-  // console.log("worklist", worklist);
-  // console.log("workLinks", workLinks);
 
   $( "a.plain" ).each(function( index ) {
     console.log( index + ": " + $(this).val );

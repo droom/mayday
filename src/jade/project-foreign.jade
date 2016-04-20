@@ -23,13 +23,17 @@ include partials/_html
     
   body.work.iso(data-project="foreign")
     div(data-animsition-in-class="fade-in" data-animsition-in-duration="500").js-animsition.animsition#context
-      .belly-title
+      .cover-title
         include partials/_nav
         include partials/_mast
 
-      .belly-photo.fo#checkpoint-nav
+      .cover-photo.fo#checkpoint-nav
+        .segment.type
+          dl.reset.credits
+            dt.hide Photo
+            dd Georgetown central market, Guyana
 
-      .belly-aside
+      .cover-aside
         aside.project(role="complementary")
           .segment.type
             dl.reset.credits
@@ -44,24 +48,18 @@ include partials/_html
               dd Sublime
         
       main(role="main")
+        .segment.center.blueprint
+          figure
+            img(src="img/projects/fo/fo-baseline.png")
 
         .segment.center.blueprint
           figure
-            img(src="img/projects/fo-baseline.png")
-            figcaption
-              small
-                = "Hanging puncutation wasn't a big thing in 2010 and I honestly don't recall a single template that used it. Fast-forward to 2015 and it's more common — the biggest one being on Medium. Credit to the excellent typographer "
-                a(href="http://www.markboulton.co.uk/journal/five-simple-steps-to-better-typography-part-2") Mark Boulton
-                = " for bringing this to my attention in the first place in 2005."
-
-        .segment.center.blueprint
-          figure
-            img(src="img/projects/fo-reflow.gif").faint
+            img(src="img/projects/fo/fo-reflow.gif").faint
             figcaption
 
         .segment.center.blueprint
           figure
-            img(src="img/projects/fo-georgia.png")
+            img(src="img/projects/fo/fo-georgia.png")
             figcaption
 
       include partials/_footer
