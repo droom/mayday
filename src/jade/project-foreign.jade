@@ -28,7 +28,7 @@ include partials/_html
         include partials/_mast
 
       .cover-photo.fo#checkpoint-nav
-        .segment.type
+        .segment.type.dark
           dl.reset.credits
             dt.hide Photo
             dd Georgetown central market, Guyana
@@ -48,19 +48,28 @@ include partials/_html
               dd Sublime
         
       main(role="main")
-        .segment.center.blueprint
+        .segment.center.blueprint.squash
           figure
             img(src="img/projects/fo/fo-baseline.png")
+            figcaption
 
-        .segment.center.blueprint
+        .segment.center.blueprint.squash
+          figure
+            img(src="img/projects/fo/fo-georgia.png")
+            figcaption
+
+
+        .segment.type
+          h3 Design Responsively
+          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur totam, dolores itaque. Accusamus iusto repudiandae doloribus ipsam ex eum nobis veniam blanditiis placeat maxime, modi, saepe corporis sint molestiae dolorum.
+        
+
+        .segment.center.blueprint.squash
           figure
             img(src="img/projects/fo/fo-reflow.gif").faint
             figcaption
 
-        .segment.center.blueprint
-          figure
-            img(src="img/projects/fo/fo-georgia.png")
-            figcaption
+
 
       include partials/_footer
       include partials/_scripts

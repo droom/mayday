@@ -1,20 +1,28 @@
+// p, h3
+//   margin: 0
+//   padding: 0
+//   outline: 1px solid red
+
+  
 main
   .segment
     &.type
-      h3:first-child
-        margin-top: 0
-
-    &.intro
-      & + .segment.type
-        padding-top: 0
+      h3 + p
+        margin-top: 1.5em
+      p + p
+        margin-top: 1em
+      
 
     &.surface,
     &.blueprint
-      margin-top: 1.5em
       figure
         figcaption
           padding-top: 1em
           padding-bottom: 3em
+
+    &.blueprint + .surface,
+    &.blueprint + .blueprint
+      margin-top: 1.5em
 
     &.code
       margin-bottom: 1.5em

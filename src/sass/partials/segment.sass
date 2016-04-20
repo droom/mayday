@@ -5,7 +5,7 @@
     background: $blueSky
   &.ref
     background: rgba(200,200,200,0.1)
-    padding: 0 0 1em 0
+    // padding: 0 0 1em 0
   &.relative
     position: relative
 
@@ -14,10 +14,14 @@
   figure
     img
     figcaption
-      // background: $bg
       padding-left: $gttr-dt
       padding-right: $gttr-dt
       max-width: 340px
+
+  &.squash  
+    figure
+      img
+        width: 100%
 
   &.center
     text-align: center
@@ -28,9 +32,7 @@
   &.surface
     max-width: 100%
     overflow: hidden
-    // figure
-      // img
-        // width: 100%
+
 
   &.blueprint
     max-width: 100%

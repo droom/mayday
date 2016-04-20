@@ -34,7 +34,9 @@ h3, .h3
   font-weight: 600
   line-height: 2rem
   letter-spacing: -0.02em
-
+  margin: 0
+  
+  
 @media (max-width: $phone-max)
   h3, .h3
     font-size: 1.255rem
@@ -114,6 +116,15 @@ blockquote::before
   content: ""
 
 
+.dark
+  dt, dd, p, a, small, h1, h2, h3, h4
+    color: $copy
+
+.light
+  dt, dd, p, a, small, h1, h2, h3, h4
+    color: white
+
+
 .ndash
   position: relative
   top: -0.09em
@@ -129,9 +140,6 @@ blockquote::before
 
 .hide-desktop
   display: none
-
-.pull
-  margin: 0 0 0 -0.09em
 
 .nolist
   list-style: none

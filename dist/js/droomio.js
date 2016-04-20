@@ -17733,6 +17733,34 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
 
 ;$(document).ready(function() {
 
+
+  $( "a.pan" ).click(function(e) {
+
+
+    e.preventDefault();
+
+
+    if ( $(this).hasClass('active') ){
+
+
+    $(this).removeClass('active');
+    $(this).css('outline', '2px solid blue');
+
+    } else {
+
+
+    $(this).addClass('active');
+    $(this).css('outline', '2px solid red');
+
+
+    }
+
+
+
+  });
+
+});;$(document).ready(function() {
+
   var worklist = $('ul.work-list li')
 
   $( "a.plain" ).each(function( index ) {

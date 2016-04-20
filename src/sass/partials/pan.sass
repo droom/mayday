@@ -1,5 +1,4 @@
 a.pan
-  background: $blueSky
   width: 70px
   height: 70px
   position: absolute
@@ -8,13 +7,16 @@ a.pan
   padding: 16px
   text-decoration: none
   border: none
-  &:hover
-    background: $hover
+  outline: 2px solid blue
     
   img
     width: 100%
-    opacity: 0.4
+    opacity: 1
 
 
-.drag:hover
+a.pan.active
   cursor: col-resize
+  img
+    opacity: 1
+
+
