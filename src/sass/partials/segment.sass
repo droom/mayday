@@ -3,9 +3,9 @@
     border-top: $border
   &.head
     background: $blueSky
+    // background: #26a6e1
   &.ref
     background: rgba(200,200,200,0.1)
-    // padding: 0 0 1em 0
   &.relative
     position: relative
 
@@ -32,7 +32,6 @@
   &.surface
     max-width: 100%
     overflow: hidden
-
 
   &.blueprint
     max-width: 100%
@@ -64,6 +63,23 @@
   &.blueprint
     max-width: $wide-unit
 
+
+
+@media (max-width: $phone-max)
+  .segment
+    &.type
+      padding: $gttr-ph
+
+    &.surface,
+    &.blueprint
+      figure
+        figcaption
+          padding: $gttr-ph
+          
+
+
+
+
     
 .half
   display: flex
@@ -79,16 +95,5 @@
   .slice:nth-child(2)
     padding-left: 5px
 
-
-@media (max-width: $phone-max)
-  .segment
-    &.type
-      padding: $gttr-ph
-
-    &.surface,
-    &.blueprint
-      figure
-        figcaption
-          padding: $gttr-ph
           
 

@@ -1,39 +1,43 @@
-// p, h3
-//   margin: 0
-//   padding: 0
-//   outline: 1px solid red
+.work.iso
+  main
+    margin-top: 2.5em
 
-  
-main
-  .segment
-    &.type
-      h3 + p
+    .segment
+
+      &.type
+        h3 + p
+          margin-top: 1.5em        
+        p + h3
+          margin-top: 1.5em
+        p + p
+          margin-top: 1em
+
+        &:first-child h3:first-child
+          font-size: 2.4rem
+          line-height: 2.7rem
+          margin-bottom: 1em
+
+
+      &.surface,
+      &.blueprint
+        figure
+          figcaption
+            padding-top: 1em
+            padding-bottom: 3em
+
+      &.blueprint + .surface,
+      &.blueprint + .blueprint
         margin-top: 1.5em
-      p + p
-        margin-top: 1em
-      
 
-    &.surface,
-    &.blueprint
-      figure
-        figcaption
-          padding-top: 1em
-          padding-bottom: 3em
+      &.code
+        margin-bottom: 1.5em
 
-    &.blueprint + .surface,
-    &.blueprint + .blueprint
-      margin-top: 1.5em
+    .band.turn
+      margin-top: 2em
 
-    &.code
-      margin-bottom: 1.5em
+    .band.ref
+      margin-top: 2em
+      padding: 1em 0
 
-  .band.turn
-    margin-top: 2em
-
-  .band.ref
-    margin-top: 2em
-    padding: 1em 0
-
-    & + .band.turn
-      margin-top: 0
-
+      & + .band.turn
+        margin-top: 0

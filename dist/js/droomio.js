@@ -17719,9 +17719,11 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
 		}
 	}
 
+
 	$(window).resize(function() {
 		cover();
 	});
+
 
 	cover();
 
@@ -17733,38 +17735,31 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
 
 ;$(document).ready(function() {
 
-
   $( "a.pan" ).click(function(e) {
-
 
     e.preventDefault();
 
-
     if ( $(this).hasClass('active') ){
-
 
     $(this).removeClass('active');
     $(this).css('outline', '2px solid blue');
 
     } else {
 
-
     $(this).addClass('active');
     $(this).css('outline', '2px solid red');
 
-
     }
-
-
 
   });
 
 });;$(document).ready(function() {
 
-  var worklist = $('ul.work-list li')
+	var worklist = $('ul.work-list li')
+	console.log( worklist );
 
-  $( "a.plain" ).each(function( index ) {
-    console.log( index + ": " + $(this).val );
-  });
+	$( "a.plain" ).each(function( index ) {
+		console.log( index + ": " + $(this).val );
+	});
 
 });

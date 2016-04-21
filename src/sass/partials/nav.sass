@@ -27,7 +27,19 @@ ol.nav
       background: $hover
 
 
+
+
 ul.work-list
+  li.disable
+    border-top: $border
+    dl.reset.credits
+      opacity: 0.3
+    
+    &:active,
+    &:hover
+      background: none
+
+
   li
     border-top: $border
     &:first-child

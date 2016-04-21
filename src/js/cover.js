@@ -16,9 +16,11 @@ $(document).ready(function() {
 		}
 	}
 
+
 	$(window).resize(function() {
 		cover();
 	});
+
 
 	cover();
 

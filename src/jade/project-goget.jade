@@ -8,9 +8,9 @@
 
 - var URLShort  = "givereceipt.com"
 - var URLLong   = "http://www.givereceipt.com"
-- var URLNext   = "project-givereceipt.html"
-- var URLPrev   = "project-foreign.html"
 
+- var URLPrev   = "project-givereceipt.html"
+- var URLNext   = "project-foreign.html"
 - var prevTitle = "Foreign Office"
 - var nextTitle = "Give Receipt"
 
@@ -48,7 +48,15 @@ include partials/_html
 
 
       main(role="main")
-        .segment.surface
+        
+
+
+        .segment.type
+          h3 Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima eius laborum quasi iusto dolores id porro ea laboriosam cumque inventore ipsam cum iste, a rerum quis esse consequatur, harum labore.
+       
+
+        .segment.surface.squash
           figure
             .half
               img(src="img/projects/gg/gg-research-1.jpg").slice
@@ -67,7 +75,6 @@ include partials/_html
             img(src="img/projects/gg/gg-ui.png")
             figcaption 
               small UI based on transport markings found around Malaysia.
-
         
         .segment.surface.squash
           figure
