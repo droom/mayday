@@ -1,9 +1,9 @@
 .work.iso
   main
     margin-top: 2.5em
+    
 
     .segment
-
       &.type
         h3 + p
           margin-top: 1.5em        
@@ -25,19 +25,19 @@
             padding-top: 1em
             padding-bottom: 3em
 
+      &.surface   + .blueprint,
       &.blueprint + .surface,
-      &.blueprint + .blueprint
+      &.blueprint + .blueprint,
+      &.surface   + .surface
         margin-top: 1.5em
 
       &.code
         margin-bottom: 1.5em
 
-    .band.turn
-      margin-top: 2em
 
-    .band.ref
-      margin-top: 2em
-      padding: 1em 0
+  .band.ref
+    margin-top: 3em
+    padding: 1em 0
 
-      & + .band.turn
-        margin-top: 0
+    & + .band.turn
+      margin-top: 0
