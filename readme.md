@@ -2,7 +2,7 @@
 Deployed to `droom.io`. 
 
 
-This theme is based on the signage at Mayday hospital in my hometown.
+This theme is based on the signage at Mayday hospital.
 
 ![alt tag](https://raw.githubusercontent.com/droom/mayday/master/src/docs/ref.jpg)
 
