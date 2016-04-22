@@ -1,5 +1,13 @@
 # 2016 Portfolio (‘Mayday’)
-Deployed to `droom.io`. I'm going to turn this into a Jekyll theme at some point but you are free to use this as you like.
+Deployed to `droom.io`. 
+
+
+This theme is based on the signage at Mayday hospital in my hometown.
+
+![alt tag](https://raw.githubusercontent.com/droom/mayday/master/src/docs/ref.jpg)
+
+
+I'm going to turn this into a Jekyll theme at some point but you are free to use this as you like.
 
 ##Libraries
 - `jQuery`
