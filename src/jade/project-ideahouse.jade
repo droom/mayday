@@ -1,18 +1,21 @@
-- var workiso   = true
+- var workiso     = true
 
-- var project   = "Ideahouse Web"
-- var client    = "Ideahouse"
-- var studio    = "VLT Labs"
-- var date      = "March 2015"
-- var repo      = "Private"
+- var project     = "Ideahouse Web"
+- var client      = "Ideahouse"
+- var studio      = "VLT Labs"
+- var date        = "March 2015"
+- var repo        = "Private"
 
-- var URLShort  = "givereceipt.com"
-- var URLLong   = "http://www.givereceipt.com"
-- var URLNext   = "project-givereceipt.html"
-- var URLPrev   = "project-foreign.html"
+- var URLTitle    = "givereceipt.com"
+- var URLLong     = "http://www.givereceipt.com"
+- var URLNext     = "project-givereceipt.html"
+- var URLPrev     = "project-foreign.html"
+- var prevTitle   = "Foreign Office"
+- var nextTitle   = "Give Receipt"
 
-- var prevTitle = "Foreign Office"
-- var nextTitle = "Give Receipt"
+- var role        = [ 'UX + UI', 'Front-End' ]
+- var stack       = [ 'Adobe© Illustrator', 'Adobe© Photoshop', 'HTML (Jade), CSS (Sass), jQuery' ]
+- var collab      = [ 'Jessica Tzy (Icons, Pallette)', 'Bon Woo Meng (Back-End)' ]
 
 
 doctype html
@@ -32,27 +35,8 @@ include partials/_html
           dl.reset.credits
             dt Photo
             dd Winnie Tzp
-
       .cover-aside
-        aside.project(role="complementary")#checkpoint-nav
-          .segment.type
-              dl.reset.credits
-                dt Role
-                dd UX &plus; UI
-                dd Front-End build
-
-              dl.reset.credits
-                dt Stack
-                dd Adobe&copy; Photoshop
-                dd HTML Jade
-                dd Sass (Semantic UI)
-
-              dl.reset.credits
-                dt With
-                dd
-                  a(href="https://www.instagram.com/_jessicatzy/") Jessica Tzy
-                  = " (Icons, Colours)"
-                dd Bon Woo Meng (Back-End)
+        include partials/_role
 
       main(role="main")
 

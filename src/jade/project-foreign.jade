@@ -1,18 +1,20 @@
-- var workiso   = true
+- var workiso     = true
 
-- var project   = "Foreign Office (tumblr)"
-- var client    = "Reformist.io"
-- var studio    = "Reformist.io"
-- var date      = "July 2012"
-- var repo      = "—"
+- var project     = "Foreign Office (tumblr)"
+- var client      = "Reformist.io"
+- var studio      = "Reformist.io"
+- var date        = "July 2012"
+- var repo        = "—"
 
-- var URLShort  = "givereceipt.com"
-- var URLLong   = "http://www.givereceipt.com"
+- var URLTitle    = "givereceipt.com"
+- var URLLong     = "http://www.givereceipt.com"
+- var URLPrev     = "project-goget.html"
+- var URLNext     = "project-givereceipt.html"
+- var prevTitle   = "project-goget.html"
+- var nextTitle   = "project-givereceipt.html"
 
-- var URLPrev   = "project-goget.html"
-- var URLNext   = "project-givereceipt.html"
-- var prevTitle = "project-goget.html"
-- var nextTitle = "project-givereceipt.html"
+- var role        = [ 'Identity', 'UX + UI', 'Front-End' ]
+- var stack       = [ 'Adobe© Illustrator', 'Adobe© Photoshop', 'HTML + CSS' ]
 
 
 doctype html
@@ -34,18 +36,7 @@ include partials/_html
             dd Georgetown central market, Guyana
 
       .cover-aside
-        aside.project(role="complementary")
-          .segment.type
-            dl.reset.credits
-              dt Role
-              dd Identity
-              dd UX &plus; UI
-              dd Front-End
-            dl.reset.credits
-              dt Stack
-              dd Adobe© Illustrator
-              dd Adobe© Photoshop
-              dd Sublime
+        include partials/_role
         
       main(role="main")
 

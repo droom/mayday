@@ -1,18 +1,22 @@
-- var workiso   = true
+- var workiso     = true
 
-- var project   = "Atop Watches"
-- var client    = "Ideahouse"
-- var studio    = "Reformist.io"
-- var date      = "May 2012"
-- var repo      = "https://github.com/droom/atop-mobile"
+- var project     = "Atop Watches"
+- var client      = "Ideahouse"
+- var studio      = "Reformist.io"
+- var date        = "May 2012"
+- var repo        = "https://github.com/droom/atop-mobile"
 
-- var URLShort  = "givereceipt.com"
-- var URLLong   = "http://www.givereceipt.com"
-- var URLNext   = "project-givereceipt.html"
-- var URLPrev   = "project-foreign.html"
+- var URLTitle    = "givereceipt.com"
+- var URLLong     = "http://www.givereceipt.com"
+- var URLNext     = "project-givereceipt.html"
+- var URLPrev     = "project-foreign.html"
 
-- var prevTitle = "Foreign Office"
-- var nextTitle = "GiveReceipt Web/App"
+- var prevTitle   = "Foreign Office"
+- var nextTitle   = "GiveReceipt Web/App"
+
+- var role        = [ 'Identity', 'UX + UI', 'Front-End' ]
+- var stack       = [ 'Adobe© Illustrator', 'Adobe© Photoshop', 'HTML + CSS' ]
+- var collab      = [ 'Jessica Tzy']
 
 
 doctype html
@@ -26,35 +30,15 @@ include partials/_html
       .cover-title
         include partials/_nav
         include partials/_mast
-
       .cover-photo.atop#checkpoint-nav
-
       .cover-aside
-        aside.project(role="complementary")
-          .segment.type
-            dl.reset.credits
-              dt Role
-              dd Front-End
-              dd UX &plus; UI
-            dl.reset.credits
-              dt Stack
-              dd Adobe© Illustrator
-              dd Adobe© Photoshop
-              dd Sublime
-
-            dl.reset.credits
-              dt With
-              dd
-                a(href="https://www.instagram.com/_jessicatzy/") Jessica Tzy
-                = " (Photog., Artwork)"
+        include partials/_role
 
       main(role="main")
-
 
         .segment.type
           h3 A campaign site for Taiwanese watch manufacturer ATOP
           p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima eius laborum quasi iusto dolores id porro ea laboriosam cumque inventore ipsam cum iste, a rerum quis esse consequatur, harum labore.
-       
 
         .segment.relative.center(id="waypoint-atop")
           .atop-live
@@ -64,7 +48,6 @@ include partials/_html
             .seconds
             .unit
             .day
-
 
         .segment.code
           pre.comment.

@@ -1,18 +1,21 @@
-- var workiso   = true
+- var workiso     = true
 
-- var project   = "GiveReceipt"
-- var client    = "DVG Web"
-- var studio    = "SixLeaves"
-- var date      = "July 2015"
-- var repo      = "Private"
+- var project     = "GiveReceipt"
+- var client      = "DVG Web"
+- var studio      = "SixLeaves"
+- var date        = "July 2015"
+- var repo        = "Private"
 
-- var URLShort  = "givereceipt.com"
-- var URLLong   = "http://www.givereceipt.com"
+- var URLTitle    = "givereceipt.com"
+- var URLLong     = "http://www.givereceipt.com"
+- var URLPrev     = "project-foreign.html"
+- var URLNext     = "project-goget.html"
+- var prevTitle   = "Foreign Office"
+- var nextTitle   = "GoGet Brand/Web"
 
-- var URLPrev   = "project-foreign.html"
-- var URLNext   = "project-goget.html"
-- var prevTitle = "Foreign Office"
-- var nextTitle = "GoGet Brand/Web"
+- var role        = [ 'Identity', 'UX + UI', 'Front-End' ]
+- var stack       = [ 'Balsamiq', 'Paper', 'Adobe© Illustrator', 'Adobe© Photoshop', 'Adobe© InDesign', 'HTML (Ruby Slim)' ]
+- var collab      = [ 'Hass']
 
 
 doctype html
@@ -26,26 +29,10 @@ include partials/_html
       .cover-title
         include partials/_nav
         include partials/_mast
-
       .cover-photo.gr#checkpoint-nav
-
       .cover-aside
-        aside.project(role="complementary")
-          .segment.type
-            dl.reset.credits
-              dt Role
-              dd Identity
-              dd UX &plus; UI
-              dd Front-end build
-
-            dl.reset.credits
-              dt Stack
-              dd Adobe&copy; Illustrator
-              dd Adobe&copy; Photoshop
-              dd Adobe&copy; InDesign
-              dd Ruby Slim
-              dd Sass (&plus;Bootstap)
-              
+        include partials/_role
+        
       main(role="main")
 
         .segment.type

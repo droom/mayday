@@ -1,18 +1,20 @@
-- var workiso   = true
+- var workiso     = true
 
-- var project   = "GoGet Brand/Web"
-- var client    = "GoGet"
-- var studio    = "VLT Labs"
-- var date      = "March 2015"
-- var repo      = "Private"
+- var project     = "GoGet Brand/Web"
+- var client      = "GoGet"
+- var studio      = "VLT Labs"
+- var date        = "March 2015"
+- var repo        = "Private"
 
-- var URLShort  = "givereceipt.com"
-- var URLLong   = "http://www.givereceipt.com"
+- var URLTitle    = "TBA"
+- var URLLong     = "TBA"
+- var URLPrev     = "project-givereceipt.html"
+- var URLNext     = "project-foreign.html"
+- var prevTitle   = "Foreign Office"
+- var nextTitle   = "Give Receipt"
 
-- var URLPrev   = "project-givereceipt.html"
-- var URLNext   = "project-foreign.html"
-- var prevTitle = "Foreign Office"
-- var nextTitle = "Give Receipt"
+- var role        = [ 'Identity', 'UX + UI' ]
+- var stack       = [ 'Balsamiq', 'Paper', 'Adobe© Illustrator', 'Adobe© Photoshop', 'Adobe© InDesign', 'InVision' ]
 
 
 doctype html
@@ -26,31 +28,12 @@ include partials/_html
       .cover-title
         include partials/_nav
         include partials/_mast
-
       .cover-photo.gg#checkpoint-nav
-
       .cover-aside
-        aside.project(role="complementary")
-          .segment.type
-            dl.reset.credits
-              dt Role
-              dd Identity
-              dd UX &plus; UI
-
-            dl.reset.credits
-              dt Stack
-              dd Balsamiq
-              dd Paper
-              dd Adobe© Illustrator
-              dd Adobe© Photoshop
-              dd Adobe© InDesign
-              dd InVision
+        include partials/_role
 
 
       main(role="main")
-        
-
-
         .segment.type
           h3 Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
           p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima eius laborum quasi iusto dolores id porro ea laboriosam cumque inventore ipsam cum iste, a rerum quis esse consequatur, harum labore.

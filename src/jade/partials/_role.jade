@@ -1,0 +1,20 @@
+aside.project(role="complementary")
+  .segment.type
+
+    if role
+      dl.reset.credits
+        dt Role
+        each item in role
+          dd= item
+
+    if stack
+      dl.reset.credits
+        dt Stack
+        each item in stack
+          dd= item
+
+    if collab
+      dl.reset.credits
+        dt With
+        each item in collab
+          dd= item
