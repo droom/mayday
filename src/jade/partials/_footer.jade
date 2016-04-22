@@ -10,11 +10,20 @@
 //-           a(href=nextURL tabindex="-1" data-animsition-out-class="fade-out-left-sm" data-animsition-out-duration="400").h4.animsition-link.ghost=nextTitle
 
 
-footer(role="contentinfo").band.hr
-  .segment.type
-    p
-      = "Made by Chris Droom "
-      &bull;
-      = " 2016"
-      br
-      a(href="https://github.com/droom/mayday" aria-label="View code on GitHub") Judge code
+if !index
+  footer(role="contentinfo").band.hr
+    .segment.type
+      p
+        &copy;
+        = "2016 "
+        a(href="https://github.com/droom/mayday" aria-label="View code on GitHub") Judge code
+
+      //- ul
+      //-   li 
+      //-     a(href="http://codepen.io/droom") CodePen
+      //-   li
+      //-     a(href="https://github.com/droom") GitHub
+      //-   li
+      //-     a(href="https://twitter.com/droomio") Twitter
+      //-   li
+      //-     a(href="http://uk.linkedin.com/in/chrisdroom") LinkedIn

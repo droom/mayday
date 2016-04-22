@@ -1,4 +1,5 @@
-- var workiso = false
+- var workiso   = false
+- var index     = true
 
 doctype html
 include partials/_html
@@ -25,19 +26,14 @@ include partials/_html
                 = "KL"
 
       .cover-photo.me
-        
       .cover-aside
         main(role="main")#checkpoint-nav
           .segment.type
-            p.bind
-              a(href="http://codepen.io/droom") CodePen
-              = ", "
-              a(href="https://github.com/droom") GitHub
-              = ", "
-              a(href="https://twitter.com/droomio") Twitter
-              = ", "
-              a(href="http://uk.linkedin.com/in/chrisdroom") LinkedIn
-              = "."
+            p
+              &copy;
+              = "2016 "
+              a(href="https://github.com/droom/mayday" aria-label="View code on GitHub") Judge code
+
 
       include partials/_footer
       include partials/_scripts
