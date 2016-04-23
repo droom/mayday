@@ -1,3 +1,45 @@
+.gg-2
+  width: 100%
+  display: flex
+  justify-content: space-around
+
+  .unit:nth-child(1)
+    padding-right: 2px
+  .unit:nth-child(2)
+    padding-left: 2px
+  .unit
+    flex-basis: calc(100%/2)
+    align-self: flex-start
+    flex-grow: 1
+
+    img
+      width: 100%
+      padding: 0
+
+
+@media (max-width: 450px)
+  .gg-2
+    width: 100%
+    display: flex
+    flex-flow: row wrap
+    justify-content: space-around
+    
+    .unit.tuck
+      display: none
+    .unit:nth-child(1)
+      padding-right: 0
+    .unit:nth-child(2)
+      padding-left: 0
+    .unit
+      flex-basis: 100%
+      align-self: flex-start
+      flex-grow: 1
+
+      img
+        width: 100%
+        padding: 0
+
+
 .gg-24
   padding: 20px
   width: 100%
