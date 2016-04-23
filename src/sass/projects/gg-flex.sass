@@ -1,0 +1,144 @@
+.gg-2
+  width: 100%
+  display: flex
+  justify-content: space-around
+
+  .unit:nth-child(1)
+    padding-right: 2px
+  .unit:nth-child(2)
+    padding-left: 2px
+  .unit
+    flex-basis: calc(100%/2)
+    align-self: flex-start
+    flex-grow: 1
+
+    img
+      width: 100%
+      padding: 0
+
+
+@media (max-width: 450px)
+  .gg-2
+    width: 100%
+    display: flex
+    flex-flow: row wrap
+    justify-content: space-around
+    
+    .unit.tuck
+      display: none
+    .unit:nth-child(1)
+      padding-right: 0
+    .unit:nth-child(2)
+      padding-left: 0
+    .unit
+      flex-basis: 100%
+      align-self: flex-start
+      flex-grow: 1
+
+      img
+        width: 100%
+        padding: 0
+
+
+.gg-24
+  padding: 20px
+  width: 100%
+  display: flex
+  text-align: center
+  flex-flow: row wrap
+  justify-content: space-around
+
+  .unit
+    flex-basis: calc(100%/12)
+    align-self: flex-start
+    flex-grow: 1
+
+    img
+      height: auto
+      width: auto
+      max-height: 200px
+      max-width: 100%
+      padding: 0
+
+
+@media (max-width: 700px)
+  .gg-24
+    .unit
+      flex-basis: calc(100%/8)
+
+@media (max-width: 500px)
+  .gg-24
+    .unit
+      flex-basis: calc(100%/6)
+
+@media (max-width: 300px)
+  .gg-24
+    .unit
+      flex-basis: calc(100%/3)
+
+
+
+.gg-6
+  width: 100%
+  display: flex
+  text-align: center
+  flex-flow: row wrap
+  justify-content: space-around
+
+  .unit
+    outline: 1px solid red
+    flex-basis: calc(100%/6)
+    align-self: flex-start
+    flex-grow: 1
+
+    img
+      height: auto
+      width: auto
+      max-height: 200px
+      max-width: 100%
+      padding: 8px
+
+
+
+
+@media (max-width: 700px)
+  .gg-6
+    text-align: left
+    .unit
+      flex-basis: calc(100%/3)
+      align-self: center
+
+
+.gg-12
+  width: 100%
+  display: flex
+  justify-content: center
+  text-align: center
+  flex-flow: row wrap
+  align-items: stretch
+  justify-content: space-around
+
+  .unit
+
+    flex-basis: calc(100%/6)
+    align-self: center
+    flex-grow: 1
+
+    img
+      height: auto
+      width: auto
+      max-width: 100%
+      padding: 0
+
+
+
+@media (max-width: 780px)
+  .gg-12
+    .unit
+      flex-basis: calc(100%/4)
+        
+
+@media (max-width: $phone-max)
+  .gg-12
+    .unit
+      flex-basis: calc(100%/3)

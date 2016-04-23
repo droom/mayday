@@ -1,0 +1,135 @@
+#gg-wire
+  $gg-wire-colour: $copy
+
+  line-height: 0.95em
+  font-family: $technical
+  max-width: $narrow-unit
+  text-transform: uppercase
+  color: $gg-wire-colour
+  padding: 15px
+  margin: 30px auto
+
+
+  ul, li, p, h2, hgroup
+    margin: 0
+    padding: 0
+    font-size: 10px
+    word-break: break-word
+
+  hgroup
+    font-weight: bold
+
+  hgroup + ul
+    margin-top: 15px
+
+  ul
+    list-style: none
+    li
+      border-top: 1px solid $gg-wire-colour
+      padding: 3px 0
+      
+      ul
+        padding-left: 10px
+        
+        li
+          border-top: none
+          padding: 1px 0
+
+        li:before
+          content: "― "
+
+  .external
+    display: block
+    opacity: 0.4
+
+  .row
+    width: 100%
+    display: flex
+
+    .unit
+      flex: 1
+      align-items: stretch
+
+      &.row
+        min-height: 30px
+
+      &.joiner
+        background: url('../img/components/line.gif') repeat-y 50% 50%
+        
+        .inner
+          background: url('../img/components/line-spoof.gif') repeat-y 50% 50%
+
+        &.up:before
+          margin: 15px 0
+          display: block
+
+        &.up
+          background: url('../img/components/up-long.gif') repeat-y 50% 50%
+
+        &.down
+          background: url('../img/components/down-long.gif') repeat-y 50% 50%
+
+      &.outer
+        position: relative
+        padding: 0 4px
+        align-self: stretch
+        
+        .inner
+          border: 1px solid $gg-wire-colour
+          padding: 5px
+          
+        .main
+          border: 3px solid $gg-wire-colour
+          padding: 15px 5px
+          
+          ul
+            display: inline-block
+            border: 1px solid $gg-wire-colour
+            li
+              display: block
+              padding: 5px
+            li:first-child
+              border-top: none
+
+      &.center
+        text-align: center
+
+
+
+  @media (max-width: 480px)
+    .external
+      display: inline
+
+    .row
+      .unit
+        &.outer
+          padding: 0 3px
+
+          .inner
+
+            ul
+              display: none
+
+            &.turn
+              display: block
+              height: 126px
+
+              hgroup
+                position: absolute
+                left: 13px
+                top: 0
+
+                transition: transform 300ms
+                transform: rotate(90deg)
+                transform-origin: left center
+                display: inline-block
+                vertical-align: middle
+                width: 300px
+
+
+
+
+
+
+
+
