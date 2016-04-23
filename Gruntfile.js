@@ -109,6 +109,9 @@ module.exports = function(grunt) {
       },
       dist: {
         src: [
+
+        // 'src/lib/animsition-docs.js',
+
         'src/lib/jquery.js',
         'src/lib/modernizr-2.8.3.min.js',
         'src/lib/easing.js',
@@ -122,6 +125,7 @@ module.exports = function(grunt) {
         'src/js/cover.js',
         'src/js/drag.js',
         'src/js/index.js'
+
         ],
         dest: 'dist/js/droomio.js',
       },

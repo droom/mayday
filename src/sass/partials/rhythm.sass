@@ -2,6 +2,13 @@
   main
     margin-top: 2.5em
     
+    .segment + .segment
+      margin-top: 2em
+
+      figure
+        figcaption
+          padding-top: 1em
+          padding-bottom: 3em
 
     .segment
       &.type
@@ -17,22 +24,25 @@
           line-height: 2.7rem
           margin-bottom: 1em
 
-
-      &.surface,
-      &.blueprint
-        figure
-          figcaption
-            padding-top: 1em
-            padding-bottom: 3em
-
-      &.surface   + .blueprint,
-      &.blueprint + .surface,
-      &.blueprint + .blueprint,
-      &.surface   + .surface
-        margin-top: 1.5em
-
       &.code
         margin-bottom: 1.5em
+
+
+      // &.diagram,
+      // &.surface,
+      // &.blueprint
+      //   figure
+      //     figcaption
+      //       padding-top: 1em
+      //       padding-bottom: 3em
+
+
+      // &.surface   + .blueprint,
+      // &.blueprint + .surface,
+      // &.blueprint + .blueprint,
+      // &.surface   + .surface
+      //   margin-top: 1.5em
+
 
 
   .band.ref
