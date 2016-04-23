@@ -1,16 +1,17 @@
 #gg-wire
-  $gg-wire-colour: $copy
-
-  line-height: 0.95em
+  line-height: 0.9em
   font-family: $technical
   max-width: $narrow-unit
   text-transform: uppercase
   color: $gg-wire-colour
   padding: 15px
-  margin: 30px auto
+  margin: 0 auto 30px auto
+  
+  h4
+    margin: 10px auto 50px auto
+    text-align: center
 
-
-  ul, li, p, h2, hgroup
+  ul, li, hgroup
     margin: 0
     padding: 0
     font-size: 10px
@@ -20,27 +21,25 @@
     font-weight: bold
 
   hgroup + ul
-    margin-top: 15px
+    margin-top: 20px
 
   ul
     list-style: none
     li
       border-top: 1px solid $gg-wire-colour
-      padding: 3px 0
-      
+      padding: 3px 0 2px 0
+      &:last-child
+        padding: 3px 0 0 0
       ul
         padding-left: 10px
-        
         li
           border-top: none
           padding: 1px 0
-
         li:before
           content: "― "
 
   .external
     display: block
-    opacity: 0.4
 
   .row
     width: 100%
@@ -50,14 +49,18 @@
       flex: 1
       align-items: stretch
 
-      &.row
-        min-height: 30px
+      &:first-child
+        padding-left: 0
+        
+      &:last-child
+        padding-right: 0
 
       &.joiner
+        min-height: 30px
         background: url('../img/components/line.gif') repeat-y 50% 50%
         
         .inner
-          background: url('../img/components/line-spoof.gif') repeat-y 50% 50%
+          background: $bg
 
         &.up:before
           margin: 15px 0
@@ -79,7 +82,7 @@
           padding: 5px
           
         .main
-          border: 3px solid $gg-wire-colour
+          border: 2px solid $gg-wire-colour
           padding: 15px 5px
           
           ul
@@ -87,7 +90,7 @@
             border: 1px solid $gg-wire-colour
             li
               display: block
-              padding: 5px
+              padding: 3px 5px 2px 5px
             li:first-child
               border-top: none
 
@@ -95,30 +98,34 @@
         text-align: center
 
 
-
-  @media (max-width: 480px)
+@media (max-width: 600px)
+  #gg-wire
     .external
       display: inline
-
     .row
       .unit
         &.outer
-          padding: 0 3px
+          padding: 0 2px
 
+
+@media (max-width: 500px)
+  #gg-wire
+    .external
+      display: inline
+    .row
+      .unit
+        &.outer
+          padding: 0 1px
           .inner
-
             ul
               display: none
-
             &.turn
               display: block
               height: 126px
-
               hgroup
                 position: absolute
                 left: 13px
                 top: 0
-
                 transition: transform 300ms
                 transform: rotate(90deg)
                 transform-origin: left center

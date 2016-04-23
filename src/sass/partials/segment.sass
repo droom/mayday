@@ -3,7 +3,6 @@
     border-top: $border
   &.head
     background: $blueSky
-    // background: #26a6e1
   &.ref
     background: rgba(200,200,200,0.1)
   &.relative
@@ -12,8 +11,6 @@
 .segment
   margin: auto
   figure
-
-    .gg-6,
     img
       padding: $gttr-dt
   
@@ -33,6 +30,12 @@
   &.relative
     position: relative
 
+  &.diagram
+    max-width: 100%
+    overflow: hidden
+    // border: 2px solid $gg-wire-colour 
+
+
   &.surface
     max-width: 100%
     overflow: hidden
@@ -44,19 +47,12 @@
     // figure
       // background: url('../img/components/tile-graph.gif') repeat 100% 100% $blueDark
 
-  &.drag
-    .notice
-      display: block
-      background: rgba(176,234,236, 0.6)   
-
-  &.code
-    background: $slate
-
   &.type,
   &.code
     padding: $gttr-dt
 
   &.code
+    background: $slate
     overflow: hidden
 
   &.type
@@ -65,6 +61,7 @@
 
   &.code,
   &.surface,
+  &.diagram,
   &.blueprint
     max-width: $wide-unit
 
