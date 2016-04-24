@@ -5,7 +5,7 @@
   text-transform: uppercase
   color: $gg-wire-colour
   padding: 15px
-  margin: 0 auto 30px auto
+  margin: 30px auto 30px auto
   
   h4
     margin: 10px auto 50px auto
@@ -105,7 +105,33 @@
     .row
       .unit
         &.outer
-          padding: 0 2px
+          .inner
+            &.break-1
+              margin: auto
+              // background: yellow
+              display: block
+              height: 126px
+              width: 50px
+              
+              hgroup
+                // position: absolute
+                // left: 13px
+                // top: 0
+                // transition: transform 300ms
+                // transform: rotate(90deg)
+                // transform-origin: left center
+                // display: inline-block
+                // vertical-align: middle
+                // width: 300px
+
+                margin: -10px 5px 0 5px
+                transition: transform 300ms
+                transform: rotate(90deg)
+                transform-origin: left center
+                display: inline-block
+                vertical-align: middle
+                width: 300px
+
 
 
 @media (max-width: 500px)
@@ -115,13 +141,16 @@
     .row
       .unit
         &.outer
-          padding: 0 1px
+          padding: 0 3px
           .inner
             ul
               display: none
-            &.turn
+            &.break-1,
+            &.break-2
               display: block
               height: 126px
+              width: auto
+
               hgroup
                 position: absolute
                 left: 13px
@@ -133,7 +162,15 @@
                 vertical-align: middle
                 width: 300px
 
-
+                margin: 0
+                
+                // margin: -10px 5px 0 5px
+                // transition: transform 300ms
+                // transform: rotate(90deg)
+                // transform-origin: left center
+                // display: inline-block
+                // vertical-align: middle
+                // width: 300px
 
 
 
