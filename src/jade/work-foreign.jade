@@ -1,0 +1,82 @@
+- var workiso     = true
+
+- var project     = "Foreign Office (tumblr)"
+- var client      = "Reformist.io"
+- var studio      = "Reformist.io"
+- var date        = "July 2012"
+- var repo        = "—"
+
+- var URLTitle    = "blog.droom.name"
+- var URLProject  = "http://blog.droom.name"
+
+- var URLPrev     = "work-goget.html"
+- var URLNext     = "work-goget.html"
+- var prevTitle   = "work-goget.html"
+- var nextTitle   = "work-goget.html"
+
+- var role        = [ 'Identity', 'UX + UI', 'Front-End' ]
+- var stack       = [ 'Adobe© Illustrator', 'Adobe© Photoshop', 'HTML (Vanilla)', 'CSS (Vanilla)' ]
+
+
+doctype html
+include partials/_html
+
+  head
+    include partials/_head
+    
+  body.work.iso(data-project="foreign")
+    div(data-animsition-in-class="fade-in" data-animsition-in-duration="500").js-animsition.animsition#context
+      .cover-title
+        include partials/_nav
+        include partials/_mast
+
+      .cover-photo.fo#checkpoint-nav
+        .segment.type.dark
+          dl.reset.credits
+            dt.hide Photo
+            dd Georgetown central market, Guyana
+
+      .cover-aside
+        include partials/_role
+        
+      main(role="main")
+
+        .segment.type
+
+          h3 An editorial theme for tumblr
+          
+          p If you've ever observed graphic design from the ex-colonies, there is an earnest.
+
+          p tumblr has a wealth of themes, but I couldnt find what I wanted. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium minus perferendis facere amet cumque exercitationem deleniti. Iusto magni, quia dolorem odio numquam, quasi hic enim minus corporis sint quo, illo.
+
+          h3 Georgia Pro
+
+          p After sampling a near hundred webfonts, I settled on this. Its generous x-height means it performs well at the small sizes (copyright, captions, etc). It’s a very stable, sober looking face, without being too stiff. body copy set in serifs easier to read.
+
+
+        .segment.center.blueprint.squash
+          figure
+            img(src="img/projects/fo/fo-georgia.png")
+            figcaption
+
+
+        .segment.center.blueprint.squash
+          figure
+            img(src="img/projects/fo/fo-baseline.png")
+            figcaption
+
+
+        .segment.type
+          h3 Design Responsively
+          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur totam, dolores itaque. Accusamus iusto repudiandae doloribus ipsam ex eum nobis veniam blanditiis placeat maxime, modi, saepe corporis sint molestiae dolorum.
+        
+
+        .segment.center.blueprint.squash
+          figure
+            img(src="img/projects/fo/fo-reflow.gif").faint
+            figcaption
+
+
+
+      include partials/_footer
+      include partials/_scripts
