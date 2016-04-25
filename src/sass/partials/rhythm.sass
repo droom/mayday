@@ -27,21 +27,15 @@
       &.code
         margin-bottom: 1.5em
 
-
-      // &.diagram,
-      // &.surface,
-      // &.blueprint
-      //   figure
-      //     figcaption
-      //       padding-top: 1em
-      //       padding-bottom: 3em
+      &.diagram
+        margin-top: 3em
+        margin-bottom: 4em
 
 
-      // &.surface   + .blueprint,
-      // &.blueprint + .surface,
-      // &.blueprint + .blueprint,
-      // &.surface   + .surface
-      //   margin-top: 1.5em
+      &.surface
+        figure + figure
+          img
+            padding-top: 0
 
 
 
@@ -51,3 +45,12 @@
 
     & + .band.turn
       margin-top: 0
+
+
+@media (max-width: $phone-max)
+  .work.iso
+    main
+      .segment
+        &.diagram
+          margin-top: 1.5em
+          margin-bottom: 1.5em

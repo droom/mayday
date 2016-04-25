@@ -5,14 +5,26 @@
     header
       h2=project
       dl.reset.credits
-        dt Client
-        dd=client 
-        dt Studio
-        dd=studio
-        dt Date
-        dd=date
-        dt Repo
-        dd=repo
+        if client
+          dt Client
+          dd=client
+
+        if studio
+          dt Studio
+          dd=studio
+
+        if date
+          dt Date
+          dd=date
+
+        if repo
+          dt Repo
+          dd=repo
+
+        if status
+          dt Status
+          dd=status
+
         if URLProject
           dt Live
           dd
