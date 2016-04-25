@@ -91,7 +91,6 @@ small
   line-height: 16px
   display: inline-block
 
-
 figcaption
   text-align: left
   font-weight: 200
@@ -106,13 +105,48 @@ figcaption:before
   content: "fig. " counter(cards)
   display: block
 
-blockquote
-  font-size: 20px
-  font-weight: 600
-  letter-spacing: -0.025em
-blockquote::before
-  content: ""
 
+
+
+
+blockquote
+  text-align: center
+  margin: 0 auto 
+  padding: 0
+
+  background: #eee
+  font-size: 1em
+  font-weight: 600
+  quotes: "\201C""\201D""\2018""\2019"
+
+blockquote::before,
+blockquote::after
+  display: inline
+  vertical-align: top
+
+blockquote::before
+  content: open-quote
+  margin-left:    -0.7em
+  margin-right:   0.2em
+
+blockquote::after
+  content: close-quote
+
+
+cite
+  display: block
+  margin: 0.75em 0 2.5em 0
+  font-style: normal  
+
+cite:before
+  content: "\2013"
+  margin-left:    -0.7em
+  margin-right:   0.2em
+
+
+sup
+  vertical-align: top
+  margin-left: 0.3em
 
 .dark
   dt, dd, p, a, small, h1, h2, h3, h4
