@@ -34,7 +34,6 @@
         h4
           margin: 0 auto 3em
 
-
   .band.ref
     margin-top: 3em
     padding: 1em 0
@@ -60,8 +59,11 @@
           h4
             margin: 0 auto 1.5em
   
-        &.type
+      .segment
+        &.blueprint + .blueprint
+          margin-top: 1em
 
+        &.type
           &:first-child h3:first-child
             font-size: 1.8rem
             line-height: 2.1rem

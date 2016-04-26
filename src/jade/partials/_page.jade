@@ -1,0 +1,16 @@
+if project
+  .band.hr.relative.pager
+    
+    .segment.type
+      a(href=prevURL tabindex="-1" data-animsition-out-class="fade-out-right-sm" data-animsition-out-duration="400").move.move-left.animsition-link
+      a(href=nextURL tabindex="-1" data-animsition-out-class="fade-out-left-sm" data-animsition-out-duration="400").move.move-right.animsition-link
+      
+
+      ul.reset.page.ghost
+        li.ghost
+          label Previous
+          a(href=prevURL tabindex="-1" data-animsition-out-class="fade-out-right-sm" data-animsition-out-duration="400").h4.animsition-link.ghost=prevTitle
+        li.ghost
+          label Next
+          a(href=nextURL tabindex="-1" data-animsition-out-class="fade-out-left-sm" data-animsition-out-duration="400").h4.animsition-link.ghost=nextTitle
+

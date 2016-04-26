@@ -2,7 +2,6 @@
   width: 100%
   display: flex
   justify-content: space-around
-
   margin: auto
   display: flex
   align-items: center
@@ -15,7 +14,6 @@
     text-align: center
     justify-content: space-around
     align-self: flex-start
-
     img
       width: 100%
 
@@ -26,6 +24,13 @@
       flex-basis: 100%
     .unit.tuck
       display: none
+    .unit:nth-child(1)
+      img
+        padding-right: 0
+    .unit:nth-child(2)
+      img
+        padding-left: 0
+
 
 @media (min-width: 451px)
   .flex-2
