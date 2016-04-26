@@ -17726,7 +17726,7 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
 		var hSum          =  hWindow - parseInt(hBellyTitle + hBellyAside);
 		var hSup 		  =  parseInt(hWindow - hBellyTitle);
 
-		if (wWindow > 600) {
+		if (wWindow > 585) {
 			$('.cover-photo').css('height', hSup);
 		} else {
 			$('.cover-photo').css('height', hSum);
