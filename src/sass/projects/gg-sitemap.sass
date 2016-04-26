@@ -1,0 +1,156 @@
+#gg-sitemap
+  line-height: 0.9em
+  font-family: $technical
+  max-width: $narrow-unit
+  text-transform: uppercase
+  color: $gg-sitemap-colour
+  margin: 0 auto
+  
+  ul, li, hgroup
+    margin: 0
+    padding: 0
+    font-size: 10px
+    word-break: break-word
+
+  hgroup
+    font-weight: bold
+
+  hgroup + ul
+    margin-top: 20px
+
+  ul
+    list-style: none
+    li
+      border-top: 1px solid $gg-sitemap-colour
+      padding: 3px 0 2px 0
+      &:last-child
+        padding: 3px 0 0 0
+      ul
+        padding-left: 10px
+        li
+          border-top: none
+          padding: 1px 0
+        li:before
+          content: "― "
+
+  .external
+    display: block
+    color: $orange
+
+  .row
+    width: 100%
+    display: flex
+
+    .unit
+      flex: 1
+      align-items: stretch
+
+      &:first-child
+        padding-left: 0
+        
+      &:last-child
+        padding-right: 0
+
+      &.joiner
+        min-height: 30px
+        background: url('../img/components/line.gif') repeat-y 50% 50%
+        
+        .inner
+          background: $bg
+
+        &.up:before
+          margin: 15px 0
+          display: block
+
+        &.up
+          background: url('../img/components/up-long.gif') repeat-y 50% 50%
+
+        &.down
+          background: url('../img/components/down-long.gif') repeat-y 50% 50%
+
+      &.outer
+        position: relative
+        padding: 0 4px
+        align-self: stretch
+        
+        .inner
+          border: 1px solid $gg-sitemap-colour
+          padding: 5px 6px 4px 6px
+          
+        .main
+          border: 2px solid $gg-sitemap-colour
+          padding: 15px 5px
+          
+          ul
+            display: inline-block
+            border: 1px solid $gg-sitemap-colour
+            li
+              display: block
+              padding: 3px 5px 2px 5px
+            li:first-child
+              border-top: none
+
+      &.center
+        text-align: center
+
+
+@media (max-width: 600px)
+  #gg-sitemap
+    .external
+      display: inline
+    .row
+      .unit
+        &.outer
+          .inner
+            &.break-1
+              margin: auto
+              display: block
+              height: 126px
+              width: 50px
+              
+              hgroup
+                margin: -10px 5px 0 5px
+                transition: transform 300ms
+                transform: rotate(90deg)
+                transform-origin: left center
+                display: inline-block
+                vertical-align: middle
+                width: 300px
+
+
+
+@media (max-width: 500px)
+  #gg-sitemap
+    .external
+      display: inline
+    .row
+      .unit
+        &.outer
+          padding: 0 3px
+          .inner
+            ul
+              display: none
+            &.break-1,
+            &.break-2
+              display: block
+              height: 126px
+              width: auto
+
+              hgroup
+                position: absolute
+                left: 13px
+                top: 0
+                transition: transform 300ms
+                transform: rotate(90deg)
+                transform-origin: left center
+                display: inline-block
+                vertical-align: middle
+                width: 300px
+                margin: 0
+                
+
+
+
+
+
+
