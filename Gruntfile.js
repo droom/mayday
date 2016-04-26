@@ -21,11 +21,11 @@ module.exports = function(grunt) {
       jade: {
         files: [
 
-          'src/jade/*.jade', 
-          'src/jade/partials/*.jade',
-          'src/jade/projects/*.jade'
+        'src/jade/*.jade', 
+        'src/jade/partials/*.jade',
+        'src/jade/projects/*.jade'
 
-          ],
+        ],
         
         tasks: ['jade'],
       },
@@ -110,17 +110,46 @@ module.exports = function(grunt) {
       }
     },
 
+
+    critical: {
+      test: {
+        options: {
+
+          inline: true,
+          minify: true,
+          base: '',
+          css: [
+        
+          'dist/css/style.css'
+        
+          ],
+          width: 1200,
+          height: 800
+        },
+
+        src: [
+            'dist/*.html'            
+            ],
+
+        dest: 'critical/'
+      }
+    },
+
+
+
+
     concat: {
       options: {
         separator: ';',
       },
       dist: {
         src: [
+        
         'src/lib/jquery.js',
         'src/lib/easing.js',
         'src/lib/jquery.waypoints.js',
         'src/lib/modernizr-2.8.3.min.js',
-        
+
         'src/js/project-atop.js',
         'src/js/waypoints.js',
         'src/js/context.js',
@@ -153,7 +182,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-autoprefixer');
   grunt.loadNpmTasks('grunt-postcss');
-
+  grunt.loadNpmTasks('grunt-critical');
 
   grunt.registerTask('default', [ 'concat', 'uglify', 'jade', 'sass', 'postcss', 'imagemin' ]);
 
