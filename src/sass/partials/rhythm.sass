@@ -2,15 +2,15 @@
   main
     margin-top: 2.5em
     
-    .segment + .segment
-      margin-top: 2em
-
-      figure
-        figcaption
-          padding-top: 1em
-          padding-bottom: 3em
-
     .segment
+      & + .segment
+        margin-top: 2em
+
+        figure
+          figcaption
+            padding-top: 1em
+            padding-bottom: 3em
+
       &.type
         h3 + p
           margin-top: 1.5em        
@@ -31,11 +31,8 @@
         margin-top: 3em
         margin-bottom: 4em
 
-      // &.surface
-      //   figure + figure
-      //     img
-      //       padding-top: 0
-
+        h4
+          margin: 0 auto 3em
 
 
   .band.ref
@@ -49,7 +46,16 @@
 @media (max-width: $phone-max)
   .work.iso
     main
+      margin-top: 1.5em
+    
+      .segment
+        & + .segment
+          margin-top: 0
+
       .segment
         &.diagram
-          margin-top: 1.5em
+          margin-top: 1em
           margin-bottom: 1.5em
+
+          h4
+            margin: 0 auto 1.5em
