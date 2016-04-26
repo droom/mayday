@@ -1,5 +1,5 @@
 h1, h2, h3, h4, h5, h6, nav, nav ol li, .h1, .h2, .h3, .h4, .h5, .h6, .nav
-  font-family: $running
+  font-family: $display
   font-weight: normal !important
 
 h1, .h1,
@@ -65,7 +65,6 @@ p, .p
   margin-left: 4.95556em
 
 
-
 pre
   font-family: $technical
   margin: 0
@@ -83,7 +82,7 @@ pre
     padding-top: 15px
 
 small
-  font-family: $display
+  font-family: $running
   font-size: $font-small
   line-height: 16px
   display: inline-block
@@ -101,10 +100,6 @@ figcaption
 figcaption:before
   content: "fig. " counter(cards)
   display: block
-
-
-
-
 
 blockquote
   text-align: center
@@ -140,13 +135,12 @@ cite:before
   margin-left:    -0.7em
   margin-right:   0.2em
 
-
-
 sup
   vertical-align: top
   margin: -0.3em 0 0 0.45em
   display: inline-block
   font-size: $font-small
+
 
 .dark
   dt, dd, p, a, small, h1, h2, h3, h4
