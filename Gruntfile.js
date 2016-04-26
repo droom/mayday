@@ -110,9 +110,9 @@ module.exports = function(grunt) {
       dist: {
         src: [
         'src/lib/jquery.js',
-        'src/lib/modernizr-2.8.3.min.js',
         'src/lib/easing.js',
-        'src/lib/noframework.waypoints.js',
+        'src/lib/jquery.waypoints.js',
+        'src/lib/modernizr-2.8.3.min.js',
         
         'src/js/project-atop.js',
         'src/js/waypoints.js',
