@@ -19,7 +19,14 @@ module.exports = function(grunt) {
       },
 
       jade: {
-        files: ['src/jade/*.jade', 'src/jade/projects/*.jade'],
+        files: [
+
+          'src/jade/*.jade', 
+          'src/jade/partials/*.jade',
+          'src/jade/projects/*.jade'
+
+          ],
+        
         tasks: ['jade'],
       },
 
