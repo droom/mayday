@@ -113,6 +113,7 @@ module.exports = function(grunt) {
         'src/lib/modernizr-2.8.3.min.js',
         'src/lib/easing.js',
         'src/lib/noframework.waypoints.js',
+        
         'src/js/project-atop.js',
         'src/js/waypoints.js',
         'src/js/context.js',
