@@ -1,6 +1,6 @@
 body.work.iso
   main
-    counter-reset: ref  
+    counter-reset: ref cards
 
 sup
   counter-increment: ref
@@ -8,9 +8,6 @@ sup
 sup:before
   content: "[" counter(ref) "]"
 
-
-body.work
-  counter-reset: cards
 
 figcaption
   counter-increment: cards
