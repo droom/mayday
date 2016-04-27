@@ -923,9 +923,9 @@ https://github.com/imakewebthings/waypoints/blog/master/licenses.txt
     console.log(".move-right");
   })
 
-  $(".move-up").click(function(){
+  $(".move-return").click(function(){
     localStorage.context = "upwards";
-    console.log(".move-up");
+    console.log(".move-return");
   })
 
   
