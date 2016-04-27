@@ -19,8 +19,7 @@
 
 
 doctype html
-include partials/_html
-
+html(class="no-js" lang="en")
   head
     include partials/_head
     
@@ -44,21 +43,26 @@ include partials/_html
         .segment.type
           h3 An editorial theme for tumblr
           p 
-            = "In 2010 I was looking for a sober, type-led tumblr theme to start jotting down design concerns that occupied my thoughts. I’m not a good writer and my ideas are few and far between, but as "
+            = "In 2010 I was looking for a sober, type-led blogging theme to start jotting down design realted musings as they occured to me. I’m not skilled at writing and my ideas are few and far between, but as "
             a(href="https://twitter.com/RellyAB") @RellyAB
             = " once said, " 
             q To become a good writer, you need to do a lot of shitty writing first.
             a(href="#ref").plain.glide-slow
               sup [1]
 
-          p By using the tumblr platform, the predicted paucity of written updates could at least be mitigated with other types of media to keep it from becoming another graveyard. It also had the added benefit of being separate from my portfolio in case it was complete garbage.
+          p By using the tumblr platform, the predicted paucity of written posts could at least be mitigated with ‘re-blogging’ other types of media. It also had the added benefit of being separate from my portfolio in case it was complete garbage.
 
-          p There were (and are) a wealth of themes to choose from, but I couldn’t find precisely what I was looking for. Either the type choices weren’t right, or it had artefacts or detailing I found extraneous, or it was just too gimmicky. (On reflection, this whole foray might have just have been a subconscious avoidance strategy to keep me from doing what I feared. Still, it was a good exercise&hellip; )
+          p 
+            = "There were (and are) a wealth of themes to choose from, but I couldn’t find precisely what I was looking for. Either the type choices didn't jive with me, it had artefacts or detailing I found superfluous, or it was just too gimmicky. (On reflection, this whole exercise might have just have been a subconscious avoidance strategy to keep me from doing what I feared"
+              &hellip; 
+              = "). So began my first forary into desiging for CMSes and ‘the known unknowns.’"
+              a(href="#ref").plain.glide-slow
+                sup [1]
 
           h3 Georgia &plus;&plus;
 
           p 
-            = "The most important component to get right was the typeface. At this point I was already a huge fan of Georgia, having used it for my last portfolio. Its ubiquity is a testament to the decisions  Matthew Carter made and how well it performs, but it also prevents us from fully seeing its beauty. (If you look into the decisions you can get an idea why it performs so well.) Around this time, Webtype had released Georgia Pro"
+            = "The most important component to get right was the typeface. At this point I was already a huge fan of Georgia; Its ubiquity is a testament to how well it performs, but I think it also prevents us from fully seeing its beauty. During the build, Webtype had released Georgia Pro"
             a(href="#ref").plain.glide-slow
               sup= "[2]"
             = ", an updated version of the Matthew Carter classic with new weights and extra hinting. Side-by-side, the new  letters looked even better."
@@ -66,7 +70,7 @@ include partials/_html
         .segment.center.blueprint.squash
           figure
             img(src="img/projects/fo/fo-georgia.png")
-            figcaption After sampling quite a few webfonts, I settled on Georgia Pro. Its generous x-height means it performs well at the small sizes (copyright, captions, etc).
+            figcaption After sampling quite a few webfonts, I settled on Georgia Pro. Its generous x-height means it performs well at the small sizes (copyright, captions, etc). Amongst the new cuts was even a small caps.
 
         .segment.type
           h3 RWD FTW 
@@ -78,13 +82,13 @@ include partials/_html
               sup= "[3]"
             = " around the office that the penny dropped for me."
 
-          p Responsive design was such a huge revelation that might have actually rewired my brain, much in the same way CSS did a decade earlier. The mental model I had been using up until this point had been.
+          p Responsive design was such a huge revelation that might have actually rewired my brain — much in the same way CSS did a decade earlier — and the mental model I used to design for screens had been forever changed.
 
 
         .segment.center.blueprint.squash
           figure
             img(src="img/projects/fo/fo-reflow.gif").faint
-            figcaption A single post is be divided up into three subdivions: date, content and tags. On a wide desktop, date and tags site at opposite sides of the screen. On a smaller table, they stack on top of each other on the left hand side. I had used regular floats to move these sections about. 
+            figcaption A single post is divided up into three subdivions: date, content and tags. On a wide desktop, date and tags site at opposite sides of the screen. On a smaller table, they stack on top of each other on the left hand side. I had used regular floats to move these sections about. 
 
         .segment.swatch.fo
           .colour.colour-1
@@ -96,7 +100,7 @@ include partials/_html
             img(src="img/projects/fo/fo-layout.jpg")
 
         .segment.type
-          p Revisiting the source for this 4 years later makes me appreciated (even more) how useful all the build tools we now have are. Back then, I was writing vanilla CSS, manually typing out vendor-prefixes, meticulously indenting and then minifying with some online service. Ridiculous. But at least it kept me from writing.
+          p Revisiting the source for this 4 years later makes me appreciate (even more) how useful all the build tools we now have are. Back then, I was writing vanilla CSS, manually typing out vendor-prefixes, meticulously indenting and then minifying with some online service. Ridiculous. But at least it kept me from writing.
 
 
       .band.ref#ref
@@ -106,6 +110,8 @@ include partials/_html
             li The demo in question was (I think) from Leigh Howells at Headscape which I can't seme to track down now. I'll email and update.
             li
               a(href="http://www.fontbureau.com/blog/georgia_verdana/") Georgia Pro &amp; Verdana Pro: More Widths. More Weights. More Possibilities. 
+            li 
+              a(href="https://adactio.com/articles/4938") One Web, Jeremy Keith
 
 
       include partials/_footer
