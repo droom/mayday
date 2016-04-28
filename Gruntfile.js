@@ -126,7 +126,8 @@ module.exports = function(grunt) {
         'src/js/context.js',
         'src/js/nav.js',
         'src/js/cover.js',
-        'src/js/drag.js'
+        'src/js/drag.js',
+        'src/js/mix.js'
         ],
         dest: 'dist/js/droomio.js',
       },
