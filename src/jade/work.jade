@@ -81,6 +81,11 @@ html(class="no-js" lang="en")
                 dd.client Ideahouse
                 dt.model Model
                 dd.model SaaS
+      
+      //  ↓↓↓ MIXPANEL ↓↓↓ 
+      script(type='text/javascript').
+        mixpanel.track("Index Loaded"), {"Page Name" : "Index"}
+      // ↑↑↑ MIXPANEL ↑↑↑ 
 
       include partials/_footer
       include partials/_scripts
