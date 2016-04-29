@@ -17,13 +17,26 @@ mixpanel.init("31fdd130031128015591e5734572b9af");
 
 
 
-console.log("mixpanel");
-mixpanel.track("hello!");
+mixpanel.track("ready");
 
 
-$('.move-top').click(function() {
-	mixpanel.track("move top!");
+$('a.move-top').click(function() {
+	mixpanel.track("move top");
 });
+
+$('a.move-return').click(function() {
+	mixpanel.track("move return");
+});
+
+
+$('#profile').click(function() {
+	mixpanel.track("#profile");
+});
+
+$('#work').click(function() {
+	mixpanel.track("#work");
+});
+
 
 
 
