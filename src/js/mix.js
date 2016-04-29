@@ -20,6 +20,13 @@ mixpanel.init("31fdd130031128015591e5734572b9af");
 console.log("mixpanel");
 mixpanel.track("hello!");
 
+
+$('.move-top').click(function() {
+	mixpanel.track("move top!");
+});
+
+
+
 });
 
 
