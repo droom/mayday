@@ -16,7 +16,6 @@ $(document).ready(function() {
 mixpanel.init("31fdd130031128015591e5734572b9af");
 
 
-
 mixpanel.track("ready");
 
 

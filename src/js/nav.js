@@ -29,21 +29,31 @@ $(document).ready(function() {
 
 
 
+  if ( $( "#checkpoint-nav" ).length ) {
+   
+    var returnShow = new Waypoint({
+      element: document.getElementById('checkpoint-nav'),
+      handler: function(direction) {
+        $("#top").addClass("show");
+      }, offset: 0
+    });
 
-  var returnShow = new Waypoint({
-    element: document.getElementById('checkpoint-nav'),
-    handler: function(direction) {
-      $("#top").addClass("show");
-    }, offset: 0
-  });
+    
+    var returnHide = new Waypoint({
+      element: document.getElementById('checkpoint-nav'),
+      handler: function(direction) {
+        $("#top").removeClass("show");
+      }, offset: 56
+    });
+
+    
+  }
 
 
-  var returnHide = new Waypoint({
-    element: document.getElementById('checkpoint-nav'),
-    handler: function(direction) {
-      $("#top").removeClass("show");
-    }, offset: 56
-  });
+
+
+
+
 
 
 
