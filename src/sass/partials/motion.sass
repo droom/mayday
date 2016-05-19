@@ -2,4 +2,13 @@ header,
 footer,
 nav,
 a
-  transition: $transition
+	transition: $transition
+
+body
+	animation: fadein 175ms ease-in-out
+
+@keyframes fadein
+	from
+		opacity: 0
+	to
+		opacity: 1
