@@ -14,7 +14,7 @@ aside.project(role="complementary")
           dd= item
 
     if collab
-      dl.reset.credits
+      dl.reset.credits(itemscope itemprop="Person" itemtype="http://schema.org/Person")
         dt With
         each item in collab
-          dd= item
+          dd(itemprop="name")= item

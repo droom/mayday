@@ -3,15 +3,15 @@
 
   .segment.type.relative.mast
     header
-      h2=project
+      h2(itemprop="name")=project
       dl.reset.credits
         if client
           dt Client
-          dd=client
+          dd(itemprop="copyrightHolder")=client
 
         if studio
           dt Studio
-          dd=studio
+          dd(itemprop="author")=studio
 
         if model
           dt Model
@@ -19,7 +19,7 @@
 
         if date
           dt Date
-          dd=date
+          dd(itemprop="datePublished")=date
 
         if repo
           dt Repo
@@ -32,6 +32,6 @@
         if URLProject
           dt Live
           dd
-            a(href=URLProject aria-label=project)=URLTitle
+            a(itemprop="URL" href=URLProject aria-label=project)=URLTitle
   
   a(href=URLNext tabindex="-1" data-animsition-out-class="fade-out-left-sm" data-animsition-out-duration="300").animsition-link.move.move-right
