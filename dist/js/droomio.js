@@ -892,57 +892,48 @@ https://github.com/imakewebthings/waypoints/blog/master/licenses.txt
 
 
 // });
-;$(document).ready(function() {
+;// $(document).ready(function() {
 
-  console.log('localStorage.context', localStorage.context);
+//   if (localStorage.context === "backwards"){
+//     $( "#context" ).attr('data-animsition-in-class','fade-in-left-sm');
+//   };
 
-  if (localStorage.context === "backwards"){
-    $( "#context" ).attr('data-animsition-in-class','fade-in-left-sm');
-  };
+//   if (localStorage.context === "forwards"){
+//     $( "#context" ).attr('data-animsition-in-class','fade-in-right-sm');
+//   };
 
-  if (localStorage.context === "forwards"){
-    $( "#context" ).attr('data-animsition-in-class','fade-in-right-sm');
-  };
+//   if (localStorage.context === "upwards"){
+//     $( "#context" ).attr('data-animsition-in-class','fade-in-up-sm');
+//   };
 
-  if (localStorage.context === "upwards"){
-    $( "#context" ).attr('data-animsition-in-class','fade-in-up-sm');
-  };
-
-  if (localStorage.context === "normal"){
-    $( "#context" ).attr('data-animsition-in-class','fade-in');
-  };
+//   if (localStorage.context === "normal"){
+//     $( "#context" ).attr('data-animsition-in-class','fade-in');
+//   };
 
 
-  $(".move-left").click(function(){
-    localStorage.context = "backwards";
-    console.log(".move-left");
-  })
+//   $(".move-left").click(function(){
+//     localStorage.context = "backwards";
+//   })
 
-  $(".move-right").click(function(){
-    localStorage.context = "forwards";
-    console.log(".move-right");
-  })
+//   $(".move-right").click(function(){
+//     localStorage.context = "forwards";
+//   })
 
-  $(".move-return").click(function(){
-    localStorage.context = "upwards";
-    console.log(".move-return");
-  })
-
+//   $(".move-return").click(function(){
+//     localStorage.context = "upwards";
+//   })
   
+//   $("a.plain").click(function(){
+//     localStorage.context = "normal";
+//   })
 
-  $("a.plain").click(function(){
-    localStorage.context = "normal";
-    console.log(".ul.work-list a.plain");
-  })
-
-  $("a.target").click(function(){
-    localStorage.context = "normal";
-    console.log(".ul.work-list a.plain");
-  })
+//   $("a.target").click(function(){
+//     localStorage.context = "normal";
+//   })
 
 
 
-});
+// });
 
 ;$(document).ready(function() {
 
@@ -1077,7 +1068,6 @@ $('#profile').click(function() {
 $('#work').click(function() {
 	mixpanel.track("#work");
 });
-
 
 
 

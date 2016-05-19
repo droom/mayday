@@ -21,11 +21,11 @@ module.exports = function(grunt) {
       jade: {
         files: [
 
-          'src/jade/*.jade', 
-          'src/jade/partials/*.jade',
-          'src/jade/projects/*.jade'
+        'src/jade/*.jade', 
+        'src/jade/partials/*.jade',
+        'src/jade/projects/*.jade'
 
-          ],
+        ],
         
         tasks: ['jade'],
       },
@@ -44,6 +44,7 @@ module.exports = function(grunt) {
         files: ['src/js/*.js'],
         tasks: ['uglify']
       },
+
     },
 
 
@@ -93,7 +94,7 @@ module.exports = function(grunt) {
           expand: true,
           cwd: 'src/jade',
           src: [ '*.jade' ],
-          dest: 'dist',
+          dest: 'dist/',
           ext: '.html'
         }]
       }
@@ -120,7 +121,6 @@ module.exports = function(grunt) {
         'src/lib/easing.js',
         'src/lib/jquery.waypoints.js',
         'src/lib/modernizr-2.8.3.min.js',
-        
         'src/js/project-atop.js',
         'src/js/waypoints.js',
         'src/js/context.js',
@@ -142,9 +142,36 @@ module.exports = function(grunt) {
         src: 'dist/js/droomio.js',
         dest: 'dist/js/droomio.min.js'
       }
-    }
+    },
 
-  });
+
+
+    critical: {
+      options: {
+        base: './',
+        css: [
+        'dist/css/style.css'
+        ],
+        width: 1400,
+        height: 1200,
+        minify: true,
+
+        excludeSelectors: [
+        'html, body, div'
+        ],
+
+      },
+
+      src: 'dist/*.html',
+      dest: 'dist/critical/'
+    },
+
+
+
+  
+
+
+});
 
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-jade');
@@ -154,8 +181,9 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-autoprefixer');
   grunt.loadNpmTasks('grunt-postcss');
+  grunt.loadNpmTasks('grunt-critical');
 
 
-  grunt.registerTask('default', [ 'concat', 'uglify', 'jade', 'sass', 'postcss', 'imagemin' ]);
+  grunt.registerTask('default', [ 'concat', 'uglify', 'jade', 'sass', 'postcss', 'imagemin', 'critical' ]);
 
 };
