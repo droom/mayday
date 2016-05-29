@@ -26,14 +26,14 @@ html(class="no-js" lang="en")
   head
     include partials/_head
 
-  body(data-project="atop").work.iso
-
+  body.work.iso
     include partials/_top
 
-    div.fade-in#context
+    article(data-project="atop").fade-in#context
       .cover-title
         include partials/_nav
         include partials/_mast
+        
       .cover-photo.atop#checkpoint-nav
       .cover-aside
         include partials/_role

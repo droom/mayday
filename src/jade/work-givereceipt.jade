@@ -22,15 +22,14 @@
 
 doctype html
 html(class="no-js" lang="en")
-
   head
     include partials/_head
     
-  body(data-project="givereceipt").work.iso
+  body.work.iso
 
     include partials/_top
 
-    div.fade-in#context
+    article(data-project="givereceipt").fade-in#context
       .cover-title
         include partials/_nav
         include partials/_mast
