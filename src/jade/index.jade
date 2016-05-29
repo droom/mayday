@@ -7,8 +7,10 @@ html(class="no-js" lang="en")
     include partials/_head
 
 
-  body.profile(data-project="profile")
-    div.js-animsition.animsition(data-animsition-in-duration="500" data-animsition-in-class="fade-in")#context
+  body(data-project="profile").profile
+    include partials/_top
+
+    div.fade-in#context
       .cover-title
         include partials/_nav
         .band.head.relative.hr

@@ -13,7 +13,6 @@ $(document).ready(function() {
     }
   });
 
-
   $('.glide-slow').click(function() {
     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
       var target = $(this.hash);
@@ -38,7 +37,6 @@ $(document).ready(function() {
       }, offset: 0
     });
 
-    
     var returnHide = new Waypoint({
       element: document.getElementById('checkpoint-nav'),
       handler: function(direction) {

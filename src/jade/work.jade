@@ -6,8 +6,10 @@ html(class="no-js" lang="en")
   head
     include partials/_head
 
-  body.work(data-project="work")
-    div.js-animsition.animsition(data-animsition-in-duration="500" data-animsition-in-class="fade-in")#context
+  body(data-project="work").work
+
+    include partials/_top
+    div.fade-in#context
 
       include partials/_nav
       .band.head.hr.relative

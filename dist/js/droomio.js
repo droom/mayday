@@ -892,48 +892,63 @@ https://github.com/imakewebthings/waypoints/blog/master/licenses.txt
 
 
 // });
-;// $(document).ready(function() {
-
-//   if (localStorage.context === "backwards"){
-//     $( "#context" ).attr('data-animsition-in-class','fade-in-left-sm');
-//   };
-
-//   if (localStorage.context === "forwards"){
-//     $( "#context" ).attr('data-animsition-in-class','fade-in-right-sm');
-//   };
-
-//   if (localStorage.context === "upwards"){
-//     $( "#context" ).attr('data-animsition-in-class','fade-in-up-sm');
-//   };
-
-//   if (localStorage.context === "normal"){
-//     $( "#context" ).attr('data-animsition-in-class','fade-in');
-//   };
+;$(document).ready(function() {
 
 
-//   $(".move-left").click(function(){
-//     localStorage.context = "backwards";
-//   })
+	if (localStorage.context === "backwards"){
+		$( "#context" ).addClass('right');
+	};
 
-//   $(".move-right").click(function(){
-//     localStorage.context = "forwards";
-//   })
+	if (localStorage.context === "forwards"){
+		$( "#context" ).addClass('left');
+	};
 
-//   $(".move-return").click(function(){
-//     localStorage.context = "upwards";
-//   })
-  
-//   $("a.plain").click(function(){
-//     localStorage.context = "normal";
-//   })
+	if (localStorage.context === "upwards"){
+		$( "#context" ).addClass('up');
+	};
 
-//   $("a.target").click(function(){
-//     localStorage.context = "normal";
-//   })
+	if (localStorage.context === "normal"){
+		$( "#context" ).removeClass('left');
+		$( "#context" ).removeClass('right');
+		$( "#context" ).removeClass('up');
+	};
 
 
+	$(".move-left").click(function(){
+		localStorage.context = "backwards";
+		// $( "#context" ).addClass('fade-out');
+		console.log("localStorage.context", localStorage.context); 
+	})
 
-// });
+	$(".move-right").click(function(){
+		localStorage.context = "forwards";
+		
+		// $( "#context" ).addClass('fade-out-right');
+
+		console.log("localStorage.context", localStorage.context); 
+	})
+
+	$(".move-return").click(function(){
+		localStorage.context = "upwards";
+		// $( "#context" ).addClass('fade-out');
+		console.log("localStorage.context", localStorage.context); 
+	})
+
+	$("a.plain").click(function(){
+		localStorage.context = "normal";
+		// $( "#context" ).addClass('fade-out');
+		console.log("localStorage.context", localStorage.context); 
+	})
+
+	$("a.target").click(function(){
+		localStorage.context = "normal";
+		// $( "#context" ).addClass('fade-out');
+		console.log("localStorage.context", localStorage.context); 
+	})
+
+
+
+});
 
 ;$(document).ready(function() {
 
@@ -949,7 +964,6 @@ https://github.com/imakewebthings/waypoints/blog/master/licenses.txt
       }
     }
   });
-
 
   $('.glide-slow').click(function() {
     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
@@ -975,7 +989,6 @@ https://github.com/imakewebthings/waypoints/blog/master/licenses.txt
       }, offset: 0
     });
 
-    
     var returnHide = new Waypoint({
       element: document.getElementById('checkpoint-nav'),
       handler: function(direction) {
