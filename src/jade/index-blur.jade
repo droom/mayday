@@ -1,0 +1,45 @@
+- var workiso   = false
+- var index     = true
+
+doctype html
+html(class="no-js" lang="en")
+  head
+    include partials/_head
+
+
+  body.profile(data-project="profile")
+    div.js-animsition.animsition(data-animsition-in-duration="500" data-animsition-in-class="fade-in")#context
+      .cover-title
+        include partials/_nav
+        .band.head.relative.hr
+          .segment.type
+            header
+              h2
+                = "Chris Droom is a Designer "
+                span.accent &amp;&amp;
+                = " Client-side Developer based in London "
+                span.accent.slim &#124;&#124;
+                = " Berlin"
+                &nbsp;
+                span.accent.slim &#124;&#124;
+                &nbsp;
+                = "KL"
+
+
+
+
+      .placeholder
+        img(src="img/medium/small.jpeg" class="img-small")
+        //- .div(style="padding-bottom: 67.6%;")
+
+
+      //- .placeholder(data-large="img/medium/large.jpeg")
+      //-   img(src="img/medium/small.jpeg" class="img-small")
+      //-   .div(style="padding-bottom: 67.6%;")
+
+
+
+
+
+      include partials/_footer
+      include partials/_scripts
