@@ -1,26 +1,25 @@
 // Type
-$display:         "c-std-bold", "Noto Serif", Georgia, serif
-$running:			  	"Noto Serif", Georgia, serif
-$technical:				"Roboto Mono", monospace
-$notes:			  		"Noto Serif", Georgia, serif
+$display:       "c-std-bold", "Noto Serif", Georgia, serif
+$running:		"Noto Serif", Georgia, serif
+$technical:		"Roboto Mono", monospace
+$notes:			"Noto Serif", Georgia, serif
 
-$font-small:			11px
-$border:			  	1px solid rgba(0, 0, 0, 0.08)
-
+$font-small:	11px
+$border:		1px solid rgba(0, 0, 0, 0.08)
 // Colour
-$maths:						rgba(33, 153, 231, 1)
-$copy:			    	rgba(0, 0, 0, 0.85)
-$bg:			      	rgba(241, 241, 241, 1)
-$hover:			    	rgba(255, 255, 255, 0.4)
-$ink:           	rgba(46, 77, 210, 1)
+$maths:			rgba(33, 153, 231, 1)
+$copy:		   	rgba(0, 0, 0, 0.85)
+$bg:	    	rgba(241, 241, 241, 1)
+$hover:		  	rgba(255, 255, 255, 0.4)
+$ink:      		rgba(46, 77, 210, 1)
 
 // Grid
-$wide-unit:     	1104px
-$narrow-unit:			760px
-$phone-max:				500px
-$gttr-ph:			  	15px
-$gttr-dt:			  	26px
-$gttr-dt-top:			22px
+$wide-unit:    	1104px
+$narrow-unit:	760px
+$phone-max:		500px
+$gttr-ph:	 	15px
+$gttr-dt:	 	26px
+$gttr-dt-top:	22px
 
 
 @mixin theme-A($alpha)
@@ -53,8 +52,10 @@ $gttr-dt-top:			22px
 @import "partials/swatch.sass"
 @import "partials/flex.sass"
 @import "partials/counters.sass"
-@import "partials/medium.sass"
 
+//beta
+@import "partials/medium.sass"
+@import "partials/tiles.sass"
 // projects
 @import "projects/atop.sass"
 @import "projects/gg-sitemap.sass"
