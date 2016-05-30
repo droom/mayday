@@ -16,13 +16,12 @@ ul.work-list.tiles
 		a.plain
 			&:focus > .segment.type.work,
 			&:hover > .segment.type.work
-				background-position: 96% 26px
-
+				// background-position: 96% 26px
 			.segment.work
-				min-height: 300px
-				background: none
-				background-size: 30px
-				background-position: 92% 26px
+				// min-height: 300px
+				// background: none
+				// background-size: 30px
+				// background-position: 92% 26px
 				@include tween(300ms)
 				
 				dl
@@ -32,7 +31,6 @@ ul.work-list.tiles
 					dt, dd
 						display: none
 
-
 	li:nth-child(1)
 		a.plain
 			&:focus > .segment.type.work,
@@ -40,7 +38,7 @@ ul.work-list.tiles
 				background-position: 50% 50%
 
 			.segment.work
-				@include theme-B(1)
+				@include theme-B(0.3)
 				
 	li:nth-child(2)
 		a.plain
@@ -49,4 +47,4 @@ ul.work-list.tiles
 				background-position: 50% 50%
 
 			.segment.work
-				background: coral
+				@include theme-B(0.1)

@@ -21,10 +21,12 @@ html(class="no-js" lang="en")
             dl.reset.credits
               dt.hide Scope
               dd 2012 &ndash; 2016
+              //- dt.hide
+              //- dd 
+                a(href="#")#toggle Toggle View  
 
       main(role='main')#checkpoint-nav
-        ul.work-list.reset
-
+        ul.work-list.reset#work
           li
             a(href="work-goget.html").plain
               .segment.type.work
@@ -87,10 +89,11 @@ html(class="no-js" lang="en")
                 dt.model Model
                 dd.model B2B Commerce
       
-      //  ↓↓↓ MIXPANEL ↓↓↓ 
-      script(type='text/javascript').
-        mixpanel.track("Index Loaded"), {"Page Name" : "Index"}
-      // ↑↑↑ MIXPANEL ↑↑↑ 
+      
+      //- //  ↓↓↓ MIXPANEL ↓↓↓ 
+      //- script(type='text/javascript').
+      //-   mixpanel.track("Index Loaded"), {"Page Name" : "Index"}
+      //- // ↑↑↑ MIXPANEL ↑↑↑ 
 
       include partials/_footer
       include partials/_scripts
