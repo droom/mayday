@@ -2,7 +2,7 @@
   &.hr
     border-top: $border
   &.head
-    background: $blueSky
+    @include theme-A(1)
   &.ref
     background: rgba(0,0,0,0.05)
   &.relative
@@ -37,7 +37,7 @@
   &.blueprint
     max-width: 100%
     overflow: hidden
-    background: url('../img/components/tile-graph.gif') repeat 0 0 $blueDark
+    background: url('../img/components/tile-graph.gif') repeat 0 0 white
   
   &.swatch,  
   &.diagram,
@@ -46,7 +46,7 @@
     padding: $gttr-dt
 
   &.code
-    background: $slate
+    background: $copy
     overflow: hidden
 
   &.type

@@ -1,44 +1,39 @@
-// Colours
-$blue:					#2199E7
-$blueSky:				rgb(176,234,236)
-$yellow:				#fbf395
-$white:					rgba(255, 255, 255, 0.85)
-$copy:			    	rgba(0, 0, 0, 0.85)
-$bg:			      	#f1f1f1
-$blueDark:				#406da8
-$red:			      	#ff6876
-$slate:			    	#333
-$orange:			  	#e4b071
-$ink:           		#2e4dd2
-$hover:			    	rgba(255, 255, 255, 0.4)
+// Type
+$display:         "c-std-bold", "Noto Serif", Georgia, serif
+$running:			  	"Noto Serif", Georgia, serif
+$technical:				"Roboto Mono", monospace
+$notes:			  		"Noto Serif", Georgia, serif
 
-$gg-sitemap-colour:		$ink
-  
+$font-small:			11px
+
+$border:			  	1px solid rgba(0, 0, 0, 0.08)
+
+// Colour
+$maths:						rgba(33, 153, 231, 1)
+$white:						rgba(255, 255, 255, 0.85)
+$copy:			    	rgba(0, 0, 0, 0.85)
+$bg:			      	rgba(241, 241, 241, 1)
+$hover:			    	rgba(255, 255, 255, 0.4)
+$ink:           	rgba(46, 77, 210, 1)
+
 // Grid
-$wide-unit:     		1104px
+$wide-unit:     	1104px
 $narrow-unit:			760px
 $phone-max:				500px
-
 $gttr-ph:			  	15px
 $gttr-dt:			  	26px
 $gttr-dt-top:			22px
 
-// Type
-$display:         		"c-std-bold", "Noto Serif", Georgia, serif
-$running:			  	"Noto Serif", Georgia, serif
-$technical:				"Roboto Mono", monospace
-$notes:					"Roboto Mono", monospace
-// $notes:					"Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif
 
-$font-small:			11px
-// $font-small:			10px
+@mixin theme-A($alpha)
+	background: rgba(129, 211, 235, $alpha)
 
+@mixin theme-B($alpha)
+	background: rgba(228, 176, 113, $alpha)
 
-$border:			  	1px solid rgba(0, 0, 0, 0.08)
+@mixin tween($speed)
+	transition: all $speed ease
 
-// Motion
-$transition:			all 300ms ease
-$transition-quick: 		all 200ms ease
 
 
 // partials
@@ -61,10 +56,13 @@ $transition-quick: 		all 200ms ease
 @import "partials/swatch.sass"
 @import "partials/flex.sass"
 @import "partials/counters.sass"
-
-// @import "lib/animisition.sass"
+@import "partials/medium.sass"
 
 // projects
 @import "projects/atop.sass"
 @import "projects/gg-sitemap.sass"
 @import "projects/gg-ui.sass"
+
+
+
+

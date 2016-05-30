@@ -3,7 +3,11 @@ header,
 footer,
 nav,
 a
-  transition: $transition
+  // transition: $transition
+  @include tween(300ms)
+
+#top
+  @include tween(200ms)
 
 .fade-in
   animation-fill-mode: forwards
