@@ -1,0 +1,52 @@
+ul.work-list.tiles
+	display: flex
+	flex-wrap: wrap
+
+	li
+		border: none
+		flex-basis: calc(100%/3)
+		align-self: flex-start
+		flex-grow: 1
+		justify-content: space-around
+		align-self: flex-start
+		
+		.segment.work
+			min-height: 300px
+
+		a.plain
+			&:focus > .segment.type.work,
+			&:hover > .segment.type.work
+				background-position: 96% 26px
+
+			.segment.work
+				min-height: 300px
+				background: none
+				background-size: 30px
+				background-position: 92% 26px
+				@include tween(300ms)
+				
+				dl
+					background: yellow
+					width: 100%
+					height: 100%
+					dt, dd
+						display: none
+
+
+	li:nth-child(1)
+		a.plain
+			&:focus > .segment.type.work,
+			&:hover > .segment.type.work
+				background-position: 50% 50%
+
+			.segment.work
+				@include theme-B(1)
+				
+	li:nth-child(2)
+		a.plain
+			&:focus > .segment.type.work,
+			&:hover > .segment.type.work
+				background-position: 50% 50%
+
+			.segment.work
+				background: coral
