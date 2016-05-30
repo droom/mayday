@@ -1026,7 +1026,7 @@ https://github.com/imakewebthings/waypoints/blog/master/licenses.txt
 			$('.cover-photo').css('height', hSum);
 		}
 
-		$('.jacket').css('height', hSup);
+		// $('.jacket').css('height', hSup);
 
 	}
 

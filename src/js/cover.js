@@ -17,7 +17,7 @@ $(document).ready(function() {
 			$('.cover-photo').css('height', hSum);
 		}
 
-		$('.jacket').css('height', hSup);
+		// $('.jacket').css('height', hSup);
 
 	}
 
