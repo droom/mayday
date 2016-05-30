@@ -1,0 +1,40 @@
+- var workiso   = false
+- var index     = true
+
+doctype html
+html(class="no-js" lang="en")
+  head
+    include partials/_head
+
+  body.profile
+    include partials/_top
+
+    article(data-project="profile").fade-in#context
+      .cover-title
+        include partials/_nav
+        
+        .band.head.relative.hr
+          .segment.type
+            header
+              h2
+                = "Guru Medidation"
+                span.accent &amp;&amp;
+                = " Client-side Developer based in London "
+                span.accent.slim &#124;&#124;
+                = " Berlin"
+                &nbsp;
+                span.accent.slim &#124;&#124;
+                &nbsp;
+                = "KL"
+
+      .jacket
+        .segment.type
+          dl.reset.credits
+            dt.hide twitter
+            dd 
+              a(href="https://twitter.com/droomio").plain @droomio
+
+
+
+      include partials/_footer
+      include partials/_scripts

@@ -1,0 +1,161 @@
+- var workiso     = true
+
+- var project     = "GoGet Brand/Public"
+- var client      = "GoGet"
+- var studio      = "VLT Labs"
+- var date        = "March 2015"
+- var repo        = "Private"
+- var status      = "In Production"
+- var model        = "Marketplace"
+
+- var URLPrev     = "work-foreign.html"
+- var URLNext     = "work-foreign.html"
+
+- var prevTitle   = "Foreign Office"
+- var nextTitle   = "Foreign Office"
+
+- var role        = [ 'Identity', 'UX + UI' ]
+- var stack       = [ 'Balsamiq', 'Paper', 'Adobe© Illustrator', 'Adobe© Photoshop', 'Adobe© InDesign', 'InVision' ]
+
+
+doctype html
+html(class="no-js" lang="en")
+  head
+    include partials/_head
+
+  body.work.iso
+    include partials/_top
+
+    article(data-project="goget" itemscope itemtype="http://schema.org/CreativeWork").fade-in#context
+      .cover-title
+        include partials/_nav
+        include partials/_mast
+      
+      .blue
+        .cover-photo.gg.hello(style="background:url(img/gg-small.jpg) 50% 0 repeat-x rgba(0,0,0,.05)")#checkpoint-nav
+
+      .cover-aside
+        include partials/_role
+
+      main(role="main")
+        .segment.type(itemprop="description")
+          h3 GoGet is a community-focused errands and delivery marketplace, currently operating in Kuala Lumpur
+          p GoGet began in 2014 and—simply put—matches those with complementary resources. This exchange, between equals in a safe community, is at the heart of their offering.
+
+        .segment.type
+          h3 
+            = "A " 
+            span.arial &rarr;
+            = " B"
+
+          p 
+            = "As Francesca explains, GoGet is more ‘logistics and human resource’"
+            a(href="#ref").plain.glide-slow
+              sup
+            = " than straight up tech and after the first meeting it was clear that ‘speed’ and ‘dispatch’ needed to be communicated in the new identity. I hit upon the idea of calling upon some markings I had seen on the side of trucks transporting goods around KL."
+            a(href="#ref").plain.glide-slow
+              sup
+
+        .segment.surface
+          figure
+            .flex-2
+              .unit
+                img(src="img/projects/gg/gg-research-1.jpg")
+              .unit.tuck
+                img(src="img/projects/gg/gg-research-2.jpg")
+
+
+        .segment.blueprint
+          figure
+            .flex-12.gg-ui
+              .unit
+                img(src="img/projects/gg/ui/gg-ui-1104-12_01.png")
+              .unit
+                img(src="img/projects/gg/ui/gg-ui-1104-12_02.png")
+              .unit
+                img(src="img/projects/gg/ui/gg-ui-1104-12_03.png")
+              .unit
+                img(src="img/projects/gg/ui/gg-ui-1104-12_04.png")
+              .unit
+                img(src="img/projects/gg/ui/gg-ui-1104-12_05.png")
+              .unit
+                img(src="img/projects/gg/ui/gg-ui-1104-12_06.png")
+              .unit
+                img(src="img/projects/gg/ui/gg-ui-1104-12_07.png")
+              .unit
+                img(src="img/projects/gg/ui/gg-ui-1104-12_08.png")
+              .unit
+                img(src="img/projects/gg/ui/gg-ui-1104-12_09.png")
+              .unit
+                img(src="img/projects/gg/ui/gg-ui-1104-12_10.png")
+              .unit
+                img(src="img/projects/gg/ui/gg-ui-1104-12_11.png")
+              .unit
+                img(src="img/projects/gg/ui/gg-ui-1104-12_12.png")
+            
+            figcaption Initial UI experiments, carried through to the core product.
+
+        .segment.blueprint
+          figure
+            .flex-12
+              .unit
+                img(src="img/projects/gg/marks/gg-marks-1104_01.png")
+              .unit
+                img(src="img/projects/gg/marks/gg-marks-1104_02.png")
+              .unit
+                img(src="img/projects/gg/marks/gg-marks-1104_03.png")
+              .unit
+                img(src="img/projects/gg/marks/gg-marks-1104_04.png")
+              .unit
+                img(src="img/projects/gg/marks/gg-marks-1104_05.png")
+              .unit
+                img(src="img/projects/gg/marks/gg-marks-1104_06.png")
+              .unit
+                img(src="img/projects/gg/marks/gg-marks-1104_07.png")
+              .unit
+                img(src="img/projects/gg/marks/gg-marks-1104_08.png")
+              .unit
+                img(src="img/projects/gg/marks/gg-marks-1104_09.png")
+              .unit
+                img(src="img/projects/gg/marks/gg-marks-1104_10.png")
+              .unit
+                img(src="img/projects/gg/marks/gg-marks-1104_11.png")
+              .unit
+                img(src="img/projects/gg/marks/gg-marks-1104_12.png")
+            
+            figcaption Initial wordmark exploration
+
+        .segment.diagram
+          include projects/_gg-sitemap
+
+        .segment.swatch.goget
+          .colour.colour-1
+          .colour.colour-2
+          .colour.colour-3
+          .colour.colour-4
+
+        .segment.surface.squash
+          figure
+            img(src="img/projects/gg/gg-layout-1.jpg")
+
+        .segment.surface.squash
+          figure
+            .flex-2
+              .unit
+                img(src="img/projects/gg/gg-layout-3.jpg")
+              .unit
+                img(src="img/projects/gg/gg-layout-2.jpg")
+
+
+        .segment.type
+          p Like most successful startups, GoGet iterate often. The new identity is being applied to digital and printed materials and elements have been folded in to a temporary website. The public face I’m designing is currently in production and is set to go live Summer/Autumn 2016.
+
+      .band.ref
+        .segment.type
+          ol.ref
+            li
+              a(href="https://www.youtube.com/watch?v=lL1_xwe8x0c") Bloomberg TV Malaysia: ‘Leapfrogging’ to Grow Errands Market: GoGet's Chia
+            li I think ‘A’ stands for the vechile grade, but I need to make sure of this.
+
+      include partials/_footer
+      include partials/_scripts
