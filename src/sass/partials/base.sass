@@ -14,22 +14,16 @@ body
   padding: 0
   color: $copy
   background: $bg
+  user-select: none
+  main
+    user-select: auto
 
 figure
   margin: 0 auto
   padding: 0
   line-height: 0
-
-body
-  user-select: none
-
-body
-  main
-    user-select: auto
     
-::selection
-  background-color: rgba(176,234,236, 0.7)
- 
-pre
-  ::selection
-    background-color: $hover
+
+::selection,
+pre ::selection
+  @include theme-A(0.7)

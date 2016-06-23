@@ -1,0 +1,201 @@
+$mobile-width: 349px
+
+$swatch1: rgba(255,255,255,0.5)
+
+
+
+.segment
+  ul.layout
+    position:   absolute
+    margin:     0
+    padding:    0
+    list-style: none
+    z-index:    999
+    text-align: left
+    
+    top:        34px
+    left:       34px
+
+    font-size:        10px
+    text-transform:   uppercase
+    font-family:      $technical
+    
+    li + li a
+      border-top: none
+      
+    li
+      margin:   0
+      padding:  0
+      display:  block
+      
+      a
+        border:         #588e5c 1px solid
+        border-radius:  1px
+        padding:        10px 10px 8px 9px
+        margin:         0
+        background:     none
+        color:          #588e5c
+        text-align:     center
+        width:          71px
+        display:        block
+
+        &.active
+          background:   $swatch1
+
+section#layout
+  margin:         35px auto 20px auto
+  position:       relative
+  transition:     all 400ms ease
+  font-size:      10px
+  text-transform: uppercase
+
+  .cell
+    position:         absolute
+    transition:       all 400ms ease
+    background:       rgba(255, 0, 0, 0.1)
+    padding:          1px 0 0 0
+    text-align:       right
+    font-family:      $technical
+    font-size:        10px
+    text-transform:   uppercase
+    font-family:      $technical
+    display:          flex
+    align-items:      center
+    justify-content:  center
+
+    &.colour
+      background: rgba(0, 120, 255, 0.08)
+
+    &.stock
+      background: rgba(75,255,0,0.08)
+
+    &.nav
+      background: rgba(0,0,0,0.05)
+      transition: all 900ms ease
+      width:      38%
+      height: 245px
+      top:    0
+      right:  62%
+      width:  209px
+      height: 279px
+      height: 100%
+      top:    0
+      left:   0
+
+  .cycle
+  .cycle:after
+    content: "Navigation: Cycle Products"
+
+section#layout.desktop
+  width:      629px
+  height:     489px
+  
+  .nav
+    opacity: 0
+
+  .cycle
+    width: 60%
+    height: 16px
+    top: 254px
+    right: 0
+
+  .image
+    width: 60%
+    height: 245px
+    top: 0
+    right: 0
+    
+    &:after
+      content: "Image (×1)"
+
+  .colour
+    width: 66.6666666%
+    height: 211px
+    top: 279px
+    right: calc(100%/3)
+      
+  .stock
+    border-left: 1px dotted $copy
+    width: calc(100%/3)
+    height: 211px
+    top: 279px
+    right: 0
+
+  .stats
+    width: 38%
+    height: 270px
+    top: 0
+    right: 62%
+
+    &:after
+      content: "Stats"
+
+    .tab
+      display: none
+      
+section#layout.mobile
+  width:      629px
+  height:     489px
+
+  .cell
+
+    &.nav
+      opacity: 1
+      
+    &.nav:after
+      content: "Navigation: Main"
+
+    &.cycle
+      width: 60%
+      height: 20px
+      top: 0
+      right: 0
+      
+    &.image
+      width: 60%
+      height: 185px
+      top: 25px
+      right: 0
+      
+      &:after
+        content: "Image (Multiple)"
+
+    &.stock,
+    &.colour,
+    &.stats
+      width: 60%
+      height: 273px
+      top: 216px
+      right: 0
+      background: none
+      display: block
+
+      .region
+        background: none
+        height: 252px
+        width: 100%
+      
+      .tab
+        transition: all ease 1s
+        width: calc(100%/3)
+        height: 20px
+        display: block
+        display: flex
+        align-items: center
+        justify-content: center
+        text-align: center
+
+    &.stats
+      .tab,
+      .region
+        background: rgba(255, 0, 0, 0.1)
+
+    &.colour
+      .tab
+        margin: auto
+        background: rgba(0, 120, 255, 0.08)
+        
+    &.stock
+      .tab
+        margin-left: 66.6666666%
+        background: rgba(75,255,0,0.08)

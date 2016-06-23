@@ -1054,9 +1054,8 @@ https://github.com/imakewebthings/waypoints/blog/master/licenses.txt
   });
 
 
-
   if ( $( "#checkpoint-nav" ).length ) {
-   
+
     var returnShow = new Waypoint({
       element: document.getElementById('checkpoint-nav'),
       handler: function(direction) {
@@ -1070,15 +1069,19 @@ https://github.com/imakewebthings/waypoints/blog/master/licenses.txt
         $("#top").removeClass("show");
       }, offset: 56
     });
-
-    
   }
 
 
-
-
-
-
+  var lastScrollTop = 0;
+  $(window).scroll(function(event){
+   var st = $(this).scrollTop();
+   if (st > lastScrollTop){
+     console.log("down")
+   } else {
+     console.log("up")
+   }
+   lastScrollTop = st;
+ });
 
 
 
@@ -1116,12 +1119,30 @@ https://github.com/imakewebthings/waypoints/blog/master/licenses.txt
 
 
 // });
-;$(document).ready(function() {
+;$('a.desktop').click(function(e) {
+	e.preventDefault();
+	// console.log("hey!");
+	$('a.desktop').addClass('active');
+	$('a.mobile').removeClass('active');
 
-  $('#toggle').click(function() {
-     $( "ul.work-list" ).toggleClass( "tiles" )
-  });
+	$('#layout').addClass('desktop');
+	$('#layout').removeClass('mobile');
+});
 
 
+$('a.mobile').click(function(e) {
+
+	// console.log("yo!");
+	e.preventDefault();
+	$('a.mobile').addClass('active');
+	$('a.desktop').removeClass('active');
+
+	$('#layout').addClass('mobile');
+	$('#layout').removeClass('desktop');
+
+});;$(document).ready(function() {
+	$('#toggle').click(function() {
+		$( "ul.work-list" ).toggleClass( "tiles" )
+	});
 });
 

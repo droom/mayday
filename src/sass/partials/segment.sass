@@ -33,11 +33,10 @@
     max-width: 100%
     overflow: hidden
 
-
   &.blueprint
     max-width: 100%
     overflow: hidden
-    background: url('../img/components/tile-graph.gif') repeat 0 0 white
+    background: url('../img/components/tile-graph.gif') repeat -1px 0 white
   
   &.swatch,  
   &.diagram,
@@ -52,6 +51,9 @@
   &.type
     max-width: $narrow-unit
     z-index: 1
+    
+    h3
+      text-align: center 
 
   &.code,
   &.surface,
@@ -62,6 +64,12 @@
 
 @media (max-width: $phone-max)
   .segment
+
+    &.type
+      h3
+        text-align: left
+
+
     &.diagram,
     &.type,
     &.code

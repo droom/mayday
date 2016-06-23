@@ -27,9 +27,8 @@ $(document).ready(function() {
   });
 
 
-
   if ( $( "#checkpoint-nav" ).length ) {
-   
+
     var returnShow = new Waypoint({
       element: document.getElementById('checkpoint-nav'),
       handler: function(direction) {
@@ -43,15 +42,19 @@ $(document).ready(function() {
         $("#top").removeClass("show");
       }, offset: 56
     });
-
-    
   }
 
 
-
-
-
-
+  var lastScrollTop = 0;
+  $(window).scroll(function(event){
+   var st = $(this).scrollTop();
+   if (st > lastScrollTop){
+     console.log("down")
+   } else {
+     console.log("up")
+   }
+   lastScrollTop = st;
+ });
 
 
 

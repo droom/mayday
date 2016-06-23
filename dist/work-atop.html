@@ -99,17 +99,40 @@
       <main role="main">
         <div class="segment type">
           <h3>A campaign site for Taiwanese watch manufacturer ATOP</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima eius laborum quasi iusto dolores id porro ea laboriosam cumque inventore ipsam cum iste, a rerum quis esse consequatur, harum labore.</p>
+          <p>I only knew two things about Taiwan. Before I discovered the joys of MacBooks, I used to put together my own Windows builds because I am a huge dweeb. A key component of any PC is its motherboard. This is like the central nervous system of a computer and therefore one of its most important parts. A trusted name in mid-level motherboards at the time was ASUS, a manufacturer from Taiwan. This is all I knew about Taiwan until I came across these watches. Secondly, the U.S. refuses to recognise China as an independent country. None of that is relevant.</p>
+          <h3>Findings</h3>
+          <p>This project went through three rounds and by juxtaposing v1 with v3, I can chart my progression as a designer. Here are my realisations:</p>
+          <ul>
+            <li>Use vectors when you can</li>
+            <li>Control all the things that you’re able to control.</li>
+            <li>Design and control on the web is really large and interesting subject</li>
+            <li>Get out of the way. Focus on the important.</li>
+          </ul>
         </div>
-        <div id="waypoint-atop" class="segment relative center">
-          <div class="atop-live">
-            <div class="face"></div>
-            <div class="hand-large"></div>
-            <div class="hand-small"></div>
-            <div class="seconds"></div>
-            <div class="unit"></div>
-            <div class="day"></div>
-          </div>
+        
+        <div class="segment type">
+          <h3>SVG all the things</h3>
+          <p>By constructing our watch with vectors, we’re able to have control over the entire thing within code. We can even change the time  to match that of the users’.</p>
+          <p> Leveraging the power of SVG sprites means we only need to define this once, then pass in styles to get our seperate watches. Unfortunately, we can’t dial in to the path itself, so we need to <span class="code">position: absolute</span> them on top one another to achieve this.
+          </p>
+        </div>
+        <div class="segment surface squash">
+          <figure><img src="img/projects/at/at-vector.png">
+            <figcaption>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa nemo pariatur maiores, architecto magni quisquam. Deserunt sint esse voluptas natus mollitia a, enim, dolor, asperiores obcaecati eius ad expedita maiores?</figcaption>
+          </figure>
+        </div>
+        <div class="segment type">
+          <h3>Constructing the grid</h3>
+          <p>The precisoin used in the manufacturing the watch needed to be conveyed in its presentation. In 2011, Mark Boulton wrote A Richer Canvas, a treatise on web layout which confronted the incorrect model we had been using to construct grids on the web. It’s as important today as it was back then and I encourage you to read it if you work on the web. This was my first opportunity to put the ‘content out’  methodology into practice. </p>
+          <p>300 is nice, triangular number for us to use as a base unit deriving a sensible grid.</p>
+        </div>
+        <div class="segment surface">
+          <figure>
+            <div class="flex-2">
+              <div class="unit"><img src="img/projects/at/dribbble-500-blue.jpg"></div>
+              <div class="unit tuck"><img src="img/projects/at/dribbble-500-yellow.jpg"></div>
+            </div>
+          </figure>
         </div>
         <div class="segment code">
           <pre class="comment">// JSON object stores all our needed product values</pre>
@@ -133,6 +156,15 @@
 </pre>
         </div>
       </main>
+      <div class="band ref">
+        <div class="segment type">
+          <ol class="ref">
+            <li>http://www.markboulton.co.uk/journal/a-richer-canvas</li>
+            <li>http://noisepng.com/</li>
+            <li>https://www.youtube.com/watch?v=wRzyStODIZ4</li>
+          </ol>
+        </div>
+      </div>
       <footer role="contentinfo" class="band hr">
         <div class="segment type">
           <p>&copy;2016. <a href="https://github.com/droom/mayday" aria-label="View code on GitHub">Judge code</a>.
