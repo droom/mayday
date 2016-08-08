@@ -1,0 +1,69 @@
+- var fTitle    = "methods"
+- var workiso   = false
+
+doctype html
+html(class="no-js" lang="en")
+  head
+    include partials/_head
+
+  body(data-project="work").work
+
+    include partials/_top
+    article.fade-in#context
+
+      include partials/_nav
+      .band.head.hr.relative
+        .segment.type.mast
+          heeader
+            h2 Methods
+            dl.reset.credits
+              dt.hide Scope
+              //- dd 2012 &ndash; 2016
+              //- dt.hide
+              //- dd 
+                a(href="#")#toggle Toggle View  
+
+      main(role='main')#checkpoint-nav
+        ul.work-list.reset#work
+
+          li
+            a(href="work-rainbow.html").plain
+              .segment.type.work
+                dl.reset.credits
+                  dt.hide Article name
+                  dd.project.h3 Contextually aware
+                                br
+                                | page transitions
+                  dt.description.hide Description
+                  dd.description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias tenetur, ea ad neque itaque deserunt perferendis aut maxime.
+          
+          li
+            a(href="work-ideahouse.html").plain
+              .segment.type.work
+                dl.reset.credits
+                  dt.hide Article name
+                  dd.project.h3 Use Real Italics
+                  dt.description.hide Description
+                  dd.description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias tenetur, ea ad neque itaque deserunt perferendis aut maxime. Velit molestias debitis aliquam cumque quaerat amet laborum esse natus vel nam!
+
+          li
+            a(href="work-goget.html").plain
+              .segment.type.work
+                dl.reset.credits
+                  dt.hide Article name
+                  dd.project.h3 A Singular Hero
+                  dt.description.hide Description
+                  dd.description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias tenetur, ea ad neque itaque deserunt perferendis aut maxime. Velit molestias debitis aliquam cumque quaerat amet laborum esse natus vel nam!
+
+          li
+            a(href="work-foreign.html").plain
+              .segment.type.work
+                dl.reset.credits
+                  dt.hide Article name
+                  dd.project.h3 Responsive Sitemaps
+                  dt.description.hide Description
+                  dd.description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias tenetur, ea ad neque itaque deserunt perferendis aut maxime. Velit molestias debitis aliquam cumque quaerat amet laborum esse natus vel nam!
+
+
+      include partials/_footer
+      include partials/_scripts

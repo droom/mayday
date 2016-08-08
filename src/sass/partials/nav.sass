@@ -10,14 +10,28 @@
     opacity: 1
     top: 0px
 
-ol.nav
-  display: flex
-  flex-flow: nowrap
-  li
-    width: 50%
+// ol.nav
+//   display: flex
+//   flex-flow: nowrap
+//   li
+//     width: 50%
 
-    &:nth-child(2)
-      text-align: right
+//     &:nth-child(2)
+//       text-align: right
+
+
+ol.nav li
+  display: inline-block
+
+ol.nav li:nth-child(3),
+ol.nav li:nth-child(2)
+  text-align: right
+  float: right
+  a
+    border: none 
+
+ol.nav li:nth-child(3)
+  margin: 0 20px
 
 
 .band.hr.relative.pager
