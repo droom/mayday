@@ -1,6 +1,5 @@
 module.exports = function(grunt) {
 
-  // Project configuration.
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
 
@@ -12,8 +11,13 @@ module.exports = function(grunt) {
         files: [
         'src/sass/*.sass',
         'src/sass/lib/*.sass',
-        'src/sass/partials/*.sass',
-        'src/sass/projects/*.sass'
+        'src/sass/partials/*',
+        'src/sass/projects/*',
+        'src/sass/projects/at/*',
+        'src/sass/projects/ih/*',
+        'src/sass/projects/gg/*',
+        'src/sass/projects/gr/*',
+        'src/sass/components/*'
         ],
         tasks: ['sass'],
       },
@@ -22,8 +26,8 @@ module.exports = function(grunt) {
         files: [
 
         'src/jade/*.jade', 
-        'src/jade/partials/*.jade',
-        'src/jade/projects/*.jade'
+        'src/jade/partials/*',
+        'src/jade/projects/*'
 
         ],
         
@@ -31,7 +35,9 @@ module.exports = function(grunt) {
       },
 
       concat: {
-        files: ['src/js/*.js'],
+        files: [
+        'src/js/*.js'
+        ],
         tasks: ['concat']
       },
 
@@ -62,12 +68,10 @@ module.exports = function(grunt) {
 
     postcss: {
       options: {
-      map: true, // inline sourcemaps
-
-      // or
-      map: {
-          inline: false, // save all sourcemaps as separate files...
-          annotation: 'dist/css/maps/' // ...to the specified directory
+        map: true,
+        map: {
+          inline: false,
+          annotation: 'dist/css/maps/'
         },
 
         processors: [
@@ -119,14 +123,14 @@ module.exports = function(grunt) {
         src: [
         'src/lib/jquery.js',
         'src/lib/easing.js',
+        'src/lib/slick.js',
         'src/lib/jquery.waypoints.js',
         'src/lib/modernizr-2.8.3.min.js',
-        'src/js/*'
+        'src/js/*.js'
         ],
         dest: 'dist/js/droomio.js',
       },
     },
-
 
     uglify: {
       options: {
@@ -137,8 +141,6 @@ module.exports = function(grunt) {
         dest: 'dist/js/droomio.min.js'
       }
     },
-
-
 
     critical: {
       options: {
@@ -162,10 +164,10 @@ module.exports = function(grunt) {
 
 
 
-  
 
 
-});
+
+  });
 
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-jade');

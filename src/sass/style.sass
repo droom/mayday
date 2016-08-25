@@ -1,20 +1,17 @@
-// Type
 $display:       "c-std-bold", "Noto Serif", Georgia, serif
 $running:		"Noto Serif", Georgia, serif
 $technical:		"Roboto Mono", monospace
-$notes:			"Noto Serif", Georgia, serif
+$notes:			"hndi-std", serif
 
 $font-small:	11px
+$font-xsmall:	10px
 $border:		1px solid rgba(0, 0, 0, 0.08)
-// Colour
+
 $maths:			rgba(33, 153, 231, 1)
 $copy:		   	rgba(0, 0, 0, 0.85)
 $bg:	    	rgba(241, 241, 241, 1)
 $hover:		  	rgba(255, 255, 255, 0.4)
 $ink:      		rgba(46, 77, 210, 1)
-
-// Grid
-// $wide-unit:    	1104px
 
 $wide-unit:    	1118px
 $narrow-unit:	760px
@@ -34,33 +31,43 @@ $gttr-dt-top:	22px
 	transition: all $speed ease
 
 
-// partials
-@import "partials/includes.sass"
-@import "partials/base.sass"
-@import "partials/type.sass"
-@import "partials/lists.sass"
-@import "partials/segment.sass"
-@import "partials/image.sass"
-@import "partials/links.sass"
-@import "partials/nav.sass"
-@import "partials/footer.sass"
-@import "partials/motion.sass"
-@import "partials/rhythm.sass"
-@import "partials/cover.sass"
-@import "partials/fallback.sass"
-@import "partials/stacking.sass"
-@import "partials/mast.sass"
-@import "partials/pan.sass"
-@import "partials/swatch.sass"
-@import "partials/flex.sass"
-@import "partials/counters.sass"
+@charset "UTF-8"
 
-//beta
-@import "partials/medium.sass"
-@import "partials/tiles.sass"
+@import "grid/base.sass"
+@import "grid/segment.sass"
+@import "grid/stacking.sass"
+@import "grid/flex.sass"
+@import "grid/rhythm.sass"
 
-// projects
-@import "projects/atop.sass"
-@import "projects/gg-sitemap.sass"
-@import "projects/gg-ui.sass"
-@import "projects/ih-reflow.sass"
+@import "motion/page.sass"
+@import "motion/elements.sass"
+@import "motion/work.sass"
+
+@import "type/includes.sass"
+@import "type/type.sass"
+@import "images/base.sass"
+@import "images/jacket.sass"
+
+@import "components/list-base.sass"
+@import "components/list-index.sass"
+@import "components/list-work.sass"
+@import "components/list-work-view.sass"
+@import "components/links.sass"
+@import "components/nav.sass"
+@import "components/counters.sass"
+@import "components/pan.sass"
+@import "components/mast.sass"
+@import "components/footer.sass"
+
+@import "projects/shared/swatch.sass"
+@import "projects/shared/cover.sass"
+@import "projects/gg/sitemap.sass"
+@import "projects/gg/singular.sass"
+@import "projects/gg/ui.sass"
+@import "projects/at/atop.sass"
+@import "projects/ih/reflow.sass"
+
+// @import "a11y/nojs.sass"
+
+@import "slick.sass"
+@import "shame.sass"

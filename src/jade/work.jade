@@ -1,4 +1,4 @@
-- var fTitle    = "work"
+- var fTitle  = "droom.io/work"
 - var workiso = false
 
 doctype html
@@ -7,67 +7,33 @@ html(class="no-js" lang="en")
     include partials/_head
 
   body(data-project="work").work
-
     include partials/_top
     article.fade-in#context
-
       include partials/_nav
       .band.head.hr.relative
         .segment.type.mast
-          heeader
-            //- h2 Case Studies
+          header
             h2 Selected Work
-            dl.reset.credits
-              dt.hide Scope
-              dd 2012 &ndash; 2016
-              //- dt.hide
-              //- dd 
-                a(href="#")#toggle Toggle View  
-
-      main(role='main')#checkpoint-nav
-        ul.work-list.reset#work
-
+            include components/view
+            
+      main(role='main')#checkpoint
+        ul.work.reset#work
           li
-            a(href="work-rainbow.html").plain
-              .segment.type.work
+            a(href="work-givereceipt.html").plain
+              .segment.type.work.gr
                 dl.reset.credits
-                  dt.hide Project name
-                  dd.project.h3 Rainbow Theme
+                  dt.project Project
+                  dd.project.h3 GiveReceipt Brand/Web
                   dt.client Client
-                  dd.client Reformist.io
+                  dd.client DVG Web
                   dt.model Model
-                  dd.model Theme (tumblr)
-
-
-          li
-            a(href="work-ideahouse.html").plain
-              .segment.type.work
-                dl.reset.credits
-                  dt.hide Project name
-                  dd.project.h3 Ideahouse
-                  dt.client Client
-                  dd.client Ideahouse
-                  dt.model Model
-                  dd.model B2B Commerce
-
-          
-          li
-            a(href="work-ideahouse.html").plain
-              .segment.type.work
-                dl.reset.credits
-                  dt.hide Project name
-                  dd.project.h3 Ideahouse
-                  dt.client Client
-                  dd.client Ideahouse
-                  dt.model Model
-                  dd.model B2B Commerce
-
+                  dd.model SaaS
 
           li
             a(href="work-goget.html").plain
-              .segment.type.work
+              .segment.type.work.gg
                 dl.reset.credits
-                  dt.hide Project name
+                  dt.project Project
                   dd.project.h3 GoGet Brand/Public
                   dt.client Client
                   dd.client GoGet
@@ -76,51 +42,54 @@ html(class="no-js" lang="en")
 
           li
             a(href="work-foreign.html").plain
-              .segment.type.work
+              .segment.type.work.fo
                 dl.reset.credits
-                  dt.hide Project name
+                  dt.project Project
                   dd.project.h3 Foreign Office
                   dt.client Client
                   dd.client Reformist.io
                   dt.model Model
                   dd.model Theme
 
-          li
-            a(href="work-atop.html").plain
-              .segment.type.work
-                dl.reset.credits
-                  dt.hide Project name
-                  dd.project.h3 ATOP Watches
-                  dt.client Client
-                  dd.client Ideahouse
-                  dt.model Model
-                  dd.model Campaign
+          li.disable
+            .segment.type.work
+              dl.reset.credits
+                dt.project Project
+                dd.project.h3 Ideahouse
+                dt.client Client
+                dd.client Ideahouse
+                dt.model Model
+                dd.model Theme
 
           li.disable
             .segment.type.work
               dl.reset.credits
-                dt.hide Project name
+                dt.project Project
+                dd.project.h3 ATOP Watches
+                dt.client Client
+                dd.client Ideahouse
+                dt.model Model
+                dd.model Store
+
+          li.disable
+            .segment.type.work
+              dl.reset.credits
+                dt.project Project
                 dd.project.h3 GoGet App
                 dt.client Client
                 dd.client GoGet
                 dt.model Model
                 dd.model Marketplace
-                  
+      
           li.disable
             .segment.type.work
               dl.reset.credits
-                dt.hide Project name
-                dd.project.h3 GiveReceipt Brand/Web
+                dt.project Project
+                dd.project.h3 Rainbow Theme
                 dt.client Client
-                dd.client DVG Web
+                dd.client Reformist.io
                 dt.model Model
-                dd.model SaaS
-      
-      
-      //- //  ↓↓↓ MIXPANEL ↓↓↓ 
-      //- script(type='text/javascript').
-      //-   mixpanel.track("Index Loaded"), {"Page Name" : "Index"}
-      //- // ↑↑↑ MIXPANEL ↑↑↑ 
+                dd.model Theme (tumblr)
 
       include partials/_footer
       include partials/_scripts

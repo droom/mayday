@@ -1,0 +1,51 @@
+@keyframes fade-in
+  0%
+    opacity: 0
+  100%
+    opacity: 1
+
+@keyframes fade-in-left
+  0%
+    transform: translateX(100px)
+    opacity: 0
+  100%
+    transform: translateX(0)
+    opacity: 1
+
+
+@keyframes fade-in-right
+  0%
+    transform: translateX(-100px)
+    opacity: 0
+  100%
+    transform: translateX(0)
+    transform: translate3d(0,0,0)
+    opacity: 1
+
+
+@keyframes fade-in-up
+  0%
+    transform: translateY(50px)
+    opacity: 0
+  100%
+    transform: translateY(0)
+    opacity: 1
+
+
+.fade-in
+  animation-fill-mode: forwards
+  animation-iteration-count: 1
+  animation-timing-function: ease
+  animation-duration: 350ms
+  animation-name: fade-in
+
+  &.up
+    animation-name: fade-in-up
+  &.left
+    animation-name: fade-in-left
+  &.right
+    animation-name: fade-in-right
+
+
+
+

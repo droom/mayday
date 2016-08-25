@@ -1,5 +1,8 @@
+include partials/_order
+
 - var workiso     = true
 
+- var fTitle      = "droom.io/work/ideahouse"
 - var project     = "Ideahouse Web"
 - var client      = "Ideahouse"
 - var studio      = "VLT Labs"
@@ -7,17 +10,17 @@
 - var repo        = "Private"
 - var status      = "In Production"
 - var model       = "B2B Commerce"
-
-- var URLTitle    = "givereceipt.com"
-- var URLProject  = "http://www.givereceipt.com"
-- var URLNext     = "work-givereceipt.html"
-- var URLPrev     = "work-foreign.html"
-- var prevTitle   = "Foreign Office"
-- var nextTitle   = "Give Receipt"
+- var URLTitle    = "ideahouse.com.my"
+- var URLProject  = "http://www.ideahouse.com.my/"
 
 - var role        = [ 'UX + UI', 'Front-End' ]
 - var stack       = [ 'Adobe© Illustrator', 'Adobe© Photoshop', 'HTML, CSS, jQuery' ]
 - var collab      = [ 'Jessica Tzy (Icons, Pallette)', 'Bon Woo Meng (Back-End)' ]
+
+- var prevTitle   = order1[0]
+- var nextTitle   = order1[2]
+- var prevURL     = order2[0]
+- var nextURL     = order2[2]
 
 
 doctype html
@@ -33,7 +36,7 @@ html(class="no-js" lang="en")
         include partials/_nav
         include partials/_mast
 
-      .cover-photo.ih#checkpoint-nav
+      .cover-photo.ih#checkpoint
         .segment.type.light
           dl.reset.credits
             dt Photo
@@ -45,58 +48,47 @@ html(class="no-js" lang="en")
       main(role="main")
 
         .segment.type
-          //- h3 A responsive, uncluttered site, tailor made for both Ideahouse’s existing agents &amp; prospective ones.
           h3 A responsive, progressive web-app, tailor made for both Ideahouse’s existing agents &amp; prospective ones.
+
+        .segment.type
+          h3 Product Isolated
+          p The most information-dense view on the site is the product page itself, so that's where I started the redesign. The biggest problem on the existing site was that two sets of data were grouped into one table, making it very confusing to scan unti you understood the quirk. By grouping this information into a narrow module, we could ensure it'll scale down to a mobile viewport. 
+
+        include projects/ih/reflow
+
+        .segment.swatch.ideahouse
+          .colour.colour-1
+          .colour.colour-2
+          .colour.colour-3
+          .colour.colour-4
 
         .segment.relative.squash
           figure
             img(src="img/projects/ih/views.png")
             figcaption Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas minus laboriosam cum porro consequatur maiores voluptatem nisi non odio maxime quia assumenda, aliquid, quaerat soluta voluptatum accusamus.
 
-        .segment.type
-          h3 Product Isolated
-          p The most information-dense view on the site is the product page itself, so that's where I started the redesign. The biggest problem on the existing site was that two sets of data were grouped into one table, making it very confusing to scan unti you understood the quirk. By grouping this information into a narrow module, we could ensure it'll scale down to a mobile viewport. 
-
-        .segment.center.blueprint.relative
-          ul.layout
-            li
-              a(href="#").switch.desktop.active Before
-            li
-              a(href="#").switch.mobile After
-
-          figure
-            section#layout.desktop
-              .cell.nav
-              .cell.colour
-              .cell.stock
-              .cell.cycle
-              .cell.image
-
-
-              .cell.stats
-                .tab STATS
-                .region
-
-              .cell.colour
-                .tab COLOURS
-                .region
-              
-              .cell.stock 
-                .tab STOCK
-                .region
-
-            figcaption Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas minus laboriosam cum porro consequatur maiores voluptatem nisi non odio maxime quia assumenda, aliquid, quaerat soluta voluptatum accusamus.
-
+        section.center.slider
+          div
+            img(src="img/app-1.png")
+          div
+            img(src="img/app-2.png")
+          div
+            img(src="img/app-3.png")
+          div
+            img(src="img/app-4.png")
+          div
+            img(src="img/app-2.png")
+          div
+            img(src="img/app-3.png")
+          div
+            img(src="img/app-2.png")
 
       .band.ref
         .segment.type
           ol.ref
-
-            li
-              a(href="https://medium.com/@droomio/625d23ba4114").inline 2016 Product Catalogue (Behance)
-
             li
               a(href="https://medium.com/@droomio/625d23ba4114").inline Designing the experience with Local Storage (Medium)
 
+      include partials/_page
       include partials/_footer
       include partials/_scripts

@@ -1,0 +1,67 @@
+.reset
+  margin: 0 
+  padding: 0
+  li
+    margin: 0 
+    padding: 0
+    list-style: none
+
+ol.ref
+  margin: 0
+  padding: 0
+  
+  li
+    font-size: $font-small
+    line-height: 1.62em
+
+
+@media (max-width: 820px)
+  ol.ref
+    margin: 0
+    padding: 0 0 0 $gttr-ph
+
+dl.credits
+  display:        inline-block
+  min-width:      210px
+  margin-bottom:  1em
+  
+  &.btn
+    margin-bottom:  0
+     
+  dd
+    display:      inline
+    margin:       0
+
+  dd + dd
+    display:      block
+    margin-left:  5.45555em
+
+  dd:after
+    display:      block
+    content:      ''
+
+  dt
+    display: inline-block
+    min-width: 52px
+    font-weight: 700
+
+  dt.hide
+    display: none
+    
+  dd.description 
+    max-width: 340px
+    display: block
+     
+  dd.project
+    margin: 0 0 45px -1px
+    display: block
+
+  dd.asia:after
+    content: url('../img/components/asia-small.svg')
+    display: inline
+    position: absolute
+    margin-top: 0.38%
+    margin-left: 0.8%
+    opacity: 0.7
+
+

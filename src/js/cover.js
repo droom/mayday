@@ -6,26 +6,19 @@ $(document).ready(function() {
 		var hBellyAside   =  $('.cover-aside').height();
 		var hBellyPhoto   =  $('.cover-photo').height();
 
-
 		var hSum          =  hWindow - parseInt(hBellyTitle + hBellyAside);
 		var hSup 		  =  parseInt(hWindow - hBellyTitle);
-
 
 		if (wWindow > 585) {
 			$('.cover-photo').css('height', hSup);
 		} else {
 			$('.cover-photo').css('height', hSum);
 		}
-
-		// $('.jacket').css('height', hSup);
-
 	}
-
 
 	$(window).resize(function() {
 		cover();
 	});
-
 
 	cover();
 

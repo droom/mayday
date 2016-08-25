@@ -1,90 +1,99 @@
-- var fTitle      = "droom.io/work/gr"
+include partials/_order
+
 - var workiso     = true
 
+- var fTitle      = "droom.io/work/givereceipt"
 - var project     = "GiveReceipt"
 - var client      = "DVG Web"
 - var studio      = "SixLeaves"
 - var date        = "July 2015"
 - var repo        = "Private"
 - var status      = "Live"
-- var model        = "SaaS"
-
+- var model       = "SaaS"
 - var URLTitle    = "givereceipt.com"
 - var URLProject  = "http://www.givereceipt.com"
-- var URLPrev     = "work-foreign.html"
-- var URLNext     = "work-goget.html"
-- var prevTitle   = "Foreign Office"
-- var nextTitle   = "GoGet Brand/Web"
 
 - var role        = [ 'Identity', 'UX + UI', 'Front-End' ]
 - var stack       = [ 'Balsamiq', 'Paper', 'Adobe© Illustrator', 'Adobe© Photoshop', 'Adobe© InDesign', 'HTML (Ruby Slim)' ]
-- var collab      = [ 'Hass']
+- var collab      = [ 'Hassanin Ahmed (Back-end)']
 
+- var prevTitle   = order1[2]
+- var nextTitle   = order1[1]
+- var prevURL     = order2[2]
+- var nextURL     = order2[1]
 
 doctype html
 html(class="no-js" lang="en")
   head
     include partials/_head
-    
-  body.work.iso
 
+  body.work.iso
     include partials/_top
 
     article(data-project="givereceipt").fade-in#context
       .cover-title
         include partials/_nav
         include partials/_mast
-      .cover-photo.gr#checkpoint-nav
+      .cover-photo.gr#checkpoint
       .cover-aside
         include partials/_role
         
       main(role="main")
 
         .segment.type
+          h3 Easy to use, web-based + native accounting software. 
 
-          h3 Venture funded SaaS. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis architecto doloremque perferendis officia amet magnam rem suscipit quaerat.
-          
-          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima eius laborum quasi iusto dolores id porro ea laboriosam cumque inventore ipsam cum iste, a rerum quis esse consequatur, harum labore.  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto aliquam cupiditate sed dolorem totam! Temporibus harum exercitationem dolorem nemo iure aliquam reprehenderit assumenda? Atque similique rem, enim debitis facilis. Doloribus!
+        .segment.relative.squash
+          figure
+            img(src="img/projects/gr/iso.png")
        
-
-
-        .segment.blueprint.squash
-          figure
-            img(src="img/projects/gr/gr-wire.png")
-            figcaption We decided early on to prompt users to enter company information after the registration process to reduce cognitive load and friction.
+        .segment.type
+          p A new goods and services tax (GST) in Malaysia brought about a change in the market, affecting small business owners in particular. It became required by law to issue receipts with every purchase. Heavy accounting software would not be suitable for the majority of small traders and GiveReceipt sought to plug that gap.
 
         .segment.blueprint.squash
           figure
-            img(src="img/projects/gr/gr-id.png")
- 
-        .segment.surface.squash
-          figure
-            img(src="img/projects/gr/gr-invoice.png")
+            img(src="img/projects/gr/flow.png")
+            figcaption Users to enter company information after registration to reduce signup friction.
 
-        .segment.surface.squash
+        .segment.type
+          h3 Creating an identity
+          p Professional accounting software is usually very staid. GiveReceipt aims to be more accessible, especially for small sole-traders. The name itself is comparatively informal, and we visuals that worked alongside that. 
+          
+          p If we were to pare a physical POS ribbon receipt down to its essence, we’d have a few ingredients: its form factor, the perforated edge caused my the blade, the light GSM of the stock. The perforation and aspect is something we could take forward as the basis for the identity. We're still dealing with money so the bright teal is grounded with sensible dark grey/white.
+
+        .segment.blueprint.squash
           figure
-            img(src="img/projects/gr/gr-cards.png")
-            figcaption  
-              = "20mm "
-              &times;
-              = " 230mm, 240gsm"
-              br
-              = "Namecards. These were die-cut to show off our corrigated motif."
+            img(src="img/projects/gr/logo.png")
+            figcaption The application for this was broad from the outset — Website, App, EDM, banners, clothing. The primary lockup worked well in conventional settings but I know it wouldn’t translate to settings where a full-bleed arrangement wasn’t possible. Ideal usage (L): ‘Give Receipt’ would fit snuggly in the space above. Alternate usage (R).
+
+        .segment.swatch.gr
+          .colour.colour-1
+          .colour.colour-2
+          .colour.colour-3
+
+        .segment.surface
+          figure
+            .flex-2
+              .unit
+                img(src="img/projects/gr/block-0.png")
+              .unit.tuck
+                img(src="img/projects/gr/block-1.png")
+            figcaption 20mm × 230mm, 240gsm namecards. Die-cut to show off our corrigated motif.
 
 
       .band.ref
         .segment.type
           ol.ref
             li
-              a(href="https://www.digitalnewsasia.com/startups/givereceipt-gets-CIP500-grant-only-3mths-after-going-live") GiveReceipt gets CIP 500 grant only 3mths after going live
+              a(href="https://www.digitalnewsasia.com/startups/givereceipt-gets-CIP500-grant-only-3mths-after-going-live").inline GiveReceipt gets CIP 500 grant only 3mths after going live
             li
-              a(href="https://www.youtube.com/watch?v=ay4PJQxgrqM") The Edge TV (YouTube)
+              a(href="https://www.youtube.com/watch?v=ay4PJQxgrqM").inline The Edge TV (YouTube)
             li
-              a(href="https://vulcanpost.my/168215/givereceipt-online-business-transactions/") Vulcan post
+              a(href="https://vulcanpost.my/168215/givereceipt-online-business-transactions/").inline Vulcan post
             li
-              a(href="https://www.digitalnewsasia.com/startups/givereceipt-gets-CIP500-grant-only-3mths-after-going-live") GiveReceipt gets CIP 500 grant only 3mths after going live (Digital News Asia)
+              a(href="https://www.digitalnewsasia.com/startups/givereceipt-gets-CIP500-grant-only-3mths-after-going-live").inline GiveReceipt gets CIP 500 grant only 3mths after going live (Digital News Asia)
 
 
-
+      include partials/_page
       include partials/_footer
       include partials/_scripts

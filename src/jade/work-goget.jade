@@ -1,22 +1,23 @@
-- var fTitle      = "droom.io/work/goget"
+include partials/_order
+
 - var workiso     = true
 
+- var fTitle      = "droom.io/work/goget"
 - var project     = "GoGet Brand/Public"
 - var client      = "GoGet"
 - var studio      = "VLT Labs"
 - var date        = "March 2015"
 - var repo        = "Private"
 - var status      = "In Production"
-- var model        = "Marketplace"
-
-- var URLPrev     = "work-foreign.html"
-- var URLNext     = "work-foreign.html"
-
-- var prevTitle   = "Foreign Office"
-- var nextTitle   = "Foreign Office"
+- var model       = "Marketplace"
 
 - var role        = [ 'Identity', 'UX + UI' ]
 - var stack       = [ 'Balsamiq', 'Paper', 'Adobe© Illustrator', 'Adobe© Photoshop', 'Adobe© InDesign', 'InVision' ]
+
+- var prevTitle   = order1[0]
+- var nextTitle   = order1[2]
+- var prevURL     = order2[0]
+- var nextURL     = order2[2]
 
 
 doctype html
@@ -31,7 +32,7 @@ html(class="no-js" lang="en")
       .cover-title
         include partials/_nav
         include partials/_mast
-      .cover-photo.gg(itemprop="image")#checkpoint-nav
+      .cover-photo.gg(itemprop="image")#checkpoint
       .cover-aside
         include partials/_role
 
@@ -126,7 +127,17 @@ html(class="no-js" lang="en")
             figcaption Initial wordmark exploration
 
         .segment.diagram
-          include projects/_gg-sitemap
+          include projects/gg/sitemap
+
+        .segment.type
+          h3 A Singular Hero
+          p 
+          | GoGet's public face is fairly conventional in its layout. A hero image introduces each page, with content modules sitting below each. Whilst marking up the third hero module, I sensed I could 
+          a(href="#").inline DRY this all out
+          | , despite having different content on each (and a carousel on one). This will be made available on GitHub.
+
+        .segment.surface.squash
+          include projects/gg/singular
 
         .segment.swatch.goget
           .colour.colour-1
@@ -147,7 +158,7 @@ html(class="no-js" lang="en")
                 img(src="img/projects/gg/gg-layout-2.jpg")
 
         .segment.type
-          p Like most successful startups, GoGet iterate often. The new identity is being applied to digital and printed materials and elements have been folded in to a temporary website. The public face I’m designing is currently in production and is set to go live Summer/Autumn 2016.
+          p The new identity is being applied to digital and printed materials and elements have been folded in to a temporary website. The public face I’m designing is currently in production and is set to go live Summer/Autumn 2016.
 
       .band.ref
         .segment.type
@@ -155,10 +166,11 @@ html(class="no-js" lang="en")
             li
               a(href="https://www.youtube.com/watch?v=lL1_xwe8x0c").inline Bloomberg TV Malaysia: ‘Leapfrogging’ to Grow Errands Market: GoGet's Chia
             li I think ‘A’ stands for the vechicle grade, but I need to make sure of this.
+            li 
+              a(href="https://en.wikipedia.org/wiki/Don%27t_repeat_yourself").inline Don't repeat yourself (Wikipedia) 
             li Responsive Art-boards
 
 
-
-
+      include partials/_page
       include partials/_footer
       include partials/_scripts

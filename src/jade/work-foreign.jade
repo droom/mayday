@@ -1,5 +1,8 @@
+include partials/_order
+
 - var workiso     = true
 
+- var fTitle      = "droom.io/work/foreign"
 - var project     = "Foreign Office"
 - var client      = "Reformist.io"
 - var studio      = "Reformist.io"
@@ -10,13 +13,13 @@
 - var URLTitle    = "blog.droom.name"
 - var URLProject  = "http://blog.droom.name"
 
-- var URLPrev     = "work-goget.html"
-- var URLNext     = "work-goget.html"
-- var prevTitle   = "work-goget.html"
-- var nextTitle   = "work-goget.html"
-
 - var role        = [ 'Identity', 'UX + UI', 'Front-End' ]
 - var stack       = [ 'Adobe© Illustrator', 'Adobe© Photoshop', 'HTML (Vanilla)', 'CSS (Vanilla)' ]
+
+- var prevTitle   = order1[1]
+- var nextTitle   = order1[0]
+- var prevURL     = order2[1]
+- var nextURL     = order2[0]
 
 
 doctype html
@@ -32,7 +35,7 @@ html(class="no-js" lang="en")
         include partials/_nav
         include partials/_mast
 
-      .cover-photo.fo#checkpoint-nav
+      .cover-photo.fo#checkpoint
         .segment.type.dark
           dl.reset.credits
             dt.hide Photo
@@ -47,7 +50,7 @@ html(class="no-js" lang="en")
           h3 An editorial theme for tumblr
           p 
             = "In 2010 I was looking for a sober, type-led blogging theme to start jotting down design realted musings as they occured to me. I’m not skilled at writing and my ideas are few and far between, but as @"
-            a(href="https://twitter.com/RellyAB") RellyAB
+            a(href="https://twitter.com/RellyAB").inline RellyAB
             = " once said, " 
             q To become a good writer, you need to do a lot of shitty writing first.
             a(href="#ref").plain.glide-slow
@@ -78,8 +81,8 @@ html(class="no-js" lang="en")
         .segment.type
           h3 RWD FTW 
           p 
-            = "Sometime in mid-2012 the words ‘responsive’ and ‘design’ accounted for about 65% of the words in my twitterfeed, but it was only when Front-Ender/UX Designer/pal @"
-            a(href="https://twitter.com/steveavery") SteveAvery
+            = "Sometime in mid-2012 the words ‘responsive’ and ‘design’ comprised about 65% of my twitterfeed, but it was only when Front-Ender/UX Designer/pal @"
+            a(href="https://twitter.com/steveavery").inline SteveAvery
             = " sent a working demo"
             a(href="#ref").plain.glide-slow
               sup
@@ -110,12 +113,11 @@ html(class="no-js" lang="en")
           ol.ref
             li Words and pictures: Copy and the design process (published by the now defunct Five Simple Steps)
             li 
-              a(href="https://adactio.com/articles/4938") One Web, Jeremy Keith
+              a(href="https://adactio.com/articles/4938").inline One Web, Jeremy Keith
             li
-              a(href="http://www.fontbureau.com/blog/georgia_verdana/") Georgia Pro &amp; Verdana Pro: More Widths. More Weights. More Possibilities. 
-            li The demo in question was (I think) from Leigh Howells at Headscape which I can't seem to track down now. I'll email and update.
+              a(href="http://www.fontbureau.com/blog/georgia_verdana/").inline Georgia Pro &amp; Verdana Pro: More Widths. More Weights. More Possibilities. 
+            li The demo in question was (I think) from Leigh Howells at Headscape which I can't seem to track down now.
 
-
-
+      include partials/_page
       include partials/_footer
       include partials/_scripts
