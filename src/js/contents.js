@@ -3,20 +3,22 @@ $(document).ready(function() {
 	localStorage.contents;
 
 	function fContents(){
-		if (localStorage.contents === "tiles"){
+		if (localStorage.contents === "contentsTile"){
 			$('ul#work').addClass('tile');
+			$('a#view .unit').addClass('list');
 		} else {
 			$('ul#work').removeClass('tile');
+			$('a#view .unit').removeClass('list');
 		};
 	};
 
-	$('#view').click(function(e) {
+	$('a#view').click(function(e) {
 		e.preventDefault();
-		$('#view .unit').toggleClass('list');
+		$('a#view .unit').toggleClass('list');
 		$('ul#work').toggleClass('tile');
 
 		if ($('ul#work').hasClass('tile')){
-			localStorage.contents = "tiles";
+			localStorage.contents = "contentsTile";
 		} else {
 			localStorage.contents = "list";
 		};
