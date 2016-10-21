@@ -1,0 +1,50 @@
+html.no-flexbox
+
+  a.plain.btn.view .unit
+    display: none
+
+  a.move.move-return
+    display: none
+
+  ol.nav
+    display: block
+    li
+      width: 50%
+      outline: 1px solid red
+      display: inline-block
+      
+      &:nth-child(2)
+        float: right
+        text-align: right
+
+
+  .flex-12
+    width: 100%
+    display: block
+    text-align: center
+
+    .unit
+      width: calc(100%/6)
+      line-height: 0
+      float: left
+
+      img
+        height: auto
+        width: auto
+        max-width: 100%
+        padding: 0
+
+
+@media (max-width: 780px)
+  html.no-flexbox
+    .flex-12
+      .unit
+        width: calc(100%/4)
+        
+
+@media (max-width: $phone-max)
+  html.no-flexbox
+    .flex-12
+      .unit
+        width: calc(100%/3)
+        

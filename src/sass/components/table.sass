@@ -1,0 +1,58 @@
+table.issues
+  line-height: 1.5em
+  font-family: $technical
+  max-width: $narrow-unit
+  font-size: 12px
+  margin: 50px auto 0
+  max-width: 500px
+  border-spacing: 0
+  color: $copy
+
+  thead,
+  tbody,
+  tfoot
+    tr
+      td.icon
+        width: 5%
+        text-align: center
+
+      td.issue
+        width: 65%    
+      
+      th
+        text-transform: uppercase
+        
+      td, th
+        padding: 0.6rem 1rem
+        width: calc(100%/3)
+        font-weight: 400
+        text-align: left
+        vertical-align: top
+        
+        &.top
+          border-top: 1px solid $copy
+        &.left
+          border-left: 1px solid $copy
+        &.right
+          border-right: 1px solid $copy
+        &.bottom
+          border-bottom: 1px solid $copy
+
+      &:last-child
+        border-bottom: none
+
+
+  tbody,
+  tfoot
+    tr
+      td, th
+        &:nth-child(2)
+          padding-left: 0
+
+  tfoot
+    tr
+      td
+        padding-top:    1.2em
+        padding-bottom: 1.2em
+        text-align:     center
+        background:     rgba(0,0,0,0.03)

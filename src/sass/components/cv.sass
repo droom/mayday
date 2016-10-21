@@ -1,0 +1,75 @@
+body.cv
+
+  dl, dt, dd
+    &.dim
+      visibility: hidden
+
+  main
+    dl, dt, dd
+      margin: 0
+      padding: 0
+
+    ul + p,
+    ul + ul,
+    p  + p,
+    p  + ul,
+    dl + ul,
+    dl + p
+      margin-top: 1em
+
+    dl, dt, dd
+      line-height: 1.4em
+      &.hide
+        display: none
+
+    dl dt,
+    dl dd
+      font-weight: bold
+
+    a
+      border: none
+      background-image: -linear-gradient(top,transparent 87%,#81d3eb 0,#81d3eb 97%,transparent 0)
+      background-image: -moz-linear-gradient(top,transparent 87%,#81d3eb 0,#81d3eb 97%,transparent 0)
+      background-image: -webkit-linear-gradient(top,transparent 87%,#81d3eb 0,#81d3eb 97%,transparent 0)
+
+    hr
+      height:     1px
+      border:     none
+      background: rgba(0, 0, 0, 0.08)
+
+    // p.rep
+      // font-family:    $notes
+      // font-size:      $font-xsmall
+      // line-height:    15px
+      // vertical-align: top
+
+    ul.plain li
+      list-style: none
+
+    ul.circle li
+      list-style: circle
+      margin: 0 0 0.5em 1.5em
+
+    ul.small
+      li
+        font-family:    $notes
+        font-size:      $font-xsmall
+        line-height:    15px
+        vertical-align: top
+
+    ul.brace
+      padding: 0
+      
+      li.main
+        padding: $gttr-dt
+        max-width: $narrow-unit
+        z-index: 1
+        margin: auto
+        
+
+@media (max-width: $phone-max)
+  body.cv
+    ul.brace
+      li.main
+        padding: $gttr-ph
+

@@ -1,0 +1,133 @@
+
+html.cssanimations
+	.flash
+		position: fixed
+		top: 0
+		left: 0
+
+		width: 100vw
+		height: 100vh
+
+		background: white
+		animation-fill-mode: forwards
+		animation-iteration-count: 1
+		animation-timing-function: ease-out
+		animation-duration: 1s
+		animation-name: flash-out
+		pointer-events: none
+		z-index: 99999999
+
+	@keyframes flash-out
+		0%
+			opacity: 1
+		100%
+			opacity: 0
+
+
+
+html.konami
+	div
+		outline: 1px solid $ink
+
+	body,
+	.band.head
+		background: url('../img/components/ps.gif') repeat #ebeeee
+
+
+				
+	body
+
+		color: $ink
+
+		.dark dt, .dark dd, .dark p, .dark a, .dark small, .dark h1, .dark h2, .dark h3, .dark h4
+			color: $ink
+
+		table.issues
+			color: $ink
+			td, th
+				border-color: $ink
+
+		.segment.blueprint
+			background: none
+
+
+		.ih.reflow.before,
+		.ih.reflow.after
+			div,
+			.cell.nav,
+			.cell.colour,
+			.cell.stock,
+			.cell.cycle,
+			.cell.image,
+			.cell.stats,
+			.region,
+			.tab,
+			.region
+				outline: 0
+
+
+		.gg.sitemap .row,
+		.gg.sitemap .row .unit
+			outline: none
+
+		.gg.sitemap .row .unit.joiner .inner
+			background: url('../img/components/ps.gif') repeat transparent
+
+		.pager
+			a:nth-child(1)
+				border-right: 1px dotted $ink
+
+		a,
+		.accent
+			color: $ink
+			border-bottom-color: $ink
+
+		a
+			&.inline
+				border: none
+				background: none
+				text-decoration: underline
+		
+		a.plain.view.btn,
+		a.plain.view.btn .unit,
+		a.plain.view.btn .unit .row,
+		a.plain.view.btn .unit .row .cell
+			outline: none
+		
+		a.plain.view.btn .unit .row .cell
+			border: solid 1px white
+			background: $ink
+
+		.jacket
+			background: none	
+
+		::selection,
+		pre ::selection
+			background-color: rgba(255,255,0,0.3)
+
+		a.move.move-return:hover,
+		a.move.move-left:hover,
+		a.move.move-right:hover
+			background-color: rgba(255,255,0,0.15)
+
+		.segment.type.relative.mast
+			background: url('../img/components/ps.gif') repeat transparent
+
+		.band.hr.relative.pager .segment.type a:hover
+			background-color: rgba(255,255,0,0.15)
+
+		ul.work
+			li.disable
+				&:active,
+				&:hover
+					background: none
+					
+			li
+				&:active,
+				&:hover
+					background-color: rgba(255,255,0,0.15)
+					
+				border-top: 1px dotted $ink
+				
+				&:first-child
+					border-top: none
