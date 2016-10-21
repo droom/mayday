@@ -1,7 +1,13 @@
+section.flow
+	padding:   $gttr-dt
+@media (max-width: $phone-max)
+	section.flow
+		padding: $gttr-ph
+		
 ul.reflow
 	width: 		100%
 	display: 	block
-	margin: 	10px auto 30px auto
+	margin: 	35px auto 35px auto
 	padding: 	0
 	text-align: center
 	
@@ -31,21 +37,29 @@ figure .ih.reflow
 		display:          flex
 		align-items:      center
 		justify-content:  center
-		border: 					1px dotted blue
+		border: 		  1px dotted blue
 
 		&.stock
-			background: url('../img/stripes/1.png')
+			background: url('../img/stripes/1.gif')
 			
 		&.colour
-			background: url('../img/stripes/2.png')
+			background: url('../img/stripes/2.gif')
 			
 		&.stats
-			background: url('../img/stripes/3.png')
+			background: url('../img/stripes/3.gif')
 
 				
 		.tab
 			transition: all ease 1s
 		
+		&.cycle
+			height: 16px
+			top: 	254px
+			right: 	0
+			
+			&:after
+				content: "Navigation: Cycle Products"
+
 		&.image
 			svg
 				width: 100%
@@ -64,28 +78,7 @@ figure .ih.reflow.before
 	.cell
 		&.nav
 			opacity: 0
-			
-		&.colour
-			width: 	66.6666666%
-			height: 211px
-			top: 	279px
-			right: 	calc(100%/3)
-			
-		&.stock
-			width: 	calc(100%/3 - 3px)
-			height: 211px
-			top: 	279px
-			right: 	0
 
-		&.cycle,
-		&.image
-			width: 	60%
-
-		&.cycle
-			height: 16px
-			top: 	254px
-			right: 	0
-			
 		&.image
 			height: 245px
 			top: 	0
@@ -97,6 +90,17 @@ figure .ih.reflow.before
 				left: 10px
 				content: "Image (×1)"
 
+		&.cycle,
+		&.image
+			width: 	60%
+
+		&.cycle
+			height: 16px
+			top: 	254px
+			right: 	0
+
+
+				
 		&.stats
 			width: 	38%
 			height: 270px
@@ -104,9 +108,36 @@ figure .ih.reflow.before
 			right: 	62%
 			&:after
 				content: "Stats"
-				background: yellow
+				background: white
+				padding: 0.3rem 0.3rem
 			.tab
 				display: none
+
+		&.stock
+			width: 	calc(100%/3 - 3px)
+			height: 211px
+			top: 	279px
+			right: 	0
+			.tab
+				background: white
+				padding: .1rem .35rem 0.15rem .35rem
+			
+		&.colour
+			width: 	66.6666666%
+			right: 	calc(100%/3)
+
+		&.stock
+			width: 	calc(100%/3 - 3px)
+			right: 	0
+				
+		&.stock,
+		&.colour
+			height: 211px
+			top: 	279px
+			.tab
+				background: white
+				padding: .1rem .35rem 0.15rem .35rem
+
 
 figure .ih.reflow.after
 	.cell
@@ -133,16 +164,13 @@ figure .ih.reflow.after
 			
 		&.image
 			height:	185px
-			top: 		25px
-
-		&.cycle:after
-			content: "Navigation: Cycle Products"
+			top: 	25px
 
 		&.stock,
 		&.colour,
 		&.stats
 			height: 	284px
-			top: 			216px
+			top: 		216px
 			display: 	block
 			.region
 				background:	none
@@ -152,14 +180,24 @@ figure .ih.reflow.after
 				width: 				calc(100%/3)
 				height: 			20px
 				display: 			flex
-				align-items: 			center
+				align-items: 		center
 				justify-content: 	center
-				text-align: 			center
-				background: white
+				text-align: 		center
+				background: 		rgba(255,255,255,0.9)
+				z-index: 			99
+				border-bottom: 		1px dotted blue
 		
+		&.stats
+			.tab
+				position: absolute
+				left: 0
 		&.colour
 			.tab
-				margin: auto
+				position: 		absolute
+				left: 			calc(100%/3)
+				border-left: 	1px dotted blue
+				border-right: 	1px dotted blue
+				
 		&.stock
 			.tab
 				margin-left: 66.6666666%

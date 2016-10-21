@@ -23,8 +23,6 @@ html(class="no-js" lang="en")
     include partials/_head
 
   body.work.iso
-    include partials/_top
-
     article(data-project="atop").fade-in#context
       .cover-title
         include partials/_nav
@@ -52,14 +50,14 @@ html(class="no-js" lang="en")
             li Get out of the way. Focus on the important.
 
 
-        //- .segment.relative.center(id="waypoint-atop")
-        //-   .atop-live
-        //-     .face
-        //-     .hand-large
-        //-     .hand-small
-        //-     .seconds
-        //-     .unit
-        //-     .day
+        .segment.relative.center(id="waypoint-atop")
+          .atop-live
+            .face
+            .hand-large
+            .hand-small
+            .seconds
+            .unit
+            .day
 
 
         .segment.type
@@ -85,7 +83,7 @@ html(class="no-js" lang="en")
 
         .segment.surface
           figure
-            .flex-2
+            .flex
               .unit
                 img(src="img/projects/at/dribbble-500-blue.jpg")
               .unit.tuck
@@ -123,7 +121,8 @@ html(class="no-js" lang="en")
             li http://noisepng.com/
             li https://www.youtube.com/watch?v=wRzyStODIZ4
 
-
-
-      include partials/_footer
-      include partials/_scripts
+    include partials/_page
+    include partials/_top
+    include partials/_footer
+      
+  include partials/_scripts

@@ -1,165 +1,47 @@
 .flex
-  display: flex
-  width: 100%
+  display:  flex
+  width:    100%
+  margin:   auto
   justify-content: space-around
-  margin: auto
-  align-items: flex-end
+  align-items: center 
 
-  .unit
-    flex-grow: 1
-    text-align: center
-    margin: 0 10px
-    img
-      width: 100%
-  .unit:nth-child(1)
-    margin: 0
-  .unit:nth-child(3)
-    margin: 0
+  &.recto
+    align-items: flex-start
 
-
-.flex-2
-  width: 100%
-  display: flex
-  justify-content: space-around
-  margin: auto
-  display: flex
-  align-items: center
-  justify-content: center
-
-  .unit
-    flex-basis: calc(100%/2)
-    align-self: flex-start
-    flex-grow: 1
-    text-align: center
-    justify-content: space-around
-    align-self: flex-start
-    img
-      width: 100%
-
-
-
-@media (max-width: 450px)
-  .flex-2
+  &.verso
+    align-items: flex-end
+  
+  &.wrap
     flex-flow: row wrap
-    .unit
-      flex-basis: 100%
-    .unit.tuck
-      display: none
-    .unit:nth-child(1)
-      img
-        padding-right: 0
-    .unit:nth-child(2)
-      img
-        padding-left: 0
-
-
-@media (min-width: 451px)
-  .flex-2
-    .unit:nth-child(1)
-      img
-        padding-right: 15px
-
-    .unit:nth-child(2)
-      img
-        padding-left: 15px
-
-
-.flex-6
-  width: 100%
-  display: flex
-  text-align: center
-  flex-flow: row wrap
-  justify-content: space-around
 
   .unit
-    outline: 1px solid red
-    flex-basis: calc(100%/6)
-    align-self: flex-start
     flex-grow: 1
-
+    text-align: center
     img
-      height: auto
-      width: auto
-      max-height: 200px
-      max-width: 100%
-      padding: 8px
+      width: 100%
 
+    &.pad
+      margin: 0 1em
 
-@media (max-width: 700px)
-  .flex-6
-    text-align: left
-    .unit
-      flex-basis: calc(100%/3)
-      align-self: center
+      &:first-child
+        margin-left: 0
+      
+      &:last-child
+        margin-right: 0
 
-
-.flex-12
-  width: 100%
-  display: flex
-  justify-content: center
-  text-align: center
-  flex-flow: row wrap
-  align-items: stretch
-  justify-content: space-around
-
-  .unit
-    flex-basis: calc(100%/6)
-    align-self: center
-    flex-grow: 1
-
-    img
-      height: auto
-      width: auto
-      max-width: 100%
-      padding: 0
+    &.unit-12
+      flex-basis: calc(100%/6)
 
 
 @media (max-width: 780px)
-  .flex-12
+  .flex
     .unit
-      flex-basis: calc(100%/4)
-        
+      &.unit-12
+        flex-basis: calc(100%/4)
+          
 
 @media (max-width: $phone-max)
-  .flex-12
+  .flex
     .unit
-      flex-basis: calc(100%/3)
-      
-
-.flex-24
-  padding: 20px
-  width: 100%
-  display: flex
-  text-align: center
-  flex-flow: row wrap
-  justify-content: space-around
-
-  .unit
-    flex-basis: calc(100%/12)
-    align-self: flex-start
-    flex-grow: 1
-
-    img
-      height: auto
-      width: auto
-      max-height: 200px
-      max-width: 100%
-      padding: 0
-
-
-@media (max-width: 700px)
-  .flex-24
-    .unit
-      flex-basis: calc(100%/8)
-
-@media (max-width: 500px)
-  .flex-24
-    .unit
-      flex-basis: calc(100%/6)
-
-@media (max-width: 300px)
-  .flex-24
-    .unit
-      flex-basis: calc(100%/3)
-
-
+      &.unit-12
+        flex-basis: calc(100%/3)

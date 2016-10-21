@@ -10,10 +10,12 @@
       & + .segment
         margin-top: 2em
 
+        & + .caption
+          margin-top: 0
 
       &.type
         h3 + p
-          margin-top: 1.5em        
+          margin-top: 2.5em
         p + h3
           margin-top: 1.5em
         p + p
@@ -31,23 +33,23 @@
         margin-top: 3em
         margin-bottom: 4em
 
-        h4
-          margin: 0 auto 3em
+        // h4
+          // margin: 0 auto 3em
 
   .band.ref
     margin-top: 3em
-    padding: 1em 0
-
     & + .band.turn
       margin-top: 0
 
-
 @media (max-width: $phone-max)
+
   .work.iso
     main
       margin-top: 1.5em
-    
+
       .segment
+        figure figcaption
+          padding-bottom: 2em
 
         & + .segment
           margin-top: 0
@@ -68,3 +70,12 @@
             font-size: 1.8rem
             line-height: 2.1rem
             margin-bottom: 1em
+
+          h3
+            margin: 1em 0
+
+          h3 + p
+            margin-top: 1em
+            
+
+

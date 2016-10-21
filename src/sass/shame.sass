@@ -1,7 +1,13 @@
+.segment.diagram h4
+	color: $ink
+
+
 ul.reflow li a,
 figure .ih.reflow .cell,
 figure.gg-singular label,
-#gg-sitemap
+figure.gg-singular,
+section.flow,
+section.gg.sitemap
 	line-height: 1.5em
 	font-family: $technical
 	max-width: $narrow-unit
@@ -12,12 +18,27 @@ figure.gg-singular label,
 		font-weight: 600
 
 
+h2 + a.plain.view.btn
+	margin-top: 20px
 
-figure.gg-singular section.diagram
-	padding-left:   $gttr-dt
-	padding-right:  $gttr-dt
 
-@media (max-width: $phone-max)
-	figure.gg-singular section.diagram
-		padding-left: $gttr-ph
-		padding-right: $gttr-ph
+#ih-words
+	.slick-slide
+		margin: 0px
+
+#ih-product
+	margin: 30px auto 0
+
+	.slick-list
+		padding: 10px 0 30px 0 !important
+		
+		.slick-slide
+			outline: 0
+
+			img
+				box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0), 0 5px 5px 0 rgba(0, 0, 0, 0)
+				@include tween(300ms)
+
+			&.slick-current
+				img
+					box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1), 0 5px 5px 0 rgba(0, 0, 0, 0.1)

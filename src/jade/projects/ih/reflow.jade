@@ -1,10 +1,12 @@
-ul.reflow
-	li
-		a(href="#").plain.reflow.before.active Before
-	li
-		a(href="#").plain.reflow.after After
-
 .segment.blueprint.relative
+
+	ul.reflow#checkpoint-reflow
+		li
+			a(href="#").plain.reflow.before.active Before
+		li
+			a(href="#").plain.reflow.after After
+
+	
 	figure
 		.ih.reflow.before#reflow
 			.cell.nav
@@ -25,4 +27,4 @@ ul.reflow
 				.tab STOCK
 				.region
 
-		figcaption Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet repellendus dolor beatae voluptas quae? Eaque totam, maiores, iusto animi, suscipit dolorum id quam ipsa ab a, alias quia atque eligendi.
+		figcaption On the original layout, two sets of data were grouped into one table, making it very confusing to scan until you understood this quirk. By grouping this information into a narrow module, we could ensure it'll scale down to a mobile viewport.

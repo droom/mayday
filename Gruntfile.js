@@ -12,23 +12,29 @@ module.exports = function(grunt) {
         'src/sass/*.sass',
         'src/sass/lib/*.sass',
         'src/sass/partials/*',
+        
         'src/sass/projects/*',
         'src/sass/projects/at/*',
         'src/sass/projects/ih/*',
         'src/sass/projects/gg/*',
         'src/sass/projects/gr/*',
-        'src/sass/components/*'
+
+        'src/sass/a11y/*',
+        'src/sass/components/*',
+        'src/sass/grid/*',
+        'src/sass/type/*',
+        'src/sass/motion/*',
+        'src/sass/images/*'
+
         ],
         tasks: ['sass'],
       },
 
       jade: {
         files: [
-
         'src/jade/*.jade', 
         'src/jade/partials/*',
         'src/jade/projects/*'
-
         ],
         
         tasks: ['jade'],
@@ -60,7 +66,7 @@ module.exports = function(grunt) {
           style: 'compressed'
         },
         files: {
-          'dist/css/style.css': 'src/sass/style.sass',
+          'dist/css/droomio.css': 'src/sass/style.sass',
         }
       }
     },
@@ -73,7 +79,6 @@ module.exports = function(grunt) {
           inline: false,
           annotation: 'dist/css/maps/'
         },
-
         processors: [
         require('pixrem')(), // add fallbacks for rem units
         require('autoprefixer')({browsers: 'last 2 versions'}), // add vendor prefixes
@@ -81,7 +86,7 @@ module.exports = function(grunt) {
         ]
       },
       dist: {
-        src: 'dist/css/style.css'
+        src: 'dist/css/droomio.css'
       }
     },
 
@@ -126,7 +131,8 @@ module.exports = function(grunt) {
         'src/lib/slick.js',
         'src/lib/jquery.waypoints.js',
         'src/lib/modernizr-2.8.3.min.js',
-        'src/js/*.js'
+        'src/lib/konami.js',
+        'src/js/*.js',
         ],
         dest: 'dist/js/droomio.js',
       },
@@ -161,9 +167,6 @@ module.exports = function(grunt) {
       src: 'dist/*.html',
       dest: 'dist/critical/'
     },
-
-
-
 
 
 

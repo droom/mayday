@@ -8,8 +8,6 @@ html(class="no-js" lang="en")
     include partials/_head
 
   body.profile
-    include partials/_top
-
     article(data-project="profile").fade-in#context
       .cover-title
         include partials/_nav
@@ -28,15 +26,13 @@ html(class="no-js" lang="en")
                 &nbsp;
                 = "KL"
 
-
       .jacket
-        .segment.type
-          dl.reset.credits
-            dt.hide twitter
-            dd 
-              a(href="https://twitter.com/droomio").plain @droomio
-
-
-
-      include partials/_footer
-      include partials/_scripts
+      
+      .segment.type
+        include partials/_feed
+        
+    include partials/_page
+    include partials/_top
+    include partials/_footer
+      
+  include partials/_scripts

@@ -1,20 +1,23 @@
-$display:       "c-std-bold", "Noto Serif", Georgia, serif
-$running:		"Noto Serif", Georgia, serif
+$display:       "c-std-bold", Helvetica, sans-serif
+$running:		"hndi-std", Georgia, serif
 $technical:		"Roboto Mono", monospace
-$notes:			"hndi-std", serif
+$notes:			"hndi-std", Georgia, serif
 
-$font-small:	11px
 $font-xsmall:	10px
 $border:		1px solid rgba(0, 0, 0, 0.08)
 
 $maths:			rgba(33, 153, 231, 1)
 $copy:		   	rgba(0, 0, 0, 0.85)
+
 $bg:	    	rgba(241, 241, 241, 1)
 $hover:		  	rgba(255, 255, 255, 0.4)
 $ink:      		rgba(46, 77, 210, 1)
 
+
+
 $wide-unit:    	1118px
-$narrow-unit:	760px
+$narrow-unit:	710px
+
 $phone-max:		500px
 $gttr-ph:	 	15px
 $gttr-dt:	 	26px
@@ -45,29 +48,42 @@ $gttr-dt-top:	22px
 
 @import "type/includes.sass"
 @import "type/type.sass"
+
 @import "images/base.sass"
 @import "images/jacket.sass"
 
-@import "components/list-base.sass"
-@import "components/list-index.sass"
-@import "components/list-work.sass"
-@import "components/list-work-view.sass"
+@import "components/lists.sass"
+@import "components/projects.sass"
+@import "components/btn-view.sass"
+@import "components/cv.sass"
 @import "components/links.sass"
 @import "components/nav.sass"
 @import "components/counters.sass"
 @import "components/pan.sass"
 @import "components/mast.sass"
+@import "components/table.sass"
 @import "components/footer.sass"
+@import "components/slick.sass"
+@import "components/konami.sass"
+@import "components/appendix.sass"
+
 
 @import "projects/shared/swatch.sass"
 @import "projects/shared/cover.sass"
+
 @import "projects/gg/sitemap.sass"
+@import "projects/gg/sitemap-ul.sass"
+
 @import "projects/gg/singular.sass"
 @import "projects/gg/ui.sass"
+@import "projects/gr/flow.sass"
 @import "projects/at/atop.sass"
 @import "projects/ih/reflow.sass"
+@import "projects/ih/blueprints.sass"
 
-// @import "a11y/nojs.sass"
+@import "a11y/no-js.sass"
+@import "a11y/no-flexbox.sass"
+@import "a11y/no-cssgradients.sass"
 
-@import "slick.sass"
+
 @import "shame.sass"

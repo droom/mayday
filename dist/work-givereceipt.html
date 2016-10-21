@@ -1,41 +1,28 @@
 <!DOCTYPE html>
 <html lang="en" class="no-js">
   <head>
-    <link href="https://fonts.googleapis.com/css?family=Noto+Serif:400,700" rel="stylesheet" media="screen" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,700" rel="stylesheet" media="screen" type="text/css">
-    <link href="css/style.css" rel="stylesheet" media="screen" type="text/css">
-    <link href="img/icons/Icon.png" rel="apple-touch-icon-precomposed" sizes="57x57">
-    <link href="img/icons/Icon-72x72.png" rel="apple-touch-icon-precomposed" sizes="72x72">
-    <link href="img/icons/Icon@2x.png" rel="apple-touch-icon-precomposed" sizes="114x114">
+    <link href="css/droomio.css" rel="stylesheet" media="all" type="text/css">
+    <link rel="prefetch" href="http://droom.io/img/cover/ih-cover-600.jpg">
+    <link rel="prefetch" href="http://droom.io/img/cover/gg-cover-600.jpg">
+    <link rel="prefetch" href="http://droom.io/img/cover/gr-cover-600.jpg">
+    <link rel="prefetch" href="http://droom.io/img/cover/fo-cover-600.jpg">
     <title>droom.io/work/givereceipt</title>
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
     <meta charset="utf-8">
     <meta name="language" content="en">
     <meta name="title" content="droom.io/work/givereceipt">
-    <meta name="description" content="Designer &amp; Client-side Developer, 2016 portfolio">
-    <meta name="subject" content="Design portfolio">
-    <meta name="author" content="@droomio">
     <meta name="p:domain_verify" content="0adca0e3d608f74b4f9af464b0955a55">
     
     <meta name="og:title" content="droom.io/work/givereceipt">
     <meta name="og:site_name" content="droom.io/work/givereceipt">
     <meta name="og:description" content="Designer &amp; Client-side Developer, 2016 portfolio">
-    <meta name="twitter:title" content="droom.io/work/givereceipt">
-    <meta name="twitter:description" content="Designer &amp; Client-side Developer, 2016 portfolio">
     <meta name="twitter:site" content="@droomio">
     <meta name="twitter:creator" content="@droomio">
     <meta name="robot" content="index, follow">
   </head>
   <body class="work iso">
-    <div id="top" class="band head"><a href="#head" tabindex="-1" class="move move-top glide"></a>
-      <div class="segment type ghost">
-        <ol class="nav reset ghost">
-          <li class="ghost nolist space caps">droom.io</li>
-          <li class="ghost nolist">GiveReceipt</li>
-        </ol>
-      </div>
-    </div>
     <article data-project="givereceipt" id="context" class="fade-in">
       <div class="cover-title">
         <div id="head" class="band head relative"><a href="work.html" class="move move-return"></a>
@@ -50,7 +37,7 @@
             </div>
           </nav>
         </div>
-        <div class="band head hr relative move"><a href="work-foreign.html" tabindex="-1" class="move move-left"></a>
+        <div class="band head hr relative move"><a href="work-ideahouse.html" tabindex="-1" class="move move-left"></a>
           <div class="segment type relative mast">
             <header>
               <h2 itemprop="name">GiveReceipt</h2>
@@ -63,15 +50,17 @@
                 <dd>SaaS</dd>
                 <dt>Date</dt>
                 <dd itemprop="datePublished">July 2015</dd>
-                <dt>Repo</dt>
-                <dd>Private</dd>
-                <dt>Status</dt>
-                <dd>Live</dd>
                 <dt>Live</dt>
-                <dd><a itemprop="URL" href="http://www.givereceipt.com" aria-label="GiveReceipt">givereceipt.com</a></dd>
+                <dd> <a itemprop="URL" href="http://www.givereceipt.com/" aria-label="GiveReceipt" class="inline dark">givereceipt.com</a></dd>
               </dl>
             </header>
-          </div><a href="work-goget.html" tabindex="-1" class="move move-right"></a>
+          </div><a href="work-foreign.html" tabindex="-1" class="move move-right"></a>
+        </div>
+        <div class="band js hr">
+          <div class="segment type">
+            <h4> Some parts of this site need JavaScript to work properly. Please enable it for the full experience. <a href="http://enable-javascript.com/" class="inline">How</a>?
+            </h4>
+          </div>
         </div>
       </div>
       <div id="checkpoint" class="cover-photo gr"></div>
@@ -95,7 +84,7 @@
             </dl>
             <dl itemscope itemprop="Person" itemtype="http://schema.org/Person" class="reset credits">
               <dt>With</dt>
-              <dd itemprop="name">Hassanin Ahmed (Back-end)</dd>
+              <dd itemprop="name">Hassanin Ahmed (RoR)</dd>
             </dl>
           </div>
         </aside>
@@ -110,9 +99,73 @@
         <div class="segment type">
           <p>A new goods and services tax (GST) in Malaysia brought about a change in the market, affecting small business owners in particular. It became required by law to issue receipts with every purchase. Heavy accounting software would not be suitable for the majority of small traders and GiveReceipt sought to plug that gap.</p>
         </div>
-        <div class="segment blueprint squash">
-          <figure><img src="img/projects/gr/flow.png">
-            <figcaption>Users to enter company information after registration to reduce signup friction.</figcaption>
+        <div class="segment blueprint">
+          <figure class="gg flow">
+            <h4>gr&mdash;process_diagram_v2</h4>
+            <section class="flow">
+              <div class="row center">
+                <div class="terminal">A</div>
+              </div>
+              <div class="row center">
+                <div class="cell join join-c"></div>
+              </div>
+              <div class="row">
+                <div class="cell box profile">
+                  <label>Profile admin</label>
+                </div>
+                <div class="cell join join-a strut"></div>
+                <div class="cell box dashboard">
+                  <label>Dashboard</label>
+                </div>
+                <div class="cell join join-b strut"></div>
+                <div class="cell box view">
+                  <label>View single receipt</label>
+                </div>
+              </div>
+              <div class="row flex-end">
+                <div class="cell join join-c"></div>
+                <div class="cell join strut"></div>
+                <div class="cell join join-c"></div>
+              </div>
+              <div class="row flex-end">
+                <div class="cell box create">
+                  <label>Create new receipt</label>
+                </div>
+                <div class="cell join join-a strut"></div>
+                <div class="cell box edit"> 
+                  <label>Edit</label>
+                </div>
+              </div>
+              <div class="row center">
+                <div class="cell join join-e"></div>
+              </div>
+              <div class="row center">
+                <div class="cell box review">
+                  <label>Review</label>
+                </div>
+              </div>
+              <div class="row center">
+                <div class="cell join join-c"></div>
+              </div>
+              <div class="row flex-end">
+                <div class="cell box send">
+                  <label>Send</label>
+                </div>
+                <div class="cell join join-b strut"></div>
+                <div class="cell box inbox">
+                  <label>Receipt emailed to recipient</label>
+                </div>
+              </div>
+              <div class="row center">
+                <div class="cell join join-c"></div>
+              </div>
+              <div class="row center">
+                <div class="stop">
+                  <div class="terminal end">A</div>
+                </div>
+              </div>
+            </section>
+            <figcaption>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi corrupti, deserunt rem eaque iure, sit omnis ducimus incidunt dolore atque voluptatibus minus nobis. Minus quas velit eligendi iusto corporis tenetur.</figcaption>
           </figure>
         </div>
         <div class="segment type">
@@ -132,9 +185,9 @@
         </div>
         <div class="segment surface">
           <figure>
-            <div class="flex-2">
-              <div class="unit"><img src="img/projects/gr/block-0.png"></div>
-              <div class="unit tuck"><img src="img/projects/gr/block-1.png"></div>
+            <div class="flex">
+              <div class="unit pad"><img src="img/projects/gr/block-0.png"></div>
+              <div class="unit pad tuck"><img src="img/projects/gr/block-1.png"></div>
             </div>
             <figcaption>20mm × 230mm, 240gsm namecards. Die-cut to show off our corrigated motif.</figcaption>
           </figure>
@@ -150,25 +203,33 @@
           </ol>
         </div>
       </div>
-      <div class="band hr relative pager">
-        <div class="segment type"><a href="work-foreign.html" tabindex="-1" class="move move-left"></a><a href="work-goget.html" tabindex="-1" class="move move-right"></a>
-          <ul class="reset page ghost">
-            <li class="ghost">
-              <label>Previous</label><a href="work-foreign.html" class="h4 ghost">Foreign Office</a>
-            </li>
-            <li class="ghost">
-              <label>Next</label><a href="work-goget.html" class="h4 ghost">GoGet Brand/Web</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <footer role="contentinfo" class="band hr">
-        <div class="segment type">
-          <p>&copy;2016. <a href="https://github.com/droom/mayday" aria-label="View code on GitHub" class="inline">Judge code</a>.
-          </p>
-        </div>
-      </footer>
-      <script src="js/droomio.min.js"></script>
     </article>
+    <div class="band hr relative pager">
+      <div class="segment type"><a href="work-ideahouse.html" tabindex="-1" class="move move-left"></a><a href="work-foreign.html" tabindex="-1" class="move move-right"></a>
+        <ul class="reset page ghost">
+          <li class="ghost">
+            <label>Previous</label><a href="work-ideahouse.html" class="h4 ghost">Ideahouse</a>
+          </li>
+          <li class="ghost">
+            <label>Next</label><a href="work-foreign.html" class="h4 ghost">Foreign Office</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div id="top" class="band head"><a href="#head" tabindex="-1" class="move move-top glide"></a>
+      <div class="segment type ghost">
+        <ol class="nav reset ghost">
+          <li class="ghost nolist space caps">droom.io</li>
+          <li class="ghost nolist">GiveReceipt</li>
+        </ol>
+      </div>
+    </div>
+    <footer role="contentinfo" class="band hr">
+      <div class="segment type">
+        <p>&copy;2016. <a href="https://github.com/droom/mayday" aria-label="View code on GitHub" class="inline">Judge code</a>.
+        </p>
+      </div>
+    </footer>
   </body>
+  <script src="js/droomio.min.js"></script>
 </html>

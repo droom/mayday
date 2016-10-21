@@ -1,6 +1,5 @@
 $(document).ready(function() {
 
-	console.log('reflow');
 
 	$('a.reflow.before').click(function(e) {
 		e.preventDefault();
@@ -26,5 +25,26 @@ $(document).ready(function() {
 		$('#reflow').addClass('after');
 		$('#reflow').removeClass('before');
 	};
+
+
+
+	if ( $( "#checkpoint-reflow" ).length ) {
+		var fAfterFire = new Waypoint({
+			element: document.getElementById('checkpoint-reflow'),
+			handler: function() {
+				console.log('fAfter');
+				fAfter();
+			}, offset: 130
+		});
+
+		var fBeforeFire = new Waypoint({
+			element: document.getElementById('checkpoint-reflow'),
+			handler: function() {
+				console.log('fBefore');
+				fBefore();
+			}, offset: 135
+		});
+	}
+
 
 });

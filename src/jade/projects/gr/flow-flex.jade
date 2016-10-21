@@ -1,39 +1,53 @@
-#gr-flow
-	h4 GR&mdash;user_flow
-	.inner
-		.box.start
-			.terminal
-				label A
+h4 gr&mdash;process_diagram_v2
+section.flow
+  .row.center
+    .terminal A
+  
+  .row.center
+    .cell.join.join-c
 
-		.box.join-v.join-v-0
-		.box.join-v.join-v-1
-		.box.join-v.join-v-2
-		.box.join-v.join-v-3
+  .row
+    .cell.box.profile
+      label Profile admin
+    .cell.join.join-a.strut
+    .cell.box.dashboard
+      label Dashboard
+    .cell.join.join-b.strut
+    .cell.box.view
+      label View single receipt
+      
+  .row.flex-end
+    .cell.join.join-c
+    .cell.join.strut
+    .cell.join.join-c
+    
+  .row.flex-end
+    .cell.box.create
+      label Create new receipt
+    .cell.join.join-a.strut
+    .cell.box.edit 
+      label Edit
+      
+  .row.center
+    .cell.join.join-e
+  
+  .row.center
+    .cell.box.review
+      label Review
 
-		.box.join-h.join-h-0
-		.box.join-h.join-h-1
-		.box.join-h.join-h-2
-		.box.join-h.join-h-3
-		.box.join-h.join-h-4
-		.box.join-h.join-h-5
+  .row.center
+    .cell.join.join-c
 
-		.box.cell.profile 
-			label Profile admin
-		.box.cell.dashboard
-			label Dashboard
-		.box.cell.view
-			label View single receipt
-		.box.cell.create
-			label Create new receipt
-		.box.cell.edit 
-			label Edit
-		.box.cell.review
-			label Review
-		.box.cell.send
-			label Send
-		.box.cell.inbox
-			label Receipt emailed to recipient (optional cc to sender)
-
-		.box.stop
-			.terminal.end 
-				label A
+  .row.flex-end
+    .cell.box.send
+      label Send
+    .cell.join.join-b.strut
+    .cell.box.inbox
+      label Receipt emailed to recipient
+  
+  .row.center
+    .cell.join.join-c
+  
+  .row.center
+    .stop
+      .terminal.end A

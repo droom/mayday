@@ -10,7 +10,16 @@ a
 
   &.inline
     border: none
-    background-image: -webkit-linear-gradient(top,transparent 88%,#81d3eb 0,#81d3eb 95%,transparent 0)
+    background-image: -linear-gradient(top,transparent 85%,#81d3eb 0,#81d3eb 95%,transparent 0)
+    background-image: -moz-linear-gradient(top,transparent 85%,#81d3eb 0,#81d3eb 95%,transparent 0)
+    background-image: -webkit-linear-gradient(top,transparent 85%,#81d3eb 0,#81d3eb 95%,transparent 0)
+
+    &.dark
+      border: none
+      background-image: -linear-gradient(transparent 88%, rgba(0,0,0,0.3) 0,rgba(0,0,0,0.3) 97%,transparent 0)
+      background-image: -moz-linear-gradient(transparent 88%, rgba(0,0,0,0.3) 0,rgba(0,0,0,0.3) 97%,transparent 0)
+      background-image: -webkit-linear-gradient(transparent 88%, rgba(0,0,0,0.3) 0,rgba(0,0,0,0.3) 97%,transparent 0)
+
 
   &.plain
     border-bottom: none

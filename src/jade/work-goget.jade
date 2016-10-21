@@ -1,23 +1,28 @@
 include partials/_order
 
 - var workiso     = true
-
 - var fTitle      = "droom.io/work/goget"
 - var project     = "GoGet Brand/Public"
 - var client      = "GoGet"
 - var studio      = "VLT Labs"
 - var date        = "March 2015"
-- var repo        = "Private"
 - var status      = "In Production"
 - var model       = "Marketplace"
-
-- var role        = [ 'Identity', 'UX + UI' ]
+- var role        = [ 'Identity', 'UX + UI', 'Front-End' ]
 - var stack       = [ 'Balsamiq', 'Paper', 'Adobe© Illustrator', 'Adobe© Photoshop', 'Adobe© InDesign', 'InVision' ]
 
-- var prevTitle   = order1[0]
-- var nextTitle   = order1[2]
-- var prevURL     = order2[0]
-- var nextURL     = order2[2]
+- var live        = false
+- var repo        = false
+
+- var stage       = true
+- var stageTitle  = "clients.droom.io/go"
+- var stageURL    = "http://clients.droom.io/go"
+
+- var prevTitle   = order1[3]
+- var prevURL     = order2[3]
+
+- var nextTitle   = order1[1]
+- var nextURL     = order2[1]
 
 
 doctype html
@@ -26,8 +31,6 @@ html(class="no-js" lang="en")
     include partials/_head
 
   body.work.iso
-    include partials/_top
-
     article(data-project="goget" itemscope itemtype="http://schema.org/CreativeWork").fade-in#context
       .cover-title
         include partials/_nav
@@ -59,82 +62,121 @@ html(class="no-js" lang="en")
 
         .segment.surface
           figure
-            .flex-2
-              .unit
+            .flex
+              .unit.pad
                 img(src="img/projects/gg/gg-research-1.jpg")
-              .unit.tuck
+              .unit.pad
                 img(src="img/projects/gg/gg-research-2.jpg")
-
 
         .segment.blueprint
           figure
-            .flex-12.gg-ui
-              .unit
+            .flex.wrap.gg-ui
+              .unit.unit-12
                 img(src="img/projects/gg/ui/gg-ui-1104-12_01.png")
-              .unit
+              .unit.unit-12
                 img(src="img/projects/gg/ui/gg-ui-1104-12_02.png")
-              .unit
+              .unit.unit-12
                 img(src="img/projects/gg/ui/gg-ui-1104-12_03.png")
-              .unit
+              .unit.unit-12
                 img(src="img/projects/gg/ui/gg-ui-1104-12_04.png")
-              .unit
+              .unit.unit-12
                 img(src="img/projects/gg/ui/gg-ui-1104-12_05.png")
-              .unit
+              .unit.unit-12
                 img(src="img/projects/gg/ui/gg-ui-1104-12_06.png")
-              .unit
+              .unit.unit-12
                 img(src="img/projects/gg/ui/gg-ui-1104-12_07.png")
-              .unit
+              .unit.unit-12
                 img(src="img/projects/gg/ui/gg-ui-1104-12_08.png")
-              .unit
+              .unit.unit-12
                 img(src="img/projects/gg/ui/gg-ui-1104-12_09.png")
-              .unit
+              .unit.unit-12
                 img(src="img/projects/gg/ui/gg-ui-1104-12_10.png")
-              .unit
+              .unit.unit-12
                 img(src="img/projects/gg/ui/gg-ui-1104-12_11.png")
-              .unit
+              .unit.unit-12
                 img(src="img/projects/gg/ui/gg-ui-1104-12_12.png")
             
             figcaption Initial UI experiments, carried through to the core product.
 
         .segment.blueprint
           figure
-            .flex-12
-              .unit
+            .flex.wrap
+              .unit.unit-12
                 img(src="img/projects/gg/marks/gg-marks-1104_01.png")
-              .unit
+              .unit.unit-12
                 img(src="img/projects/gg/marks/gg-marks-1104_02.png")
-              .unit
+              .unit.unit-12
                 img(src="img/projects/gg/marks/gg-marks-1104_03.png")
-              .unit
+              .unit.unit-12
                 img(src="img/projects/gg/marks/gg-marks-1104_04.png")
-              .unit
+              .unit.unit-12
                 img(src="img/projects/gg/marks/gg-marks-1104_05.png")
-              .unit
+              .unit.unit-12
                 img(src="img/projects/gg/marks/gg-marks-1104_06.png")
-              .unit
+              .unit.unit-12
                 img(src="img/projects/gg/marks/gg-marks-1104_07.png")
-              .unit
+              .unit.unit-12
                 img(src="img/projects/gg/marks/gg-marks-1104_08.png")
-              .unit
+              .unit.unit-12
                 img(src="img/projects/gg/marks/gg-marks-1104_09.png")
-              .unit
+              .unit.unit-12
                 img(src="img/projects/gg/marks/gg-marks-1104_10.png")
-              .unit
+              .unit.unit-12
                 img(src="img/projects/gg/marks/gg-marks-1104_11.png")
-              .unit
+              .unit.unit-12
                 img(src="img/projects/gg/marks/gg-marks-1104_12.png")
             
             figcaption Initial wordmark exploration
 
+
+        .segment.type
+          h3 Public face: Immediate problems
+          table.issues
+            thead
+              tr
+                th.top.left(colspan="2") Problem
+                th.top.left.right Type
+            tbody
+              tr
+                td.top.left.icon &#x2717;
+                td.top.issue It doesn’t work on mobiles
+                td.top.left.right.type Technical
+              tr
+                td.top.left.icon &#x2717;
+                td.top.issue Doesn't reflect the quality of the service
+                td.top.left.right.type Cosmetic
+              tr
+                td.top.left.icon &#x2717;
+                td.top.issue Broken features
+                td.top.left.right.type Technical
+              tr
+                td.top.left.icon &#x2717;
+                td.top.issue Cluttered
+                td.top.left.right.type Informational
+              tr
+                td.top.left.icon &#x2717;
+                td.top.issue Hard to find things
+                td.top.left.right.type Informational
+            tfoot
+              tr
+                td(colspan="3").top.bottom.left.right
+                  | View 
+                  a(href="https://drive.google.com/open?id=0B-nn3m_0dK5edlVjMW5nVk1vRms#").inline screenshots of the original site
+                  |  on Google Drive.
+
+
         .segment.diagram
-          include projects/gg/sitemap
+          //- include projects/gg/sitemap
+          //- hr
+          include projects/gg/sitemap_ul
+
 
         .segment.type
           h3 A Singular Hero
-          p 
-          | GoGet's public face is fairly conventional in its layout. A hero image introduces each page, with content modules sitting below each. Whilst marking up the third hero module, I sensed I could 
-          a(href="#").inline DRY this all out
-          | , despite having different content on each (and a carousel on one). This will be made available on GitHub.
+          p
+            = "GoGet's public face is fairly conventional in its layout. A hero image introduces each page, with content modules sitting below. Whilst marking up the third hero module, I felt I could "
+            a(href="https://en.wikipedia.org/wiki/Don%27t_repeat_yourself").inline DRY this all out
+            | , despite having different content on each of them (and a carousel on one). This will be made available on GitHub.
 
         .segment.surface.squash
           include projects/gg/singular
@@ -151,10 +193,10 @@ html(class="no-js" lang="en")
 
         .segment.surface.squash
           figure
-            .flex-2
-              .unit
+            .flex
+              .unit.pad
                 img(src="img/projects/gg/gg-layout-3.jpg")
-              .unit
+              .unit.pad
                 img(src="img/projects/gg/gg-layout-2.jpg")
 
         .segment.type
@@ -164,13 +206,14 @@ html(class="no-js" lang="en")
         .segment.type
           ol.ref
             li
-              a(href="https://www.youtube.com/watch?v=lL1_xwe8x0c").inline Bloomberg TV Malaysia: ‘Leapfrogging’ to Grow Errands Market: GoGet's Chia
+              a(href="https://www.youtube.com/watch?v=lL1_xwe8x0c").inline Bloomberg TV Malaysia: ‘Leapfrogging’ to Grow Errands Market: GoGet’s Chia
             li I think ‘A’ stands for the vechicle grade, but I need to make sure of this.
             li 
-              a(href="https://en.wikipedia.org/wiki/Don%27t_repeat_yourself").inline Don't repeat yourself (Wikipedia) 
-            li Responsive Art-boards
+              a(href="https://en.wikipedia.org/wiki/Don%27t_repeat_yourself").inline Don’t repeat yourself (Wikipedia) 
 
 
-      include partials/_page
-      include partials/_footer
-      include partials/_scripts
+    include partials/_page
+    include partials/_top
+    include partials/_footer
+      
+  include partials/_scripts

@@ -1,5 +1,6 @@
 h1, h2, h3, h4, h5, h6, nav, nav ol li, .h1, .h2, .h3, .h4, .h5, .h6, .nav
   font-family: $display
+  font-style: normal !important
   font-weight: normal !important
 
 h1, .h1,
@@ -7,17 +8,12 @@ nav, .nav
   font-size: 1rem
   margin: 0
   padding: 0
-
-@media (max-width: $phone-max)
-  h1, .h1,
-  nav, .nav
-    font-size: 0.85rem
+  
 
 h2, .h2
   letter-spacing: -0.035em
   line-height: 1.15em
   font-size: 3rem
-  color: $copy
   margin: 0
   margin-left: -0.03em
   margin-bottom: 0.07em
@@ -38,32 +34,41 @@ h3, .h3
   
 @media (max-width: $phone-max)
   h3, .h3
-    font-size: 1.255rem
-    line-height: 1.5rem
+    font-size:    1.5rem
+    line-height:  1.7rem
+
 
 h4, .h4
-  font-size:    1.255rem
-  line-height:  1.5rem  
-  text-align:   center
-  padding-top:  0px
+  font-size:      1.5rem
+  line-height:    1.7rem
+  text-align:     center
+  padding-top:    0px
   padding-bottom: 0px
+  margin:         0
+  
+p + h4, p + .h4
+  margin:     2em 0 1em 0
+
 
 p, .p, li, .li,
   font-size:    1em
+  font-size:    15px
   font-weight:  400
   line-height:  1.65em
-
 
 label,
 sup,
 small,
 figcaption,
 ul.page label,
+ol.ref li,
+ol.credits li,
 dl.credits
   font-family:    $notes
   font-size:      $font-xsmall
   line-height:    15px
   vertical-align: top
+
 
 small
   display: inline-block
@@ -105,7 +110,7 @@ cite:before
 
 sup
   vertical-align: top
-  margin: 0 0 0 0.2em
+  // margin: 0 0 0 0.2em
   display: inline-block
 
 .bind

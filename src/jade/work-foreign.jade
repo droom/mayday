@@ -7,18 +7,20 @@ include partials/_order
 - var client      = "Reformist.io"
 - var studio      = "Reformist.io"
 - var date        = "July 2012"
-- var repo        = "—"
-- var model        = "Theme"
-
-- var URLTitle    = "blog.droom.name"
-- var URLProject  = "http://blog.droom.name"
-
+- var model       = "Theme"
 - var role        = [ 'Identity', 'UX + UI', 'Front-End' ]
 - var stack       = [ 'Adobe© Illustrator', 'Adobe© Photoshop', 'HTML (Vanilla)', 'CSS (Vanilla)' ]
 
-- var prevTitle   = order1[1]
+- var live        = true
+- var liveTitle   = "fotheme.tumblr.com"
+- var liveURL     = "http://fotheme.tumblr.com/"
+
+- var repo        = false
+
+- var prevTitle   = order1[2]
+- var prevURL     = order2[2]
+
 - var nextTitle   = order1[0]
-- var prevURL     = order2[1]
 - var nextURL     = order2[0]
 
 
@@ -28,8 +30,6 @@ html(class="no-js" lang="en")
     include partials/_head
     
   body.work.iso
-    include partials/_top
-
     article(data-project="foreign").fade-in#context
       .cover-title
         include partials/_nav
@@ -118,6 +118,8 @@ html(class="no-js" lang="en")
               a(href="http://www.fontbureau.com/blog/georgia_verdana/").inline Georgia Pro &amp; Verdana Pro: More Widths. More Weights. More Possibilities. 
             li The demo in question was (I think) from Leigh Howells at Headscape which I can't seem to track down now.
 
-      include partials/_page
-      include partials/_footer
-      include partials/_scripts
+    include partials/_page
+    include partials/_top
+    include partials/_footer
+      
+  include partials/_scripts

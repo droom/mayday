@@ -23,15 +23,26 @@
 
         if repo
           dt Repo
-          dd=repo
+          dd 
+            a(itemprop="URL" href=repoURL aria-label=project).inline.dark=repoTitle
 
-        if status
-          dt Status
-          dd=status
+        if stage
+          dt Stage
+          dd 
+            a(itemprop="URL" href=stageURL aria-label=project).inline.dark=stageTitle
 
-        if URLProject
+        if live
           dt Live
-          dd
-            a(itemprop="URL" href=URLProject aria-label=project)=URLTitle
+          dd 
+            a(itemprop="URL" href=liveURL aria-label=project).inline.dark=liveTitle
+
   
   a(href=nextURL tabindex="-1").move.move-right
+
+
+.band.js.hr
+  .segment.type
+    h4 
+      = "Some parts of this site need JavaScript to work properly. Please enable it for the full experience. "
+      a(href="http://enable-javascript.com/").inline How
+      = "?"

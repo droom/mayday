@@ -7,20 +7,24 @@ include partials/_order
 - var client      = "DVG Web"
 - var studio      = "SixLeaves"
 - var date        = "July 2015"
-- var repo        = "Private"
 - var status      = "Live"
 - var model       = "SaaS"
-- var URLTitle    = "givereceipt.com"
-- var URLProject  = "http://www.givereceipt.com"
-
 - var role        = [ 'Identity', 'UX + UI', 'Front-End' ]
 - var stack       = [ 'Balsamiq', 'Paper', 'Adobe© Illustrator', 'Adobe© Photoshop', 'Adobe© InDesign', 'HTML (Ruby Slim)' ]
-- var collab      = [ 'Hassanin Ahmed (Back-end)']
+- var collab      = [ 'Hassanin Ahmed (RoR)']
 
-- var prevTitle   = order1[2]
-- var nextTitle   = order1[1]
-- var prevURL     = order2[2]
-- var nextURL     = order2[1]
+- var live        = true
+- var liveTitle   = "givereceipt.com"
+- var liveURL     = "http://www.givereceipt.com/"
+
+- var repo        = false
+
+- var prevTitle   = order1[1]
+- var prevURL     = order2[1]
+
+- var nextURL     = order2[3]
+- var nextTitle   = order1[3]
+
 
 doctype html
 html(class="no-js" lang="en")
@@ -28,8 +32,6 @@ html(class="no-js" lang="en")
     include partials/_head
 
   body.work.iso
-    include partials/_top
-
     article(data-project="givereceipt").fade-in#context
       .cover-title
         include partials/_nav
@@ -46,14 +48,17 @@ html(class="no-js" lang="en")
         .segment.relative.squash
           figure
             img(src="img/projects/gr/iso.png")
-       
+
+
         .segment.type
           p A new goods and services tax (GST) in Malaysia brought about a change in the market, affecting small business owners in particular. It became required by law to issue receipts with every purchase. Heavy accounting software would not be suitable for the majority of small traders and GiveReceipt sought to plug that gap.
 
-        .segment.blueprint.squash
-          figure
-            img(src="img/projects/gr/flow.png")
-            figcaption Users to enter company information after registration to reduce signup friction.
+
+        .segment.blueprint
+          figure.gg.flow
+            include projects/gr/flow-flex
+            figcaption Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi corrupti, deserunt rem eaque iure, sit omnis ducimus incidunt dolore atque voluptatibus minus nobis. Minus quas velit eligendi iusto corporis tenetur.
+
 
         .segment.type
           h3 Creating an identity
@@ -73,13 +78,12 @@ html(class="no-js" lang="en")
 
         .segment.surface
           figure
-            .flex-2
-              .unit
+            .flex
+              .unit.pad
                 img(src="img/projects/gr/block-0.png")
-              .unit.tuck
+              .unit.pad.tuck
                 img(src="img/projects/gr/block-1.png")
             figcaption 20mm × 230mm, 240gsm namecards. Die-cut to show off our corrigated motif.
-
 
       .band.ref
         .segment.type
@@ -93,7 +97,8 @@ html(class="no-js" lang="en")
             li
               a(href="https://www.digitalnewsasia.com/startups/givereceipt-gets-CIP500-grant-only-3mths-after-going-live").inline GiveReceipt gets CIP 500 grant only 3mths after going live (Digital News Asia)
 
-
-      include partials/_page
-      include partials/_footer
-      include partials/_scripts
+    include partials/_page
+    include partials/_top
+    include partials/_footer
+      
+  include partials/_scripts

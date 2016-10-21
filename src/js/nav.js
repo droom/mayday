@@ -1,20 +1,5 @@
 $(document).ready(function() {
 
-//   var upwards = false;
-//   var lastScrollTop = 0;
-//   $(window).scroll(function(event){
-//    var st = $(this).scrollTop();
-//    if (st > lastScrollTop){
-//     upwards = true
-//     console.log("upwards", upwards)
-//   } else {
-//     upwards = false
-//     console.log("upwards", upwards)
-//   }
-//   lastScrollTop = st;
-// });
-
-
   if ( $( "#checkpoint" ).length ) {
     var returnShow = new Waypoint({
       element: document.getElementById('checkpoint'),
@@ -45,6 +30,8 @@ $(document).ready(function() {
       }
     }
   });
+
+
 
   $('.glide-slow').click(function() {
     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
