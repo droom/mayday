@@ -21,7 +21,6 @@ body.cv
       line-height: 1.4em
       &.hide
         display: none
-
     dl dt,
     dl dd
       font-weight: bold
@@ -36,12 +35,6 @@ body.cv
       height:     1px
       border:     none
       background: rgba(0, 0, 0, 0.08)
-
-    // p.rep
-      // font-family:    $notes
-      // font-size:      $font-xsmall
-      // line-height:    15px
-      // vertical-align: top
 
     ul.plain li
       list-style: none
@@ -65,7 +58,9 @@ body.cv
         max-width: $narrow-unit
         z-index: 1
         margin: auto
-        
+
+        p:last-child
+          margin-bottom: 0
 
 @media (max-width: $phone-max)
   body.cv
