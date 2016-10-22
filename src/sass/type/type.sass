@@ -98,6 +98,22 @@ blockquote::before
 blockquote::after
   content: close-quote
 
+
+ul.reflow li a,
+figure .ih.reflow .cell,
+figure.gg-singular label,
+figure.gg-singular,
+section.flow,
+section.gg.sitemap
+  line-height: 1.5em
+  font-family: $technical
+  max-width: $narrow-unit
+  text-transform: uppercase
+  color: $ink
+  font-size: 10px
+  .bold
+    font-weight: 600
+    
 cite
   display: block
   margin: 0.75em 0 2.5em 0
@@ -110,7 +126,6 @@ cite:before
 
 sup
   vertical-align: top
-  // margin: 0 0 0 0.2em
   display: inline-block
 
 .bind

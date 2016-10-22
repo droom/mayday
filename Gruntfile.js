@@ -48,7 +48,7 @@ module.exports = function(grunt) {
       },
 
       postcss: {
-        files: ['dist/css/style.css'],
+        files: ['dist/css/screen.css'],
         tasks: ['postcss']
       },
 
@@ -66,7 +66,9 @@ module.exports = function(grunt) {
           style: 'compressed'
         },
         files: {
-          'dist/css/droomio.css': 'src/sass/style.sass',
+          'dist/css/screen.css': 'src/sass/screen.sass',
+          'dist/css/print.css': 'src/sass/print.sass',
+
         }
       }
     },
@@ -74,7 +76,7 @@ module.exports = function(grunt) {
 
     postcss: {
       options: {
-        map: true,
+        map: false,
         map: {
           inline: false,
           annotation: 'dist/css/maps/'
@@ -86,7 +88,7 @@ module.exports = function(grunt) {
         ]
       },
       dist: {
-        src: 'dist/css/droomio.css'
+        src: 'dist/css/screen.css'
       }
     },
 
