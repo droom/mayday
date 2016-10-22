@@ -13,18 +13,17 @@ body.cv
     ul + ul,
     p  + p,
     p  + ul,
-    dl + ul,
-    dl + p
+    dl + ul
       margin-top: 1em
+
+    dl + p
+      margin-top: 2em
 
     dl, dt, dd
       line-height: 1.4em
       &.hide
         display: none
-    dl dt,
-    dl dd
-      font-weight: bold
-
+    
     a
       border: none
       background-image: -linear-gradient(top,transparent 87%,#81d3eb 0,#81d3eb 97%,transparent 0)
@@ -62,9 +61,8 @@ body.cv
         p:last-child
           margin-bottom: 0
 
+
 @media (max-width: $phone-max)
-  body.cv
-    ul.brace
-      li.main
-        padding: $gttr-ph
+  body.cv main ul.brace li.main
+    padding: $gttr-ph
 
