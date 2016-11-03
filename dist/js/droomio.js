@@ -3752,6 +3752,12 @@ var Konami = function (callback) {
 
 ;$(document).ready(function() {
 
+  Modernizr.addTest('pointerevents',function(){
+    return 'pointerEvents' in document.documentElement.style;
+  })
+
+});;$(document).ready(function() {
+
 	function flash(){
 		var $div = $("<div>", {"class": "flash"});
 		$("body").append($div);
@@ -3798,7 +3804,6 @@ var Konami = function (callback) {
 	});
 
 });;$(document).ready(function() {
-
 
   if ( $( "#checkpoint" ).length ) {
     var returnShow = new Waypoint({
