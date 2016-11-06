@@ -1,63 +1,53 @@
-#gr-flow
-	h4 gr&mdash;process_diagram_v2
+h4 gr&mdash;process_diagram_v2
+section.flow
+  .row.center
+    .terminal A
+  
+  .row.center
+    .cell.join.join-c
 
-	.flex-parent
-		.flex-child.terminal
-			label A
+  .row
+    .cell.box.profile
+      label Profile admin
+    .cell.join.join-a.strut
+    .cell.box.dashboard
+      label Dashboard
+    .cell.join.join-b.strut
+    .cell.box.view
+      label View single receipt
+      
+  .row.flex-end
+    .cell.join.join-c
+    .cell.join.strut
+    .cell.join.join-c
+    
+  .row.flex-end
+    .cell.box.create
+      label Create new receipt
+    .cell.join.join-a.strut
+    .cell.box.edit 
+      label Edit
+      
+  .row.center
+    .cell.join.join-e
+  
+  .row.center
+    .cell.box.review
+      label Review
 
-		.flex-child.join
-			.cell
+  .row.center
+    .cell.join.join-c
 
-		.flex-child
-			.cell.profile
-				.box
-					label Profile admin
-			.cell.dashboard
-				.box
-					label Dashboard
-			.cell.view
-				.box
-					label View single receipt
-
-		.flex-child
-			.cell.join
-			.cell.join
-			.cell.join
-
-		.flex-child
-			.cell.create
-				.box
-					label Create new receipt
-			.cell.edit 
-				.box
-					label Edit
-
-		.flex-child
-			.cell.join
-			.cell.join
-			.cell.join
-
-		.flex-child
-			.cell.review
-				.box
-					label Review
-		
-		.flex-child
-			.cell.join
-			.cell.join
-			.cell.join
-
-		.flex-child
-			.cell.send
-				.box
-					label Send
-			.cell.inbox
-				.box
-					label Receipt emailed to recipient (optional cc to sender)
-		
-		.flex-child
-			.cell.join
-
-		.flex-child.terminal
-			label.end A
-
+  .row.flex-end
+    .cell.box.send
+      label Send
+    .cell.join.join-b.strut
+    .cell.box.inbox
+      label Receipt emailed to recipient
+  
+  .row.center
+    .cell.join.join-c
+  
+  .row.center
+    .stop
+      .terminal.end A
