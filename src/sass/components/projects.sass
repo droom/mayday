@@ -38,7 +38,6 @@ ul.work
 				background-repeat: no-repeat
 				background-size: 50px
 				background-position: 96% 50%
-				// @include tween(300ms)
 				transition: 300ms background ease, 300ms opacity ease
 
 		&.disable
@@ -80,7 +79,7 @@ ul.work.tile
 		opacity: 		0
 		animation-name: fade-in-tiles
 		animation-fill-mode: forwards
-		animation-iteration-count: 1
+		animation-iteration-count: 1∏
 		animation-timing-function: ease-out
 		animation-duration:  200ms
 		&:nth-child(1)
@@ -138,9 +137,7 @@ ul.work.tile
 						display: block
 						min-width: auto
 					dd.project.h3
-						font-family:    $running
-						font-size:      $font-xsmall
-						line-height:    15px
+						@include tiny()
 						margin-bottom:  0
 
 
@@ -169,7 +166,7 @@ ul.work.tile
 	ul.work.tile
 		li
 			flex-basis: 100%
-			max-width: 100%
+			max-width: 	100%
 			align-self: flex-start
 			flex-grow: 	1
 			border-bottom: 2px solid $bg

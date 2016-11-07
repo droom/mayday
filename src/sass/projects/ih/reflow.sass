@@ -1,32 +1,16 @@
-section.flow
-	padding:   $gttr-dt
-@media (max-width: $phone-max)
-	section.flow
-		padding: $gttr-ph
-		
 ul.reflow
-	width: 		100%
-	display: 	block
-	margin: 	35px auto 35px auto
-	padding: 	0
-	text-align: center
-	
 	li
 		display: inline-block
 
 		a
-			padding: 			11px 15px 10px 15px
+			padding: 		11px 15px 10px 15px
 			background: 	white
 
 		a.active
 			background: yellow
 
 
-@media (max-width: 500px)
-	figure .ih.reflow
-		zoom: 0.7
-
-figure .ih.reflow
+figure .diagram.ih.reflow
 	margin:         35px auto 20px auto
 	position:       relative
 	width:      550px
@@ -59,6 +43,7 @@ figure .ih.reflow
 			
 			&:after
 				content: "Navigation: Cycle Products"
+				@include tiny()
 
 		&.image
 			svg
@@ -73,8 +58,9 @@ figure .ih.reflow
 			left:   0
 			&:after
 				content: "Navigation: Main"
+				@include tiny()
 
-figure .ih.reflow.before
+figure .diagram.ih.reflow.before
 	.cell
 		&.nav
 			opacity: 0
@@ -86,9 +72,11 @@ figure .ih.reflow.before
 			&:after
 				float: left
 				position: absolute
-				top: 	10px
+				top:  10px
 				left: 10px
 				content: "Image (×1)"
+				@include tiny()
+				
 
 		&.cycle,
 		&.image
@@ -107,9 +95,11 @@ figure .ih.reflow.before
 			top: 	0
 			right: 	62%
 			&:after
-				content: "Stats"
 				background: white
 				padding: 0.3rem 0.3rem
+				content: "Stats"
+				@include tiny()
+				
 			.tab
 				display: none
 
@@ -139,7 +129,12 @@ figure .ih.reflow.before
 				padding: .1rem .35rem 0.15rem .35rem
 
 
-figure .ih.reflow.after
+@media (max-width: 500px)
+	figure .diagram.ih.reflow
+		zoom: 0.7
+
+
+figure .diagram.ih.reflow.after
 	.cell
 		&.nav
 			opacity: 1

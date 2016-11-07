@@ -49,11 +49,10 @@ html(class="no-js" lang="en")
 
       main(role="main")
 
-        .segment.type
-          h3 A responsive, uncluttered site, tailor-made for both existing and prospective users.
-          p Ideahouse is a wholesaler specialising in corporate gifts. They've been operating since 1993 and have grown to supply thousands of registered retailers (internally referred to as &#8216;agents&#8217;) &mdash; currently shipping to Malaysia, Singapore and Brunei. 
+        h2 A responsive, uncluttered, tailor-made site for both existing and prospective users.
+        p Ideahouse is a wholesaler specialising in corporate gifts. They've been operating since 1993 and have grown to supply thousands of retailers (internally referred to as &#8216;agents&#8217;) &mdash; currently shipping to Malaysia, Singapore and Brunei. 
 
-          p I was approached to redesign their site.
+        p I was approached to redesign their site.
 
         .segment.surface
           figure
@@ -63,102 +62,86 @@ html(class="no-js" lang="en")
               .unit.pad.tuck
                 img(src="img/projects/ih/ih-research-2.jpg")
 
-        .segment.type
-          h3 Immediate Problems
+        h3 Immediate Problems
+        table.issues
+          thead
+            tr
+              th.top.left(colspan="2") Problem
+              th.top.left.right Type
+          tbody
+            tr
+              td.top.left.icon &#x2717;
+              td.top.issue Poor mobile view
+              td.top.left.right.type Technical
+            tr
+              td.top.left.icon &#x2717;
+              td.top.issue It&rsquo;s outdated
+              td.top.left.right.type Cosmetic
+            tr
+              td.top.left.icon &#x2717;
+              td.top.issue It&rsquo;s slow
+              td.top.left.right.type Technical
+            tr
+              td.top.left.icon &#x2717;
+              td.top.issue It&rsquo;s cluttered
+              td.top.left.right.type Informational                
+            tr
+              td.top.left.icon &#x2717;
+              td.top.issue It&rsquo;s hard to find things
+              td.top.left.right.type Informational
 
-          table.issues
-            thead
-              tr
-                th.top.left(colspan="2") Problem
-                th.top.left.right Type
-            tbody
-              tr
-                td.top.left.icon &#x2717;
-                td.top.issue Poor mobile view
-                td.top.left.right.type Technical
-              tr
-                td.top.left.icon &#x2717;
-                td.top.issue It’s outdated
-                td.top.left.right.type Cosmetic
-              tr
-                td.top.left.icon &#x2717;
-                td.top.issue It’s slow
-                td.top.left.right.type Technical
-              tr
-                td.top.left.icon &#x2717;
-                td.top.issue It’s cluttered
-                td.top.left.right.type Informational                
-              tr
-                td.top.left.icon &#x2717;
-                td.top.issue It’s hard to find things
-                td.top.left.right.type Informational
+          tfoot
+            tr
+              td(colspan="3").top.bottom.left.right
+                | View 
+                a(href="#").inline screenshots of the original site
+                |   on Google Drive.
 
-            tfoot
-              tr
-                td(colspan="3").top.bottom.left.right
-                  | View 
-                  a(href="#").inline screenshots of the original site
-                  |   on Google Drive.
 
-        .segment.type
-          h3 It doesn’t work on mobiles
+        h3 It doesn’t work on mobiles
 
-          p This was really the most pressing issue and the driving force behind the redesign. Although accessible from any browser-enabled device, the experience on small screens was a pan-and-zoom headache and accessing via desktop was the only viable option. This leads me to the second criticism&hellip;
+        p This was really the most pressing issue and the driving force behind the redesign. Although accessible from any browser-enabled device, the experience on small screens was a pan-and-zoom headache and accessing via desktop was the only viable option. This leads me to the second criticism&hellip;
 
-          p
-            | Outdated is quite a nebulous term, but we all have a sense of what modern websites look, feel and function like. We can understand this from a techincal standpoint (in this instance 'not responsive') but it also relates to shallower, more cosmetic things. Trust is a big issue when you're trying to build relationships anything and the perception of website trust is 
-            a(href="https://www.nngroup.com/articles/trustworthy-design/").inline no different in Asian markets
-            sup
-            | . Making the site appear trustworthy to prospective agents was essential to growth.
+        p
+          | Outdated is quite a nebulous term, but we all have a sense of what modern websites look, feel and function like. We can understand this from a techincal standpoint (in this instance 'not responsive') but it also relates to shallower, more cosmetic things. Trust is a big issue when you're trying to build relationships anything and the perception of website trust is 
+          a(href="https://www.nngroup.com/articles/trustworthy-design/").inline no different in Asian markets
+          sup
+          | . Making the site appear trustworthy to prospective agents was essential to growth.
 
-          h4 Solve the hard bit first
-          p 
-            | In a project like this, the real task of the Designer is to 
-            a(href="https://www.youtube.com/watch?v=lL1_xwe8x0c").inline create a system
-            sup
-            |  , rather than simply create individual views. This requires establishing patterns that can be applied consistently throughout. The most information-dense, component-heavy view on the site is the Product page itself, so that felt like a sensible place to start.
+        h3 Solve the hard bit first
+        p 
+          | In a project like this, the real task of the Designer is to 
+          a(href="https://www.youtube.com/watch?v=lL1_xwe8x0c").inline create a system
+          sup
+          |  , rather than simply create individual views. This requires establishing patterns that can be applied consistently throughout. The most information-dense, component-heavy view on the site is the Product page itself, so that felt like a sensible place to start.
 
-        include projects/ih/reflow
+        .segment.blueprint.relative
+          figure
+            hgroup title—1
+            ul.controls.reset.reflow#checkpoint-reflow
+              li
+                a(href="#").plain.reflow.before.active Before
+              li
+                a(href="#").plain.reflow.after After
+            include projects/ih/reflow
+            figcaption On the original layout, two sets of data were grouped into one table, making it very confusing to scan until you understood this quirk. By grouping this information into a narrow module, we could ensure it'll scale down to a mobile viewport.
 
-        .segment.type
-          h3 It&#8217;s cluttered &plus; hard to find things
+        h3 It&#8217;s cluttered &plus; hard to find things
 
-          p The broad navigational structure was already defined when the project reached me, so I was really working in those parameters. Ideahouse has a loyal retailer base, some of whom have grown with the company. Being mindful not to alienate them would be crucial to a successful update. The relationship they would have with the website is a little different to an ordinary B2C consumer: they have more invested in the status quo and will likely be more resistant to change, even if it benefits newcomers.
+        p The broad navigational structure was already defined when the project reached me, so I was really working in those parameters. Ideahouse has a loyal retailer base, some of whom have grown with the company. Being mindful not to alienate them would be crucial to a successful update. The relationship they would have with the website is a little different to an ordinary B2C consumer: they have more invested in the status quo and will likely be more resistant to change, even if it benefits newcomers.
 
-          p Although the site was cluttered, adding more information would have been just been lost amongst what was already there and just confused the eye even more.
-          
-          p A ‘Quick Search’ is present on all views and is only ever hidden scrolling down on small screens, for screen real estate reasons. The ‘Advanced Search’ is still accessible through level 1 navigation, offering more precise control.
+        p Although the site was cluttered, adding more information would have been just been lost amongst what was already there and just confused the eye even more.
+        
+        p A ‘Quick Search’ is present on all views and is only ever hidden scrolling down on small screens, for screen real estate reasons. The ‘Advanced Search’ is still accessible through level 1 navigation, offering more precise control.
 
         .segment.blueprint
           figure
-            h4 
-              span.under Advanced Search
-              span.chevron &gt;
-              br
-              span.under Search results for &#8216;omega&#8217; (22)
-              span.chevron &gt;
-              br
-              | OMEGA &mdash; Ball Pen (Black Ink)
-            
-            h4.hr
-              span.under Browse Categories
-              span.chevron &gt;
-              br
-              span.under Metal Pens
-              span.chevron &gt;
-              br
-              | OMEGA &mdash; Ball Pen (Black Ink)
-
+            include projects/ih/breadcrumb
             figcaption Using breadcrumbs as titles allowed us to condense two key features into one. The user always knows where they are and how they got there.
 
         .segment.blueprint
           figure
-            h4.modal 
-              | There are [$NUM] new products since your last visit.
-              br
-              span.btn View all
-              span.btn Dismiss
-
+            include projects/ih/modal
             figcaption The idea behind this was to keep the user constantly up-to-date with the product line, ensuring they don't miss out on anything that would interest thier customers. 
 
         .segment.swatch.ideahouse
@@ -192,12 +175,10 @@ html(class="no-js" lang="en")
               div E. Contact
               div F. Preferred Agents Program
 
-        .segment.type
-          h3 Onwards
-          
-          p Ideahouse's Digital Manager was kind enough to share a few insights into how the new site was received. A benefit relayed that I didn’t predict was the experience of demo'ing the site with prospective clients. This could happen at trade shows, at their office or someplace else entirely. The only thing these scenarios have in common is that Ideahouse wouldn’t be using a desktop machine in a controlled environment. A representative would certainly use their mobile device and having it displayed correctly at whatever size is asked makes a great first impression.
-          p Prior to the update, regular clients would more frequently email quote requests (instead of finding this available information out themselves. This is more overhead for the staff and really wouldn't scale very well. This decline in assistance but not in sales suggested this information was now much easier to find.
-          p There was a clear divide between users in one particular view, but it wasn’t drawn along new/existing users, but rather the age of the existing users. The 'Isolated Product' page (fig.1) is the view in question as it meant not all information was on the screen at once, no matter how unorderly. This is something I want to explore further as there might be a solution in which everyone is happy.
+        h3 Onwards
+        p Ideahouse's Digital Manager was kind enough to share a few insights into how the new site was received. A benefit relayed that I didn’t predict was the experience of demo'ing the site with prospective clients. This could happen at trade shows, at their office or someplace else entirely. The only thing these scenarios have in common is that Ideahouse wouldn’t be using a desktop machine in a controlled environment. A representative would certainly use their mobile device and having it displayed correctly at whatever size is asked makes a great first impression.
+        p Prior to the update, regular clients would more frequently email quote requests (instead of finding this available information out themselves. This is more overhead for the staff and really wouldn't scale very well. This decline in assistance but not in sales suggested this information was now much easier to find.
+        p There was a clear divide between users in one particular view, but it wasn’t drawn along new/existing users, but rather the age of the existing users. The 'Isolated Product' page (fig.1) is the view in question as it meant not all information was on the screen at once, no matter how unorderly. This is something I want to explore further as there might be a solution in which everyone is happy.
 
       .band.ref
         .segment.type
@@ -212,7 +193,7 @@ html(class="no-js" lang="en")
 
 
 
-    include partials/_page
+    include partials/_pager
     include partials/_top
     include partials/_footer
       

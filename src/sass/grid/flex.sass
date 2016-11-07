@@ -2,21 +2,28 @@
   display:  flex
   width:    100%
   margin:   auto
-  justify-content: space-around
-  align-items: center 
 
-  &.recto
-    align-items: flex-start
+  .start
+    justify-content: flex-start
 
-  &.verso
-    align-items: flex-end
+  .end
+    justify-content: flex-end
+
+  .center
+    justify-content: center
+
+  .between
+    justify-content: space-between
   
+  .around
+    justify-content: space-around
+
   &.wrap
     flex-flow: row wrap
 
   .unit
     flex-grow: 1
-    text-align: center
+    
     img
       width: 100%
 

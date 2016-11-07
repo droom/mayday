@@ -13,18 +13,29 @@ html(class="no-js" lang="en")
       .band.head.hr.relative
         .segment.type.mast
           header
-            h2 Selected Work
+            h1 Selected Work
             include components/view
             
       main(role='main')#checkpoint
         ul.work.reset#work
 
           li
+            a(href="work-goget-app.html").plain
+              .segment.type.work.gg
+                dl.reset.credits
+                  dt.project Project
+                  dd.project.h3 GoGet App
+                  dt.client Client
+                  dd.client GoGet
+                  dt.model Model
+                  dd.model Marketplace
+
+          li
             a(href="work-goget.html").plain
               .segment.type.work.gg
                 dl.reset.credits
                   dt.project Project
-                  dd.project.h3 GoGet Brand/Public
+                  dd.project.h3 GoGet Brand/Public Face
                   dt.client Client
                   dd.client GoGet
                   dt.model Model
@@ -59,11 +70,10 @@ html(class="no-js" lang="en")
                   dt.project Project
                   dd.project.h3 Foreign Office
                   dt.client Client
-                  dd.client Reformist.io
+                  dd.client Self initiated
                   dt.model Model
                   dd.model Editorial
 
-                  
           li.disable
             .segment.type.work
               dl.reset.credits
@@ -90,9 +100,9 @@ html(class="no-js" lang="en")
                 dt.project Project
                 dd.project.h3 Rainbow Theme
                 dt.client Client
-                dd.client Reformist.io
+                dd.client Self initiated
                 dt.model Model
-                dd.model Theme (tumblr)
+                dd.model Editorial
 
       include partials/_footer
       include partials/_scripts

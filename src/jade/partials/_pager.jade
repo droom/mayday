@@ -1,0 +1,14 @@
+if project
+  .band.hr.relative.pager
+    
+    .segment.type
+      a(href=prevURL tabindex="-1").move.move-left
+      a(href=nextURL tabindex="-1").move.move-right
+
+      ul.reset.flex.page.ghost
+        li.unit.ghost
+          label.caps Previous
+          a(href=prevURL).h3.plain.ghost=prevTitle
+        li.unit.right.ghost.align-r
+          label.caps Next 
+          a(href=nextURL).h3.plain.ghost=nextTitle

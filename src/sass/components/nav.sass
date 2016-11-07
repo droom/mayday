@@ -1,24 +1,19 @@
 #top
   position: fixed
-  left: 0
-  opacity: 0
-  width: 100%
-  top: -75px
+  top:      -75px
+  left:     0
+  width:    100%
+  opacity:  0
   @include theme-A(0.8)
 
   &.show
-    opacity: 1
-    top: 0px
+    opacity:  1
+    top:      0px
 
-
-ol.nav
-  display: flex
-  flex-flow: nowrap
-  li
-    width: 50%
-    &:nth-child(2)
-      text-align: right
-
+nav ol li
+  // outline: 1px solid green
+  // display: inline-block
+  // width: 48%
 
 .band.hr.relative.pager
   .segment.type
