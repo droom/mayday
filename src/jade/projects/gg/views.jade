@@ -1,0 +1,96 @@
+.diagram.views.flex.main(data-js-module='filtering-demo')
+  .gogetter
+    .chrome-3
+      .but-l-1
+      .but-l-2
+      .but-l-3
+      .but-r-1
+      .chrome-2
+        .circle
+        .oval
+        .chrome-1
+          label I am a GoGetter
+          .grid
+            .element-item.stage.join.active.fin
+              .terminal
+              .joinery
+            .element-item.desc
+              label Job Started
+            .element-item.status.flex
+              .tick-wrap
+                img(src="img/projects/gg/tick.svg").tick.tick-1
+            .element-item.stage.join.active.fin
+              .terminal.terminal-b A
+              .joinery
+            .element-item.desc
+              label Frozen Yoghurt Guava if available if not original x1+ Sunflower seeds topping
+            .element-item.status.flex
+              .tick-wrap
+                img(src="img/projects/gg/tick.svg").tick.tick-2
+            .element-item.stage.join.active.fin
+              .terminal B
+              .joinery
+            .element-item.desc
+              label Deliver to my work address
+            .element-item.status.flex
+              .tick-wrap
+                .filter-button-group.button-group.js-radio-button-group
+                  button.button(data-filter='.fin').finished
+                    img(src="img/projects/gg/tick.svg").tick.tick-3.button
+            .element-item.fin.reopen
+              .filter-button-group.button-group.js-radio-button-group
+                button.button(data-filter=':not(.reopen)').reopen REOPEN
+            .element-item.stage.fin
+              .terminal
+            .element-item.desc.fin 
+              label Job Complete
+            .element-item.status.flex.fin
+              .tick-wrap
+                img(src="img/projects/gg/tick.svg").tick
+
+  .poster
+    .chrome-3
+      .but-l-1
+      .but-l-2
+      .but-l-3
+      .but-r-1
+      .chrome-2
+        .circle
+        .oval
+        .chrome-1
+          label I am a Poster
+          .grid
+            .element-item.stage.join.active.fin
+              .terminal
+              .joinery
+            .element-item.desc Job Started
+            .element-item.status.flex
+              .tick-wrap
+                img(src="img/projects/gg/tick.svg").tick.tick-1
+            .element-item.stage.join.active.fin
+              .terminal A
+              .joinery
+            .element-item.desc
+              label
+                | Frozen Yoghurt Guava
+                | if available if not original
+                | x1+ Sunflower seeds topping
+            .element-item.status.flex
+              .tick-wrap
+                img(src="img/projects/gg/tick.svg").tick.tick-2
+            .element-item.stage.join.active.fin
+              .terminal B
+              .joinery
+            .element-item.desc
+              label Deliver to my work address
+            .element-item.status.flex
+              .tick-wrap
+                img(src="img/projects/gg/tick.svg").tick.tick-3
+            .element-item.fin.reopen
+            .element-item.stage.fin
+              .terminal
+            .element-item.desc.fin
+              label Job Complete
+            .element-item.status.flex.fin
+              .tick-wrap
+                img(src="img/projects/gg/tick.svg").tick
