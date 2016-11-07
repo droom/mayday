@@ -1,13 +1,12 @@
 $display:       "c-std-bold-subset", "Helvetica Neue", Helvetica, Arial, sans-serif
 $running:		-apple-system, BlinkMacSystemFont, "hndi-std", "Roboto", "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif
 $technical:		"Roboto Mono", "Consolas", "Monaco", "Lucida Console", "Andale Mono"
+$entity:		Arial, Helvetica, sans-serif
 
-$font-xsmall:	10px
 $border:		1px solid rgba(0, 0, 0, 0.08)
 
 $maths:			rgba(33, 153, 231, 1)
 $copy:		   	rgba(0, 0, 0, 0.85)
-
 $bg:	    	rgba(241, 241, 241, 1)
 $hover:		  	rgba(255, 255, 255, 0.4)
 $ink:      		rgba(46, 77, 210, 1)
@@ -19,6 +18,19 @@ $phone-max:		500px
 $gttr-ph:	 	15px
 $gttr-dt:	 	26px
 $gttr-dt-top:	22px
+
+
+@mixin tiny()
+	font-family:    $running
+	font-size:      10px
+	line-height:    15px
+	vertical-align: top
+
+@mixin technical()
+	font-family: 	$technical
+	font-size:      10px
+	line-height:    15px
+	vertical-align: top
 
 
 @mixin theme-A($alpha)
@@ -45,6 +57,8 @@ $gttr-dt-top:	22px
 
 @import "type/includes.sass"
 @import "type/type.sass"
+@import "type/details.sass"
+@import "type/colour.sass"
 
 @import "images/base.sass"
 @import "images/jacket.sass"
@@ -66,21 +80,21 @@ $gttr-dt-top:	22px
 
 @import "projects/shared/swatch.sass"
 @import "projects/shared/cover.sass"
+@import "projects/shared/terminal.sass"
 
 @import "projects/gg/sitemap.sass"
 @import "projects/gg/singular.sass"
 @import "projects/gg/ui.sass"
-
 @import "projects/gr/flow.sass"
-@import "projects/at/atop.sass"
-
 @import "projects/ih/reflow.sass"
-@import "projects/ih/blueprints.sass"
+@import "projects/ih/breadcrumb.sass"
 @import "projects/ih/slider.sass"
+@import "projects/gg/views/chrome.sass"
+@import "projects/gg/views/views.sass"
 
 @import "a11y/no-js.sass"
 @import "a11y/no-flexbox.sass"
 @import "a11y/no-cssgradients.sass"
-
-
 @import "shame.sass"
+
+

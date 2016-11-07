@@ -18,6 +18,7 @@ module.exports = function(grunt) {
         'src/sass/projects/ih/*',
         'src/sass/projects/gg/*',
         'src/sass/projects/gr/*',
+        'src/sass/projects/gg/views/*',
 
         'src/sass/a11y/*',
         'src/sass/components/*',
@@ -34,7 +35,11 @@ module.exports = function(grunt) {
         files: [
         'src/jade/*.jade', 
         'src/jade/partials/*',
-        'src/jade/projects/*'
+        'src/jade/projects/*',
+        'src/jade/projects/gr/*',
+        'src/jade/projects/ih/*',
+        'src/jade/projects/shared/*',
+        'src/jade/projects/gg/*'
         ],
         
         tasks: ['jade'],
@@ -133,6 +138,7 @@ module.exports = function(grunt) {
         'src/lib/slick.js',
         'src/lib/jquery.waypoints.js',
         'src/lib/modernizr-2.8.3.min.js',
+        'src/lib/isotope.js',
         'src/lib/konami.js',
         'src/js/*.js',
         ],

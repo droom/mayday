@@ -1,17 +1,32 @@
 main
-  z-index: 0
+	z-index: 0
+
+main
+	table,
+	h2,
+	h3,
+	p
+		z-index: 1
+
+.pager
+	a
+		z-index: 1
+
+	ul.page
+		li.ghost
+			z-index: 2
 
 a.pan
-  z-index: 10
+	z-index: 10
 
-#head a
-  z-index: 996
-
-#head nav ol li
-  z-index: 997
+#head
+	a
+		z-index: 996
+	
+	nav ol li
+		z-index: 997
 
 #top
-  z-index: 998
-
-#top ol li
-  z-index: 999
+	z-index: 998
+	ol li
+		z-index: 999

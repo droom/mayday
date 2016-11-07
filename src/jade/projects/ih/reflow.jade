@@ -1,30 +1,22 @@
-.segment.blueprint.relative
+.diagram.ih.reflow.before#reflow
+	.cell.nav
+	.cell.colour
+	.cell.stock
+	.cell.cycle
+	.cell.image
+		svg(version='1.1', xmlns='http://www.w3.org/2000/svg')
+			line(x1='0' x2='100%' y1='0'    y2='100%' stroke-dasharray="1,1"  style='stroke-width: 1px;' stroke='blue' fill='none')
+			line(x1="0" x2="100%" y1="100%" y2="0"    stroke-dasharray="1,1"  style="stroke-width: 1px;" stroke="blue" fill="none")
+	.cell.stats
+		.tab
+			label STATS
+		.region
+	.cell.colour
+		.tab
+			label COLOURS
+		.region
+	.cell.stock 
+		.tab
+			label STOCK
+		.region
 
-	ul.reflow#checkpoint-reflow
-		li
-			a(href="#").plain.reflow.before.active Before
-		li
-			a(href="#").plain.reflow.after After
-
-	
-	figure
-		.ih.reflow.before#reflow
-			.cell.nav
-			.cell.colour
-			.cell.stock
-			.cell.cycle
-			.cell.image
-				svg(version='1.1', xmlns='http://www.w3.org/2000/svg')
-					line(x1='0' x2='100%' y1='0'    y2='100%' stroke-dasharray="1,1"  style='stroke-width: 1px;' stroke='blue' fill='none')
-					line(x1="0" x2="100%" y1="100%" y2="0"    stroke-dasharray="1,1"  style="stroke-width: 1px;" stroke="blue" fill="none")
-			.cell.stats
-				.tab STATS
-				.region
-			.cell.colour
-				.tab COLOURS
-				.region
-			.cell.stock 
-				.tab STOCK
-				.region
-
-		figcaption On the original layout, two sets of data were grouped into one table, making it very confusing to scan until you understood this quirk. By grouping this information into a narrow module, we could ensure it'll scale down to a mobile viewport.

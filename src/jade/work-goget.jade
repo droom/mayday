@@ -40,25 +40,26 @@ html(class="no-js" lang="en")
         include partials/_role
 
       main(role="main")
-        .segment.type(itemprop="description")
-          h3 GoGet is a community-focused errands and delivery marketplace, currently operating in Kuala Lumpur
-          p GoGet began in 2014 and—simply put—matches those with complementary resources. This exchange, between equals in a safe community, is at the core of their offering.
+        //- .segment.type
+        
+        h2(itemprop="description") GoGet is a community-focused errands and delivery marketplace, currently operating in Kuala Lumpur
+        p GoGet began in 2014 and—simply put—matches those with complementary resources. This exchange, between equals in a safe community, is at the core of their offering.
 
-        .segment.type
-          h3
-            = "A " 
-            span.arial &rarr;
-            = " B"
+        //- .segment.type
+        h3
+          = "A " 
+          span.entity &rarr;
+          = " B"
 
-          p
-            = "As Francesca explains, GoGet is more ‘"
-            a(href="https://www.youtube.com/watch?v=lL1_xwe8x0c").inline logistics and human resource
-            = "’"
-            a(href="#ref").plain.glide-slow
-              sup
-            = " than straight up tech and after the first meeting it was clear that ‘speed’ and ‘dispatch’ needed to be communicated in the new identity. I hit upon the idea of calling upon some markings I had seen on the side of trucks transporting goods around KL."
-            a(href="#ref").plain.glide-slow
-              sup
+        p
+          = "As Francesca explains, GoGet is more ‘"
+          a(href="https://www.youtube.com/watch?v=lL1_xwe8x0c").inline logistics and human resource
+          = "’"
+          a(href="#ref").plain.glide-slow
+            sup
+          = " than straight up tech and after the first meeting it was clear that ‘speed’ and ‘dispatch’ needed to be communicated in the new identity. I hit upon the idea of calling upon some markings I had seen on the side of trucks transporting goods around KL."
+          a(href="#ref").plain.glide-slow
+            sup
 
         .segment.surface
           figure
@@ -128,51 +129,54 @@ html(class="no-js" lang="en")
             
             figcaption Initial wordmark exploration
 
+        //- .segment.type
+        h3 Public face: Immediate problems
+        table.issues
+          thead
+            tr
+              th.top.left(colspan="2") Problem
+              th.top.left.right Type
+          tbody
+            tr
+              td.top.left.icon &#x2717;
+              td.top.issue It doesn’t work on mobiles
+              td.top.left.right.type Technical
+            tr
+              td.top.left.icon &#x2717;
+              td.top.issue Doesn't reflect the quality of the service
+              td.top.left.right.type Cosmetic
+            tr
+              td.top.left.icon &#x2717;
+              td.top.issue Broken features
+              td.top.left.right.type Technical
+            tr
+              td.top.left.icon &#x2717;
+              td.top.issue Cluttered
+              td.top.left.right.type Informational
+            tr
+              td.top.left.icon &#x2717;
+              td.top.issue Hard to find things
+              td.top.left.right.type Informational
+          tfoot
+            tr
+              td(colspan="3").top.bottom.left.right
+                | View 
+                a(href="https://drive.google.com/open?id=0B-nn3m_0dK5edlVjMW5nVk1vRms#").inline screenshots of the original site
+                |  on Google Drive.
 
-        .segment.type
-          h3 Public face: Immediate problems
-          table.issues
-            thead
-              tr
-                th.top.left(colspan="2") Problem
-                th.top.left.right Type
-            tbody
-              tr
-                td.top.left.icon &#x2717;
-                td.top.issue It doesn’t work on mobiles
-                td.top.left.right.type Technical
-              tr
-                td.top.left.icon &#x2717;
-                td.top.issue Doesn't reflect the quality of the service
-                td.top.left.right.type Cosmetic
-              tr
-                td.top.left.icon &#x2717;
-                td.top.issue Broken features
-                td.top.left.right.type Technical
-              tr
-                td.top.left.icon &#x2717;
-                td.top.issue Cluttered
-                td.top.left.right.type Informational
-              tr
-                td.top.left.icon &#x2717;
-                td.top.issue Hard to find things
-                td.top.left.right.type Informational
-            tfoot
-              tr
-                td(colspan="3").top.bottom.left.right
-                  | View 
-                  a(href="https://drive.google.com/open?id=0B-nn3m_0dK5edlVjMW5nVk1vRms#").inline screenshots of the original site
-                  |  on Google Drive.
 
-        .segment.diagram
-          include projects/gg/sitemap
+        .segment.blueprint
+          hgroup GG&mdash;Sitemap_v4
+          figure
+            include projects/gg/sitemap
+            figcaption Lorem...
 
-        .segment.type
-          h3 A Singular Hero
-          p
-            = "GoGet's public face is fairly conventional in its layout. A hero image introduces each page, with content modules sitting below. Whilst marking up the third hero module, I felt I could "
-            a(href="https://en.wikipedia.org/wiki/Don%27t_repeat_yourself").inline DRY this all out
-            | , despite having different content on each of them (and a carousel on one). This will be made available on GitHub.
+        //- .segment.type
+        h3 A Singular Hero
+        p
+          = "GoGet's public face is fairly conventional in its layout. A hero image introduces each page, with content modules sitting below. Whilst marking up the third hero module, I felt I could "
+          a(href="https://en.wikipedia.org/wiki/Don%27t_repeat_yourself").inline DRY this all out
+          | , despite having different content on each of them (and a carousel on one). This will be made available on GitHub.
 
         .segment.surface.squash
           include projects/gg/singular
@@ -195,8 +199,8 @@ html(class="no-js" lang="en")
               .unit.pad
                 img(src="img/projects/gg/gg-layout-2.jpg")
 
-        .segment.type
-          p The new identity is being applied to digital and printed materials and elements have been folded in to a temporary website. The public face I’m designing is currently in production and is set to go live Summer/Autumn 2016.
+        //- .segment.type
+        p The new identity is being applied to digital and printed materials and elements have been folded in to a temporary website. The public face I’m designing is currently in production and is set to go live Summer/Autumn 2016.
 
       .band.ref
         .segment.type
@@ -208,7 +212,7 @@ html(class="no-js" lang="en")
               a(href="https://en.wikipedia.org/wiki/Don%27t_repeat_yourself").inline Don’t repeat yourself (Wikipedia) 
 
 
-    include partials/_page
+    include partials/_pager
     include partials/_top
     include partials/_footer
       

@@ -1,29 +1,18 @@
 .pager
   label
+    @include tiny()
     display: block
-    font-size: $font-xsmall
-    margin-bottom: 5px
+    margin-bottom: 0.2em
     font-weight: bold
-  a
-    z-index: 1
 
   a:nth-child(1)
     border-right: $border
     
-  ul.reset.page.ghost
-    display: flex
+  ul.page
     overflow: hidden
     width: 100%
-
-    li.ghost
-      width: 50%
-      z-index: 2
-      a
-        border: none
-        
-    li.ghost:nth-child(2)
-      text-align: right
-
+    li
+      max-width: 50%
 
 @media (max-width: $phone-max)
   .pager
