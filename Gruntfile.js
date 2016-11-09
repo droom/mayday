@@ -177,6 +177,30 @@ module.exports = function(grunt) {
     },
 
 
+    yslow: {
+      options: {
+        thresholds: {
+          weight: 180,
+          speed: 1000,
+          score: 80,
+          requests: 15
+        }
+      },
+      pages: {
+        files: [
+        {
+          src: 'dist/'
+        },
+        {
+          src: 'http://droom.io',
+          thresholds: {
+            weight: 100
+          }
+        }
+        ]
+      }
+    },
+
 
   });
 
@@ -189,7 +213,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-autoprefixer');
   grunt.loadNpmTasks('grunt-postcss');
   grunt.loadNpmTasks('grunt-critical');
-
+  grunt.loadNpmTasks('grunt-yslow');
 
   grunt.registerTask('default', [ 'concat', 'uglify', 'jade', 'sass', 'postcss', 'imagemin', 'critical' ]);
 

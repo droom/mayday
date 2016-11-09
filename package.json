@@ -14,7 +14,8 @@
     "grunt-criticalcss": "^1.0.2",
     "grunt-modernizr": "^1.0.2",
     "grunt-pixrem": "^0.1.2",
-    "grunt-postcss": "^0.8.0"
+    "grunt-postcss": "^0.8.0",
+    "grunt-yslow": "0.0.4"
   },
   "dependencies": {
     "critical": "^0.7.2"
