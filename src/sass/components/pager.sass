@@ -2,8 +2,6 @@
   label
     @include tiny()
     display: block
-    margin-bottom: 0.2em
-    font-weight: bold
 
   a:nth-child(1)
     border-right: $border
@@ -13,9 +11,25 @@
     width: 100%
     li
       max-width: 50%
+      
+      &:nth-child(1)
+        padding-right: $gttr-dt
+        
+      &:nth-child(2)
+        padding-left: $gttr-dt
+
 
 @media (max-width: $phone-max)
   .pager
     h4, .h4
       font-size: 1em
       line-height: 1.2em
+
+    ul.page
+      li
+        &:nth-child(1)
+          padding-right: $gttr-ph
+          
+        &:nth-child(2)
+          padding-left: $gttr-ph
+

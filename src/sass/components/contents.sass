@@ -1,4 +1,4 @@
-ul.work
+ul.contents
 	li
 		opacity: 			    	0
 		animation-name: 			fade-in-list
@@ -6,6 +6,7 @@ ul.work
 		animation-iteration-count: 	1
 		animation-timing-function: 	ease-out
 		animation-duration: 		215ms
+		border-top: $border
 		
 		&:nth-child(1)
 			animation-delay: 0
@@ -17,11 +18,8 @@ ul.work
 			animation-delay: 150ms
 		&:nth-child(5)
 			animation-delay: 200ms
-
-		border-top: $border
-
 		dt.project
-			display: none
+			display: 	none
 		&:first-child
 			border-top: none
 		&:active,
@@ -34,40 +32,43 @@ ul.work
 				background-position: 100% 50%
 
 			.segment.work
-				background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNi4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iNjBweCIgaGVpZ2h0PSI1NnB4IiB2aWV3Qm94PSI2OC4wNjYgNzQuODU1IDYwIDU2IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDY4LjA2NiA3NC44NTUgNjAgNTYiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGc+DQoJPHBvbHlnb24gZmlsbD0iIzJDMjIyNSIgcG9pbnRzPSIxMjguMDY2LDEwMi45NzEgOTcuMTU3LDEzMC44NTUgOTcuMDk1LDEzMC43ODEgOTcuMDY1LDEzMC44MDggOTUuNjA5LDEyOS4wMTkgOTMuMzUzLDEyNi4zNDUgDQoJCTkzLjM5NywxMjYuMzA1IDkzLjM1MywxMjYuMjQ4IDExNi40MjcsMTA1LjgyOSA2OC4wNjYsMTA1LjgyOSA2OC4wNjYsOTkuNDg2IDExNS44MzQsOTkuNDg2IDkzLjM1Myw3OS42ODggOTMuNTIsNzkuNDc4IA0KCQk5My4zNTMsNzkuMzMzIDk3LjE1Nyw3NC44NTUgMTI4LjA2NCwxMDIuODY5IDEyOC4wNjQsMTAyLjk3MSAxMjguMDY2LDEwMi45NzEgCSIvPg0KPC9nPg0KPC9zdmc+DQo=")
-				background-repeat: no-repeat
-				background-size: 50px
-				background-position: 96% 50%
-				transition: 300ms background ease, 300ms opacity ease
+				background-image: 		url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNi4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iNjBweCIgaGVpZ2h0PSI1NnB4IiB2aWV3Qm94PSI2OC4wNjYgNzQuODU1IDYwIDU2IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDY4LjA2NiA3NC44NTUgNjAgNTYiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGc+DQoJPHBvbHlnb24gZmlsbD0iIzJDMjIyNSIgcG9pbnRzPSIxMjguMDY2LDEwMi45NzEgOTcuMTU3LDEzMC44NTUgOTcuMDk1LDEzMC43ODEgOTcuMDY1LDEzMC44MDggOTUuNjA5LDEyOS4wMTkgOTMuMzUzLDEyNi4zNDUgDQoJCTkzLjM5NywxMjYuMzA1IDkzLjM1MywxMjYuMjQ4IDExNi40MjcsMTA1LjgyOSA2OC4wNjYsMTA1LjgyOSA2OC4wNjYsOTkuNDg2IDExNS44MzQsOTkuNDg2IDkzLjM1Myw3OS42ODggOTMuNTIsNzkuNDc4IA0KCQk5My4zNTMsNzkuMzMzIDk3LjE1Nyw3NC44NTUgMTI4LjA2NCwxMDIuODY5IDEyOC4wNjQsMTAyLjk3MSAxMjguMDY2LDEwMi45NzEgCSIvPg0KPC9nPg0KPC9zdmc+DQo=")
+				background-repeat: 		no-repeat
+				background-size: 		50px
+				background-position: 	96% 50%
+				transition: 			300ms background ease, 300ms opacity ease
+				
+				dl.credits
+					dd.project
+						display: block
 
 		&.disable
 			border-top: $border
 			user-select: none
+			
 			dl.reset.credits
 				opacity: 0.25
+			
 			&:active,
 			&:hover
 				background: none
 
 
 @media (max-width: $phone-max)
-	ul.work
+	ul.contents
 		li
 			a.plain
 				&:hover > .segment.type.work
-					background-position: 100% 18%
+					background-position: 100% 20%
 				.segment.work
 					background-size: 30px
-					background-position: 96% 18%
+					background-position: 96% 20%
 					dl.credits
-						width: 75%
-						padding: 0 0 3em 0
-						dd.project
-							margin: 0px 0 1em 0 
+						dt.project
+							display: inline-block
 
 
-
-ul.work.tile
+ul.contents.tile
 	display: flex
 	flex-wrap: 	wrap
 	li
@@ -142,7 +143,7 @@ ul.work.tile
 
 
 @media (min-width: $wide-unit)
-	ul.work.tile
+	ul.contents.tile
 		li
 			flex-basis: calc(100%/4)
 			max-width: calc(100%/4)
@@ -151,19 +152,19 @@ ul.work.tile
 			border: none
 
 @media (max-width: 800px)
-	ul.work.tile
+	ul.contents.tile
 		li
 			flex-basis: calc(100%/2)
-			max-width: calc(100%/2)
+			max-width: 	calc(100%/2)
 			align-self: flex-start
 			flex-grow: 	1
-			border: none
+			border: 	none
 			
 			a.plain .segment.work dl.credits
 				margin: 0 0 26px -10px
 
 @media (max-width: $phone-max)
-	ul.work.tile
+	ul.contents.tile
 		li
 			flex-basis: 100%
 			max-width: 	100%

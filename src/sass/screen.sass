@@ -5,34 +5,21 @@ $entity:		Arial, Helvetica, sans-serif
 
 $border:		1px solid rgba(0, 0, 0, 0.08)
 
-$maths:			rgba(33, 153, 231, 1)
-$copy:		   	rgba(0, 0, 0, 0.85)
 $bg:	    	rgba(241, 241, 241, 1)
+$maths:			rgba(33, 153, 231, 1)
+$copy:		   	rgba(0, 0, 0, 0.8)
 $hover:		  	rgba(255, 255, 255, 0.4)
 $ink:      		rgba(46, 77, 210, 1)
 
 $wide-unit:    	1118px
 $narrow-unit:	710px
-
 $phone-max:		500px
-$gttr-ph:	 	15px
+
 $gttr-dt:	 	26px
 $gttr-dt-top:	22px
+$gttr-ph:	 	15px
 
-
-@mixin tiny()
-	font-family:    $running
-	font-size:      10px
-	line-height:    15px
-	vertical-align: top
-
-@mixin technical()
-	font-family: 	$technical
-	font-size:      10px
-	line-height:    15px
-	vertical-align: top
-
-
+	
 @mixin theme-A($alpha)
 	background-color: rgba(129, 211, 235, $alpha)
 
@@ -46,10 +33,10 @@ $gttr-dt-top:	22px
 @charset "UTF-8"
 
 @import "grid/base.sass"
-@import "grid/segment.sass"
-@import "grid/stacking.sass"
+@import "grid/frame.sass"
 @import "grid/flex.sass"
 @import "grid/rhythm.sass"
+@import "grid/stacking.sass"
 
 @import "motion/page.sass"
 @import "motion/elements.sass"
@@ -64,14 +51,12 @@ $gttr-dt-top:	22px
 @import "images/jacket.sass"
 
 @import "components/lists.sass"
-@import "components/projects.sass"
-@import "components/btn-view.sass"
+@import "components/contents.sass"
+@import "components/contents-btn.sass"
 @import "components/cv.sass"
 @import "components/links.sass"
 @import "components/nav.sass"
 @import "components/counters.sass"
-@import "components/pan.sass"
-@import "components/mast.sass"
 @import "components/table.sass"
 @import "components/pager.sass"
 @import "components/slick.sass"
@@ -80,7 +65,7 @@ $gttr-dt-top:	22px
 
 @import "projects/shared/swatch.sass"
 @import "projects/shared/cover.sass"
-@import "projects/shared/terminal.sass"
+@import "projects/shared/diagrams.sass"
 
 @import "projects/gg/sitemap.sass"
 @import "projects/gg/singular.sass"
@@ -89,12 +74,15 @@ $gttr-dt-top:	22px
 @import "projects/ih/reflow.sass"
 @import "projects/ih/breadcrumb.sass"
 @import "projects/ih/slider.sass"
-@import "projects/gg/views/chrome.sass"
 @import "projects/gg/views/views.sass"
 
 @import "a11y/no-js.sass"
 @import "a11y/no-flexbox.sass"
 @import "a11y/no-cssgradients.sass"
-// @import "shame.sass"
 
+
+
+
+div
+	outline: 1px solid red
 

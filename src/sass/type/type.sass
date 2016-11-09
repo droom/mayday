@@ -1,16 +1,44 @@
-body
-  font-family: $running
-  font-size: 1em
-  font-weight: 400
-  line-height: 1.6em
+@mixin huge()
+  font-family:    $running
+  font-size:      10.5px
+  line-height:    15.5px
+  
+@mixin tiny()
+  font-family:    $running
+  font-size:      10.5px
+  line-height:    15.5px
+
+@mixin bigger()
+  font-family:    $running
+  font-size:      10.5px
+  line-height:    15.5px
+
+@mixin menu()
+  font-family:    $running
+  font-size:      10.5px
+  line-height:    15.5px
+
+
+html, body
+  font-family:  $running
+  font-size:    16px
+  line-height:  19px
+  font-style:   normal
+  font-weight:  normal
 
 h1, h2, h3, h4, h5, h6, nav, nav ol li, .h1, .h2, .h3, .h4, .h5, .h6, .nav
-  font-family: $display
-  font-style: normal !important
-  font-weight: normal !important
+  font-family:  $display
+  font-style:   normal
+  font-weight:  normal
 
 h1, h2, h3, .h1, .h2, .h3
   text-rendering: geometricPrecision
+
+dl.credits dl
+  font-weight:  400
+  
+dl.credits dt
+  font-weight:  700
 
 .entity
   font-family: $entity
@@ -18,67 +46,23 @@ h1, h2, h3, .h1, .h2, .h3
   text-rendering: optimizeLegibility
 
 h1, .h1
-  font-size:      3rem
-  line-height:    1.15em
-  letter-spacing: -0.035em
-  margin-left:    -0.03em
-  
-@media (max-width: $phone-max)
-  h1, .h1
-    font-size:    1.8rem
-    line-height:  1.212em
-    max-width:    320px
-
+  @include huge()
 
 h2, .h2
-  font-size:      2.4rem
-  line-height:    2.7rem
-  letter-spacing: -0.02em
+  @include bigger()
   
-@media (max-width: $phone-max)
-  h2, .h2
-    font-size:    1.8rem
-    line-height:  2.1rem
-
 h3, .h3
-  font-size: 1.8rem
-  font-weight: 400
-  line-height: 2rem
-  letter-spacing: -.02em
-
-@media (max-width: $phone-max)
-  h3, .h3
-    font-size:    1.5rem
-    line-height:  1.7rem
-
-
-hgroup
-  line-height: 1.5em
+  @include menu()
 
 nav li
-  font-size:    1.6em
+  @include menu()
 
-p, li
-  font-size:    1em
-  font-weight:  400
-  line-height:  1.6em
+hgroup
+  @include menu()
 
-label,
-sup,
-small,
-figcaption,
-ul,
-ol,
-li,
-dd,
-dl,
-dt
-  @include tiny()
+p, li, dl, dd, dt, label, figcaption, small
+  @include menu()
 
+table, th, td
+  @include menu()
 
-small
-  display: inline-block
-
-sup
-  vertical-align: top
-  display: inline-block

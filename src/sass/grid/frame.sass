@@ -1,0 +1,119 @@
+.band
+  &.hr
+    border-top: $border
+  &.head
+    @include theme-A(1)
+  &.ref
+    background: rgba(0,0,0,0.04)
+  &.relative
+    position: relative
+
+.block
+  display: block
+.inline
+  display: inline
+.block
+  display: block
+
+
+body main
+  p,
+  h2,
+  h3
+    margin: auto
+
+main
+  table,
+  h2,
+  h3,
+  p
+    max-width: $narrow-unit
+    
+  p
+  h2,
+  h3,
+  p,
+  table,
+  .diagram.flow,
+  ul.controls
+    padding-left: $gttr-dt
+    padding-right: $gttr-dt
+
+  hgroup,
+  figure figcaption,
+    padding-left: $gttr-dt
+    padding-right: $gttr-dt
+
+
+// figure.gg-singular section.diagram
+//   padding-left:   $gttr-dt
+//   padding-right:  $gttr-dt
+
+// @media (max-width: $phone-max)
+//   figure.gg-singular section.diagram
+//     padding-left: $gttr-ph
+//     padding-right: $gttr-ph
+
+
+.segment
+  margin: auto
+  
+  &.squash
+    figure
+      img
+        max-width: 100%
+
+  &.relative
+    position: relative
+
+  &.diagram,
+  &.surface,
+  &.blueprint
+    overflow: hidden
+
+  &.swatch,  
+  &.diagram,
+  &.type
+    padding-left: $gttr-dt
+    padding-right: $gttr-dt
+
+  &.type
+    max-width: $narrow-unit
+    z-index: 1
+
+  &.surface,
+  &.caption,
+  &.diagram,
+  &.blueprint
+    max-width: $wide-unit
+
+  &.blueprint
+    background: url('../img/components/graph.gif') repeat -1px 0 #e9eae9
+
+@media (max-width: $phone-max)
+  .segment
+    &.diagram,
+    &.type,
+    &.code
+      padding-left: $gttr-ph
+      padding-right: $gttr-ph
+    ol.ref
+      padding-left: $gttr-ph
+      
+  main
+    p
+    h2,
+    h3,
+    p,
+    table,
+    .diagram.flow,
+    ul.controls
+      padding-left: $gttr-ph
+      padding-right: $gttr-ph
+
+    hgroup,
+    figure figcaption,
+      padding-left: $gttr-ph
+      padding-right: $gttr-ph
+
+

@@ -1,3 +1,9 @@
+$outline: rgba(0,0,0,.3)
+$grid:    255px
+$pad-v:   0
+$pad-h:   0
+$gap:     30px
+
 @keyframes bounce-in
   0%
     transform: scale(0,0)
@@ -7,7 +13,6 @@
   
   100%
     transform: scale(1, 1)
-    
 
 @keyframes bounce-out
   0%
@@ -18,7 +23,6 @@
   
   100%
     transform: scale(0, 0)
-
 
 @keyframes fader
   0%
@@ -35,71 +39,71 @@
     opacity: 0
     
 
-.diagram.views  
-  max-width: 800px
-  
+
+label.role
+  padding: 2em 0.5em
+
+.diagram.views .gogetter .tick-wrap
+  outline: 1px solid blue
+  width: 35px
+  height: 30px
+  cursor: pointer
+
+  .tick
+    background: #eee
+    opacity: 0
+    &.set
+      opacity: 1 
+
+.diagram.views .poster .tick-wrap
+  position: relative
+  width: 35px
+  height: 30px
+
+  .tick
+    position: absolute
+    top:  0
+    left: 0
+    transition: all ease 300ms
+    transform: scale(0,0)
+    transform-origin:     center center
+    animation-fill-mode:  forwards
+    animation-iteration-count: 1
+    animation-duration:   300ms
+    animation-name:       bounce-out
+    
+    &.set
+      animation-fill-mode: forwards
+      animation-iteration-count: 1
+      animation-duration: 300ms
+      animation-name: bounce-in
+      
+.diagram.views
+  width: 710px
+
+  .view:nth-child(1)
+    padding-right: 47px
+
+  .view:nth-child(2)
+    padding-left: 47px
+    border-left: 1px dotted $ink
 
   button.button
-    border: none
+    border:     none
     background: none
-    padding: 0
-    margin: 0
+    padding:    0
+    margin:     0
     
   .reopen
-    width: 205px
+    width:      180px
     text-align: right
-
-  
-  .gogetter
-    .tick-wrap
-      outline: 1px solid blue
-      width: 35px
-      height: 30px
-      cursor: pointer
-      
-      .tick
-        background: #eee
-        opacity: 0
-        &.set
-          // background: yellow
-          opacity: 1 
-
-  .poster
-    .tick-wrap
-      position: relative
-      width: 35px
-      height: 30px
-      
-      .tick
-        position: absolute
-        top:  0
-        left: 0
-        transition: all ease 300ms
-        transform: scale(0,0)
-        transform-origin: center center
-        animation-fill-mode: forwards
-        animation-iteration-count: 1
-        animation-duration: 300ms
-        animation-name: bounce-out
-        // animation-delay: 300ms
-        
-        &.set
-          animation-fill-mode: forwards
-          animation-iteration-count: 1
-          animation-duration: 300ms
-          animation-name: bounce-in
-          // animation-delay: 300ms
-
 
   .gogetter,
   .poster
     .grid
-      width: 284px
+      width: $grid
       background: white
-      border-radius: 4px
-      padding: 10px
-      margin: 20px auto 0 auto
-      border: 1px solid rgba(0,0,255,0.6)
+      margin: auto
       
       .element-item
         min-height: 70px
@@ -107,20 +111,6 @@
         &.stage
           width: 25px
         
-          // .terminal
-          //   margin: auto
-          //   display: block
-          //   height: 25px
-          //   width: 25px
-          //   line-height: 25px
-          //   border-radius: 50%
-          //   background: #ccc
-          //   text-align: center
-
-          //   &.end
-          //     background: blue
-          //     color: #fff
-
           .joinery
             position:   absolute
             top:    25px
@@ -129,8 +119,8 @@
             width:  100%
             
             background-image: -linear-gradient(left, transparent 49%, blue 0, blue 52%, transparent 0)
-            background-image: -moz-linear-gradient(left, transparent 49%, blue 0, blue 52%, transparent 0)
-            background-image: -webkit-linear-gradient(left, transparent 49%, blue 0, blue 52%, transparent 0)
+            // background-image: -moz-linear-gradient(left, transparent 49%, blue 0, blue 52%, transparent 0)
+            // background-image: -webkit-linear-gradient(left, transparent 49%, blue 0, blue 52%, transparent 0)
             animation-fill-mode: forwards
             animation-iteration-count: 1
             animation-duration: 1000ms
@@ -144,16 +134,17 @@
 
         &.desc
           width: 195px
-          padding: 0.48em 0.60em
-          border-top: 1px solid rgba(0,0,0,0.15)
+          padding-top: $pad-v
+          padding-left: $pad-h
           
         &.status
-          width: 40px
-          user-select: none
-          border-top: 1px solid rgba(0,0,0,0.15)
           align-items: flex-end
-          padding: 10px
+          padding-bottom: $pad-v
           
+        &.desc,
+        &.status
+          border-top: 1px solid rgba(0,0,0,0.15)
+
         &:nth-child(1),
         &:nth-child(2),
         &:nth-child(3)
@@ -162,5 +153,90 @@
 
 
 
+.circle
+  border: 0.1em solid $outline
+  border-radius: 50%
+  width:  12px
+  height: 12px
+  margin: 3px auto 0 auto
+  
+.oval
+  border: 0.1em solid $outline
+  border-radius: 6px
+  width: 56px
+  height: 6px
+  margin: 12px auto 0 auto  
 
+
+.but-l-1
+  width: 4px
+  height: 18px
+  position: absolute
+  left: -4px
+  top: 109px
+  border-radius: 1px
+  border: .1em solid $outline
+
+
+.but-l-2
+  width: 5px
+  height: 42px
+  position: absolute
+  left: -5px
+  top: 149px
+  border-radius: 1px
+  border: .1em solid $outline
+
+
+.but-l-3
+  width: 5px
+  height: 42px
+  position: absolute
+  left: -5px
+  top: 199px
+  border-radius: 1px
+  border: .1em solid $outline
+
+
+.but-r-1
+  width: 5px
+  height: 40px
+  margin: 10px auto 0
+  position: absolute
+  right: -5px
+  top: 130px
+  border-radius: 1px
+  border: .1em solid $outline
+
+
+.chrome-3,
+.chrome-2,
+.chrome-1
+  margin: auto
+
+.chrome-3
+  border-top: 0.1em solid $outline
+  border-right: 0.1em solid $outline
+  border-left: 0.1em solid $outline
+  width: $grid + 48px
+  padding-top: 3px
+  border-radius: 35px 35px 0 0
+  position: relative
+
+.chrome-2
+  border-top: 0.1em solid $outline
+  border-right: 0.1em solid $outline
+  border-left: 0.1em solid $outline
+  width: $grid + 40px
+  padding-top: 10px
+  border-radius: 30px 30px 0 0
+
+.chrome-1
+  position: relative
+  width: $grid + 15px 
+  margin-top: 30px
+  min-height: 345px
+  background: rgba(0,0,0,0.1)
+  border: 0.1em solid $outline
+  border-bottom: none
 

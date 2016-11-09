@@ -4,20 +4,20 @@ $(document).ready(function() {
 
 	function fContents(){
 		if (localStorage.contents === "contentsTile"){
-			$('ul#work').addClass('tile');
-			$('a#view .unit').addClass('list');
+			$('ul#contents').addClass('tile');
+			$('a#contents .unit').addClass('list');
 		} else {
-			$('ul#work').removeClass('tile');
-			$('a#view .unit').removeClass('list');
+			$('ul#contents').removeClass('tile');
+			$('a#contents .unit').removeClass('list');
 		};
 	};
 
-	$('a#view').click(function(e) {
+	$('a#contents').click(function(e) {
 		e.preventDefault();
-		$('a#view .unit').toggleClass('list');
-		$('ul#work').toggleClass('tile');
+		$('a#contents .unit').toggleClass('list');
+		$('ul#contents').toggleClass('tile');
 
-		if ($('ul#work').hasClass('tile')){
+		if ($('ul#contents').hasClass('tile')){
 			localStorage.contents = "contentsTile";
 		} else {
 			localStorage.contents = "list";
