@@ -138,7 +138,7 @@ module.exports = function(grunt) {
         'src/lib/slick.js',
         'src/lib/jquery.waypoints.js',
         'src/lib/modernizr-2.8.3.min.js',
-        'src/lib/isotope.js',
+        // 'src/lib/isotope.js',
         'src/lib/konami.js',
         'src/js/*.js',
         ],
