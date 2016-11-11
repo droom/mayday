@@ -1,6 +1,5 @@
 .flex
   display:  flex
-  // width:    100%
   margin:   auto
 
   .start
@@ -28,7 +27,7 @@
       width: 100%
 
     &.pad
-      margin: 0 1em
+      margin: 0 $gttr-ph
 
       &:first-child
         margin-left: 0
@@ -39,16 +38,20 @@
     &.unit-12
       flex-basis: calc(100%/6)
 
-
 @media (max-width: 780px)
   .flex
     .unit
+      &.pad
+        margin: 0 $gttr-ph / 2
+        
       &.unit-12
         flex-basis: calc(100%/4)
-          
 
 @media (max-width: $phone-max)
   .flex
     .unit
+      &.pad
+        margin: 0
+
       &.unit-12
         flex-basis: calc(100%/3)
