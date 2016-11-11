@@ -1,62 +1,54 @@
-.swatch
-  .colour
-    width: 40px
-    height: 40px
-    border-radius: 50%
-    display: inline-block
-    margin-left: 15px
-    
-    &:first-child
-      margin: 0
+ul
+  &.swatch
+    li.colour
+      width: 40px
+      height: 40px
+      border-radius: 50%
+      display: inline-block
 
-    &.outline
-      border: #ddd 1px solid
+      + &.outline
+        border: #ddd 1px solid
 
-  &.goget
-    .colour-1
-      background: #00b4ad
-    .colour-2
-      background: #ffc611
-    .colour-3
-      background: #23262f
-    .colour-4
-      background: #fff
-
-  &.gr
-    .colour-1
-      background: #95ffe1
-    .colour-2
-      background: #222
-    .colour-3
-      background: #fff
+      + li.colour
+        margin-left: 15px
 
   &.fo
-    .colour-1
-      background: #154b0d
-    .colour-2
-      background: #C14D4D
-    .colour-3
-      background: #fcf9f9
+    li.colour
+      &:nth-child(1)
+        background: #154b0d
+      &:nth-child(2)
+        background: #C14D4D
+      &:nth-child(3)
+        background: #fcf9f9
 
   &.ideahouse
-    .colour-1
-      background: #f4c95b
-    .colour-2
-      background: #60af74
-    .colour-3
-      background: #5ec5e2
-    .colour-4
-      background: #fff
+    li.colour
+      &:nth-child(1)
+        background: #f4c95b
+      &:nth-child(2)
+        background: #60af74
+      &:nth-child(3)
+        background: #5ec5e2
+      &:nth-child(4)
+        background: #fff
 
+  &.gr
+    li.colour
+      &:nth-child(1)
+        background: #95ffe1
+      &:nth-child(2)
+        background: #222
+      &:nth-child(3)
+        background: #fff
 
-@media (max-width: 450px)
-  
-  .swatch
-    .colour
-      width: 30px
-      height: 30px
-      margin-left: -10px
-      
-    .colour
-      &:first-child
-        margin: 0
+  &.goget
+    li.colour
+      &:nth-child(1)
+        background: #00b4ad
+      &:nth-child(2)
+        background: #ffc611
+      &:nth-child(3)
+        background: #23262f
+      &:nth-child(4)
+        background: #fff
+
