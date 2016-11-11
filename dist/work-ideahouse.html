@@ -156,12 +156,11 @@
         </p>
         <div class="segment blueprint relative">
           <figure>
-            <hgroup>title—1</hgroup>
-            <ul id="checkpoint-reflow" class="controls reset reflow">
-              <li><a href="#" class="plain reflow before active">Before</a></li>
-              <li><a href="#" class="plain reflow after">After</a></li>
+            <ul id="checkpoint-reflow" class="reset controls reflow">
+              <li class="hgroup"><a href="#" class="plain reflow before active">Before</a></li>
+              <li class="hgroup"><a href="#" class="plain reflow after">After</a></li>
             </ul>
-            <div id="reflow" class="diagram ih reflow before">
+            <section id="reflow" class="diagram ih reflow before">
               <div class="cell nav"></div>
               <div class="cell colour"></div>
               <div class="cell stock"></div>
@@ -190,7 +189,7 @@
                 </div>
                 <div class="region"></div>
               </div>
-            </div>
+            </section>
             <figcaption>On the original layout, two sets of data were grouped into one table, making it very confusing to scan until you understood this quirk. By grouping this information into a narrow module, we could ensure it'll scale down to a mobile viewport.</figcaption>
           </figure>
         </div>

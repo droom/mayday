@@ -117,12 +117,12 @@ html(class="no-js" lang="en")
 
         .segment.blueprint.relative
           figure
-            hgroup title—1
-            ul.controls.reset.reflow#checkpoint-reflow
-              li
+            ul.reset.controls.reflow#checkpoint-reflow
+              li.hgroup
                 a(href="#").plain.reflow.before.active Before
-              li
+              li.hgroup
                 a(href="#").plain.reflow.after After
+
             include projects/ih/reflow
             figcaption On the original layout, two sets of data were grouped into one table, making it very confusing to scan until you understood this quirk. By grouping this information into a narrow module, we could ensure it'll scale down to a mobile viewport.
 

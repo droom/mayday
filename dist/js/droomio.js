@@ -3907,7 +3907,6 @@ var Konami = function (callback) {
 
 
 });;$(document).on('ready', function() {
-	
 
 	$("#ih-product").slick({
 		dots: false,
@@ -3923,12 +3922,17 @@ var Konami = function (callback) {
 				slidesToShow: 3
 			},
 		},
+		{
+			breakpoint: 400,
+			settings: {
+				slidesToShow: 1
+			},
+		},
+
 
 
 		]
 	});
-
-
 
 
 	$('#ih-words').slick({
@@ -3938,31 +3942,6 @@ var Konami = function (callback) {
 		fade: true,
 		asNavFor: '#ih-product'
 	});
-
-
-	// $("#ih-product").slick({
-	// 	dots: false,
-	// 	infinite: true,
-	// 	centerMode: true,
-	// 	slidesToShow: 5,
-	// 	slidesToScroll: 1
-	// });
-
-	// $("#ih-product").slick({
-	// 	dots: false,
-	// 	infinite: true,
-	// 	centerMode: true,
-	// 	slidesToShow: 1,
-	// 	slidesToScroll: 1
-	// });
-
-	// $("#ih-chrome").slick({
-	// 	dots: false,
-	// 	infinite: false,
-	// 	centerMode: true,
-	// 	slidesToShow: 1,
-	// 	slidesToScroll: 1
-	// });
 
 
 

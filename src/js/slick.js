@@ -1,5 +1,4 @@
 $(document).on('ready', function() {
-	
 
 	$("#ih-product").slick({
 		dots: false,
@@ -15,12 +14,17 @@ $(document).on('ready', function() {
 				slidesToShow: 3
 			},
 		},
+		{
+			breakpoint: 400,
+			settings: {
+				slidesToShow: 1
+			},
+		},
+
 
 
 		]
 	});
-
-
 
 
 	$('#ih-words').slick({
@@ -30,31 +34,6 @@ $(document).on('ready', function() {
 		fade: true,
 		asNavFor: '#ih-product'
 	});
-
-
-	// $("#ih-product").slick({
-	// 	dots: false,
-	// 	infinite: true,
-	// 	centerMode: true,
-	// 	slidesToShow: 5,
-	// 	slidesToScroll: 1
-	// });
-
-	// $("#ih-product").slick({
-	// 	dots: false,
-	// 	infinite: true,
-	// 	centerMode: true,
-	// 	slidesToShow: 1,
-	// 	slidesToScroll: 1
-	// });
-
-	// $("#ih-chrome").slick({
-	// 	dots: false,
-	// 	infinite: false,
-	// 	centerMode: true,
-	// 	slidesToShow: 1,
-	// 	slidesToScroll: 1
-	// });
 
 
 

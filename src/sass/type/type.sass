@@ -4,7 +4,7 @@
   font-style:     normal
   font-weight:    normal
   font-size:      50px
-  line-height:    52px
+  line-height:    52.5px
   letter-spacing: -0.045em
   margin-left:    -0.045em
 
@@ -15,7 +15,7 @@
   font-weight:    normal
   font-size:      35px
   line-height:    40px
-  letter-spacing: -0.025em
+  letter-spacing: -0.045em
 
 @mixin h3()
   font-family:    $display
@@ -36,12 +36,22 @@
   letter-spacing: -0.01em
 
 @mixin h5()
+  font-family:    $display
+  text-rendering: geometricPrecision
+  font-style:     normal
+  font-weight:    normal
+  font-size:      13.5px
+  line-height:    16px
+  letter-spacing: -0.01em
+
+
+@mixin hgroup()
   font-family:    $running
   font-style:     normal
   font-weight:    normal
   letter-spacing: 0.04em
-  font-size: 20px
-  line-height: 25px
+  font-size:      20px
+  line-height:    25px
 
 @mixin p()
   font-family:    $running
@@ -60,18 +70,33 @@ html, body
 h1, .h1
   @include h1()
 
+@media (max-width: $phone-max)
+  h1, .h1
+    @include h2()
+
 h2, .h2
   @include h2()
   
 h3, .h3
   @include h3()
 
+h4, .h4
+  @include h4()
+
+nav,
 nav ol li,
 nav ul li
   @include h4()
 
-hgroup
-  @include h5()
+@media (max-width: $phone-max)
+  nav,
+  nav ol li,
+  nav ul li
+    @include h5()
+
+
+hgroup, .hgroup
+  @include hgroup()
 
 table, th, td, p
   @include p()
