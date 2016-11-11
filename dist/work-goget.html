@@ -180,16 +180,16 @@
         <div class="segment surface">
           <hgroup>GG&mdash;Sitemap_v4</hgroup>
           <figure>
-            <section class="gg sitemap">
-              <hgroup class="main thick">Main Navigation</hgroup>
-              <ul class="row">
+            <section class="diagram gg sitemap">
+              <label class="block main thick align-c">Main Navigation</label>
+              <ul class="reset row">
                 <li class="page stretch join up down">
                   <div class="thin">
                     <div class="turn">
-                      <hgroup>Home</hgroup>
-                      <ul class="content">
+                      <label>Home</label>
+                      <ul class="reset content">
                         <li>Hero carousel
-                          <ul class="section">
+                          <ul class="reset section">
                             <li>Dispatch</li>
                             <li>Shopping</li>
                             <li>Food Delivery</li>
@@ -208,8 +208,8 @@
                 <li class="page stretch join up down">
                   <div class="thin">
                     <div class="turn">
-                      <hgroup>Gateway</hgroup>
-                      <ul class="content">
+                      <label>Gateway</label>
+                      <ul class="reset content">
                         <li>Option to download native apps</li>
                         <li>Log in</li>
                         <li>Register</li>
@@ -220,30 +220,30 @@
                 <li class="page stretch join up down">
                   <div class="thin">
                     <div class="turn">
-                      <hgroup>FAQ</hgroup>
+                      <label>FAQ</label>
                     </div>
                   </div>
                 </li>
                 <li class="page stretch join up down">
                   <div class="thin">
                     <div class="turn">
-                      <hgroup>Blog</hgroup>
+                      <label>Blog</label>
                     </div>
                   </div>
                 </li>
               </ul>
-              <hgroup class="main thick">Footer Navigation
-                <ul class="thin">
+              <label class="block main thick align-c">Footer Navigation
+                <ul class="reset block thin">
                   <li>Contact Info</li>
                   <li>Copyright info</li>
                 </ul>
-              </hgroup>
-              <ul class="row">
+              </label>
+              <ul class="reset row">
                 <li class="page join down">
                   <div class="thin">
                     <div class="turn">
-                      <hgroup>GoGet for Business</hgroup>
-                      <ul class="content">
+                      <label>GoGet for Business</label>
+                      <ul class="reset content">
                         <li>Option to download native apps</li>
                         <li>Log in</li>
                         <li>Register</li>
@@ -254,8 +254,8 @@
                 <li class="page join down">
                   <div class="thin">
                     <div class="turn">
-                      <hgroup>Become a GoGetter</hgroup>
-                      <ul class="content">
+                      <label>Become a GoGetter</label>
+                      <ul class="reset content">
                         <li>Benefits of Gogetting</li>
                         <li>Ground Rules</li>
                       </ul>
@@ -265,15 +265,15 @@
                 <li class="page join down">
                   <div class="thin">
                     <div class="turn">
-                      <hgroup>Sign Up Form</hgroup>
+                      <label>Sign Up Form</label>
                     </div>
                   </div>
                 </li>
                 <li class="page join down">
                   <div class="thin">
                     <div class="turn">
-                      <hgroup>About GoGet</hgroup>
-                      <ul class="content">
+                      <label>About GoGet</label>
+                      <ul class="reset content">
                         <li>About GoGet</li>
                         <li>Our Community</li>
                         <li>Our Values</li>
@@ -286,14 +286,14 @@
                 <li class="page join down">
                   <div class="thin">
                     <div class="turn">
-                      <hgroup>Staff Vacancies</hgroup>
+                      <label>Staff Vacancies</label>
                     </div>
                   </div>
                 </li>
                 <li class="page join down">
                   <div class="thin">
                     <div class="turn">
-                      <hgroup>Terms of Service</hgroup>
+                      <label>Terms of Service</label>
                     </div>
                   </div>
                 </li>
@@ -306,26 +306,24 @@
         <p>GoGet's public face is fairly conventional in its layout. A hero image introduces each page, with content modules sitting below. Whilst marking up the third hero module, I felt I could <a href="https://en.wikipedia.org/wiki/Don%27t_repeat_yourself" class="inline">DRY this all out</a>, despite having different content on each of them (and a carousel on one). This will be made available on GitHub.
         </p>
         <div class="segment surface squash">
-          <figure class="gg-singular">
-            <section class="diagram">
-              <div class="flex">
-                <div class="unit pad">
-                  <label><span class="bold">index</span><br><span class="bold type">Jade</span><br>Page settings (excluding images)</label>
-                </div>
-                <div class="unit pad">
-                  <label><span class="bold">partials/hero</span><br><span class="bold type">Jade</span><br>The single source of truth</label>
-                </div>
-                <div class="unit pad">
-                  <label><span class="bold">sass/hero</span><br><span class="bold type">Sass</span><br>Image settings</label>
-                </div>
+          <section class="diagram gg singular align-c">
+            <div class="flex">
+              <div class="unit thick pad">
+                <label class="align-c block"><span class="bold">index</span><br><span class="inline-block bold type thin">Jade</span><br>Page settings (excluding images)</label>
               </div>
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="laylines">
-                <line x1="15%" y1="0" x2="50%" y2="100%" style="stroke-width: 1px;" stroke="blue" fill="none"></line>
-                <line x1="85%" y1="0" x2="50%" y2="100%" style="stroke-width: 1px;" stroke="blue" fill="none"></line>
-                <line x1="50%" y1="0" x2="50%" y2="100%" style="stroke-width: 1px;" stroke="blue" fill="none"></line>
-              </svg>
-            </section><img src="img/projects/gg/singular-hero.png">
-          </figure>
+              <div class="unit thick pad">
+                <label class="align-c block"><span class="bold">partials/hero</span><br><span class="inline-block bold type thin">Jade</span><br>The single source of truth</label>
+              </div>
+              <div class="unit thick pad">
+                <label class="align-c block"><span class="bold">sass/hero</span><br><span class="inline-block bold type thin">Sass</span><br>Image settings</label>
+              </div>
+            </div>
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="laylines">
+              <line x1="15%" y1="0" x2="50%" y2="100%" style="stroke-width: 1px;" stroke="blue" fill="none"></line>
+              <line x1="85%" y1="0" x2="50%" y2="100%" style="stroke-width: 1px;" stroke="blue" fill="none"></line>
+              <line x1="50%" y1="0" x2="50%" y2="100%" style="stroke-width: 1px;" stroke="blue" fill="none"></line>
+            </svg><img src="img/projects/gg/singular-hero.png">
+          </section>
         </div>
         <div class="segment align-c swatch goget">
           <div class="colour colour-1"></div>
