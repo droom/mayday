@@ -25,18 +25,26 @@ figure
         &.border
             border-top: 1px solid $ink
 
-.diagram
-    .terminal
-        @include small()
-        margin:           auto
-        display:          block
-        height:           25px
-        width:            25px
-        line-height:      25px
-        border-radius:    50%
-        border: 1px solid rgba(0,0,255,0.3) 
-        background:       white
-        text-align:       center
-        &.end
-            background:     blue
-            color:          white
+.thin
+    border: 1px solid $ink
+
+.thick
+    border: 3px solid $ink
+
+.soft
+    border-radius: 0.15em
+
+.terminal
+    @include small()
+    margin:           auto
+    display:          block
+    height:           25px
+    width:            25px
+    line-height:      25px
+    border-radius:    50%
+    border: 1px solid rgba(0,0,255,0.3) 
+    background:       white
+    text-align:       center
+    &.end
+        background:     blue
+        color:          white

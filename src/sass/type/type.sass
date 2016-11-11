@@ -76,5 +76,9 @@ hgroup
 table, th, td, p
   @include p()
 
+@media (max-width: $phone-max)
+  table, th, td
+    @include small()
+
 ol li, ul li, dl, dd, dt, label, figcaption, small, label
   @include small()
