@@ -33,22 +33,13 @@ body main
   p,
   table,
   ul.controls,
-  .diagram
-    padding-left: $gttr-dt
-    padding-right: $gttr-dt
-
   hgroup,
-  figure figcaption,
+  figcaption,
     padding-left: $gttr-dt
     padding-right: $gttr-dt
 
 .segment
   margin: auto
-  
-  &.squash
-    figure
-      img
-        max-width: 100%
 
   &.relative
     position: relative
@@ -59,10 +50,13 @@ body main
     overflow: hidden
 
   &.swatch,  
-  &.diagram,
-  &.type
+  &.type,
+  &.blueprint.pad
     padding-left: $gttr-dt
     padding-right: $gttr-dt
+    hgroup,
+    figcaption
+      padding: 0
 
   &.type
     max-width: $narrow-unit
@@ -70,7 +64,6 @@ body main
 
   &.surface,
   &.caption,
-  &.diagram,
   &.blueprint
     max-width: $wide-unit
 
@@ -80,11 +73,15 @@ body main
 
 @media (max-width: $phone-max)
   .segment
-    &.diagram,
     &.type,
-    &.code
+    &.code,
+    &.blueprint.pad
       padding-left: $gttr-ph
       padding-right: $gttr-ph
+      hgroup,
+      figcaption
+        padding: 0
+        
     ol.ref
       padding-left: $gttr-ph
       
@@ -94,13 +91,9 @@ body main
     h3,
     p,
     table,
-    .diagram.flow,
-    ul.controls
-      padding-left: $gttr-ph
-      padding-right: $gttr-ph
-
+    ul.controls,
     hgroup,
-    figure figcaption,
+    figcaption,
       padding-left: $gttr-ph
       padding-right: $gttr-ph
 

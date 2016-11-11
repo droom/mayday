@@ -3,7 +3,10 @@ ul.reflow
 		display: inline-block
 		a
 			background: white
+			padding: 0.5em 1em
+			display: block
 		a.active
+			background: yellow
 
 section.diagram.ih.reflow
 	margin:     auto
@@ -17,7 +20,7 @@ section.diagram.ih.reflow
 		display:          flex
 		align-items:      center
 		justify-content:  center
-		border: 		  1px dotted blue
+		border: 		  $dashed
 
 		&.stock
 			background: url('../img/stripes/1.gif')
@@ -146,7 +149,7 @@ section.diagram.ih.reflow.after
 
 		&.cycle
 			height:	20px
-			top: 		0
+			top: 	0
 			
 		&.image
 			height:	185px

@@ -72,9 +72,9 @@ html(class="no-js" lang="en")
             sup
           = ", an updated version of the Matthew Carter classic with new weights and extra hinting. Side-by-side, the new  letters looked even better."
 
-        .segment.align-c.blueprint.squash
+        .segment.align-c.blueprint.pad.squash
           figure
-            img(src="img/projects/fo/fo-georgia.png")
+            img(src="img/projects/fo/fo-georgia.png").max
             figcaption After sampling quite a few webfonts, I settled on Georgia Pro. Its generous x-height means it performs well at the small sizes (copyright, captions, etc). Amongst the new cuts was even a small caps.
 
         h3 RWD FTW 
@@ -88,9 +88,9 @@ html(class="no-js" lang="en")
 
         p Responsive design was such a huge revelation that might have actually rewired my brain, much in the same way CSS did a decade earlier. The mental model I used to design for screens had now been forever changed.
 
-        .segment.align-c.blueprint.squash
+        .segment.align-c.blueprint.pad.squash
           figure
-            img(src="img/projects/fo/fo-reflow.gif").faint
+            img(src="img/projects/fo/fo-reflow.gif").max.faint
             figcaption A single post is divided up into three subdivions: date, content and tags. On a wide desktop, date and tags site at opposite sides of the screen. On a smaller table, they stack on top of each other on the left hand side. I had used regular floats to move these sections about. 
 
         .segment.surface.align-c
@@ -101,7 +101,7 @@ html(class="no-js" lang="en")
 
         .segment.surface.squash
           figure
-            img(src="img/projects/fo/fo-layout.jpg")
+            img(src="img/projects/fo/fo-layout.jpg").max
 
         p Revisiting the source for this 4 years later makes me appreciate (even more) how useful all the build tools we now have are. Back then, I was writing vanilla CSS, manually typing out vendor-prefixes, meticulously indenting and then minifying with some online service. Ridiculous. But at least it kept me from writing.
 

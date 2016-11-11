@@ -58,9 +58,9 @@ html(class="no-js" lang="en")
           figure
             .flex
               .unit.pad
-                img(src="img/projects/ih/ih-research-1.jpg")
+                img(src="img/projects/ih/ih-research-1.jpg").max
               .unit.pad.tuck
-                img(src="img/projects/ih/ih-research-2.jpg")
+                img(src="img/projects/ih/ih-research-2.jpg").max
 
         h3 Immediate Problems
         table.issues
@@ -115,7 +115,7 @@ html(class="no-js" lang="en")
           sup
           |  , rather than simply create individual views. This requires establishing patterns that can be applied consistently throughout. The most information-dense, component-heavy view on the site is the Product page itself, so that felt like a sensible place to start.
 
-        .segment.align-c.blueprint.relative
+        .segment.align-c.blueprint.pad.relative
           figure
             ul.reset.controls.reflow#checkpoint-reflow
               li.hgroup
@@ -134,12 +134,12 @@ html(class="no-js" lang="en")
         
         p A ‘Quick Search’ is present on all views and is only ever hidden scrolling down on small screens, for screen real estate reasons. The ‘Advanced Search’ is still accessible through level 1 navigation, offering more precise control.
 
-        .segment.blueprint
+        .segment.blueprint.pad
           figure
             include projects/ih/breadcrumb
             figcaption Using breadcrumbs as titles allowed us to condense two key features into one. The user always knows where they are and how they got there.
 
-        .segment.blueprint
+        .segment.blueprint.pad
           figure
             include projects/ih/modal
             figcaption The idea behind this was to keep the user constantly up-to-date with the product line, ensuring they don't miss out on anything that would interest thier customers. 

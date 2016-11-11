@@ -3,7 +3,7 @@ $running:		-apple-system, BlinkMacSystemFont, "hndi-std", "Roboto", "Droid Sans"
 $technical:		"Roboto Mono", "Consolas", "Monaco", "Lucida Console", "Andale Mono"
 $entity:		Arial, Helvetica, sans-serif
 
-$border:		1px solid rgba(0, 0, 0, 0.08)
+
 
 $bg:	    	rgba(241, 241, 241, 1)
 $maths:			rgba(33, 153, 231, 1)
@@ -16,6 +16,10 @@ $narrow-unit:	710px
 $phone-max:		500px
 $gttr-dt:	 	28px
 $gttr-ph:	 	28px / 2
+
+
+$border:		1px solid rgba(0, 0, 0, 0.08)
+$dashed:		1px dashed $ink
 
 	
 @mixin theme-A($alpha)
@@ -77,6 +81,7 @@ $gttr-ph:	 	28px / 2
 
 @import "projects/ih/reflow.sass"
 @import "projects/ih/breadcrumb.sass"
+@import "projects/ih/modal.sass"
 @import "projects/ih/slider.sass"
 
 @import "a11y/no-js.sass"
@@ -86,7 +91,5 @@ $gttr-ph:	 	28px / 2
 
 
 
-div
-	outline: 1px solid red
 
 

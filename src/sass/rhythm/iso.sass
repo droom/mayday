@@ -37,15 +37,26 @@ body.iso main
 		&.blueprint
 			margin-top: 	$gttr-dt
 			margin-bottom: 	$gttr-dt * 2
-
-			hgroup, .hgroup
-				margin-top: 	$gttr-dt
-				margin-bottom: 	$gttr-dt * 2
-
+			
 		&.blueprint
+			&.pad
+				padding-top: 	$gttr-dt
+				padding-bottom: $gttr-dt
+				background: 	yellow
+				
+				figure figcaption
+					margin-top: 	$gttr-dt * 2
+					margin-bottom: 	0
+
+				hgroup, .hgroup
+					margin-bottom: $gttr-dt * 2
+
 			figure figcaption
 				margin-top: 	$gttr-dt * 2
 				margin-bottom: 	$gttr-dt
+
+			hgroup, .hgroup
+				margin-bottom: $gttr-dt
 
 		&.surface
 			figure figcaption
@@ -59,10 +70,16 @@ body.iso main
 		padding-top: 	$gttr-dt
 
 
-
 @media (max-width: $phone-max)
 	body.iso main
 		h2
 			margin-top: 	$gttr-dt * 2
 			margin-bottom:  $gttr-dt
+
+		.segment 
+			&.blueprint
+				&.pad
+					padding-top: 	$gttr-ph
+					padding-bottom: $gttr-ph
+					background: pink
 
