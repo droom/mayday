@@ -1,24 +1,27 @@
-// label,
-// sup,
-// small,
-// figcaption,
-// ul,
-// ol,
-// li,
-// dd,
-// dl,
-// dt
-//   vertical-align: top
-
-dd,
-dl,
-dt
+dl, dd, dt
   vertical-align: top
 
+dl.credits dl
+  font-weight:  400
+  
+dl.credits dt
+  font-weight:  700
 
 body main h2,
 body main h3
   text-align: center
+
+figure figcaption
+  text-align: left
+
+body.iso header h1
+  max-width: 10em
+
+.entity
+  font-family: $entity
+  font-weight: 400
+  text-rendering: optimizeLegibility
+  display: inline-block
 
 .align-l
   text-align: left
@@ -26,10 +29,6 @@ body main h3
   text-align: right
 .align-c
   text-align: center
-
-.entity
-  margin-top: -1em
-  display: inline-block
 
 .ndash
   position: relative

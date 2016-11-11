@@ -15,9 +15,8 @@ $wide-unit:    	1118px
 $narrow-unit:	710px
 $phone-max:		500px
 
-$gttr-dt:	 	26px
-$gttr-dt-top:	22px
-$gttr-ph:	 	15px
+$gttr-dt:	 	28px
+$gttr-ph:	 	28px / 2
 
 	
 @mixin theme-A($alpha)
@@ -35,8 +34,11 @@ $gttr-ph:	 	15px
 @import "grid/base.sass"
 @import "grid/frame.sass"
 @import "grid/flex.sass"
-@import "grid/rhythm.sass"
 @import "grid/stacking.sass"
+
+@import "rhythm/base.sass"
+@import "rhythm/contents.sass"
+@import "rhythm/iso.sass"
 
 @import "motion/page.sass"
 @import "motion/elements.sass"
@@ -79,7 +81,6 @@ $gttr-ph:	 	15px
 @import "a11y/no-js.sass"
 @import "a11y/no-flexbox.sass"
 @import "a11y/no-cssgradients.sass"
-
 
 
 

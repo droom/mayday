@@ -1,0 +1,53 @@
+body.iso main
+	p
+		margin-top: 	$gttr-dt
+		margin-bottom: 	$gttr-dt
+
+		&:last-child
+			margin-bottom: 	$gttr-dt * 3
+
+		& + p
+			margin-top: 0
+
+		& + .segment
+			&.surface,
+			&.blueprint
+				margin-top: $gttr-dt * 2
+
+	h2
+		margin-top: 	$gttr-dt * 2
+		margin-bottom:  $gttr-dt * 2
+		
+	h3
+		margin-top: 	$gttr-dt
+		margin-bottom: 	$gttr-dt
+
+	table
+		margin-top: 	$gttr-dt
+		margin-bottom: 	$gttr-dt * 2
+
+	.segment 
+		& + h3
+			margin-top: 	$gttr-dt * 2
+	
+		&.surface,
+		&.blueprint
+			margin-top: 	$gttr-dt
+			margin-bottom: 	$gttr-dt * 2
+
+		&.blueprint
+			figure figcaption
+				margin-top: 	$gttr-dt
+				margin-bottom: 	$gttr-dt
+
+		&.surface
+			figure figcaption
+				margin-top: 	$gttr-dt / 2
+				margin-bottom: 	$gttr-dt
+		
+		&.swatch
+			margin-bottom: 	$gttr-dt * 2
+
+	#ih-product
+		padding-top: 	$gttr-dt
+

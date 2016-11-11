@@ -4,7 +4,6 @@ ul.reflow
 		a
 			background: white
 		a.active
-			background: yellow
 
 figure .diagram.ih.reflow
 	margin:     auto
@@ -28,7 +27,6 @@ figure .diagram.ih.reflow
 			
 		&.stats
 			background: url('../img/stripes/3.gif')
-
 				
 		.tab
 			transition: all ease 1s
@@ -40,7 +38,7 @@ figure .diagram.ih.reflow
 			
 			&:after
 				content: "Navigation: Cycle Products"
-				@include tiny()
+				@include small()
 
 		&.image
 			svg
@@ -55,7 +53,7 @@ figure .diagram.ih.reflow
 			left:   0
 			&:after
 				content: "Navigation: Main"
-				@include tiny()
+				@include small()
 
 figure .diagram.ih.reflow.before
 	.cell
@@ -72,9 +70,8 @@ figure .diagram.ih.reflow.before
 				top:  10px
 				left: 10px
 				content: "Image (×1)"
-				@include tiny()
+				@include small()
 				
-
 		&.cycle,
 		&.image
 			width: 	60%
@@ -83,8 +80,6 @@ figure .diagram.ih.reflow.before
 			height: 16px
 			top: 	254px
 			right: 	0
-
-
 				
 		&.stats
 			width: 	38%
@@ -95,7 +90,7 @@ figure .diagram.ih.reflow.before
 				background: white
 				padding: 0.3rem 0.3rem
 				content: "Stats"
-				@include tiny()
+				@include small()
 				
 			.tab
 				display: none

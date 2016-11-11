@@ -2,7 +2,7 @@ include partials/_order
 
 - var workiso     = true
 - var fTitle      = "droom.io/work/goget"
-- var project     = "GoGet Brand/Public Face"
+- var project     = "GoGet.my Brand / Web / App"
 - var client      = "GoGet"
 - var studio      = "VLT Labs"
 - var date        = "March 2015"
@@ -20,10 +20,8 @@ include partials/_order
 
 - var prevTitle   = order1[3]
 - var prevURL     = order2[3]
-
 - var nextTitle   = order1[1]
 - var nextURL     = order2[1]
-
 
 doctype html
 html(class="no-js" lang="en")
@@ -40,15 +38,13 @@ html(class="no-js" lang="en")
         include partials/_role
 
       main(role="main")
-        //- .segment.type
         
         h2(itemprop="description") GoGet is a community-focused errands and delivery marketplace, currently operating in Kuala Lumpur
         p GoGet began in 2014 and—simply put—matches those with complementary resources. This exchange, between equals in a safe community, is at the core of their offering.
 
-        //- .segment.type
         h3
           = "A " 
-          span.entity &rarr;
+          span.entity.accent &rarr;
           = " B"
 
         p
@@ -129,7 +125,6 @@ html(class="no-js" lang="en")
             
             figcaption Initial wordmark exploration
 
-        //- .segment.type
         h3 Public face: Immediate problems
         table.issues
           thead
@@ -165,13 +160,13 @@ html(class="no-js" lang="en")
                 |  on Google Drive.
 
 
-        .segment.blueprint
+        //- .segment.blueprint
+        .segment.surface
           hgroup GG&mdash;Sitemap_v4
           figure
             include projects/gg/sitemap
             figcaption Lorem...
 
-        //- .segment.type
         h3 A Singular Hero
         p
           = "GoGet's public face is fairly conventional in its layout. A hero image introduces each page, with content modules sitting below. Whilst marking up the third hero module, I felt I could "
@@ -181,7 +176,7 @@ html(class="no-js" lang="en")
         .segment.surface.squash
           include projects/gg/singular
 
-        .segment.swatch.goget
+        .segment.align-c.swatch.goget
           .colour.colour-1
           .colour.colour-2
           .colour.colour-3
@@ -199,7 +194,6 @@ html(class="no-js" lang="en")
               .unit.pad
                 img(src="img/projects/gg/gg-layout-2.jpg")
 
-        //- .segment.type
         p The new identity is being applied to digital and printed materials and elements have been folded in to a temporary website. The public face I’m designing is currently in production and is set to go live Summer/Autumn 2016.
 
       .band.ref

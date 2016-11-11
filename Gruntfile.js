@@ -25,7 +25,8 @@ module.exports = function(grunt) {
         'src/sass/grid/*',
         'src/sass/type/*',
         'src/sass/motion/*',
-        'src/sass/images/*'
+        'src/sass/images/*',
+        'src/sass/rhythm/*'
 
         ],
         tasks: ['sass'],

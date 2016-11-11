@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en" class="no-js">
   <head>
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,700" rel="stylesheet" media="screen" type="text/css">
-    <link href="css/screen.css" rel="stylesheet" media="all" type="text/css">
-    <link href="css/print.css" rel="stylesheet" media="print" type="text/css">
+    <link rel="stylesheet" type="text/css" media="screen" href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,700">
+    <link rel="stylesheet" type="text/css" media="all" href="css/screen.css">
+    <link rel="stylesheet" type="text/css" media="print" href="css/print.css">
     <link rel="prefetch" href="http://droom.io/img/cover/ih-cover-600.jpg">
     <link rel="prefetch" href="http://droom.io/img/cover/gg-cover-600.jpg">
     <link rel="prefetch" href="http://droom.io/img/cover/gr-cover-600.jpg">
@@ -15,7 +15,6 @@
     <meta name="language" content="en">
     <meta name="title" content="droom.io/work/ideahouse">
     <meta name="p:domain_verify" content="0adca0e3d608f74b4f9af464b0955a55">
-    
     <meta name="og:title" content="droom.io/work/ideahouse">
     <meta name="og:site_name" content="droom.io/work/ideahouse">
     <meta name="og:description" content="Designer &amp; Client-side Developer, 2016 portfolio">
@@ -209,7 +208,9 @@
         <div class="segment blueprint">
           <figure>
             <div class="diagram modal">
-              <hgroup>There are [$NUM] new products since your last visit.<span class="btn">View all</span><span class="btn">Dismiss</span></hgroup>
+              <hgroup>There are [$NUM] new products since your last visit.
+                <div class="btn-group"><span class="btn">View all</span><span class="btn">Dismiss</span></div>
+              </hgroup>
             </div>
             <figcaption>The idea behind this was to keep the user constantly up-to-date with the product line, ensuring they don't miss out on anything that would interest thier customers. </figcaption>
           </figure>
@@ -256,16 +257,18 @@
       </div>
     </article>
     <div class="band hr relative pager">
-      <div class="segment type"><a href="work-goget.html" tabindex="-1" class="move move-left"></a><a href="work-givereceipt.html" tabindex="-1" class="move move-right"></a>
-        <ul class="reset flex page ghost">
-          <li class="unit ghost">
-            <label class="prise caps">Previous</label><a href="work-goget.html" class="h3 plain ghost">GoGet Brand/Web</a>
-          </li>
-          <li class="unit right ghost align-r">
-            <label class="prise caps">Next </label><a href="work-givereceipt.html" class="h3 plain ghost">GiveReceipt Brand/Web</a>
-          </li>
-        </ul>
-      </div>
+      <nav>
+        <div class="segment type"><a href="work-goget.html" tabindex="-1" class="move move-left"></a><a href="work-givereceipt.html" tabindex="-1" class="move move-right"></a>
+          <ul class="reset flex page ghost">
+            <li class="unit ghost">
+              <label class="prise block caps">Previous</label><a href="work-goget.html" class="plain ghost">GoGet Brand/Web</a>
+            </li>
+            <li class="unit right ghost align-r">
+              <label class="prise block caps">Next </label><a href="work-givereceipt.html" class="plain ghost">GiveReceipt Brand/Web</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
     </div>
     <div id="top" class="band head"><a href="#head" tabindex="-1" class="move move-top glide"></a>
       <nav class="ghost">

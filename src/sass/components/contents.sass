@@ -37,10 +37,10 @@ ul.contents
 				background-size: 		50px
 				background-position: 	96% 50%
 				transition: 			300ms background ease, 300ms opacity ease
-				
-				dl.credits
-					dd.project
-						display: block
+			
+		dl.credits
+			dd.project
+				display: block
 
 		&.disable
 			border-top: $border
@@ -66,6 +66,9 @@ ul.contents
 					dl.credits
 						dt.project
 							display: inline-block
+						dd.project
+							display: inline
+							@include small()
 
 
 ul.contents.tile
@@ -138,7 +141,7 @@ ul.contents.tile
 						display: block
 						min-width: auto
 					dd.project.h3
-						@include tiny()
+						@include small()
 						margin-bottom:  0
 
 
