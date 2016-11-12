@@ -3,8 +3,6 @@ $running:		-apple-system, BlinkMacSystemFont, "hndi-std", "Roboto", "Droid Sans"
 $technical:		"Roboto Mono", "Consolas", "Monaco", "Lucida Console", "Andale Mono"
 $entity:		Arial, Helvetica, sans-serif
 
-
-
 $bg:	    	rgba(241, 241, 241, 1)
 $maths:			rgba(33, 153, 231, 1)
 $copy:		   	rgba(0, 0, 0, 0.8)
@@ -16,7 +14,6 @@ $narrow-unit:	710px
 $phone-max:		500px
 $gttr-dt:	 	28px
 $gttr-ph:	 	28px / 2
-
 
 $border:		1px solid rgba(0, 0, 0, 0.08)
 $dashed:		1px dashed $ink
@@ -55,6 +52,7 @@ $dashed:		1px dashed $ink
 @import "images/base.sass"
 @import "images/jacket.sass"
 
+@import "components/band.sass"
 @import "components/lists.sass"
 @import "components/contents.sass"
 @import "components/contents-btn.sass"
@@ -66,23 +64,20 @@ $dashed:		1px dashed $ink
 @import "components/pager.sass"
 @import "components/slick.sass"
 @import "components/konami.sass"
+
 @import "components/appendix.sass"
 
 @import "projects/shared/diagrams.sass"
 @import "projects/shared/swatch.sass"
 @import "projects/shared/cover.sass"
-
 @import "projects/gg/sitemap.sass"
 @import "projects/gg/singular.sass"
 @import "projects/gg/ui.sass"
 // @import "projects/gg/views/views.sass"
-
 @import "projects/gr/flow.sass"
-
 @import "projects/ih/reflow.sass"
 @import "projects/ih/breadcrumb.sass"
 @import "projects/ih/modal.sass"
-@import "projects/ih/slider.sass"
 
 @import "a11y/no-js.sass"
 @import "a11y/no-flexbox.sass"
@@ -90,6 +85,20 @@ $dashed:		1px dashed $ink
 @import "a11y/no-multiplebgs.sass"
 
 
+@media (max-width: $phone-max)
+	dl.feed
+		display: block
 
-
+		dt
+			display: block
+			border-top: $border
+			padding-top: $gttr-ph
+			
+			&:nth-child(1)
+				border: none
+				padding-top: 0
+			
+		dd 
+			display: block
+			padding-bottom: $gttr-ph
 

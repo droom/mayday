@@ -1,40 +1,22 @@
-.band
-  &.hr
-    border-top: $border
-  &.head
-    @include theme-A(1)
-  &.ref
-    background: rgba(0,0,0,0.04)
-  &.relative
-    position: relative
-
-.block
-  display: block
-.inline
-  display: inline
-.inline-block
-  display: inline-block
-
 body main
   p,
   h2,
   h3
     margin: auto
-
-  table,
-  h2,
-  h3,
-  p
-    max-width: $narrow-unit
-    
-  p
-  h2,
-  h3,
   p,
+  h2,
+  h3,
+  table
+    max-width: $narrow-unit
+  p,
+  h2,
+  h3,
   table,
-  ul.controls,
   hgroup,
   figcaption,
+  ul.controls,
+  section.diagram.gg.sitemap,
+  section.diagram.gg.singular .modules
     padding-left: $gttr-dt
     padding-right: $gttr-dt
 
@@ -56,7 +38,8 @@ body main
     padding-right: $gttr-dt
     hgroup,
     figcaption
-      padding: 0
+      padding-left: 0
+      padding-right: 0
 
   &.type
     max-width: $narrow-unit
@@ -71,7 +54,23 @@ body main
     background: url('../img/components/graph-large.svg') repeat -1px 0 , url('../img/components/graph-small.svg') repeat -1px 0  
     background-color: #e9eae9
 
+
 @media (max-width: $phone-max)
+      
+  body main
+    h2,
+    h3,
+    p,
+    table,
+    ul.controls,
+    hgroup,
+    figcaption,
+    section.diagram.gg.sitemap,
+    section.diagram.gg.singular .modules
+      padding-left: $gttr-ph
+      padding-right: $gttr-ph
+
+
   .segment
     &.type,
     &.code,
@@ -81,20 +80,6 @@ body main
       hgroup,
       figcaption
         padding: 0
-        
     ol.ref
       padding-left: $gttr-ph
-      
-  body main
-    p
-    h2,
-    h3,
-    p,
-    table,
-    ul.controls,
-    hgroup,
-    figcaption,
-      padding-left: $gttr-ph
-      padding-right: $gttr-ph
-
 

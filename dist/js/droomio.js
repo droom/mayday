@@ -3922,6 +3922,7 @@ var Konami = function (callback) {
 				slidesToShow: 3
 			},
 		},
+
 		{
 			breakpoint: 400,
 			settings: {
