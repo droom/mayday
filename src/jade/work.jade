@@ -7,7 +7,6 @@ html(class="no-js" lang="en")
     include partials/_head
 
   body(data-project="work").work
-    include partials/_top
     article.fade-in#context
       include partials/_nav
       .band.head.hr.relative
@@ -104,5 +103,10 @@ html(class="no-js" lang="en")
                 dt.model Model
                 dd.model Editorial
 
-      include partials/_footer
-      include partials/_scripts
+
+    //- include partials/_pager
+    include partials/_top
+    include partials/_footer
+      
+  include partials/_scripts
+      

@@ -3750,12 +3750,6 @@ var Konami = function (callback) {
 
 ;$(document).ready(function() {
 
-  Modernizr.addTest('pointerevents',function(){
-    return 'pointerEvents' in document.documentElement.style;
-  })
-
-});;$(document).ready(function() {
-
 	function flash(){
 		var $div = $("<div>", {"class": "flash"});
 		$("body").append($div);
@@ -3764,17 +3758,10 @@ var Konami = function (callback) {
 	console.log("konami load");
 	var audioElement = document.createElement('audio');
 	audioElement.setAttribute('src', 'audio/22H.wav');
-	// audioElement.setAttribute('autoplay', 'autoplay');
 	audioElement.load();
-	// $.get();
-	// audioElement.addEventListener("load", function() {
-	// 	audioElement.play();
-	// }, true);
-
 	if (localStorage.konami === "true"){
 		$( "html" ).addClass('konami');
 	};
-
 
 	var easter_egg = new Konami(function() { 
 
@@ -3788,8 +3775,6 @@ var Konami = function (callback) {
 			return;
 
 		};
-
-
 	});
 
 	$(document).keyup(function(e) {
