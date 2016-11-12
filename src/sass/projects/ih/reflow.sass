@@ -1,10 +1,15 @@
 ul.reflow
+	li + li
+		margin-left: 0.25em
+		&::before
+			content: "/"
+			padding-left: 0.25em
+			display: inline-block
+			
 	li
 		display: inline-block
 		a
 			background: white
-			padding: 0.5em 1em
-			display: block
 		a.active
 			background: yellow
 
@@ -41,6 +46,9 @@ section.diagram.ih.reflow
 			
 			&:after
 				content: "Navigation: Cycle Products"
+				padding: .08rem .35rem 0.12rem .35rem
+				background: white
+				color: $ink
 				@include small()
 
 		&.image
@@ -56,7 +64,12 @@ section.diagram.ih.reflow
 			left:   0
 			&:after
 				content: "Navigation: Main"
+				padding: .1rem .35rem 0.15rem .35rem
+				background: white
+				color: $ink
 				@include small()
+				
+
 
 section.diagram.ih.reflow.before
 	.cell
@@ -72,8 +85,12 @@ section.diagram.ih.reflow.before
 				position: absolute
 				top:  10px
 				left: 10px
+				padding: .1rem .35rem 0.15rem .35rem
 				content: "Image (×1)"
+				background: white
+				color: $ink
 				@include small()
+				
 				
 		&.cycle,
 		&.image
@@ -91,8 +108,9 @@ section.diagram.ih.reflow.before
 			right: 	62%
 			&:after
 				background: white
-				padding: 0.3rem 0.3rem
+				padding: .1rem .35rem 0.15rem .35rem
 				content: "Stats"
+				color: $ink
 				@include small()
 				
 			.tab
