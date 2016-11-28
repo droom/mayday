@@ -1,0 +1,52 @@
+.diagram.gr.flow
+  .row.center
+    .terminal A
+  
+  .row.center
+    .cell.join.join-c
+
+  .row
+    .cell.box.flex.profile
+      label Profile admin
+    .cell.join.join-a.strut
+    .cell.box.flex.dashboard
+      label Dashboard
+    .cell.join.join-b.strut
+    .cell.box.flex.view
+      label View single receipt
+      
+  .row.flex-end
+    .cell.join.join-c
+    .cell.join.strut
+    .cell.join.join-c
+    
+  .row.flex-end
+    .cell.box.flex.create
+      label Create new receipt
+    .cell.join.join-a.strut
+    .cell.box.flex.edit 
+      label Edit
+      
+  .row.center
+    .cell.join.join-e
+  
+  .row.center
+    .cell.box.flex.review
+      label Review
+
+  .row.center
+    .cell.join.join-c
+
+  .row.flex-end
+    .cell.box.flex.send
+      label Send
+    .cell.join.join-b.strut
+    .cell.box.flex.inbox
+      label Receipt emailed to recipient
+  
+  .row.center
+    .cell.join.join-c
+  
+  .row.center
+    .stop
+      .terminal.set A
