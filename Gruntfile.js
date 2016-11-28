@@ -12,14 +12,12 @@ module.exports = function(grunt) {
         'src/sass/*.sass',
         'src/sass/lib/*.sass',
         'src/sass/partials/*',
-        
         'src/sass/projects/*',
         'src/sass/projects/at/*',
         'src/sass/projects/ih/*',
         'src/sass/projects/gg/*',
         'src/sass/projects/gr/*',
         'src/sass/projects/gg/views/*',
-
         'src/sass/a11y/*',
         'src/sass/components/*',
         'src/sass/grid/*',
@@ -27,7 +25,6 @@ module.exports = function(grunt) {
         'src/sass/motion/*',
         'src/sass/images/*',
         'src/sass/rhythm/*'
-
         ],
         tasks: ['sass'],
       },
@@ -89,7 +86,7 @@ module.exports = function(grunt) {
         },
         processors: [
         require('pixrem')(), // add fallbacks for rem units
-        require('autoprefixer')({browsers: 'last 2 versions'}), // add vendor prefixes
+        require('autoprefixer')({add: false, browsers: 'last 2 versions'}), // add vendor prefixes
         require('cssnano')() // minify the result
         ]
       },

@@ -62,6 +62,7 @@ $dashed:		1px dashed $ink
 @import "components/nav.sass"
 @import "components/counters.sass"
 @import "components/table.sass"
+@import "components/feed.sass"
 @import "components/pager.sass"
 @import "components/slick.sass"
 @import "components/konami.sass"
@@ -83,22 +84,4 @@ $dashed:		1px dashed $ink
 @import "a11y/no-flexbox.sass"
 @import "a11y/no-cssgradients.sass"
 @import "a11y/no-multiplebgs.sass"
-
-
-@media (max-width: $phone-max)
-	dl.feed
-		display: block
-
-		dt
-			display: block
-			border-top: $border
-			padding-top: $gttr-ph
-			
-			&:nth-child(1)
-				border: none
-				padding-top: 0
-			
-		dd 
-			display: block
-			padding-bottom: $gttr-ph
 

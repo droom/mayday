@@ -2,13 +2,13 @@ include partials/_order
 
 - var workiso     = true
 - var fTitle      = "droom.io/work/goget"
-- var project     = "GoGet WebApp"
+- var project     = "GoGet WebApp<br />LOM"
 - var client      = "GoGet"
 - var studio      = "VLT Labs"
 - var date        = "March 2015"
 - var status      = "In Production"
 - var model       = "Marketplace"
-- var role        = [ 'Identity', 'UX + UI', 'Front-End' ]
+- var role        = [ 'Identity', '<abbr title=\"User Experience\">UX</abbr>+<abbr title=\"User Interface\">UI</abbr>', 'Front-End' ]
 - var stack       = [ 'Balsamiq', 'Paper', 'Adobe© Illustrator', 'Adobe© Photoshop', 'Adobe© InDesign', 'InVision' ]
 
 - var live        = false
@@ -32,29 +32,13 @@ html(class="no-js" lang="en")
 
   body.work.iso
     article(data-project="goget" itemscope itemtype="http://schema.org/CreativeWork").fade-in#context
-      .cover-title
-        include partials/_nav
-        include partials/_mast
-      .cover-photo.gg-app(itemprop="image")#checkpoint
-      .cover-aside
-        include partials/_role
-
       main(role="main")
-        h2(itemprop="description") GoGet is a community-focused errands and delivery marketplace, currently operating in Kuala Lumpur
 
         .segment.blueprint.pad
           figure
             hgroup gg&mdash;combined prototype views
             include projects/gg/views
-            
-      .band.ref
-        .segment.type
-          ol.ref
+            figcaption Lorem ipsum dolor sit amet, consectetur adipisicing elit.
 
-    include partials/_pager
-    include partials/_top
     include partials/_footer
-      
   include partials/_scripts
-  script(src='js/isotope.js')
-

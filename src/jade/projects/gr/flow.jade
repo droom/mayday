@@ -1,52 +1,236 @@
 .diagram.gr.flow
-  .row.center
-    .terminal A
-  
-  .row.center
-    .cell.join.join-c
 
-  .row
-    .cell.box.flex.profile
-      label Profile admin
-    .cell.join.join-a.strut
-    .cell.box.flex.dashboard
-      label Dashboard
-    .cell.join.join-b.strut
-    .cell.box.flex.view
-      label View single receipt
-      
-  .row.flex-end
-    .cell.join.join-c
-    .cell.join.strut
-    .cell.join.join-c
+  .cell.row-1.col-5.brackets
+    include hinge-d
+
+  .cell.row-1.col-6.center
+    include vertical
+    include horizontal
+
+  .cell.row-1.col-7.center
+    include vertical
+    include horizontal
+
+  .cell.row-1.col-8.center
+      include vertical
+      include horizontal
+
+  .cell.row-1.col-9.box.brackets
+    .layer
+      label Recover password
+
+  .cell.row-1.col-11.box.brackets
+    .layer
+      label Onboarding
+
+  .cell.row-1.col-13.btm
+      .terminal.set A
+
+  .cell.row-1.col-15.box.brackets
+    .layer
+      label 
+        | Profile  
+        span.br view / edit
+
+  .cell.row-2.col-5.center.brackets
+      include vertical-down
+      include horizontal-left
+
+  .cell.row-2.col-9.brackets.center.nope.after
+      include vertical-up
+      include horizontal-right
+
+  .cell.row-2.col-11.brackets.center.nope.after
+    include vertical-up
+    include horizontal-right
+
+  .cell.row-2.col-12.brackets
+    include angle-se
+
+  .cell.row-2.col-13.center.brackets
+    include vertical-down
+    include horizontal-left
+
+  .cell.row-2.col-14.brackets
+      include angle-ne
+
+  .cell.row-3.col-1.center.start
+      .terminal S
+
+  .cell.row-3.col-2.center
+    include vertical-down
+    include horizontal-right
+
+
+
+
+  .cell.row-3.col-3.box.brackets
+    .layer
+      label
+          | Landing 
+          span.br
+            | Page
+
+  .cell.row-3.col-4.center
+    include vertical-down
+    include horizontal-right
+
+  .cell.row-3.col-5.box.brackets
+    .layer
+      label Sign in
+
+  .cell.row-3.col-6.center
+    include vertical-down
+    include horizontal-right
+
+  .cell.row-3.col-7.brackets.choice
+      .layer
+          label Recognised email?
+      include choice
+
+  .cell.row-3.col-8.center.yes
+    include vertical-down
+    include horizontal-right
+
+  .cell.row-3.col-9.brackets.choice
+      .layer
+          label Recognised password?
+      include choice
+
+  .cell.row-3.col-10.center.yes
+    include vertical-down
+    include horizontal-right
+
+  .cell.row-3.col-11.brackets.choice
+      .layer
+          label Is all mandatory information entered?
+      include choice
+
+  .cell.row-3.col-12.center.yes
+    include vertical-down
+    include horizontal-right
+
+  .cell.row-3.col-13.box.brackets
+    .layer
+      label Dashboard / View previous receipts
+  
+  .cell.row-3.col-14.center
+    include vertical-down
+    include horizontal-right
+
+  .cell.row-3.col-15.box.brackets
+    .layer
+      label Create new reciept
+  
+  .cell.row-3.col-16.center
+    include vertical-down
+    include horizontal-right
+
+  .cell.row-3.col-17.box.brackets
+    .layer
+      label
+        | Complete 
+        span.br form
+
+  .cell.row-3.col-18.center
+    include vertical-down
+    include horizontal-right
+
+  .cell.row-3.col-19.brackets.choice
+      .layer
+          label 
+            | Review. 
+            span.br OK?
+
+      include choice
+
+  .cell.row-3.col-20.center.yes
+    include vertical-down
+    include horizontal-right
+
+  .cell.row-3.col-21.box.brackets
+    .layer
+      label
+          | Send 
+          span.br summary
+
+  .cell.row-3.col-22.center
+    include vertical-down
+    include horizontal-right
+
+  .cell.row-3.col-23.center.end
+      .terminal.set A
+
+
+
+
+
+
+  .cell.row-4.col-5.center.brackets
+    include vertical-down
+    include horizontal-right
+
+  .cell.row-4.col-7.center.brackets.nope.before
+    include vertical
+    include horizontal
+
+  .cell.row-4.col-13.center.brackets
+    include vertical-down
+    include horizontal-right
+
+  .cell.row-4.col-14.brackets
+    include angle-se
+
+  .cell.row-4.col-16.brackets
+    include angle-se
+
+  .cell.row-4.col-17.brackets.center
+    include vertical-up
+    include horizontal-right
+
+  .cell.row-4.col-19.center.brackets.nope.before
+    include vertical
+    include horizontal
+
+  .cell.row-4.col-21.center
+    include vertical-down
+    include horizontal-left
+
+
+  .cell.row-5.col-5.box.brackets
+    .layer
+      label Sign up
+
+  .cell.row-5.col-6.center
+    include vertical-down
+    include horizontal-right
+
+  .cell.row-5.col-7.brackets
+    include hinge-b
+
+  .cell.row-5.col-13.box.brackets
+    .layer
+      label Log out
+  
+  .cell.row-5.col-15.box.brackets
+    .layer
+      label View / create from existing
+
+  .cell.row-5.col-16.center
     
-  .row.flex-end
-    .cell.box.flex.create
-      label Create new receipt
-    .cell.join.join-a.strut
-    .cell.box.flex.edit 
+  .cell.row-5.col-17.box.brackets
+    .layer
       label Edit
-      
-  .row.center
-    .cell.join.join-e
-  
-  .row.center
-    .cell.box.flex.review
-      label Review
 
-  .row.center
-    .cell.join.join-c
+  .cell.row-5.col-18.center
+    include horizontal-left
+    include vertical-up
 
-  .row.flex-end
-    .cell.box.flex.send
-      label Send
-    .cell.join.join-b.strut
-    .cell.box.flex.inbox
-      label Receipt emailed to recipient
-  
-  .row.center
-    .cell.join.join-c
-  
-  .row.center
-    .stop
-      .terminal.end A
+  .cell.row-5.col-19.brackets
+    include hinge-b
+
+  .cell.row-5.col-21.box.dashed.brackets
+    .layer
+      label Send to inbox
+
+

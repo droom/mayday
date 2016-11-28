@@ -1,6 +1,5 @@
 $(document).ready(function() {
 
-
 	$('a.reflow.before').click(function(e) {
 		e.preventDefault();
 		fBefore();

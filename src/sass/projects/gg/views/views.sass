@@ -1,26 +1,16 @@
-$outline: rgba(0,0,0,.3)
-$grid:    255px
-$pad-v:   0
-$pad-h:   0
-$gap:     30px
-
 @keyframes bounce-in
   0%
     transform: scale(0,0)
-  
   50%
     transform: scale(1.4,1.4)
-  
   100%
     transform: scale(1, 1)
 
 @keyframes bounce-out
   0%
     transform: scale(1,1)
-  
   50%
     transform: scale(1.4,1.4)
-  
   100%
     transform: scale(0, 0)
 
@@ -39,204 +29,186 @@ $gap:     30px
     opacity: 0
     
 
+@mixin bounce-in-set
+  animation-fill-mode: forwards
+  animation-iteration-count: 1
+  animation-duration: 300ms
+  animation-name: bounce-in
 
-label.role
-  padding: 2em 0.5em
+@mixin bounce-out-set
+  transition: all ease 300ms
+  transform: scale(0,0)
+  transform-origin:     center center
+  animation-fill-mode:  forwards
+  animation-iteration-count: 1
+  animation-duration:   300ms
+  animation-name:       bounce-out
 
-section.diagram.views .gogetter .tick-wrap
-  outline: 1px solid blue
-  width: 35px
-  height: 30px
-  cursor: pointer
+@mixin fader-set
+  animation-fill-mode: forwards
+  animation-iteration-count: 1
+  animation-duration: 1000ms
+  animation-name: fader
+  
+@mixin fader-rev-set
+  animation-fill-mode: forwards
+  animation-iteration-count: 1
+  animation-duration: 5ms
+  animation-name: fader-rev
 
-  .tick
-    background: #eee
-    opacity: 0
-    &.set
-      opacity: 1 
 
-section.diagram.views .poster .tick-wrap
-  position: relative
-  width: 35px
-  height: 30px
-
-  .tick
-    position: absolute
-    top:  0
-    left: 0
-    transition: all ease 300ms
-    transform: scale(0,0)
-    transform-origin:     center center
-    animation-fill-mode:  forwards
-    animation-iteration-count: 1
-    animation-duration:   300ms
-    animation-name:       bounce-out
-    
-    &.set
-      animation-fill-mode: forwards
-      animation-iteration-count: 1
-      animation-duration: 300ms
-      animation-name: bounce-in
-      
 section.diagram.views
-  width: 710px
-
-  .view:nth-child(1)
-    padding-right: 47px
-
-  .view:nth-child(2)
-    padding-left: 47px
-    border-left: 1px dotted $ink
-
-  button.button
-    border:     none
-    background: none
-    padding:    0
-    margin:     0
-    
-  .reopen
-    width:      180px
-    text-align: right
-
-  .gogetter,
-  .poster
-    .grid
-      width: $grid
-      background: white
-      margin: auto
-      
-      .element-item
-        min-height: 70px
-
-        &.stage
-          width: 25px
-        
+  .view 
+    .container.review
+      .mix
+        &.term
           .joinery
-            position:   absolute
-            top:    25px
-            left:   0
-            height: 100%
-            width:  100%
-            
-            background-image: -linear-gradient(left, transparent 49%, blue 0, blue 52%, transparent 0)
-            background-image: -moz-linear-gradient(left, transparent 49%, blue 0, blue 52%, transparent 0)
-            background-image: -webkit-linear-gradient(left, transparent 49%, blue 0, blue 52%, transparent 0)
-            animation-fill-mode: forwards
-            animation-iteration-count: 1
-            animation-duration: 1000ms
-            animation-name: fader
+            opacity: 0
 
-            &.collapsed
-              animation-fill-mode: forwards
-              animation-iteration-count: 1
-              animation-duration: 5ms
-              animation-name: fader-rev
-
-        &.desc
-          width: 195px
-          padding-top: $pad-v
-          padding-left: $pad-h
+        &.review
+          margin-top: 10px
+          border-top: 1px solid rgba(0,0,0,0.15)
           
-        &.status
+          &.term
+            padding-top: 5px
+          &.desc
+            padding-top: 10px
+          &.done
+
+
+section.diagram.views
+  width: 701px
+  user-select: none
+  .view
+    &:nth-child(1)
+      padding-right: 47px
+
+      .tick-btn
+        cursor: pointer
+        outline: 1px solid $ink
+        background: #fbf395
+
+      .container
+        &::before
+          content: "GOGETTER"
+
+        .mix
+          &.contact
+            label:before
+              content: 'Contact your Poster'
+            label:after
+              content: '{% contact partial %}'
+
+    &:nth-child(2)
+      padding-left: 47px
+      border-left: 1px solid $ink
+
+      .container
+        &::before
+          content: "POSTER"
+
+        .mix
+          &.contact
+            label:before
+              content: 'Contact your GoGetter'
+            label:after
+              content: '{% contact partial %}'
+
+      .tick-btn
+        .tick
+          @include bounce-out-set
+          &.set
+            @include bounce-in-set
+
+    .container
+      @include small()
+      color: $ink
+      margin-top: 10px
+      width: 94%
+      background: white
+      border-radius: 3px
+      padding: 5px 10px 5px 5px
+      &::before
+        display: block
+        width: 100%
+        text-align: center
+        margin: 6px 10px 10px 10px
+
+      .mix
+        display: none
+
+        .flex
           align-items: flex-end
-          padding-bottom: $pad-v
-          
+          justify-content: flex-end
+          height: 100%
+          width: 100%
+          .tick-wrap
+            align-self: flex-end
+
+        &.term
+          width: 25px
+          position: relative
+          .joinery
+            position: absolute
+            width:    100%
+            height:   calc(100% - 25px)
+            transition: all ease 300ms
+            @include joiner()
+
+        &.contact,
         &.desc,
-        &.status
+        &.done
           border-top: 1px solid rgba(0,0,0,0.15)
 
-        &:nth-child(1),
-        &:nth-child(2),
-        &:nth-child(3)
-          border-top: none
+        &.contact,
+        &.desc
+          padding: 5px 5px
 
+        &.desc
+          width:          calc(100% - 65px)
+          padding-right:  5px
+          min-height: 60px
 
+        &.reopen
+          width:      calc(100% - 75px)
+          margin:     0 0 0 auto
+          text-align: right
+          
+          .reopen-btn
+            padding:    5px 8px
+            background: white
+            display:    inline-block
+            outline:    2px solid $ink
+            color:      $ink
+            margin-right: 5px
 
+        &.contact
+          width: 100%
+          min-height: 60px
+          label:before,
+          label:after
+            text-align: center
+            display: block
 
-.circle
-  border: 0.1em solid $outline
-  border-radius: 50%
-  width:  12px
-  height: 12px
-  margin: 3px auto 0 auto
-  
-.oval
-  border: 0.1em solid $outline
-  border-radius: 6px
-  width: 56px
-  height: 6px
-  margin: 12px auto 0 auto  
+        &.done
+          width: 35px
+          padding: 0 0 10px 0
 
+          .tick-btn
+            position: relative
+            width: 35px
+            height: 30px
 
-.but-l-1
-  width: 4px
-  height: 18px
-  position: absolute
-  left: -4px
-  top: 109px
-  border-radius: 1px
-  border: .1em solid $outline
+            &.tick-4
+              cursor: pointer
+              outline: 1px solid $ink
+              background: #fbf395
 
+            &.disabled
+              opacity: 0.25
 
-.but-l-2
-  width: 5px
-  height: 42px
-  position: absolute
-  left: -5px
-  top: 149px
-  border-radius: 1px
-  border: .1em solid $outline
-
-
-.but-l-3
-  width: 5px
-  height: 42px
-  position: absolute
-  left: -5px
-  top: 199px
-  border-radius: 1px
-  border: .1em solid $outline
-
-
-.but-r-1
-  width: 5px
-  height: 40px
-  margin: 10px auto 0
-  position: absolute
-  right: -5px
-  top: 130px
-  border-radius: 1px
-  border: .1em solid $outline
-
-
-.chrome-3,
-.chrome-2,
-.chrome-1
-  margin: auto
-
-.chrome-3
-  border-top: 0.1em solid $outline
-  border-right: 0.1em solid $outline
-  border-left: 0.1em solid $outline
-  width: $grid + 48px
-  padding-top: 3px
-  border-radius: 35px 35px 0 0
-  position: relative
-
-.chrome-2
-  border-top: 0.1em solid $outline
-  border-right: 0.1em solid $outline
-  border-left: 0.1em solid $outline
-  width: $grid + 40px
-  padding-top: 10px
-  border-radius: 30px 30px 0 0
-
-.chrome-1
-  position: relative
-  width: $grid + 15px 
-  margin-top: 30px
-  min-height: 345px
-  background: rgba(0,0,0,0.1)
-  border: 0.1em solid $outline
-  border-bottom: none
+            .tick
+              opacity: 0
+              &.set
+                opacity: 1
 

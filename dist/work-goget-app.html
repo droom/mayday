@@ -24,72 +24,12 @@
   </head>
   <body class="work iso">
     <article data-project="goget" itemscope itemtype="http://schema.org/CreativeWork" id="context" class="fade-in">
-      <div class="cover-title">
-        <div id="head" class="band head relative"><a href="work.html" class="move move-return"></a>
-          <nav role="navigation" class="ghost">
-            <div class="segment type ghost">
-              <ol class="reset flex ghost">
-                <li class="unit align-l ghost prise caps"><a href="index.html" id="profile" class="target">droom.io</a></li>
-                <li class="unit align-r ghost work"><a href="work.html" id="work" class="target">Selected Work</a></li>
-              </ol>
-            </div>
-          </nav>
-        </div>
-        <div class="band head hr relative move"><a href="work-foreign.html" tabindex="-1" class="move move-left"></a>
-          <div class="segment type relative mast">
-            <header>
-              <h1 itemprop="name">GoGet WebApp</h1>
-              <dl class="reset credits">
-                <dt>Client</dt>
-                <dd itemprop="copyrightHolder">GoGet</dd>
-                <dt>Studio</dt>
-                <dd itemprop="author">VLT Labs</dd>
-                <dt>Model</dt>
-                <dd>Marketplace</dd>
-                <dt>Date</dt>
-                <dd itemprop="datePublished">March 2015</dd>
-                <dt>Stage</dt>
-                <dd> <a itemprop="URL" href="http://clients.droom.io/go" aria-label="GoGet WebApp" class="inline dark">clients.droom.io/go</a></dd>
-              </dl>
-            </header>
-          </div><a href="work-ideahouse.html" tabindex="-1" class="move move-right"></a>
-        </div>
-        <div class="band js hr">
-          <div class="segment type">
-            <h4> Some parts of this site need JavaScript to work properly. Please enable it for the full experience. <a href="http://enable-javascript.com/" class="inline">How</a>?
-            </h4>
-          </div>
-        </div>
-      </div>
-      <div itemprop="image" id="checkpoint" class="cover-photo gg-app"></div>
-      <div class="cover-aside">
-        <aside role="complementary" class="project">
-          <div class="segment type">
-            <dl class="reset credits">
-              <dt>Role</dt>
-              <dd>Identity</dd>
-              <dd>UX + UI</dd>
-              <dd>Front-End</dd>
-            </dl>
-            <dl class="reset credits">
-              <dt>Stack</dt>
-              <dd>Balsamiq</dd>
-              <dd>Paper</dd>
-              <dd>Adobe© Illustrator</dd>
-              <dd>Adobe© Photoshop</dd>
-              <dd>Adobe© InDesign</dd>
-              <dd>InVision</dd>
-            </dl>
-          </div>
-        </aside>
-      </div>
       <main role="main">
-        <h2 itemprop="description">GoGet is a community-focused errands and delivery marketplace, currently operating in Kuala Lumpur</h2>
         <div class="segment blueprint pad">
           <figure>
             <hgroup>gg&mdash;combined prototype views</hgroup>
-            <section data-js-module="filtering-demo" class="diagram views flex main">
-              <div class="view gogetter">
+            <section class="diagram views flex">
+              <div class="view">
                 <div class="chrome-3">
                   <div class="but-l-1"></div>
                   <div class="but-l-2"></div>
@@ -99,62 +39,56 @@
                     <div class="circle"></div>
                     <div class="oval"></div>
                     <div class="chrome-1">
-                      <label class="block role align-c">I am a GoGetter</label>
-                      <div class="grid">
-                        <div class="element-item stage join active fin">
-                          <div class="terminal"></div>
-                          <div class="joinery"></div>
+                      <div class="container flex wrap">
+                        <div data-my-order="1" class="mix open term complete">
+                          <div class="terminal terminal-a"></div>
+                          <div class="joinery set"></div>
                         </div>
-                        <div class="element-item desc">
-                          <label>Job Started</label>
+                        <div data-my-order="2" class="mix open desc">Job Started</div>
+                        <div data-my-order="3" class="mix open done">
+                          <div class="flex">
+                            <div class="tick-btn tick-1"><img src="img/projects/gg/views/tick.svg" class="tick"></div>
+                          </div>
                         </div>
-                        <div class="element-item status flex">
-                          <div class="tick-wrap"><img src="img/projects/gg/views/tick.svg" class="tick tick-1"></div>
-                        </div>
-                        <div class="element-item stage join active fin">
+                        <div data-my-order="4" class="mix open term complete">
                           <div class="terminal terminal-b">A</div>
-                          <div class="joinery"></div>
+                          <div class="joinery set"></div>
                         </div>
-                        <div class="element-item desc">
-                          <label>Frozen Yoghurt Guava if available if not original x1+ Sunflower seeds topping</label>
-                        </div>
-                        <div class="element-item status flex">
-                          <div class="tick-wrap"><img src="img/projects/gg/views/tick.svg" class="tick tick-2"></div>
-                        </div>
-                        <div class="element-item stage join active fin">
-                          <div class="terminal">B</div>
-                          <div class="joinery"></div>
-                        </div>
-                        <div class="element-item desc">
-                          <label>Deliver to my work address</label>
-                        </div>
-                        <div class="element-item status flex">
-                          <div class="tick-wrap">
-                            <div class="filter-button-group button-group js-radio-button-group">
-                              <button data-filter=".fin" class="button finished"><img src="img/projects/gg/views/tick.svg" class="tick tick-3 button"></button>
-                            </div>
+                        <div data-my-order="5" class="mix open desc">Frozen Yoghurt Guava if available if not original x1+ Sunflower seeds topping</div>
+                        <div data-my-order="6" class="mix open done">
+                          <div class="flex">
+                            <div class="tick-btn tick-2"><img src="img/projects/gg/views/tick.svg" class="tick"></div>
                           </div>
                         </div>
-                        <div class="element-item fin reopen">
-                          <div class="filter-button-group button-group js-radio-button-group">
-                            <button data-filter=":not(.reopen)" class="button reopen">REOPEN</button>
+                        <div data-my-order="7" class="mix open term complete">
+                          <div class="terminal terminal-c">B</div>
+                          <div class="joinery set"></div>
+                        </div>
+                        <div data-my-order="8" class="mix open desc">Deliver to my work address</div>
+                        <div data-my-order="9" class="mix open done">
+                          <div class="flex">
+                            <div class="tick-btn tick-3"><a href="#" data-filter=".complete" class="plain btn filter"><img src="img/projects/gg/views/tick.svg" class="tick"></a></div>
                           </div>
                         </div>
-                        <div class="element-item stage fin">
-                          <div class="terminal"></div>
+                        <div data-my-order="10" class="mix complete reopen"><a href="#" data-filter=".open" class="plain btn filter reopen-btn">REOPEN</a></div>
+                        <div data-my-order="11" class="mix open term review complete">
+                          <div class="terminal terminal-d"></div>
                         </div>
-                        <div class="element-item desc fin"> 
-                          <label>Job Complete</label>
+                        <div data-my-order="12" class="mix open desc review complete">Review and close</div>
+                        <div data-my-order="13" class="mix open done review complete">
+                          <div class="flex">
+                            <div class="tick-btn tick-4"><img src="img/projects/gg/views/tick.svg" class="tick"></div>
+                          </div>
                         </div>
-                        <div class="element-item status flex fin">
-                          <div class="tick-wrap"><img src="img/projects/gg/views/tick.svg" class="tick"></div>
+                        <div data-my-order="14" class="mix complete contact open">
+                          <label></label>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="view poster">
+              <div class="view">
                 <div class="chrome-3">
                   <div class="but-l-1"></div>
                   <div class="but-l-2"></div>
@@ -164,51 +98,49 @@
                     <div class="circle"></div>
                     <div class="oval"></div>
                     <div class="chrome-1">
-                      <label class="block role align-c">I am a Poster</label>
-                      <div class="grid">
-                        <div class="element-item stage join active fin">
-                          <div class="terminal"></div>
-                          <div class="joinery"></div>
+                      <div class="container flex wrap">
+                        <div data-my-order="1" class="mix open term complete">
+                          <div class="terminal terminal-a"></div>
+                          <div class="joinery set"></div>
                         </div>
-                        <div class="element-item desc">
-                          <label>Job Started</label>
+                        <div data-my-order="2" class="mix open desc">Job Started</div>
+                        <div data-my-order="3" class="mix open done">
+                          <div class="flex">
+                            <div class="tick-btn tick-1"><img src="img/projects/gg/views/tick.svg" class="tick"></div>
+                          </div>
                         </div>
-                        <div class="element-item status flex">
-                          <div class="tick-wrap"><img src="img/projects/gg/views/tick.svg" class="tick tick-1"></div>
+                        <div data-my-order="4" class="mix open term complete">
+                          <div class="terminal terminal-b">A</div>
+                          <div class="joinery set"></div>
                         </div>
-                        <div class="element-item stage join active fin">
-                          <div class="terminal">A</div>
-                          <div class="joinery"></div>
+                        <div data-my-order="5" class="mix open desc">Frozen Yoghurt Guava if available if not original x1+ Sunflower seeds topping</div>
+                        <div data-my-order="6" class="mix open done">
+                          <div class="flex">
+                            <div class="tick-btn tick-2"><img src="img/projects/gg/views/tick.svg" class="tick"></div>
+                          </div>
                         </div>
-                        <div class="element-item desc">
-                          <label>
-                            Frozen Yoghurt Guava
-                            if available if not original
-                            x1+ Sunflower seeds topping
-                          </label>
+                        <div data-my-order="7" class="mix open term complete">
+                          <div class="terminal terminal-c">B</div>
+                          <div class="joinery set"></div>
                         </div>
-                        <div class="element-item status flex">
-                          <div class="tick-wrap"><img src="img/projects/gg/views/tick.svg" class="tick tick-2"></div>
+                        <div data-my-order="8" class="mix open desc">Deliver to my work address</div>
+                        <div data-my-order="9" class="mix open done">
+                          <div class="flex">
+                            <div class="tick-btn tick-3"><a href="#" data-filter=".complete" class="plain btn filter"><img src="img/projects/gg/views/tick.svg" class="tick"></a></div>
+                          </div>
                         </div>
-                        <div class="element-item stage join active fin">
-                          <div class="terminal">B</div>
-                          <div class="joinery"></div>
+                        <div data-my-order="10" class="mix complete reopen"><a href="#" data-filter=".open" class="plain btn filter reopen-btn">REOPEN</a></div>
+                        <div data-my-order="11" class="mix open term review complete">
+                          <div class="terminal terminal-d"></div>
                         </div>
-                        <div class="element-item desc">
-                          <label>Deliver to my work address</label>
+                        <div data-my-order="12" class="mix open desc review complete">Review and close</div>
+                        <div data-my-order="13" class="mix open done review complete">
+                          <div class="flex">
+                            <div class="tick-btn tick-4"><img src="img/projects/gg/views/tick.svg" class="tick"></div>
+                          </div>
                         </div>
-                        <div class="element-item status flex">
-                          <div class="tick-wrap"><img src="img/projects/gg/views/tick.svg" class="tick tick-3"></div>
-                        </div>
-                        <div class="element-item fin reopen"></div>
-                        <div class="element-item stage fin">
-                          <div class="terminal"></div>
-                        </div>
-                        <div class="element-item desc fin">
-                          <label>Job Complete</label>
-                        </div>
-                        <div class="element-item status flex fin">
-                          <div class="tick-wrap"><img src="img/projects/gg/views/tick.svg" class="tick"></div>
+                        <div data-my-order="14" class="mix complete contact open">
+                          <label></label>
                         </div>
                       </div>
                     </div>
@@ -216,44 +148,17 @@
                 </div>
               </div>
             </section>
+            <figcaption>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</figcaption>
           </figure>
         </div>
       </main>
-      <div class="band ref">
-        <div class="segment type">
-          <ol class="ref"></ol>
-        </div>
-      </div>
     </article>
-    <div class="band hr relative pager">
-      <nav>
-        <div class="segment type"><a href="work-foreign.html" tabindex="-1" class="move move-left"></a><a href="work-ideahouse.html" tabindex="-1" class="move move-right"></a>
-          <ul class="reset flex page ghost">
-            <li class="unit ghost">
-              <label class="prise block caps">Previous</label><a href="work-foreign.html" class="plain ghost">Foreign Office</a>
-            </li>
-            <li class="unit right ghost align-r">
-              <label class="prise block caps">Next </label><a href="work-ideahouse.html" class="plain ghost">Ideahouse</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </div>
-    <div id="top" class="band head"><a href="#head" tabindex="-1" class="move move-top glide"></a>
-      <nav class="ghost">
-        <div class="segment type ghost">
-          <ol class="reset flex ghost">
-            <li class="unit align-l ghost prise profile caps">droom.io</li>
-            <li class="unit align-r ghost">GoGet WebApp</li>
-          </ol>
-        </div>
-      </nav>
-    </div>
     <footer role="contentinfo" class="band hr">
       <div class="segment type"><small class="block">&copy;2016 <a href="mailto:yo@droom.io" class="inline dark">Chris Droom</a>. <span class="github"><a href="https://github.com/droom/mayday" aria-label="View code on GitHub" class="inline dark">Source</a>.</span></small></div>
     </footer>
   </body>
   <script src="js/droomio.min.js"></script>
+  <script src="js/mixitup.js"></script>
   <script type="text/javascript">
     var _mfq = _mfq || [];
     (function() {
@@ -263,5 +168,4 @@
     document.getElementsByTagName("head")[0].appendChild(mf);
     })();
   </script>
-  <script src="js/isotope.js"></script>
 </html>

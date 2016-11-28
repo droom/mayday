@@ -2,18 +2,16 @@ include partials/_order
 
 - var workiso     = true
 - var fTitle      = "droom.io/work/goget"
-- var project     = "GoGet.my Brand / Web / App"
+- var project     = "GoGet.my <span class=\"scope\">Brand <span class=\"entity accent slim\">/</span> App <span class=\"entity accent slim\">/</span> Web</span>"
 - var client      = "GoGet"
 - var studio      = "VLT Labs"
 - var date        = "March 2015"
 - var status      = "In Production"
 - var model       = "Marketplace"
-- var role        = [ 'Identity', 'UX + UI', 'Front-End' ]
+- var role        = [ "Identity", "<abbr title=\"User Experience\">UX</abbr>+<abbr title=\"User Interface\">UI</abbr>", 'Front-End' ]
 - var stack       = [ 'Balsamiq', 'Paper', 'Adobe© Illustrator', 'Adobe© Photoshop', 'Adobe© InDesign', 'InVision' ]
-
 - var live        = false
 - var repo        = false
-
 - var stage       = true
 - var stageTitle  = "clients.droom.io/go"
 - var stageURL    = "http://clients.droom.io/go"
@@ -39,22 +37,14 @@ html(class="no-js" lang="en")
 
       main(role="main")
         h2(itemprop="description") GoGet is a community-focused errands and delivery marketplace, currently operating in Kuala Lumpur
-        p GoGet began in 2014 and—simply put—matches those with complementary resources. This exchange, between equals in a safe community, is at the core of their offering.
+        p GoGet began in 2014,  matching  those with complementary resources: those looking with not enough time with those with not enough income. This exchange between equals in a safe community, is at the core of their offering. They were already up and running with an MVP when we met in early 2015 and I was tasked with taking the brand and the app further.
 
         h3
           = "A " 
           span.entity.accent &rarr;
           = " B"
 
-        p
-          = "As Francesca explains, GoGet is more ‘"
-          a(href="https://www.youtube.com/watch?v=lL1_xwe8x0c").inline logistics and human resource
-          = "’"
-          a(href="#ref").plain.glide-slow
-            sup
-          = " than straight up tech and after the first meeting it was clear that ‘speed’ and ‘dispatch’ needed to be communicated in the new identity. I hit upon the idea of calling upon some markings I had seen on the side of trucks transporting goods around KL."
-          a(href="#ref").plain.glide-slow
-            sup
+        p GoGet were already working with a logo they had drawn up. As both founders happily admitted: neither have leanings towards design and this was simply a placeholder. As far as I could tell, there were two main problems with the identity: the wordmark didn’t convey the product, and the constituent parts weren’t unified. As Francesca explains on Bloomberg, GoGet is more ‘logistics and human resource’ than straight-up tech, and after the first meeting it was clear that ‘speed’ and ‘dispatch’ needed to be core to the new identity.
 
         .segment.surface
           figure
@@ -63,6 +53,18 @@ html(class="no-js" lang="en")
                 img(src="img/projects/gg/gg-research-1.jpg").max
               .unit.pad
                 img(src="img/projects/gg/gg-research-2.jpg").max
+
+        p When driving around KL (or rather being driven around) I had always noticed the markings on the side HGV’s hauling materials around the city. I hit upon the idea of calling upon some markings I had seen on the side of trucks transporting goods around KL. Given that the service originated here.
+
+        .segment.surface.align-c
+          ul.swatch.goget
+            li.colour
+            li.colour
+            li.colour
+            li.colour
+
+        p A note about colour: When possible, I would attempt to retain brand colours thorough a refresh. More than any other ingredient, colours build recognition and equity and are the most jarring change to get used to. In this case, the change was justified. The Australian car-share service by the same name were using the same palette and we needed to do all we could to assert ourselves as a completely separate entity.
+
 
         .segment.blueprint
           figure
@@ -74,11 +76,32 @@ html(class="no-js" lang="en")
             include projects/gg/wordmark
             figcaption Initial wordmark exploration
 
-        h3 Public face: Immediate problems
+        h3
+          = "Brand " 
+          span.entity.accent &rarr;
+          = " App"
+
+
+        .segment.surface
+          figure
+            img(src="img/projects/gg/paper.png").max
+            figcaption Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa temporibus veniam, molestiae similique doloremque facere.
+
+
+        .segment.blueprint.pad
+          figure
+            hgroup gg&mdash;combined prototype views
+            include projects/gg/views
+            figcaption Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            
+
+        h3 Public face
+        p Fast-forward to 2016 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores aut vero maxime, blanditiis placeat, obcaecati veritatis illum veniam suscipit delectus incidunt ad, sunt vitae cupiditate optio nostrum nam itaque. Animi.
+
         table.issues
           thead
             tr
-              th.top.left.caps(colspan="2") Problem
+              th.top.left.caps(colspan="2") Immediate problem
               th.top.left.caps.right Type
           tbody
             tr
@@ -105,33 +128,33 @@ html(class="no-js" lang="en")
             tr
               td(colspan="3").top.bottom.left.right
                 | View 
-                a(href="https://drive.google.com/open?id=0B-nn3m_0dK5edlVjMW5nVk1vRms#").inline screenshots of the original site
+                a(href="").inline screenshots of the original site
                 |  on Google Drive.
 
-        .segment.surface
+        .segment.blueprint.pad
           figure
+            hgroup gg&mdash;combined prototype views
             include projects/gg/sitemap
-
-        h3 A Singular Hero
-        p
-          = "GoGet's public face is fairly conventional in its layout. A hero image introduces each page, with content modules sitting below. Whilst marking up the third hero module, I felt I could "
-          a(href="https://en.wikipedia.org/wiki/Don%27t_repeat_yourself").inline DRY this all out
-          | , despite having different content on each of them (and a carousel on one). This will be made available on GitHub.
-
-        .segment.surface
-          figure
-            include projects/gg/singular
-
-        .segment.surface.align-c
-          ul.swatch.goget
-            li.colour
-            li.colour
-            li.colour
-            li.colour
+            figcaption Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, reprehenderit tenetur eum eius, ullam hic atque amet facilis ratione.
 
         .segment.surface
           figure
             img(src="img/projects/gg/gg-layout-1.jpg").max
+
+        .band.ref
+          h3 A Singular Hero
+          p
+            = "GoGet's public face is fairly conventional in its layout. A hero image introduces each page, with content modules sitting below. Whilst marking up the third hero module, I felt I could "
+            a(href="https://en.wikipedia.org/wiki/Don%27t_repeat_yourself").inline
+              abbr(title="Don't repeat yourself") DRY 
+              | this all out
+            | , despite having different content on each of them (and a carousel on one). This will be made available on GitHub.
+          .segment.surface
+            figure
+              include projects/gg/singular
+
+
+
 
         .segment.surface
           figure
@@ -141,11 +164,19 @@ html(class="no-js" lang="en")
               .unit.pad
                 img(src="img/projects/gg/gg-layout-2.jpg").max
 
+
+
+
+
         p The new identity is being applied to digital and printed materials and elements have been folded in to a temporary website. The public face I’m designing is currently in production and is set to go live Summer/Autumn 2016.
+
+        h3 So what would I have done differently?
+        p Towards the end of the project I could see I got too bogged down with UI. This biggest failure is that it affected other members of the team. If I ever have a project of this scope again I will do things in this order: UX &rarr; BRAND &rarr; UI. The UX is the most important and difficult problem to solve. Instead it was BRAND &rarr; UI &rarr; UX. So why didn‘t I start with UX? Well the truth is, I was too scared to. Up until this point I had done no UX, let alone lead design sprints to inform them. No-one knows the product better than the owner. Doubly so if its founders are anything like GoGet’s. The new identity is being applied to digital and printed materials and elements have been folded in to a temporary website. The public face I’m designing is currently in production and is set to go live Summer/Autumn 2016.
+
 
         .segment.surface.align-c
           a(href="http://clients.droom.io/go").plain.cta
-            span View live project on 
+            span View staging project on 
             span.inline clients.droom.io/go
 
       .band.ref
