@@ -3631,21 +3631,56 @@ var Konami = function (callback) {
 // });
 ;$(document).ready(function() {
 
+	if ( $( "#gg-views").length) {
+
+
+		var fStopInteractive1 = new Waypoint({
+			element: document.getElementById('gg-views'),
+			handler: function() {
+				console.log('fStop');
+				$("#gg-views .hand").removeClass('play')
+			}, offset: 160
+		});
+
+
+		var fPlayInteractive = new Waypoint({
+			element: document.getElementById('gg-views'),
+			handler: function() {
+				console.log('fPlay');
+				$("#gg-views .hand").addClass('play')
+			}, offset: 150
+		});
+
+
+		var fStopInteractive2 = new Waypoint({
+			element: document.getElementById('gg-views'),
+			handler: function() {
+				console.log('fStop');
+				$("#gg-views .hand").removeClass('play')
+			}, offset: -100
+		});
+
+
+
+	}
+
+});;$(document).ready(function() {
+
 	localStorage.contents;
 
 	function fContents(){
 		if (localStorage.contents === "contentsTile"){
 			$('ul#contents').addClass('tile');
-			$('a#contents .unit').addClass('list');
+			$('a#contents-btn .unit').addClass('list');
 		} else {
 			$('ul#contents').removeClass('tile');
-			$('a#contents .unit').removeClass('list');
+			$('a#contents-btn .unit').removeClass('list');
 		};
 	};
 
-	$('a#contents').click(function(e) {
+	$('a#contents-btn').click(function(e) {
 		e.preventDefault();
-		$('a#contents .unit').toggleClass('list');
+		$('a#contents-btn .unit').toggleClass('list');
 		$('ul#contents').toggleClass('tile');
 
 		if ($('ul#contents').hasClass('tile')){
@@ -3835,6 +3870,66 @@ var Konami = function (callback) {
 
 ;$(document).ready(function() {
 
+	var noteArray = [];
+	var noteTotal = 0;
+	var noteCount = 0;
+
+	$(".note").click(function() {
+
+		var turnMax = 10;
+		var turnMin = -10;
+		var turnRandom = Math.floor(Math.random() * (turnMax - turnMin + 1)) + turnMin;
+
+		var value = parseInt($(this).data("value"));
+		var type = parseInt($(this).data("type"));
+		noteArray.push(value);
+		noteTotal = noteTotal + value;
+		updatePot();
+		noteCount++;
+
+		$(".notes").append("<div class=\"note note-" + type + "\" data-add=\"" + type + "\" data-count=\"" + noteCount + "\"></div>");
+
+		var latest = $("[data-count=\"" + noteCount + "\"]");
+
+		$(latest).css('-webkit-transform', 'rotate(' + turnRandom + 'deg)');
+
+	});
+
+	$(".pot").click(function() {
+
+		if (noteArray.length > 0) {
+			noteTotal = noteTotal - noteArray.slice(-1)[0];
+			noteArray.pop();
+			updatePot();
+		} else {
+			console.log("There's no money on the pot");
+		}
+
+		var latest = $("[data-count=\"" + noteCount + "\"]");
+		var latestData = parseInt($(latest).data("add"));
+		latest.attr('data-return', latestData);
+		setTimeout(function() {
+			latest.remove();
+		}, 400);
+		if (noteCount > 0) {
+			noteCount--;
+		}
+
+	});
+
+	function updatePot() {
+		$('.total').text(noteTotal);
+	}
+
+
+});
+
+
+
+
+
+;$(document).ready(function() {
+
   if ( $( "#checkpoint" ).length ) {
     var returnShow = new Waypoint({
       element: document.getElementById('checkpoint'),
@@ -3931,7 +4026,7 @@ var Konami = function (callback) {
 			}, offset: 135
 		});
 	}
-
+	
 
 });;$(document).on('ready', function() {
 

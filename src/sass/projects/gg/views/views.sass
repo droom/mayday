@@ -58,31 +58,10 @@
 
 
 section.diagram.views
-  .view 
-    .container.review
-      .mix
-        &.term
-          .joinery
-            opacity: 0
-
-        &.review
-          margin-top: 10px
-          border-top: 1px solid rgba(0,0,0,0.15)
-          
-          &.term
-            padding-top: 5px
-          &.desc
-            padding-top: 10px
-          &.done
-
-
-section.diagram.views
-  width: 701px
   user-select: none
+  
   .view
     &:nth-child(1)
-      padding-right: 47px
-
       .tick-btn
         cursor: pointer
         outline: 1px solid $ink
@@ -100,8 +79,6 @@ section.diagram.views
               content: '{% contact partial %}'
 
     &:nth-child(2)
-      padding-left: 47px
-      border-left: 1px solid $ink
 
       .container
         &::before
@@ -120,6 +97,10 @@ section.diagram.views
           &.set
             @include bounce-in-set
 
+
+
+section.diagram.views
+  .view 
     .container
       @include small()
       color: $ink
@@ -133,6 +114,22 @@ section.diagram.views
         width: 100%
         text-align: center
         margin: 6px 10px 10px 10px
+
+      &.review
+        .mix
+          &.term
+            .joinery
+              opacity: 0
+
+          &.review
+            margin-top: 10px
+            border-top: 1px solid rgba(0,0,0,0.15)
+            &.term
+              padding-top: 5px
+            &.desc
+              padding-top: 10px
+            &.done
+
 
       .mix
         display: none
@@ -211,4 +208,55 @@ section.diagram.views
               opacity: 0
               &.set
                 opacity: 1
+
+
+section.diagram.views
+  .view
+    &:nth-child(1)
+      padding-right: 6vw
+    &:nth-child(2)
+      padding-left: 6vw
+      border-left: 1px solid $outline
+
+
+@media (max-width: $narrow-unit)
+  section.diagram.views
+    .view
+      &:nth-child(1)
+        zoom: 0.8
+        padding-right: 5vw
+        
+      &:nth-child(2)
+        zoom: 0.8
+        padding-left: 5vw
+
+@media (max-width: 586px)
+  section.diagram.views
+    border-bottom: none
+
+    .view
+      &:nth-child(1)
+        z-index: 70
+
+        .but-r-1
+          display: none
+          
+        .circle,
+        .oval,
+        .chrome-1,
+        .chrome-2,
+        .chrome-3
+          background: rgba(255,255,255,0.6)
+
+      &:nth-child(2)
+        z-index: 50
+        margin-left: -120px
+        opacity: 0.55
+        border-left: none
+
+        .chrome-1
+          min-height: 355px
+    
+
+
 

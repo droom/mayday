@@ -1,0 +1,252 @@
+$note-1-colour: darkcyan
+$note-2-colour: gold
+$note-3-colour: coral
+$note-4-colour: lightgreen
+
+$note-1-top: 0
+$note-1-left: 0
+$note-2-top: 0
+$note-2-left: 57px
+$note-3-top: 0
+$note-3-left: 114px
+$note-4-top: 0
+$note-4-left: 171px
+
+$note-add-top: -105px
+$note-add-left: 85px
+
+$note-rotate: rotate(90deg)
+$radius: 4px
+
+section.diagram.money
+  .screen
+    background: rgba(0, 0, 0, 0.5)
+    overflow: hidden
+    width: 310px
+    margin: 60px auto
+    height: 520px
+
+  .note, .pot
+    cursor: pointer
+
+  .wrap
+    width: 245px
+    height: 280px
+    margin: 10px auto 0 auto
+    position: relative
+    background-color: rgba(255,255,255,0.5)
+    overflow: visible
+    border: 2px solid rgba(0,0,255,0.5)
+    border-radius: 3px
+
+    &:nth-child(1)
+      height: 22px
+      margin-top: 0
+      border: none
+      border-top-left-radius: 0
+      border-top-right-radius: 0
+
+    &:nth-child(3)
+      height: 22px
+      margin-bottom: 0
+      border: none
+      border-bottom-left-radius: 0
+      border-bottom-right-radius: 0
+
+  .header
+    padding: 10px
+    text-align: center
+    
+    label::before
+      content: ''
+      width: 18px
+      height: 18px
+      background: blue 
+      margin: 0 5px 0 0
+      border-radius: 50%
+
+  .notes
+    position: absolute
+    top: 191px
+    left: -13px
+    
+    .note
+      z-index: 1
+      width: 100px
+      height: 50px
+      border-radius: 2px
+      text-align: center
+      padding: 5px
+      transition: all 200ms ease
+      position: absolute
+      transform: rotate(90deg)
+      transform-style: preserve-3d
+      border: 1px solid rgba(0,0,255,0.1)
+
+      &[data-add='1'], &[data-add='2'], &[data-add='3'], &[data-add='4']
+        z-index: 2
+        transition: all 400ms ease
+        animation: 300ms ease-out forwards
+        pointer-events: none
+      &[data-add='1']
+        animation-name: add-1
+      &[data-add='2']
+        animation-name: add-2
+      &[data-add='3']
+        animation-name: add-3
+      &[data-add='4']
+        animation-name: add-4
+      &[data-return='1'], &[data-return='2'], &[data-return='3'], &[data-return='4']
+        transition: all 400ms ease
+        animation: 300ms ease-out forwards
+      &[data-return='1']
+        animation-name: return-1
+      &[data-return='2']
+        animation-name: return-2
+      &[data-return='3']
+        animation-name: return-3
+      &[data-return='4']
+        animation-name: return-4
+        
+
+
+  .pot
+    user-select: none    
+    background-color: rgba(0,0,0,0.2)
+    border-top: 1px solid blue
+    border-bottom: 1px solid blue
+    text-align: center
+    z-index: 5
+    height: 120px
+    padding: 8px
+    p
+      margin: 0
+    
+  .note-1
+    top: $note-1-top
+    left: $note-1-left
+    background: $note-1-colour
+    transform-style: preserve-3d
+
+  .note-2
+    top: $note-2-top
+    left: $note-2-left
+    background: $note-2-colour
+    transform-style: preserve-3d
+
+  .note-3
+    top: $note-3-top
+    left: $note-3-left
+    background: $note-3-colour
+    transform-style: preserve-3d
+
+  .note-4
+    top: $note-4-top
+    left: $note-4-left
+    background: $note-4-colour
+    transform-style: preserve-3d
+
+  .note-1:before,
+  .note-2:before,
+  .note-3:before,
+  .note-4:before
+    padding: 7px 4px
+    float: left
+    font-size: 13px
+    font-weight: 400
+    opacity: 0.8
+    letter-spacing: 0.05em
+
+  .note-1:before
+    content: 'RM50'
+    color: white
+
+  .note-2:before
+    content: 'RM20'
+
+  .note-3:before
+    content: 'RM10'
+
+  .note-4:before
+    content: 'RM5'
+
+  @keyframes add-1
+    0%
+      top: $note-1-top
+      left: $note-1-left
+      transform: $note-rotate
+
+    100%
+      top: $note-add-top
+      left: $note-add-left
+
+  @keyframes add-2
+    0%
+      top: $note-2-top
+      left: $note-2-left
+      transform: $note-rotate
+
+    100%
+      top: $note-add-top
+      left: $note-add-left
+
+  @keyframes add-3
+    0%
+      top: $note-3-top
+      left: $note-3-left
+      transform: $note-rotate
+
+    100%
+      top: $note-add-top
+      left: $note-add-left
+
+  @keyframes add-4
+    0%
+      top: $note-4-top
+      left: $note-4-left
+      transform: $note-rotate
+
+    100%
+      top: $note-add-top
+      left: $note-add-left
+
+  @keyframes return-1
+    0%
+      top: $note-add-top
+      left: $note-add-left
+
+    100%
+      top: $note-1-top
+      left: $note-1-left
+      transform: $note-rotate
+
+  @keyframes return-2
+    0%
+      top: $note-add-top
+      left: $note-add-left
+
+    100%
+      top: $note-2-top
+      left: $note-2-left
+      transform: $note-rotate
+
+  @keyframes return-3
+    0%
+      top: $note-add-top
+      left: $note-add-left
+
+    100%
+      top: $note-3-top
+      left: $note-3-left
+      transform: $note-rotate
+
+  @keyframes return-4
+    0%
+      top: $note-add-top
+      left: $note-add-left
+
+    100%
+      top: $note-4-top
+      left: $note-4-left
+      transform: $note-rotate
+

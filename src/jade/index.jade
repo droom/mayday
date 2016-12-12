@@ -14,20 +14,9 @@ html(class="no-js" lang="en")
         
         .band.head.relative.hr
           .segment.type
-            header
-              h1
-                = "Chris Droom is a Designer "
-                span.entity.accent &amp;&amp;
-                = " Client-side Developer based in London "
-                span.entity.accent.slim &#124;&#124;
-                = " Berlin"
-                &nbsp;
-                span.entity.accent.slim &#124;&#124;
-                &nbsp;
-                = "KL"
+            include intro/service
 
-      .jacket
-      .cover-aside
+      main(role="main")
         include partials/_feed
         
     include partials/_pager

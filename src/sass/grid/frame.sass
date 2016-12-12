@@ -25,6 +25,10 @@ body main
 
   &.relative
     position: relative
+  
+  &.border
+    section
+      border-bottom: .1em solid $outline
 
   &.diagram,
   &.surface,
@@ -36,6 +40,14 @@ body main
   &.blueprint.pad
     padding-left: $gttr-dt
     padding-right: $gttr-dt
+    &.chart
+      padding-left: $gttr-dt / 3
+      padding-right: $gttr-dt / 3
+      hgroup,
+      figcaption
+        padding-left: $gttr-dt - ($gttr-dt / 3)
+        padding-right: $gttr-dt - ($gttr-dt / 3)
+
     hgroup,
     figcaption
       padding-left: 0
@@ -56,10 +68,6 @@ body main
 
     &.mat
       background: none
-      // background: url('../img/components/mat-large.svg') repeat -1px 0 , url('../img/components/mat-small.svg') repeat -1px 0  
-      // background-color: #486c64
-      // border-radius: 3px
-
 
 @media (max-width: $phone-max)
       
@@ -76,13 +84,21 @@ body main
       padding-left: $gttr-ph
       padding-right: $gttr-ph
 
-
   .segment
     &.type,
     &.code,
     &.blueprint.pad
       padding-left: $gttr-ph
       padding-right: $gttr-ph
+      
+      &.chart
+        padding-left: $gttr-ph
+        padding-right: $gttr-ph
+        hgroup,
+        figcaption
+          padding-left: 0
+          padding-right: 0
+
       hgroup,
       figcaption
         padding: 0

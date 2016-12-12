@@ -18,6 +18,7 @@ module.exports = function(grunt) {
         'src/sass/projects/gg/*',
         'src/sass/projects/gr/*',
         'src/sass/projects/gg/views/*',
+        'src/sass/projects/shared/*',
         'src/sass/a11y/*',
         'src/sass/components/*',
         'src/sass/grid/*',
@@ -37,7 +38,8 @@ module.exports = function(grunt) {
         'src/jade/projects/gr/*',
         'src/jade/projects/ih/*',
         'src/jade/projects/shared/*',
-        'src/jade/projects/gg/*'
+        'src/jade/projects/gg/*',
+        'src/jade/intro/*'
         ],
         
         tasks: ['jade'],
@@ -139,7 +141,9 @@ module.exports = function(grunt) {
         'src/lib/modernizr-custom.js',
         // 'src/lib/isotope.js',
         'src/lib/konami.js',
-        'src/js/*.js',
+        'src/js/*.js'
+        // 'src/lib/css-polyfills.min'
+
         ],
         dest: 'dist/js/droomio.js',
       },

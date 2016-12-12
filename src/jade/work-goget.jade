@@ -8,8 +8,10 @@ include partials/_order
 - var date        = "March 2015"
 - var status      = "In Production"
 - var model       = "Marketplace"
-- var role        = [ "Identity", "<abbr title=\"User Experience\">UX</abbr>+<abbr title=\"User Interface\">UI</abbr>", 'Front-End' ]
+- var role        = [ "Identity", "<abbr title=\"User Experience\">UX</abbr>+<abbr title=\"User Interface\">UI</abbr>", 'Front-End (Public face)' ]
 - var stack       = [ 'Balsamiq', 'Paper', 'Adobe© Illustrator', 'Adobe© Photoshop', 'Adobe© InDesign', 'InVision' ]
+- var collab      = [ 'Hassanin Ahmed (Back-End)', 'Looi Ferng Yi (Back-End)' , 'Fai Wong (Back-End)' ]
+
 - var live        = false
 - var repo        = false
 - var stage       = true
@@ -32,19 +34,38 @@ html(class="no-js" lang="en")
         include partials/_nav
         include partials/_mast
       .cover-photo.gg(itemprop="image")#checkpoint
+        .segment.type
+          dl.reset.credits
+            dt Photo
+            dd 
+              &copy;
+              = "GoGet"
+
       .cover-aside
         include partials/_role
 
       main(role="main")
-        h2(itemprop="description") GoGet is a community-focused errands and delivery marketplace, currently operating in Kuala Lumpur
-        p GoGet began in 2014,  matching  those with complementary resources: those looking with not enough time with those with not enough income. This exchange between equals in a safe community, is at the core of their offering. They were already up and running with an MVP when we met in early 2015 and I was tasked with taking the brand and the app further.
+        h2(itemprop="description") GoGet is a community-focused errands and delivery marketplace, starting life in the founders’ hometown of Kuala Lumpur and recently expanding to Hong Kong.
+
+        p GoGet began in 2014, with the aim of matching  those with complementary resources. This exchange between equals, within a safe platform, is what the team at GoGet strive to build. They were already up and running with an MVP when we met in early 2015 and I was tasked with furthering both the brand and the service. My involvement with GoGet could be broken down into three parts: Identity, Product (webapp), and the public facing website.
+
+        h3 Identity
+        p Up until this point, GoGet were  working with a logo they had drawn up internally. As both founders readily admitted, neither have design leanings and this simply just a stop-gap. In my opinion, there were three problems with the existing identity: the wordmark didn’t convey the product, the constituent parts weren’t unified and the colours didn’t compliment each other too well.
+
+        p 
+          = "As " 
+          a(href="https://www.youtube.com/watch?v=lL1_xwe8x0c").inline.glide-slow Francesca explains to Bloomberg.tv
+          sup
+          = ", GoGet is more ‘logistics and human resource’ than straight-up tech. After the first meeting it was clear that ‘speed’ and ‘dispatch’ needed to be primarily communicated in the new identity."
+
 
         h3
           = "A " 
           span.entity.accent &rarr;
           = " B"
 
-        p GoGet were already working with a logo they had drawn up. As both founders happily admitted: neither have leanings towards design and this was simply a placeholder. As far as I could tell, there were two main problems with the identity: the wordmark didn’t convey the product, and the constituent parts weren’t unified. As Francesca explains on Bloomberg, GoGet is more ‘logistics and human resource’ than straight-up tech, and after the first meeting it was clear that ‘speed’ and ‘dispatch’ needed to be core to the new identity.
+        p When driving around (or rather being driven around) KL, I had always been drawn to the markings I’d seen on the side HGV’s hauling materials around the city, taking photographs of them as I do with other bits of interesting type. I hit upon the idea of using these to inform the new identity.
+
 
         .segment.surface
           figure
@@ -54,7 +75,19 @@ html(class="no-js" lang="en")
               .unit.pad
                 img(src="img/projects/gg/gg-research-2.jpg").max
 
-        p When driving around KL (or rather being driven around) I had always noticed the markings on the side HGV’s hauling materials around the city. I hit upon the idea of calling upon some markings I had seen on the side of trucks transporting goods around KL. Given that the service originated here.
+
+        .segment.blueprint
+          figure
+            include projects/gg/ui
+            figcaption
+
+        .segment.blueprint
+          figure
+            include projects/gg/wordmark
+            figcaption
+
+        p A note about changing brand colours: When possible, I would attempt  to carry brand colours thorough a refresh.  More than any other ingredient,  colours build equity and recognition, and are the most jarring change to get used to (think hunting for the Foursqaure icon after their refresh). In this case, the change was justified,  even crucial. Being a compound of regular English words, it’s perhaps not surprising that there’s another company operating under the same name: a car sharing service in Australia. They were using this same blue/orange palette and although the two companies aren’t stepping on each others’ toes (in function or proximity), the close ties of the two countries meant we needed to be a distinct as possible visually.
+
 
         .segment.surface.align-c
           ul.swatch.goget
@@ -63,40 +96,58 @@ html(class="no-js" lang="en")
             li.colour
             li.colour
 
-        p A note about colour: When possible, I would attempt to retain brand colours thorough a refresh. More than any other ingredient, colours build recognition and equity and are the most jarring change to get used to. In this case, the change was justified. The Australian car-share service by the same name were using the same palette and we needed to do all we could to assert ourselves as a completely separate entity.
 
+        h3 Discovery
 
-        .segment.blueprint
-          figure
-            include projects/gg/ui
-            figcaption Initial UI experiments, carried through to the core product.
-
-        .segment.blueprint
-          figure
-            include projects/gg/wordmark
-            figcaption Initial wordmark exploration
-
-        h3
-          = "Brand " 
-          span.entity.accent &rarr;
-          = " App"
+        p 
+          = "I used a "
+          a(href="https://gist.github.com/droom/96381e758de1a927671b").inline.glide-slow modified version 
+          sup
+          = " of Google Ventures’ Design Sprint methodology to dig in and conduct research to figure out where the app was failing. Crucially, this was conducted with the product owners, with everyone’s input valued and the founders' insights extensively called upon."
+          p We decided there were two separate user journeys, GoGetter (‘I run errands’) and Poster (‘I need someone to run an errand’) with the ability for the user to switch between the two. These distinct use cases offered us two well defined personas to work with. As we only had 3 months with GoGet, we had to hone in on one journey per persona: Create a job + Claim a job.
 
 
         .segment.surface
           figure
-            img(src="img/projects/gg/paper.png").max
-            figcaption Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa temporibus veniam, molestiae similique doloremque facere.
+            img(src="img/projects/gg/views.jpg").max
 
 
-        .segment.blueprint.pad
+        .segment.blueprint.pad.chart
+          figure.gg.flow
+            hgroup Poster: Create a job user flow 
+            picture.max.blend
+              source(srcset="img/projects/gg/flow-v.png" media="(max-width: 750px)")
+              source(srcset="img/projects/gg/flow-h.png" media="(min-width: 751px)")
+              img(src="img/projects/gg/flow-h.png").max.blend
+            figcaption
+
+        h3 Prototyping
+        p When sketching  out possible UI components, I figured the multiple windows could be whittled down into one view, with the most common options preselected. The best way to communicate this was to use paper prototypes. These were great at getting the point across without spending too much time crafting things that might not be taken forward. This time, the reimagined flow was accepted so I pushed on into high fidelity.
+
+        .segment.surface
           figure
-            hgroup gg&mdash;combined prototype views
-            include projects/gg/views
-            figcaption Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            
+            img(src="img/projects/gg/paper.png").max
+            figcaption
+
+        .segment.blueprint.pad.interactive.border#gg-money
+          include components/interactive
+          figure
+            hgroup Payment interaction concept
+            include projects/gg/money
+            figcaption Note, this never made it further than concept.
+
+        //- .segment.blueprint.pad.interactive.border#gg-views
+        //-   include components/interactive
+        //-   hgroup Payment interaction concept
+        //-   figure
+        //-     include projects/gg/views
+        //-     figcaption projects/gg/views
 
         h3 Public face
-        p Fast-forward to 2016 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores aut vero maxime, blanditiis placeat, obcaecati veritatis illum veniam suscipit delectus incidunt ad, sunt vitae cupiditate optio nostrum nam itaque. Animi.
+
+        p As I mentioned earlier, our time with GoGet only lasted 3 months and there was only a certain amount we could accomplish in that time. With the know-how and expertise of a team, it made sense to tackle the most pressing and complex problems first. This meant not talking the public facing /onboarding pages this time.
+
+        p Fast-forward to 2016 and I was back in England and more experienced in service design. I still wanted to takle those pages as it wasn’t reflecting well on anyone involved. Fortunately, Fran and Fung were willing to take some time out to entertain this. The following colloaboration was conducted over Skype with theer marketing team.
 
         table.issues
           thead
@@ -133,28 +184,25 @@ html(class="no-js" lang="en")
 
         .segment.blueprint.pad
           figure
-            hgroup gg&mdash;combined prototype views
+            hgroup
             include projects/gg/sitemap
-            figcaption Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, reprehenderit tenetur eum eius, ullam hic atque amet facilis ratione.
+            figcaption
+
+        h3 A Singular Hero
+        p
+          = "GoGet's public face is fairly conventional in its layout. A hero image introduces each page, with content modules sitting below. Whilst marking up the third hero module, I felt I could "
+          a(href="https://en.wikipedia.org/wiki/Don%27t_repeat_yourself").inline
+            abbr(title="Don't repeat yourself") DRY 
+            | this all out
+          | , despite having different content on each of them (and a carousel on one). This will be made available on GitHub.
+        
+        .segment.surface
+          figure
+            include projects/gg/singular
 
         .segment.surface
           figure
             img(src="img/projects/gg/gg-layout-1.jpg").max
-
-        .band.ref
-          h3 A Singular Hero
-          p
-            = "GoGet's public face is fairly conventional in its layout. A hero image introduces each page, with content modules sitting below. Whilst marking up the third hero module, I felt I could "
-            a(href="https://en.wikipedia.org/wiki/Don%27t_repeat_yourself").inline
-              abbr(title="Don't repeat yourself") DRY 
-              | this all out
-            | , despite having different content on each of them (and a carousel on one). This will be made available on GitHub.
-          .segment.surface
-            figure
-              include projects/gg/singular
-
-
-
 
         .segment.surface
           figure
@@ -164,15 +212,7 @@ html(class="no-js" lang="en")
               .unit.pad
                 img(src="img/projects/gg/gg-layout-2.jpg").max
 
-
-
-
-
-        p The new identity is being applied to digital and printed materials and elements have been folded in to a temporary website. The public face I’m designing is currently in production and is set to go live Summer/Autumn 2016.
-
-        h3 So what would I have done differently?
-        p Towards the end of the project I could see I got too bogged down with UI. This biggest failure is that it affected other members of the team. If I ever have a project of this scope again I will do things in this order: UX &rarr; BRAND &rarr; UI. The UX is the most important and difficult problem to solve. Instead it was BRAND &rarr; UI &rarr; UX. So why didn‘t I start with UX? Well the truth is, I was too scared to. Up until this point I had done no UX, let alone lead design sprints to inform them. No-one knows the product better than the owner. Doubly so if its founders are anything like GoGet’s. The new identity is being applied to digital and printed materials and elements have been folded in to a temporary website. The public face I’m designing is currently in production and is set to go live Summer/Autumn 2016.
-
+        p The public face I’m designing is currently in production and is set to go live Winter 2016.
 
         .segment.surface.align-c
           a(href="http://clients.droom.io/go").plain.cta
@@ -183,8 +223,9 @@ html(class="no-js" lang="en")
         .segment.type
           ol.ref
             li
-              a(href="https://www.youtube.com/watch?v=lL1_xwe8x0c").inline Bloomberg TV Malaysia: ‘Leapfrogging’ to Grow Errands Market: GoGet’s Chia
-            li I think ‘A’ stands for the vechicle grade, but I need to make sure of this.
+              a(href="https://www.youtube.com/watch?v=lL1_xwe8x0c").inline Bloomberg.tv Malaysia: ‘Leapfrogging’ to Grow Errands Market: GoGet’s Chia
+            li 
+              a(href="https://gist.github.com/droom/96381e758de1a927671b").inline 3 Day Sprint
             li 
               a(href="https://en.wikipedia.org/wiki/Don%27t_repeat_yourself").inline Don’t repeat yourself (Wikipedia) 
 

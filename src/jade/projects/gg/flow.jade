@@ -1,0 +1,343 @@
+svg#defs
+  symbol#hinge
+    line(x1='50%', y1='50%', x2='50%', y2='0%', style='stroke-width: 1px;' stroke="blue" width="100%" height="100%")
+    line(x1='0', y1='50%', x2='50%', y2='50%', style='stroke-width: 1px;' stroke="blue" width="100%" height="100%") 
+
+svg#defs
+  symbol#hinge-2
+    line(x1='50%', y1='50%', x2='100%', y2='50%', style='stroke-width: 1px;' stroke="blue" width="100%" height="100%")
+    line(x1='50%', y1='100%', x2='50%', y2='50%', style='stroke-width: 1px;' stroke="blue" width="100%" height="100%")
+
+svg#defs
+  symbol#vertical
+    line(x1='50%', y1='100%', x2='50%', y2='0%', style='stroke-width: 1px;' stroke="blue" width="100%" height="100%")
+    
+svg#defs
+  symbol#vertical-down
+    line(x1='50%', y1='100%', x2='50%', y2='0%', style='stroke-width: 1px;' stroke="blue" width="100%" height="100%")
+    line(x1='45%', y1='68%', x2='50%', y2='100%', style='stroke-width: 1px;' stroke="blue" width="100%" height="100%")
+    line(x1='55%', y1='68%', x2='50%', y2='100%', style='stroke-width: 1px;' stroke="blue" width="100%" height="100%")
+
+svg#defs
+  symbol#vertical-up
+    line(x1='50%', y1='100%', x2='50%', y2='0%', style='stroke-width: 1px;' stroke="blue" width="100%" height="100%")
+    line(x1='45%', y1='30%', x2='50%', y2='10%', style='stroke-width: 1px;' stroke="blue" width="100%" height="100%")
+    line(x1='55%', y1='30%', x2='50%', y2='10%', style='stroke-width: 1px;' stroke="blue" width="100%" height="100%")
+    
+svg#defs
+  symbol#horizontal
+    line(x1='0%', y1='50%', x2='100%', y2='50%', style='stroke-width: 1px;' stroke="blue" width="100%" height="100%")
+    
+svg#defs
+  symbol#horizontal-left
+    line(x1='0%', y1='50%', x2='100%', y2='50%', style='stroke-width: 1px;' stroke="blue" width="100%" height="100%" x="0px" y="0px")
+    line(x1='35%', y1='30%', x2='0', y2='50%', style='stroke-width: 1px;' stroke="blue" width="100%" height="100%" x="0px" y="0px")
+    line(x1='35%', y1='70%', x2='0', y2='50%', style='stroke-width: 1px;' stroke="blue" width="100%" height="100%" x="0px" y="0px")
+
+svg#defs
+  symbol#horizontal-right
+    line(x1='0%', y1='50%', x2='100%', y2='50%', style='stroke-width: 1px;' stroke="blue" width="100%" height="100%" x="0px" y="0px")
+    line(x1='70%', y1='30%', x2='100%', y2='50%', style='stroke-width: 1px;' stroke="blue" width="100%" height="100%" x="0px" y="0px")
+    line(x1='70%', y1='70%', x2='100%', y2='50%', style='stroke-width: 1px;' stroke="blue" width="100%" height="100%" x="0px" y="0px")
+
+svg#defs
+  symbol#quad-1
+    line(x1='0%', y1='100%', x2='100%', y2='0%', style='stroke-width: 1px;' stroke="blue" width="100%" height="100%" x="0px" y="0px")
+    
+svg#defs
+  symbol#quad-2
+    line(x1='0%', y1='0%', x2='100%', y2='100%', style='stroke-width: 1px;' stroke="blue" width="100%" height="100%" x="0px" y="0px")
+
+svg#defs
+  symbol#quad-3
+    line(x1='0%', y1='0%', x2='100%', y2='100%', style='stroke-width: 1px;' stroke="blue" width="100%" height="100%" x="0px" y="0px")
+
+svg#defs
+  symbol#quad-4
+    line(x1='0%', y1='100%', x2='100%', y2='0%', style='stroke-width: 1px;' stroke="blue" width="100%" height="100%" x="0px" y="0px")
+
+
+
+
+.diagram.gg.flow
+  .cell.row-1.col-5.box.brackets
+    .layer
+      label
+        | Job 
+        span.br history
+
+  .cell.row-1.col-6.center
+    svg.liner.vertical
+      use(xlink:href='#vertical-down')
+    svg.liner.horizontal
+      use(xlink:href='#horizontal')
+  
+  .cell.row-1.col-7.box.brackets
+    .layer
+      label
+        | Create new 
+        span.br from existing  
+  
+  .cell.row-1.col-9.brackets
+    .layer
+      svg.liner.hinge
+        use(xlink:href='#hinge-2')
+
+  .cell.row-1.col-10.center
+    svg.liner.vertical
+      use(xlink:href='#vertical')
+    svg.liner.horizontal
+      use(xlink:href='#horizontal')
+
+  .cell.row-1.col-11.box.brackets
+    .layer
+      label
+        | Edit description 
+        span.br / increase tip
+  
+  .cell.row-1.col-13
+  
+  .cell.row-1.col-15.box.dashed.brackets
+    .layer
+      label 
+        | Message / Call 
+        span.br GoGetter
+
+  .cell.row-2.col-5.center.brackets
+    svg.liner.vertical
+      use(xlink:href='#vertical-down')
+    svg.liner.horizontal
+      use(xlink:href='#horizontal-left')
+      
+  .cell.row-2.col-7.center.brackets
+    svg.liner.vertical
+      use(xlink:href='#vertical-down')
+    svg.liner.horizontal
+      use(xlink:href='#horizontal-left')
+
+  .cell.row-2.col-7.center.brackets
+    svg.liner.vertical
+      use(xlink:href='#vertical-down')
+    svg.liner.horizontal
+      use(xlink:href='#horizontal-left')
+
+  .cell.row-2.col-9.center.brackets
+    svg.liner.vertical
+      use(xlink:href='#vertical-down')
+    svg.liner.horizontal
+      use(xlink:href='#horizontal-left')
+
+  .cell.row-2.col-11.brackets.center.nope.after
+    svg.liner.vertical
+      use(xlink:href='#vertical-up')
+    svg.liner.horizontal
+      use(xlink:href='#horizontal-right')
+      
+  .cell.row-2.col-15.center
+    svg.liner.vertical
+      use(xlink:href='#vertical-up')
+    svg.liner.horizontal
+      use(xlink:href='#horizontal-right')
+
+  .cell.row-3.col-1.center.start
+    .terminal A
+      
+  .cell.row-3.col-2.center
+    svg.liner.vertical
+      use(xlink:href='#vertical-down')
+    svg.liner.horizontal
+      use(xlink:href='#horizontal-right')
+      
+  .cell.row-3.col-3.box.brackets
+    .layer
+      label Dashboard 
+
+  .cell.row-3.col-4.center
+    svg.liner.vertical
+      use(xlink:href='#vertical-down')
+    svg.liner.horizontal
+      use(xlink:href='#horizontal-right')
+      
+  .cell.row-3.col-5.box.brackets
+    .layer
+      label Create new job
+
+  .cell.row-3.col-6.center
+    svg.liner.vertical
+      use(xlink:href='#vertical-down')
+    svg.liner.horizontal
+      use(xlink:href='#horizontal-right')
+      
+  .cell.row-3.col-7.box.brackets
+    .layer
+      label Populate required fields (manually / automatically)
+
+  .cell.row-3.col-8.center.yes
+    svg.liner.vertical
+      use(xlink:href='#vertical-down')
+    svg.liner.horizontal
+      use(xlink:href='#horizontal-right')
+      
+  .cell.row-3.col-9.brackets.choice
+    .layer
+      label Post to market
+
+    .layer
+      .quad
+        svg.liner
+          use(xlink:href='#quad-1')
+      .quad
+        svg.liner
+          use(xlink:href='#quad-2')
+      .quad
+        svg.liner
+          use(xlink:href='#quad-3')
+      .quad
+        svg.liner
+          use(xlink:href='#quad-4')
+
+  .cell.row-3.col-10.center.yes
+    svg.liner.vertical
+      use(xlink:href='#vertical-down')
+    svg.liner.horizontal
+      use(xlink:href='#horizontal-right')
+
+  .cell.row-3.col-11.brackets.choice
+    .layer
+      label
+        | Job 
+        span.br claimed?
+
+    .layer
+      .quad
+        svg.liner
+          use(xlink:href='#quad-1')
+      .quad
+        svg.liner
+          use(xlink:href='#quad-2')
+      .quad
+        svg.liner
+          use(xlink:href='#quad-3')
+      .quad
+        svg.liner
+          use(xlink:href='#quad-4')
+
+  .cell.row-3.col-12.center.yes
+    svg.liner.vertical
+      use(xlink:href='#vertical-down')
+    svg.liner.horizontal
+      use(xlink:href='#horizontal-right')
+      
+  .cell.row-3.col-13.box.brackets
+    .layer
+      label
+        | Job is open. 
+        span.br View status.
+
+  .cell.row-3.col-14.center
+    svg.liner.vertical
+      use(xlink:href='#vertical-down')
+    svg.liner.horizontal
+      use(xlink:href='#horizontal-right')
+      
+  .cell.row-3.col-15.brackets.choice.yes
+    .layer
+      label
+        | Is job 
+        span.br complete?
+    .layer
+      .quad
+        svg.liner
+          use(xlink:href='#quad-1')
+      .quad
+        svg.liner
+          use(xlink:href='#quad-2')
+      .quad
+        svg.liner
+          use(xlink:href='#quad-3')
+      .quad
+        svg.liner
+          use(xlink:href='#quad-4')
+
+
+  .cell.row-3.col-16.center
+    svg.liner.vertical
+      use(xlink:href='#vertical-down')
+    svg.liner.horizontal
+      use(xlink:href='#horizontal-right')
+  
+  .cell.row-3.col-17.box.brackets
+    .layer
+      label
+        | Close 
+        &plus; 
+        span.br Review
+
+  .cell.row-3.col-18.center
+    svg.liner.vertical
+      use(xlink:href='#vertical-down')
+    svg.liner.horizontal
+      use(xlink:href='#horizontal-right')
+  .cell.row-3.col-19.center.end
+      .terminal.set A
+
+  .cell.row-4.col-5.center.brackets
+    svg.liner.vertical
+      use(xlink:href='#vertical-down')
+    svg.liner.horizontal
+      use(xlink:href='#horizontal-right')
+
+  .cell.row-4.col-7.center.brackets.before
+    svg.liner.vertical
+      use(xlink:href='#vertical-up')
+    svg.liner.horizontal
+      use(xlink:href='#horizontal')
+
+  .cell.row-4.col-9.center.brackets.before.nope
+    svg.liner.vertical
+      use(xlink:href='#vertical-down')
+    svg.liner.horizontal
+      use(xlink:href='#horizontal-left')
+
+  .cell.row-4.col-13
+  .cell.row-4.col-14
+  .cell.row-4.col-16
+  .cell.row-4.col-17.brackets.center
+    svg.liner.vertical
+      use(xlink:href='#vertical-down')
+    svg.liner.horizontal
+      use(xlink:href='#horizontal-right')
+      
+
+  .cell.row-5.col-5.box.brackets
+    .layer
+      label
+        | Browse 
+        span.br promotions
+
+  .cell.row-5.col-6.center
+    svg.liner.vertical
+      use(xlink:href='#vertical')
+    svg.liner.horizontal
+      use(xlink:href='#horizontal')
+
+  .cell.row-5.col-7.brackets
+    .layer
+      svg.liner.hinge.hinge-b
+        use(xlink:href='#hinge')
+
+  .cell.row-5.col-9.box.dashed.brackets
+    .layer
+      label Save to drafts
+
+  .cell.row-5.col-13
+  .cell.row-5.col-15
+  .cell.row-5.col-16.center
+  .cell.row-5.col-17.box.dashed.brackets
+    .layer
+      label Print invoice
+
+
+
+
+

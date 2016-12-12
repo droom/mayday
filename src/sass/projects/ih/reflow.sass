@@ -1,17 +1,21 @@
 ul.reflow
-	li + li
-		margin-left: 0.25em
-		&::before
-			content: "/"
-			padding-left: 0.25em
-			display: inline-block
-			
 	li
+		@include small()
 		display: inline-block
+		text-transform: uppercase
 		a
 			background: white
+			padding: 10px 15px
 		a.active
 			background: yellow
+
+		& + li
+			margin-left: 0.25em
+			&::before
+				padding-left: 0.25em
+				display: inline-block
+
+
 
 section.diagram.ih.reflow
 	margin:     auto

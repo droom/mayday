@@ -19,10 +19,8 @@ include partials/_order
 - var liveURL     = "http://www.givereceipt.com/"
 
 - var repo        = false
-
 - var prevTitle   = order1[1]
 - var prevURL     = order2[1]
-
 - var nextURL     = order2[3]
 - var nextTitle   = order1[3]
 
@@ -42,7 +40,6 @@ html(class="no-js" lang="en")
         include partials/_role
         
       main(role="main")
-
         h2 Easy to use, web-based + native accounting software. 
 
         .segment.relative
@@ -51,12 +48,14 @@ html(class="no-js" lang="en")
 
         p April 2015: The Goods and Services Tax (GST) in Malaysia brought about a change in retailing, making it a legal requirement to issue receipts with every purchase. Larger retailers would whether the change just fine, but small business with little formal procedures would be particularly affected. Heavy accounting software would not be suitable for these small traders and GiveReceipt sought to arrive in time to plug that gap.
 
-
-        .segment.blueprint.pad
+        .segment.blueprint.pad.chart
           figure.gg.flow
             hgroup gr&mdash;process_diagram_v2
-            include projects/gr/flow
-            figcaption Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi corrupti, deserunt rem eaque iure, sit omnis ducimus incidunt dolore atque voluptatibus minus nobis. Minus quas velit eligendi iusto corporis tenetur.
+            picture.max.blend
+              source(srcset="img/projects/gr/flow-v.png" media="(max-width: 750px)")
+              source(srcset="img/projects/gr/flow-h.png" media="(min-width: 751px)")
+              img(src="img/projects/gr/flow-h.png").max.blend
+            figcaption Lorem 
 
 
         h3 Creating an identity
@@ -75,6 +74,12 @@ html(class="no-js" lang="en")
             li.colour
             li.colour
 
+
+        .segment.blueprint.pad
+          figure
+            img(src="img/projects/gr/app.png").max
+            figcaption
+
         .segment.surface
           figure
             .flex
@@ -84,18 +89,23 @@ html(class="no-js" lang="en")
                 img(src="img/projects/gr/block-1.png").max
             figcaption 20mm × 230mm, 240gsm namecards. Die-cut to show off our corrigated motif.
 
-
         .segment.surface
           figure
             img(src="img/projects/gr/invoice.png").max
-            figcaption Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum at, placeat provident error vitae ut! Nulla, quasi! Sapiente aliquam nemo consequuntur adipisci labore molestias dicta! Nam reprehenderit ut vero similique!
+            figcaption
 
-        .segment.blueprint.pad
+        //- .segment.surface
+        //-   figure
+        //-     .flex
+        //-       .unit.pad
+        //-         img(src="img/projects/gr/people-1.jpg").max
+        //-       .unit.pad.tuck
+        //-         img(src="img/projects/gr/people-2.jpg").max
+
+
+        .segment.surface.squash
           figure
-            img(src="img/projects/gr/app.png").max
-            figcaption Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum at, placeat provident error vitae ut! Nulla, quasi! Sapiente aliquam nemo consequuntur adipisci labore molestias dicta! Nam reprehenderit ut vero similique!
-
-        //- CTA -----------
+            img(src="img/projects/gr/layout.jpg").max
 
         .segment.surface.align-c
           a(href="http://www.givereceipt.com/").plain.cta

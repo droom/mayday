@@ -5,16 +5,16 @@ $(document).ready(function() {
 	function fContents(){
 		if (localStorage.contents === "contentsTile"){
 			$('ul#contents').addClass('tile');
-			$('a#contents .unit').addClass('list');
+			$('a#contents-btn .unit').addClass('list');
 		} else {
 			$('ul#contents').removeClass('tile');
-			$('a#contents .unit').removeClass('list');
+			$('a#contents-btn .unit').removeClass('list');
 		};
 	};
 
-	$('a#contents').click(function(e) {
+	$('a#contents-btn').click(function(e) {
 		e.preventDefault();
-		$('a#contents .unit').toggleClass('list');
+		$('a#contents-btn .unit').toggleClass('list');
 		$('ul#contents').toggleClass('tile');
 
 		if ($('ul#contents').hasClass('tile')){

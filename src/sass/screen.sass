@@ -9,6 +9,7 @@ $copy:		   	rgba(0, 0, 0, 0.8)
 $hover:		  	rgba(255, 255, 255, 0.4)
 $ink:      		rgba(46, 77, 210, 1)
 $grey:  		rgba(0,0,0,0.04)
+$outline: 		rgba(0,0,0,.3)
 
 $wide-unit:    	1118px
 $narrow-unit:	710px
@@ -71,10 +72,14 @@ $dashed:		1px dashed $ink
 @import "projects/shared/diagrams.sass"
 @import "projects/shared/swatch.sass"
 @import "projects/shared/cover.sass"
+@import "projects/shared/interactive.sass"
+
 @import "projects/gg/sitemap.sass"
 @import "projects/gg/singular.sass"
 @import "projects/gg/ui.sass"
 @import "projects/gg/views/views.sass"
+@import "projects/gg/flow.sass"
+@import "projects/gg/money.sass"
 @import "projects/gr/flow.sass"
 @import "projects/ih/reflow.sass"
 @import "projects/ih/breadcrumb.sass"
@@ -84,4 +89,10 @@ $dashed:		1px dashed $ink
 @import "a11y/no-flexbox.sass"
 @import "a11y/no-cssgradients.sass"
 @import "a11y/no-multiplebgs.sass"
+@import "styleguide.sass"
 
+body.profile
+	@include theme-B(1)
+	main
+		padding-top: 	$gttr-ph
+		padding-bottom: $gttr-ph

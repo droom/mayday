@@ -1,0 +1,304 @@
+$h-width-cell:      4fr
+$h-width-gutter:    20px
+$h-width-terminal:  25px
+$v-width-cell:      40px
+$v-width-gutter:    20px
+$v-width-terminal:  25px
+
+svg#defs
+  display: none 
+
+svg.liner
+  width: 100%
+  height: 100%
+  
+  &.horizontal
+    height: 20px
+ 
+  &.vertical
+    height: 20px
+
+.diagram.gg.flow
+  display: grid
+  grid-template-columns: $h-width-terminal $h-width-gutter $h-width-cell $h-width-gutter $h-width-cell $h-width-gutter $h-width-cell $h-width-gutter $h-width-cell $h-width-gutter $h-width-cell $h-width-gutter $h-width-cell $h-width-gutter $h-width-cell $h-width-gutter $h-width-cell $h-width-gutter$h-width-terminal
+  grid-template-rows: 60px 20px 60px 20px 60px
+  line-height: 0
+  margin: 3em 1em
+  
+  span.br
+    display: block 
+  .col-1
+    grid-column: 1 / 2
+  .col-2
+    grid-column: 2 / 3
+  .col-3
+    grid-column: 3 / 4
+  .col-4
+    grid-column: 4 / 5
+  .col-5
+    grid-column: 5 / 6
+  .col-6
+    grid-column: 6 / 7
+  .col-7
+    grid-column: 7 / 8
+  .col-8
+    grid-column: 8 / 9
+  .col-9
+    grid-column: 9 / 10
+  .col-10
+    grid-column: 10 / 11
+  .col-11
+    grid-column: 11 / 12
+  .col-12
+    grid-column: 12 / 13
+  .col-13
+    grid-column: 13 / 14
+  .col-14
+    grid-column: 14 / 15
+  .col-15
+    grid-column: 15 / 16
+  .col-16
+    grid-column: 16 / 17
+  .col-17
+    grid-column: 17 / 18
+  .col-18
+    grid-column: 18 / 19
+  .col-19
+    grid-column: 19 / 20
+  .col-20
+    grid-column: 20 / 21
+  .col-21
+    grid-column: 21 / 22
+  .col-22
+    grid-column: 22 / 23
+  .col-23
+    grid-column: 23 / 24
+  .row-1
+    grid-row: 1 / 2
+  .row-2
+    grid-row: 2 / 3
+  .row-3
+    grid-row: 3 / 4
+  .row-4
+    grid-row: 4 / 5
+  .row-5
+    grid-row: 5 / 6
+      
+  .cell
+    width: 100%
+    text-align: center
+    align-self: stretch
+    
+    label
+      font-size: 9px
+      line-height: 11px
+
+
+    &.nope.after::after
+      font-size: 8px
+      font-weight: bold
+      z-index: 99999999 
+      display: block
+      content: "N"
+      color: red
+      
+    &.nope.before::before
+      font-size: 8px
+      font-weight: bold
+      z-index: 99999999 
+      display: block
+      content: "N"
+      color: red
+      
+    &.yes::before
+      content: "Y"
+      color: green
+      margin-left: -6px
+      font-size: 8px
+      font-weight: bold
+      z-index: 99999999 
+      display: block
+
+    &.start
+      .terminal
+        margin-right: 0
+
+    &.end
+      .terminal
+        margin-left: 0
+
+    &.center
+      align-self: center
+    &.box
+      outline: 1px solid blue
+      &.dashed
+        outline-style: dashed
+    
+    &.choice
+      .layer
+        .quad
+          opacity: 0.3
+
+    &.brackets
+      position: relative
+      .layer
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        display: flex
+        flex-flow: row wrap
+        text-align: center
+        justify-content: center
+        
+        label
+          align-self: center
+          text-align: center
+          padding: 3px
+        .quad
+          width: 50%
+          height: 50%
+
+  .cell.btm
+    align-self: end
+
+  .cell.row-2,
+  .cell.row-4
+    svg.liner.horizontal
+      display: none
+
+  .cell.row-1,
+  .cell.row-3,
+  .cell.row-5
+    svg.liner.vertical
+      display: none
+
+  .cell.row-4.col-16
+    svg.liner.angle.se
+      transform: scaleY(-1)
+
+
+@media (max-width: 650px)
+  .diagram.gg.flow
+    display: grid
+    grid-template-columns: auto 20px auto 20px auto
+    grid-template-rows: $v-width-terminal $v-width-gutter $v-width-cell $v-width-gutter $v-width-cell $v-width-gutter $v-width-cell $v-width-gutter $v-width-cell $v-width-gutter $v-width-cell $v-width-gutter $v-width-cell $v-width-gutter $v-width-cell $v-width-gutter $v-width-cell $v-width-gutter $v-width-cell $v-width-gutter $v-width-cell $v-width-gutter $v-width-terminal
+    margin: 0 auto
+
+    span.br
+      display: inline
+
+    .row-1
+      grid-column: 5 / 6
+    .row-2
+      grid-column: 4 / 5
+    .row-3
+      grid-column: 3 / 4
+    .row-4
+      grid-column: 2 / 3
+    .row-5
+      grid-column: 1 / 2
+
+    .col-1
+      grid-row: 1 / 2
+    .col-2
+      grid-row: 2 / 3
+    .col-3
+      grid-row: 3 / 4
+    .col-4
+      grid-row: 4 / 5
+    .col-5
+      grid-row: 5 / 6
+    .col-6
+      grid-row: 6 / 7
+    .col-7
+      grid-row: 7 / 8
+    .col-8
+      grid-row: 8 / 9
+    .col-9
+      grid-row: 9 / 10
+    .col-10
+      grid-row: 10 / 11
+    .col-11
+      grid-row: 11 / 12
+    .col-12
+      grid-row: 12 / 13
+    .col-13
+      grid-row: 13 / 14
+    .col-14
+      grid-row: 14 / 15
+    .col-15
+      grid-row: 15 / 16
+    .col-16
+      grid-row: 16 / 17
+    .col-17
+      grid-row: 17 / 18
+    .col-18
+      grid-row: 18 / 19
+    .col-19
+      grid-row: 19 / 20
+    .col-20
+      grid-row: 20 / 21
+    .col-21
+      grid-row: 21 / 22
+    .col-22
+      grid-row: 22 / 23
+    .col-23
+      grid-row: 23 / 24
+
+    .cell.btm
+      align-self: center
+
+    .cell.row-1.col-7
+      align-self: stretch
+      svg.liner.vertical
+        height: 40px
+
+    .cell.row-2.col-12
+      svg.liner.angle.se
+        transform: scaleX(-1)
+
+    .cell.row-2.col-14
+      svg.liner.angle.up
+        transform: scaleX(-1)
+        transform: scaleY(-1)
+    
+    .cell.row-4.col-14
+      svg.liner.angle.se
+        transform: scaleX(-1)
+
+    svg.liner.hinge
+      transform: scaleX(-1)
+
+    .cell
+      &.start,
+      &.end
+        .terminal
+          margin: auto
+    
+    .cell.row-1.col-13
+      .terminal.set
+        margin-left: 0
+
+    .cell.row-2,
+    .cell.row-4
+      svg.liner.horizontal
+        display: block
+          
+    .cell.row-1,
+    .cell.row-3,
+    .cell.row-5
+      svg.liner.vertical
+        display: block
+
+    .cell.row-2,
+    .cell.row-4
+      svg.liner.vertical
+        display: none
+          
+    .cell.row-1,
+    .cell.row-3,
+    .cell.row-5
+      svg.liner.horizontal
+        display: none
