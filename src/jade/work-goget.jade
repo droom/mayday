@@ -57,15 +57,12 @@ html(class="no-js" lang="en")
           a(href="https://www.youtube.com/watch?v=lL1_xwe8x0c").inline.glide-slow Francesca explains to Bloomberg.tv
           sup
           = ", GoGet is more ‘logistics and human resource’ than straight-up tech. After the first meeting it was clear that ‘speed’ and ‘dispatch’ needed to be primarily communicated in the new identity."
-
-
         h3
           = "A " 
           span.entity.accent &rarr;
           = " B"
 
         p When driving around (or rather being driven around) KL, I had always been drawn to the markings I’d seen on the side HGV’s hauling materials around the city, taking photographs of them as I do with other bits of interesting type. I hit upon the idea of using these to inform the new identity.
-
 
         .segment.surface
           figure
@@ -74,7 +71,6 @@ html(class="no-js" lang="en")
                 img(src="img/projects/gg/gg-research-1.jpg").max
               .unit.pad
                 img(src="img/projects/gg/gg-research-2.jpg").max
-
 
         .segment.blueprint
           figure
@@ -122,21 +118,19 @@ html(class="no-js" lang="en")
             figcaption
 
         h3 Prototyping
-        p When sketching  out possible UI components, I figured the multiple windows could be whittled down into one view, with the most common options preselected. The best way to communicate this was to use paper prototypes. These were great at getting the point across without spending too much time crafting things that might not be taken forward. This time, the reimagined flow was accepted so I pushed on into high fidelity.
+        p When sketching  out possible interfaces, I figured the multiple stages for creating a new job could be whittled down into one view, with the most common options preselected. The best way to communicate this was to use paper prototypes. These were great at getting the point across without spending too much time crafting things that might not be taken forward.
 
         .segment.surface
           figure
             img(src="img/projects/gg/paper.png").max
-            figcaption
-
+            figcaption Low-fidelity wireframes, created in Balsamiq, printed and cropped. Using non-precious, tactile representations like these allows for things to be scrapped, rearranged and encourages new ideas generation across disciplines.
 
         .segment.blueprint.pad.interactive.border#gg-views
           include components/interactive
-          hgroup Open job, view status prototype
+          hgroup Open job prototype
           figure
             include projects/gg/views
-            figcaption #gg-views
-
+            figcaption Each job in progress could be displayed within one view, this being slightly different depending on your relationship to the job. As the GoGetter, you’re able to update your progress as you go, keeping the Poster informed along the way. For jobs with more than one stop/task. The GoGetter can prioritise as they see fit.
 
         .segment.surface
           figure
@@ -145,21 +139,21 @@ html(class="no-js" lang="en")
                 img(src="img/projects/gg/gg-app-1.jpg").max
               .unit.pad
                 img(src="img/projects/gg/gg-app-2.jpg").max
-            figcaption Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis, autem, optio maiores in doloremque natus non aliquid amet, aspernatur excepturi fugit similique nostrum. Animi enim distinctio reiciendis voluptatibus repudiandae doloremque?
 
+        p One crucial part to this flow is letting the GoGetter know how much they’ll need to cover the cost of the transaction (to be reimbursed upon completion). This is straightforward with set prices and prior knowledge, but without those, a rough estimate is all that’s possible. If you were to ask someone in real life to run an errand for you, the natural flow would be to give them enough money to cover the errand, with increments of note denominations. Using this as a starting point, I came up with this payment interaction.
 
         .segment.blueprint.pad.interactive.border#gg-money
           include components/interactive
           figure
-            hgroup Payment interaction concept
+            hgroup Rejected: Payment interaction concept
             include projects/gg/money
-            figcaption Note, this particular feature never made it further than concept in the original web build.
+            figcaption Payment interaction concept: In all honesty it is a little goofy and this particular feature wasn‘t taken further than concept in the original web build.
 
         h3 Public face
 
-        p As I mentioned earlier, our time with GoGet only lasted 3 months and there was only a certain amount we could accomplish in that time. With the know-how and expertise of a team, it made sense to tackle the most pressing and complex problems first. This meant not talking the public facing /onboarding pages this time.
+        p As I mentioned earlier, we only had 3 months with GoGet and there was only a certain amount we could accomplish in that time. With the know-how and expertise of a team, it made sense to tackle the most pressing and complex problems first. This meant putting the public facing / on-boarding pages on the back burner.
 
-        p Fast-forward to 2016 and I was back in England and more experienced in service design. I still wanted to takle those pages as it wasn’t reflecting well on anyone involved. Fortunately, Fran and Fung were willing to take some time out to entertain this. The following colloaboration was conducted over Skype with theer marketing team.
+        p Fast-forward to 2016 and I was back in England and more experienced in service design. I still wanted to tackle those pages as it wasn’t reflecting well on anyone involved. Fortunately, Fran and Fung were willing to take some time out to entertain this. The following collaboration was conducted over Skype with their marketing team.
 
         table.issues
           thead
@@ -196,9 +190,9 @@ html(class="no-js" lang="en")
 
         .segment.blueprint.pad
           figure
-            hgroup
+            hgroup Revised Sitemap
             include projects/gg/sitemap
-            figcaption
+            figcaption Alongside insight from the team, I used SEO Spider to audit and identify existing architectural problems. The original IA was a little confusing, with overlapping and broken content. We streamlined this before adding new content.
 
         h3 A Singular Hero
         p
@@ -239,8 +233,7 @@ html(class="no-js" lang="en")
             li 
               a(href="https://gist.github.com/droom/96381e758de1a927671b").inline 3 Day Sprint
             li 
-              a(href="https://en.wikipedia.org/wiki/Don%27t_repeat_yourself").inline Don’t repeat yourself (Wikipedia) 
-
+              a(href="https://en.wikipedia.org/wiki/Don%27t_repeat_yourself").inline Don’t repeat yourself (Wikipedia)
 
     include partials/_pager
     include partials/_top
