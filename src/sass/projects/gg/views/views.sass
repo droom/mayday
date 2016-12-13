@@ -63,10 +63,16 @@ section.diagram.views
   .view
     &:nth-child(1)
       .tick-btn
-        cursor: pointer
         outline: 1px solid $ink
         background: #fbf395
+        opacity: 0.25
+        
+        &.enabled
+          opacity: 1
 
+          &:hover
+            cursor: pointer
+              
       .container
         &::before
           content: "GOGETTER"
@@ -79,7 +85,6 @@ section.diagram.views
               content: '{% contact partial %}'
 
     &:nth-child(2)
-
       .container
         &::before
           content: "POSTER"
@@ -96,7 +101,6 @@ section.diagram.views
           @include bounce-out-set
           &.set
             @include bounce-in-set
-
 
 
 section.diagram.views
@@ -195,14 +199,9 @@ section.diagram.views
             position: relative
             width: 35px
             height: 30px
-
-            &.tick-4
-              cursor: pointer
-              outline: 1px solid $ink
-              background: #fbf395
-
-            &.disabled
-              opacity: 0.25
+            
+            // &.disable
+            //   opacity: 0.25
 
             .tick
               opacity: 0

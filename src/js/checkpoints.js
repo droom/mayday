@@ -6,7 +6,7 @@ $(document).ready(function() {
 		var fStopInteractive1 = new Waypoint({
 			element: document.getElementById('gg-views'),
 			handler: function() {
-				console.log('fStop');
+				// console.log('fStop');
 				$("#gg-views .hand").removeClass('play')
 			}, offset: 160
 		});
@@ -15,7 +15,7 @@ $(document).ready(function() {
 		var fPlayInteractive = new Waypoint({
 			element: document.getElementById('gg-views'),
 			handler: function() {
-				console.log('fPlay');
+				// console.log('fPlay');
 				$("#gg-views .hand").addClass('play')
 			}, offset: 150
 		});
@@ -24,7 +24,7 @@ $(document).ready(function() {
 		var fStopInteractive2 = new Waypoint({
 			element: document.getElementById('gg-views'),
 			handler: function() {
-				console.log('fStop');
+				// console.log('fStop');
 				$("#gg-views .hand").removeClass('play')
 			}, offset: -100
 		});

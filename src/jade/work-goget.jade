@@ -28,7 +28,7 @@ html(class="no-js" lang="en")
   head
     include partials/_head
 
-  body.work.iso
+  body.work.iso.goget
     article(data-project="goget" itemscope itemtype="http://schema.org/CreativeWork").fade-in#context
       .cover-title
         include partials/_nav
@@ -132,12 +132,10 @@ html(class="no-js" lang="en")
 
         .segment.blueprint.pad.interactive.border#gg-views
           include components/interactive
-          hgroup Payment interaction concept
+          hgroup Open job, view status prototype
           figure
             include projects/gg/views
-            figcaption projects/gg/views
-
-            
+            figcaption #gg-views
 
 
         .segment.blueprint.pad.interactive.border#gg-money
@@ -145,9 +143,7 @@ html(class="no-js" lang="en")
           figure
             hgroup Payment interaction concept
             include projects/gg/money
-            figcaption Note, this never made it further than concept.
-
-
+            figcaption Note, this particular feature never made it further than concept in the original web build.
 
         h3 Public face
 
