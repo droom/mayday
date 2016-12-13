@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'Calibre Semibold';
+  src: url('Calibre-Semibold.eot'); /* IE9 Compat Modes */
+  src: url('Calibre-Semibold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('Calibre-Semibold.woff') format('woff'), /* Modern Browsers */
+       url('Calibre-Semibold.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('Calibre-Semibold.svg#25dc652d1ac2f0b6c05727b08da51f67') format('svg'); /* Legacy iOS */
+       
+  font-style:   normal;
+  font-weight:  700;
+}
+
