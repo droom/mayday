@@ -1,64 +1,41 @@
-body.cv
-  dl, dt, dd
-    &.dim
-      visibility: hidden
+body.cv main
+  margin-bottom:  $gttr-dt
 
-  main
-    dl, dt, dd
-      margin: 0
-      padding: 0
+  hr
+    margin-top:     $gttr-dt
+    margin-bottom:  $gttr-dt
+    border:         $border
+    height: 1px
+  
+  dl.job
+    & + p
+      margin-top:  $gttr-dt
 
-    ul + p,
-    ul + ul,
-    p  + p,
-    p  + ul,
-    dl + ul
-      margin-top: 1em
+    dt.hide,
+    dd.hide
+      display: none
+        
 
-    dl + p
-      margin-top: 2em
+  p + ul.skills
+    margin-top:     $gttr-dt        
+  
+  ul.skills li
+    @include p()
 
-    dl, dt, dd
-      line-height: 1.4em
-      &.hide
-        display: none
+  ul.skills,
+  dl.job
+    margin:         auto
+    max-width:      $narrow-unit
+    padding-left:   $gttr-dt
+    padding-right:  $gttr-dt
     
-    a
-      border: none
-      background-image: -linear-gradient(top,transparent 87%,#81d3eb 0,#81d3eb 97%,transparent 0)
-      background-image: -moz-linear-gradient(top,transparent 87%,#81d3eb 0,#81d3eb 97%,transparent 0)
-      background-image: -webkit-linear-gradient(top,transparent 87%,#81d3eb 0,#81d3eb 97%,transparent 0)
-
-    hr
-      height:     1px
-      border:     none
-      background: rgba(0, 0, 0, 0.08)
-
-    ul.plain li
-      list-style: none
-
-    ul.circle li
-      list-style: circle
-      margin: 0 0 0.5em 1.5em
-
-    ul.small
-      li
-        @include small()
-    
-    ul.brace
-      padding: 0
-      
-      li.main
-        padding: $gttr-dt
-        max-width: $narrow-unit
-        z-index: 1
-        margin: auto
-
-        p:last-child
-          margin-bottom: 0
-
 
 @media (max-width: $phone-max)
-  body.cv main ul.brace li.main
-    padding: $gttr-ph
-
+  body.cv main
+    ul.skills,
+    dl.job
+      padding-left: $gttr-ph
+      padding-right: $gttr-ph
+    
+    ul.skills
+      margin-left:   $gttr-ph
