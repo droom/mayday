@@ -19,6 +19,7 @@ table.issues
         width: calc(100%/3)
         font-weight: 400
         text-align: left
+        vertical-align: top
         
         &.top
           border-top: 1px solid $copy
@@ -46,3 +47,44 @@ table.issues
         padding-bottom: 1.1em
         text-align:     center
         background:     $grey
+
+
+
+@media (max-width: $phone-max)
+  table.issues
+    width: 100%
+    padding-left: 0
+    padding-right: 0
+
+    thead,
+    tbody,
+    tfoot
+      tr
+        td.icon
+
+        td.issue
+          width: 65%
+        
+        td, th
+          text-align: left
+        
+          &:nth-child(1)
+            &.top,
+            &.left,
+            &.right,
+            &.bottom
+              border-left: none
+              padding-left: $gttr-ph
+
+        td, th
+          &:last-child
+            &.top,
+            &.left,
+            &.right,
+            &.bottom
+              border-right: none
+              padding-right: $gttr-ph
+
+
+
+
