@@ -3,19 +3,19 @@ ul.reflow
 		@include small()
 		display: inline-block
 		text-transform: uppercase
+		margin: 16px 0 14px 0
+		
 		a
 			background: white
-			padding: 10px 15px
+			// border: 1px solid blue
+			padding: 7px 9px
+			
 		a.active
 			background: yellow
 
 		& + li
-			margin-left: 0.25em
-			&::before
-				padding-left: 0.25em
-				display: inline-block
-
-
+			a
+			margin-left: 0.2em
 
 section.diagram.ih.reflow
 	margin:     auto
@@ -146,9 +146,9 @@ section.diagram.ih.reflow.before
 				padding: .1rem .35rem 0.15rem .35rem
 
 
-// @media (max-width: 500px)
-	// section.diagram.ih.reflow
-		// zoom: 0.7
+@media (max-width: 500px)
+	section.diagram.ih.reflow
+		zoom: 0.7
 
 section.diagram.ih.reflow.after
 	.cell

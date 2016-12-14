@@ -155,12 +155,24 @@
            
           In a project like this, the real task of the Designer is to <a href="https://www.youtube.com/watch?v=lL1_xwe8x0c" class="inline">create a system</a><sup></sup> , rather than simply create individual views. This requires establishing patterns that can be applied consistently throughout. The most information-dense, component-heavy view on the site is the Product page itself, so that felt like a sensible place to start.
         </p>
-        <div class="segment align-c blueprint pad relative">
+        <div id="checkpoint-reflow" class="segment blueprint interactive pad relative">
+          <div data-balloon="Interactive diagram" data-balloon-pos="left" class="hand">
+            <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="-0.001 -17.832 167.607 206.124">
+              <defs>
+                <lineargradient id="grad" x1="0" x2="0" y1="0" y2="1">
+                  <stop offset="0%" stop-color="#0101e7" stop-opacity="0.7"></stop>
+                  <stop offset="20%" stop-color="#0101e7" stop-opacity="0.9"></stop>
+                  <stop offset="35%" stop-color="#0101e7" stop-opacity="1"></stop>
+                  <stop offset="100%" stop-color="#0101e7" stop-opacity="1"></stop>
+                </lineargradient>
+              </defs>
+              <path fill="#0101e7" d="M77.035,56.785c2.354-6.165,8.213-10.334,15.17-10.457c8.136,0.12,14.842,6.028,16.08,13.972 c2.855-4.93,8.13-8.324,14.036-8.38c6.65,0.002,12.516,4.275,14.892,10.142c7.578-7.023,17.58-4.066,22.436,2.593 c17.953,25.252,7.835,124.047-54.147,123.635c-37.052-0.086-61.354-33.908-102.375-86.836C-2.38,94.52-0.132,84.984,6.12,78.68 c7.15-5.413,17.271-3.94,22.774,2.995l15.89,20.837L77.035,56.785z"></path>
+              <path fill="#0101e7" d="M44.785 102.512L44.792-1c0-10.049 7.42-16.832 16.358-16.832 8.94 0 15.754 8.08 15.885 16.832v103.512h-32.25z" class="finger up"></path>
+              <path fill="url(#grad)" d="M44.785 102.512L44.792-1c0-10.049 7.42-16.832 16.358-16.832 8.94 0 15.754 8.08 15.885 16.832v103.512h-32.25z" class="finger down"></path>
+            </svg>
+          </div>
+          <hgroup>Open job prototype</hgroup>
           <figure>
-            <ul id="checkpoint-reflow" class="reset controls reflow">
-              <li class="hgroup"><a href="#" class="plain reflow before active">Before</a></li>
-              <li class="hgroup"><a href="#" class="plain reflow after">After</a></li>
-            </ul>
             <section id="reflow" class="diagram ih reflow before">
               <div class="cell nav"></div>
               <div class="cell colour"></div>
@@ -191,7 +203,12 @@
                 <div class="region"></div>
               </div>
             </section>
-            <figcaption>On the original layout, two sets of data were grouped into one table, making it very confusing to scan until you understood this quirk. By grouping this information into a narrow module, we could ensure it'll scale down to a mobile viewport.</figcaption>
+            <figcaption>
+              <ul class="reset controls reflow">
+                <li><a href="#" class="plain reflow before active">Before</a></li>
+                <li><a href="#" class="plain reflow after">After</a></li>
+              </ul>On the original layout, two sets of data were grouped into one table, making it very confusing to scan until you understood this quirk. By grouping this information into a narrow module, we could ensure it'll scale down to a mobile viewport.
+            </figcaption>
           </figure>
         </div>
         <h3>It&#8217;s cluttered &plus; hard to find things</h3>
