@@ -1,288 +1,348 @@
 - var fTitle    = "droom.io"
 - var workiso   = false
 - var index     = false
+- var project   = "Appendix"
 
 doctype html
 html(class="no-js" lang="en")
   head
     include partials/_head
 
-  body
+  body.appendix
     include partials/_top
 
     article(data-project="profile").fade-in#context
       .cover-title
         include partials/_nav
-        
+
         .band.head.relative.hr
           .segment.type
             header
-              h1 Appendix
+              h1=project
 
-      main(role="main")
-        .segment.type.appendix
-          ul.brace
-            li.main
-              hgroup 
-                span.year 2016
-                span.url 
-                  a(href="http://www.v8.droom.io").inline v8.droom.io
-                span.name Mayday
-              ul
-                li GoGet
-                  ul
-                    li Brand
-                    li Website
-                    li Web Application
+      main(role="main")#checkpoint
+        ul.plain.brace
+          li.main
+            dl.job
+              dt.hide.year Year
+              dd.year 2016
+              dt.hide.codename Name
+              dd.codename Mayday
+              dt.hide.url URL
+              dd.url
+                a(href="http://www.v8.droom.io").inline v8.droom.io
 
-                li GiveReceipt
-                  ul
-                    li Brand
-                    li Web Application
-                    li Native Application
+            ul.index
+              li GoGet
+                ul
+                  li Brand
+                  li Website
+                  li Web Application
+              li GiveReceipt
+                ul
+                  li Brand
+                  li Web Application
+                  li Native Application
+              li Ideahouse
+                ul
+                  li Web Application
+              li Foriegn Office
+                ul
+                  li Web Theme
 
-                li Ideahouse
-                  ul
-                    li Web Application
+          li.main
+            dl.job
+              dt.hide.year Year
+              dd.year 2015
+              dt.hide.codename Name
+              dd.codename CARGO
+              dt.hide.url URL
+              dd.url
+                a(href="http://www.v7.droom.io").inline v7.droom.io
 
-            li.main
-              hgroup 
-                span.year 2014
-                span.url 
-                  a(href="#").inline v7.droom.io
-                span.name Circus
-              ul
-                li Clarks
-                li Kia Motors UK
-                li Orange Brand
-                li Scarlett of Soho
-                li ATOP Watches
-            
-            li.main
-              hgroup 
-                span.year 2010
-                span.url 
-                  a(href="#").inline v6.droom.io
-                span.name Gatsby
-
-              ul
-                li School Work
-                  ul
-                    li SSGB
-                    li Art-Lite
-                    li Beadwork
-                    li Grammar
-
-                li Client Work
-                  ul
-                    li Virgin Media
-                      ul
-                        li Enchanted
-                        li Mr Magorium's Wonder Emporium
-                        li P.S. I Love You
-                    li Beggars
-                      ul
-                        li Jarvis Cocker
-                        li M. Ward
-                    li Dancing Bee
-                      ul
-                        li Eva
-                        li The Biography Channel
-                        li The Discovery Channel
-
-            li.main
-              hgroup 
-                span.year 2008
-                span.url 
-                  a(href="#").inline v5.droom.io
-                span.name Since 1983
-              ul
-                li Home
-                li About
-                li Client Work
-
-                li After Effects
-                  ul
-                    li The Disappearing City, UWE (YR3)
-                    li SuperOats, UWE (YR2)
-                    li Showreel, UWE (YR2)
-
-                li Print
-                  ul
-                    li Home
-                    li Reuse Charity Shops
-                    li Aeroplane
-                    li Products
-                    li Radio Recall
-                    li Portrait of a Partner
-                    li Album Covers
-
-
-            li.main
-              hgroup 
-                span.year 2007
-                span.url 
-                  a(href="#").inline v4.droom.io
-                span.name Brooklyn
-              ul
-                li RALPH&amp;CO.
-                  ul
-                    li ESPN
-                li Feref
-                  ul
-                    li The Kingdom
-                    li The Tudors
-              ul 
-                li Dancing Bee
-                  ul
-                    li The Biography Channel
-                      ul
-                        li Gallery (Eva)
-                    li The Discovery Channel
-                      ul
-                        li Flash Ad 1
-                        li Flash Ad 2
-                        li Flash Ad 3
-
-
-            li.main
-              hgroup
-                span.year 2007
-                span.url 
-                  a(href="#").inline droom.io
-                span.name And We All Survived
-              ul
-                li City And Guilds Life Drawing
-                  ul
-                    li 1, 2, 3, 4
-
-                li Art Foundtion YR2
-                  ul
-                    li Obsessive/Compulsion
-                      ul
-                        li POGS
-                        li Records
-
-                    li Ha Ha
-                      ul
-                        li Patriarch
-                        li National Elf Service
-                        li Simon Munery
-                        li Comedy Store
-                        li Asterisk
-                        li Des &amp; Mel
-                        li Fairfeild Postcard
-                        li Punchline (Rhythm)
-
-                    li Read All About It
-                      ul
-                        li Verity
-                        li Smear
-
-
-
-
-            li.main
-              hgroup 
-                span.year 2006
-                span.url 
-                  a(href="#").inline droom.io
-                span.name Like The Sun
-              ul 
-
-                
-                li Gemin-i.org
-                  ul
-                    li Sucata Run
-                      ul
-                        li Banner Advert
-                        li A5 Flyer
-                        li Campaign website
-
-                    li Identity &amp; Rights
-                    li Global Action Schools
-                      ul
-                        li Gemini-org software skin
-                        li Campaign website
-
-                li Those Who Can't be Themselves
-                li Martha
-                li You Are [Cat Power] Free
-                li Yeah Monkey
-                li Secretly Candaian
-
-
-
-
-            li.main
-              hgroup 
-                span.year 2003&mdash;2005 
-                span.url 
-                  a(href="#").inline droom.io
-                span.name index.of : act two
+            ul.index
+              li e3 Media
+                ul
+                  li Clarks
+                  li Kia Motors UK
+                  li Orange Brand
               
-              ul
-                li Leeds College Art &amp; Design  
-                  ul 
-                    li Colin &amp; Edith
-                      ul
-                        li I hate Colin &amp; Edith
-                        li Make your own Colin Murray
-                    li Who Am I? (I Am Chris)
-                    li Reportage
+              li VLT
+                ul
+                  li Scarlett of Soho
 
-                li Art Foundtion (YR1)
-                  ul
-                    li Silly Billy
-                    li Drawings from Amsterdam
-                    li Memories
-                    li Slapdash
-                    li Explosions in the Sky
-                      ul
-                        li Cards
-                        li Apartment
-                        li Sky/Ground
-                    li Nowhere
-                    li Smugness
+              li Freelance
+                ul
+                  li Beggars Group
+                  li Doobie Kiosk
+                  li Ideahouse
+                  li GiveReceipt
+                  li Google Font Changer
+                  li LGN / RedBull
 
-                li Experiments
-                  ul
-                    li Rose/Fell
-                    li Bosh
-                    li He has left us alone 
-                    li Charlotte Hatherly
-                    li Cosmanut_in
+          li.main
+            dl.job
+              dt.hide.year Year
+              dd.year 2010
+              dt.hide.codename Name
+              dd.codename Gatsby
+              dt.hide.url URL
+              dd.url
+                a(href="http://www.v6.droom.io").inline v6.droom.io
 
-            li.main
-              hgroup 
-                span.year 2000&mdash;2002 
-                span.url 
-                  a(href="#").inline droom.io
-                span.name index.of
-              ul
-                li Websites
-                  ul
-                    li MyVitriol.net
-                    li Capcom Fiend
-                    li NPMW
 
-                li John Ruskin College
-                  ul
-                    li Computing
-                      ul
-                        li Moonstone
-                    li Art &amp; Design
-                      ul
-                        li Apple Drawing
-                        li Pot painting
+            ul.index
+              li School Work
+                ul
+                  li SSGB
+                  li Art-Lite
+                  li Beadwork
+                  li Grammar
 
-                li Harris C.T.C
-                  ul
-                    li Lesuire Centre
+              li Client Work
+                ul
+                  li Virgin Media
+                    ul
+                      li Enchanted
+                      li Mr Magorium's Wonder Emporium
+                      li P.S. I Love You
+                  li Beggars
+                    ul
+                      li Jarvis Cocker
+                      li M. Ward
+                  li Dancing Bee
+                    ul
+                      li Eva
+                      li The Biography Channel
+                      li The Discovery Channel
 
-                li Downloads
-                  ul
-                    li ActiveDesk icons
+          li.main
+            dl.job
+              dt.hide.year Year
+              dd.year 2008
+              dt.hide.codename Name
+              dd.codename Since 1983
+              dt.hide.url URL
+              dd.url
+                a(href="http://www.v5.droom.io").inline v5.droom.io
+
+            ul.index
+              li Home
+              li Client Work
+                ul
+                  li Voluntary
+                  li Internship
+                  li Freelance
+
+              li UWE 1/2
+                ul
+                  li 50 Photos
+                  li The Aeroplane Flies High
+                  li Album Covers
+                  li (Graphic Design is) Art-lite
+
+                  li Home (is where the heart is)
+                  li Products
+                  li Portrait of a Partner
+                  li Reuse Charity Shops
+                  li Radio Recall
+                  li SuperOats, UWE (YR2)
+                  li Showreel, UWE (YR2)
+
+              li Observed (Life Drawing)
+                ul
+                  li Penny
+                  li Stick
+                  li Leg
+                  li Upright
+
+              li About
+
+
+          li.main
+            dl.job
+              dt.hide.year Year
+              dd.year 2007
+              dt.hide.codename Name
+              dd.codename Brooklyn
+              dt.hide.url URL
+              dd.url
+                a(href="http://www.v4.droom.io").inline v4.droom.io
+
+            ul.index
+              li RALPH&amp;CO.
+                ul
+                  li ESPN
+              li Feref
+                ul
+                  li The Kingdom
+                  li The Tudors
+              li Dancing Bee
+                ul
+                  li The Biography Channel
+                    ul
+                      li Gallery (Eva)
+                  li The Discovery Channel
+                    ul
+                      li Flash Ad 1
+                      li Flash Ad 2
+                      li Flash Ad 3
+
+
+          li.main
+            dl.job
+              dt.hide.year Year
+              dd.year 2007
+              dt.hide.codename Name
+              dd.codename And We All Survived
+              dt.hide.url URL
+              dd.url
+                a(href="http://www.v3.droom.io").inline v3.droom.io
+
+            ul.index
+              li Leeds College Art &amp; Design  
+                ul 
+                  li Colin &amp; Edith
+                    ul
+                      li I hate Colin &amp; Edith
+                      li Make your own Colin Murray
+                  li Who Am I? (I Am Chris)
+                  li Reportage
+
+              li City And Guilds Life Drawing
+                ul
+                  li 1, 2, 3, 4
+
+              li Client
+                ul
+                
+                  li Gemin-i.org
+                    ul
+                      li Sucata Run
+                        ul
+                          li Banner Advert
+                          li A5 Flyer
+                          li Campaign website
+
+                      li Identity &amp; Rights
+                      li Global Action Schools
+                        ul
+                          li Gemini-org software skin
+                          li Campaign website
+
+          li.main
+            dl.job
+              dt.hide.year Year
+              dd.year 2007
+              dt.hide.codename Name
+              dd.codename Like The Sun
+              dt.hide.url URL
+              dd.url
+                a(href="http://www.v2.droom.io").inline v2.droom.io
+
+            ul.index
+              li Art Foundtion YR2
+
+                ul
+                  li Ha Ha
+                    ul
+                      li Patriarch
+                      li National Elf Service
+                      li Simon Munery
+                      li Asterisk
+                      li Punchline (Rhythm)
+                      li Fairfeild Postcards
+
+                      li Written Pieces 
+                        ul
+                          li Smokers
+                          li Extradite
+                          li Kent
+                          li Des &amp; Mel
+                          li Thursday night at the Comedy Store
+
+                  li Read All About It
+                    ul
+                      li Verity
+                      li Smear
+
+                  li Obsessive/Compulsion
+                    ul
+                      li POGS
+                      li Records
+              
+              li Wallpapers
+                ul
+                  li Those Who Can't be Themselves
+                  li Martha Wainwright
+                  li You Are [Cat Power] Free
+                  li Secretly Candaian
+
+          li.main
+            dl.job
+              dt.hide.year Year
+              dd.year 2003&mdash;2004
+              dt.hide.codename Name
+              dd.codename index.of: act two
+              dt.hide.url URL
+              dd.url
+                a(href="http://www.v1.droom.io").inline v1.droom.io
+
+            ul.index
+              li Print / Graphic
+                ul
+
+                  li Explosions in the Sky
+                    ul
+                      li Saber
+                      li Apartment
+
+                  li Silly Billy
+                  li Memories
+                  li Nowhere
+                  li Smugness
+                  li Rose/Fell
+                  li He has left us alone 
+                  li Charlotte Hatherly
+
+              li Sketchbook
+                ul
+                  li Drawings from Amsterdam
+                    ul
+                      li Briet
+                      li Statue
+
+
+          li.main
+            dl.job
+              dt.hide.year Year
+              dd.year 2000&mdash;2002 
+              dt.hide.codename Name
+              dd.codename At Ease
+              dt.hide.url URL
+              dd.url
+                a(href="http://www.v0.droom.io").inline v0.droom.io
+            
+            ul.index
+
+              li Pencil (John Ruskin)
+                ul
+                  li Apple Drawing
+                  li Pot painting
+
+              li Websites
+                ul
+                  li MyVitriol.net
+                  li CD—COM
+                  li Capcom Fiend
+                  li NPMW
+
+              li Uploads
+                ul
+                  li Mars Volta
+                  li ActiveDesk icons
+                  li AmpTech Winamp Skin
+
 
 
       include partials/_footer

@@ -1,58 +1,47 @@
-.appendix
-  margin-top:  2.5em
-  margin-bottom:  2.5em
+body.appendix main
+  margin-bottom:  $gttr-dt
 
-  ul.brace
-    margin:   0
-    padding:  0
+
+  li.main
+    border-top: $border
+    padding-top:   $gttr-dt
+    padding-bottom:  $gttr-dt
+
+  dl.job
+    padding-bottom: $gttr-ph
+    opacity: 0.5
+    dd
+      margin-right: 0.6em
+    dt,
+    dd
+      display: inline
+    dt.hide,
+    dd.hide
+      display: none
+
+  ul.index 
+    li 
+      ul li
+        @include small()
+        margin-left: 20px
+        &:last-child
+          margin-bottom: 0.5em
+
+  ul.index,
+  dl.job
+    margin:         auto
+    max-width:      $narrow-unit
+    padding-left:   $gttr-dt
+    padding-right:  $gttr-dt
     
-    ul
-      padding:  0
-      margin:   0
-      
-      li
-        margin-bottom:  0.5em
-        font-weight: 800
-        
-        ul li
-          font-weight: 400
-        
 
-      ul
-        margin-left:  2em
-        margin-bottom:  0.5em
-
-        li
-          margin-bottom:  0
-
-      & + ul
-        margin-top: 5px
-  
-    li.main
-      list-style:   none
-      margin-bottom: 30px
-      margin-left: 0
-      &:nth-last-child(1)
-        margin-bottom: 0
-
-  hgroup
-    display:        block
-    border-bottom:  1px solid rgba(0,0,0,0.1)
-    padding:        4px 0
-    margin:         0 0 7px 0
-    @include small()
-    font-weight: 400
-
-  .url,
-  .year
-    display: inline-block
-
-  .url,
-  .name,
-  .year
-    text-transform: uppercase
-  
-  .name,
-  .url
-    margin-left: 3em
+@media (max-width: $phone-max)
+  body.cv main
+    ul.index,
+    dl.job
+      padding-left: $gttr-ph
+      padding-right: $gttr-ph
     
+    ul.index
+      margin-left:   $gttr-ph
+
