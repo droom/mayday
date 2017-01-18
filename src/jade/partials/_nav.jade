@@ -1,11 +1,20 @@
 .band.head.relative#head
-  if workiso
-    a(href="work.html").move.move-return
+	if workiso
+		a(href="work.html").move.move-return
 
-  nav(role="navigation").ghost
-    .segment.type.ghost
-      ol.reset.flex.ghost
-        li.unit.align-l.ghost.prise.caps
-          a(href="/").target#profile droom.io
-        li.unit.align-r.ghost.work
-          a(href="work").target#work Selected Work
+	nav(role="navigation").ghost
+		.segment.type.ghost
+			ol.reset.flex.ghost
+				li.unit.align-l.ghost.prise.caps
+
+					if index
+						| droom.io
+					else
+						a(href="/").target#profile droom.io
+
+
+				li.unit.align-r.ghost.work
+					if work
+						| Selected Work
+					else
+						a(href="work").target#work Selected Work
