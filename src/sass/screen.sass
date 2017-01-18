@@ -1,4 +1,3 @@
-// $display:       "Calibre-Semibold", "Calibre-Medium", "Helvetica Neue", Helvetica, Arial, sans-serif
 $display:       "c-std-bold-subset", "Helvetica Neue", Helvetica, Arial, sans-serif
 $running:		-apple-system, BlinkMacSystemFont, "hndi-std", "Roboto", "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif
 $technical:		"Roboto Mono", "Consolas", "Monaco", "Lucida Console", "Andale Mono"
@@ -93,8 +92,45 @@ $dashed:		1px dashed $ink
 @import "styleguide.sass"
 
 
-body.profile
-	@include theme-B(1)
-	main
-		padding-top: 	$gttr-ph
+footer dl.feed
+	padding-top: $gttr-ph
+	padding-bottom: $gttr-ph
+		
+footer small:last-child
+	padding-top: $gttr-ph
+	padding-bottom: $gttr-dt
+
+footer dl.feed
+	padding-top: $gttr-dt
+	padding-bottom: $gttr-dt
+		
+footer small:last-child
+	padding-top: $gttr-dt
+	padding-bottom: $gttr-dt
+	
+@media (max-width: $phone-max)
+	footer dl.feed
+		padding-top: $gttr-ph
 		padding-bottom: $gttr-ph
+			
+	footer small:last-child
+		padding-top: $gttr-ph
+		padding-bottom: $gttr-dt
+
+
+body.profile
+	@include theme-A(1)
+
+body.profile header h1
+	max-width: 	640px
+	min-height: 3.5em
+
+@media (min-width: 800px) and (min-height: 500px)
+	body.profile
+		footer
+			width: 100%
+			position: fixed
+			bottom: 0
+			left: 0
+
+

@@ -1,9 +1,13 @@
-if !index
-	footer(role="contentinfo").band.hr
+footer(role="contentinfo")
+	if index
+		.band.hr
+			include ../partials/_feed
+
+	.band.hr
 		.segment.type
 			small.block
 				&copy;
-				= "2016 "
+				= "2016/7 "
 				a(href="mailto:yo@droom.io").inline.dark Chris Droom
 				= ". "
 				span.github

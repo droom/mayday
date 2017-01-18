@@ -1,16 +1,11 @@
-@media (max-width: $phone-max)
-  dl.feed
-    display: block
+dl.feed
+  display:            block
+  dt
+    font-family:      $technical
+    letter-spacing:   -0.05em
 
-    dt
+@media (max-width: 350px)
+  dl.feed
+    dt,
+    dd
       display: block
-      padding-top: $gttr-ph
-      
-      &:nth-child(1)
-        padding-top: 0
-      
-    dd 
-      display: block
-      padding-bottom: $gttr-ph
-      border-bottom: $border
-      
