@@ -18,7 +18,86 @@ html(class="no-js" lang="en")
           .segment.type
             include intro/fed
 
-      main(role="main")
+            include components/contents-btn-img
+            //- include components/contents-btn
+
+
+      main(role='main')
+        ul.menu.reset#menu
+          li
+            a(href="work-goget.html").plain
+              .segment.type.work.gg
+                dl.reset.credits
+                  dt.project Project
+                  dd.project.h3
+                    = "GoGet Brand "
+                    span.entity.accent.slim /
+                    = " App "
+                    span.entity.accent.slim /
+                    = " Web"
+                  dt.client Client
+                  dd.client GoGet
+                  dt.model Model
+                  dd.model Marketplace
+                  
+          li
+            a(href="work-ideahouse.html").plain
+              .segment.type.work.ih
+                dl.reset.credits
+                  dt.project Project
+                  dd.project.h3 Ideahouse Web
+                  dt.client Client
+                  dd.client Ideahouse
+                  dt.model Model
+                  dd.model Wholesaler
+
+          li
+            a(href="work-givereceipt.html").plain
+              .segment.type.work.gr
+                dl.reset.credits
+                  dt.project Project
+                  dd.project.h3
+                    = "GiveReceipt Brand "
+                    span.entity.accent.slim /
+                    = " App "
+                    span.entity.accent.slim /
+                    = " Web"
+                  dt.client Client
+                  dd.client DVG Web
+                  dt.model Model
+                  dd.model SaaS
+
+          li
+            a(href="work-foreign.html").plain
+              .segment.type.work.fo
+                dl.reset.credits
+                  dt.project Project
+                  dd.project.h3 Foreign Office Theme
+                  dt.client Client
+                  dd.client Self initiated
+                  dt.model Model
+                  dd.model Editorial
+
+          li.disable
+            .segment.type.work.blank
+              dl.reset.credits
+                dt.project Project
+                dd.project.h3 ATOP Watches
+                dt.client Client
+                dd.client Ideahouse
+                dt.model Model
+                dd.model Store
+
+          li.disable
+            .segment.type.work.blank
+              dl.reset.credits
+                dt.project Project
+                dd.project.h3 Rainbow Theme
+                dt.client Client
+                dd.client Self initiated
+                dt.model Model
+                dd.model Editorial
+
         
     include partials/_pager
     include partials/_top

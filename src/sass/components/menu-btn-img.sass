@@ -1,0 +1,57 @@
+a.menu-btn-img
+  background: none
+  user-select: none
+  outline: none
+  width: 15px
+  height: 15px
+  display: block
+  line-height: 0
+
+  &:active,
+  &:focus,
+  &:hover
+    background: none
+    user-select: none
+    outline: 0
+
+  .unit
+    position: relative
+    width: 15px
+    height: 15px
+    transition: 300ms ease all
+    transform-origin: center center
+    transform: rotate(-90deg)
+    
+    .tiles,
+    .list
+      background: none
+      user-select: none
+      outline: 0
+      will-change: transform
+      position: absolute
+      transition: 300ms ease all
+      top: 0
+      left: 0
+      width: 15px
+      height: 15px
+      
+      img
+        width: 100%
+
+  .unit .tiles
+    opacity: 1
+
+  .unit .list
+    opacity: 0
+
+  .unit.rotate
+    transform: rotate(0deg)
+
+  .unit.rotate .tiles
+    opacity: 0
+
+  .unit.rotate .list
+    opacity: 1
+
+
+

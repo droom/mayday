@@ -3666,50 +3666,6 @@ var Konami = function (callback) {
 
 });;$(document).ready(function() {
 
-	localStorage.contents;
-
-	function fContents(){
-		if (localStorage.contents === "contentsTile"){
-			$('ul#contents').addClass('tile');
-			$('a#contents-btn .unit').addClass('list');
-		} else {
-			$('ul#contents').removeClass('tile');
-			$('a#contents-btn .unit').removeClass('list');
-		};
-	};
-
-	$('a#contents-btn').click(function(e) {
-		e.preventDefault();
-		$('a#contents-btn .unit').toggleClass('list');
-		$('ul#contents').toggleClass('tile');
-
-		if ($('ul#contents').hasClass('tile')){
-			localStorage.contents = "contentsTile";
-		} else {
-			localStorage.contents = "list";
-		};
-
-		console.log(localStorage.contents);
-
-	});
-
-
-
-
-	fContents();
-
-
-
-
-});
-
-
-
-
-
-
-;$(document).ready(function() {
-
 	if (localStorage.context === "backwards"){
 		$( "#context" ).addClass('right');
 	};
@@ -3821,7 +3777,54 @@ var Konami = function (callback) {
 		}
 	});
 
-});;$(document).on('ready', function() {
+});;$(document).ready(function() {
+
+	localStorage.menu;
+
+	var menu		= $('ul#menu')
+	var button		= $('a#menu-btn-img')
+	var buttonUnit	= $('a#menu-btn-img .unit')
+
+
+	function fContents(){
+		if (localStorage.menu === "tile"){
+			menu.addClass('tile');
+			buttonUnit.addClass('rotate');
+
+		} else {
+			menu.removeClass('tile');
+			buttonUnit.removeClass('rotate');
+			
+		};
+	};
+
+	fContents();
+
+	$(button).click(function(e) {
+		e.preventDefault();
+
+		buttonUnit.toggleClass('rotate');
+		menu.toggleClass('tile');
+
+		if (menu.hasClass('tile')){
+			localStorage.menu = "tile";
+		} else {
+			localStorage.menu = "list";
+		};
+		
+		console.log(localStorage.menu);
+
+	});
+
+
+});
+
+
+
+
+
+
+;$(document).on('ready', function() {
 
 	$('.container').mixItUp({
 		load: {

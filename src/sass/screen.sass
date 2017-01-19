@@ -10,6 +10,7 @@ $hover:		  	rgba(255, 255, 255, 0.4)
 $ink:      		rgba(46, 77, 210, 1)
 $grey:  		rgba(0,0,0,0.04)
 $outline: 		rgba(0,0,0,.3)
+$salmon: 		#fad7ae
 
 $wide-unit:    	1118px
 $narrow-unit:	710px
@@ -19,7 +20,6 @@ $gttr-ph:	 	28px / 2
 
 $border:		1px solid rgba(0, 0, 0, 0.08)
 $dashed:		1px dashed $ink
-
 	
 @mixin theme-A($alpha)
 	background-color: rgba(129, 211, 235, $alpha)
@@ -39,7 +39,7 @@ $dashed:		1px dashed $ink
 @import "grid/stacking.sass"
 
 @import "rhythm/base.sass"
-@import "rhythm/contents.sass"
+@import "rhythm/menu.sass"
 @import "rhythm/iso.sass"
 
 @import "motion/page.sass"
@@ -56,8 +56,11 @@ $dashed:		1px dashed $ink
 
 @import "components/band.sass"
 @import "components/lists.sass"
-@import "components/contents.sass"
-@import "components/contents-btn.sass"
+
+@import "components/menu.sass"
+@import "components/menu-btn-flex.sass"
+@import "components/menu-btn-img.sass"
+
 @import "components/cv.sass"
 @import "components/links.sass"
 @import "components/nav.sass"
@@ -92,11 +95,10 @@ $dashed:		1px dashed $ink
 @import "a11y/no-cssgradients.sass"
 @import "a11y/no-multiplebgs.sass"
 
-
-
 @import "styleguide.sass"
 
-
+a.plain.contents.btn
+	padding-bottom: $gttr-dt
 
 
 
