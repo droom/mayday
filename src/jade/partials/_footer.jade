@@ -5,11 +5,16 @@ footer(role="contentinfo")
 
 	.band
 		.segment.type
-			small.block
-				&copy;
-				= "2016/7 "
-				a(href="mailto:yo@droom.io").inline.dark Chris Droom
-				= ". "
-				span.github
-					a(href="https://github.com/droom/mayday" aria-label="View code on GitHub").inline.dark Source
-					= "."
+			.flex.start
+				.unit
+					small
+						&copy;
+						= "2016/7 "
+						a(href="mailto:yo@droom.io").inline.dark Chris Droom
+						//- = ". "
+						//- a(href="cv.html" aria-label="View C.V.").inline.dark View Resume
+
+				if index
+					.unit.end
+						small
+							a(href="https://github.com/droom/mayday" aria-label="View code on GitHub").inline.dark View Source

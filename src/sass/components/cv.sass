@@ -4,7 +4,8 @@ body.cv main
   hr
     margin-top:     $gttr-dt
     margin-bottom:  $gttr-dt
-    border:         $border
+    border:         none
+    border-top:     $border
     height: 1px
   
   dl.job
@@ -14,13 +15,15 @@ body.cv main
     dt.hide,
     dd.hide
       display: none
-        
 
   p + ul.skills
     margin-top:     $gttr-dt        
   
   ul.skills li
     @include p()
+
+  // ul.brace
+    // border-bottom: $border
 
   ul.skills,
   dl.job
@@ -29,7 +32,6 @@ body.cv main
     padding-left:   $gttr-dt
     padding-right:  $gttr-dt
     
-
 @media (max-width: $phone-max)
   body.cv main
     ul.skills,
