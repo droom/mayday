@@ -159,51 +159,6 @@ module.exports = function(grunt) {
       }
     },
 
-    critical: {
-      options: {
-        base: './',
-        css: [
-        'dist/css/style.css'
-        ],
-        width: 1400,
-        height: 1200,
-        minify: true,
-
-        excludeSelectors: [
-        'html, body, div'
-        ],
-
-      },
-
-      src: 'dist/*.html',
-      dest: 'dist/critical/'
-    },
-
-
-    yslow: {
-      options: {
-        thresholds: {
-          weight: 180,
-          speed: 1000,
-          score: 80,
-          requests: 15
-        }
-      },
-      pages: {
-        files: [
-        {
-          src: 'dist/'
-        },
-        {
-          src: 'http://droom.io',
-          thresholds: {
-            weight: 100
-          }
-        }
-        ]
-      }
-    },
-
 
   });
 
@@ -215,8 +170,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-autoprefixer');
   grunt.loadNpmTasks('grunt-postcss');
-  grunt.loadNpmTasks('grunt-critical');
-  grunt.loadNpmTasks('grunt-yslow');
 
   grunt.registerTask('default', [ 'concat', 'uglify', 'jade', 'sass', 'postcss', 'imagemin', 'critical' ]);
 

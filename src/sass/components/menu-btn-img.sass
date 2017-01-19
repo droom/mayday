@@ -1,12 +1,13 @@
 a.menu-btn-img
-  background: none
-  user-select: none
-  outline: none
-  width: 17px
-  height: 17px
-  display: block
-  line-height: 0
-  opacity: 0.4
+  transition:   100ms ease-out all
+  background:   none
+  user-select:  none
+  outline:      none
+  width:        15px
+  height:       15px
+  display:      block
+  line-height:  0
+  opacity:      0.4
 
   &:active,
   &:focus,
@@ -20,32 +21,35 @@ a.menu-btn-img
     opacity: 0.75
 
   .unit
-    position: relative
-    width: 17px
-    height: 17px
-    display: block
-    transition: 300ms ease all
+    position:     relative
+    width:        15px
+    height:       15px
+    display:      block
+    transition:   215ms ease-out all
+    transform:    rotate(90deg)
     transform-origin: center center
-    transform: rotate(90deg)
     
-    .tiles,
+    .tile,
     .list
       background:   none
       user-select:  none
       outline:      0
       will-change:  transform
       position:     absolute
-      transition:   200ms ease all
+      transition:   215ms ease-out all
       top:        0
       left:       0
-      width:      17px
-      height:     17px
+      width:      15px
+      height:     15px
       
-      img
-        width:    17px
-        height:   17px
+      svg
+        width:    15px
+        height:   15px
+        fill:     $bg
 
-  .unit .tiles
+
+
+  .unit .tile
     opacity: 1
 
   .unit .list
@@ -54,11 +58,10 @@ a.menu-btn-img
   .unit.rotate
     transform: rotate(0deg)
 
-  .unit.rotate .tiles
+  .unit.rotate .tile
     opacity: 0
 
   .unit.rotate .list
     opacity: 1
-
 
 
