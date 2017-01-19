@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="18px" height="18px" viewBox="-305.5 396.5 18 18" enable-background="new -305.5 396.5 18 18" xml:space="preserve">
-<rect x="-305.5" y="396.5" fill="#fad7ae" width="5" height="5"/>
-<rect x="-292.5" y="396.5" fill="#fad7ae" width="5" height="5"/>
-<rect x="-299" y="396.5" fill="#fad7ae" width="5" height="5"/>
-<rect x="-305.5" y="409.5" fill="#fad7ae" width="5" height="5"/>
-<rect x="-292.5" y="409.5" fill="#fad7ae" width="5" height="5"/>
-<rect x="-299" y="409.5" fill="#fad7ae" width="5" height="5"/>
-<rect x="-305.5" y="403" fill="#fad7ae" width="5" height="5"/>
-<rect x="-292.5" y="403" fill="#fad7ae" width="5" height="5"/>
-<rect x="-299" y="403" fill="#fad7ae" width="5" height="5"/>
+<rect x="-305.5" y="396.5" fill="#fff" width="5" height="5"/>
+<rect x="-292.5" y="396.5" fill="#fff" width="5" height="5"/>
+<rect x="-299" y="396.5" fill="#fff" width="5" height="5"/>
+<rect x="-305.5" y="409.5" fill="#fff" width="5" height="5"/>
+<rect x="-292.5" y="409.5" fill="#fff" width="5" height="5"/>
+<rect x="-299" y="409.5" fill="#fff" width="5" height="5"/>
+<rect x="-305.5" y="403" fill="#fff" width="5" height="5"/>
+<rect x="-292.5" y="403" fill="#fff" width="5" height="5"/>
+<rect x="-299" y="403" fill="#fff" width="5" height="5"/>
 </svg>
