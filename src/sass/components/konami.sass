@@ -32,11 +32,16 @@ html.konami
 	.band.head
 		background: url('../img/components/ps.gif') repeat #ebeeee
 
+		#top
+			background: none
 
 	body
-
 		color: $ink
 
+		.plain.cta
+			color: #2e4dd2
+			background: none
+			outline: 2px solid #2e4dd2
 
 		a.menu-btn-img
 			opacity: 1
@@ -131,7 +136,13 @@ html.konami
 		.band.hr.relative.pager .segment.type a:hover
 			background-color: rgba(255,255,0,0.15)
 
+		ul.menu.tile li .segment.work.blank
+			background-image: url("../img/cover/blank-konami.svg")
+
+
+
 		ul.menu
+
 			li.disable
 				&:active,
 				&:hover

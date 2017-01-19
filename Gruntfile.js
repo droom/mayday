@@ -160,7 +160,20 @@ module.exports = function(grunt) {
     },
 
 
+    criticalcss: {
+      options: {
+        width: 1200,
+        height: 900,
+      },
+      your_target: {
+        url: 'http://localhost:8888/',
+        dest: 'dist/css/screen.css',    
+      },
+    },
+
+
   });
+
 
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-jade');
@@ -170,7 +183,8 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-autoprefixer');
   grunt.loadNpmTasks('grunt-postcss');
+  grunt.loadNpmTasks('grunt-criticalcss');
 
-  grunt.registerTask('default', [ 'concat', 'uglify', 'jade', 'sass', 'postcss', 'imagemin', 'critical' ]);
+  grunt.registerTask('default', [ 'concat', 'uglify', 'jade', 'sass', 'postcss', 'imagemin' ]);
 
 };
