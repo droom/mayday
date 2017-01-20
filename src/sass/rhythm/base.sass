@@ -1,5 +1,5 @@
 header h1 + dl.credits,
-header h1 + .plain.contents.btn
+header h1 + a.menu-btn-img
 	margin-top: $gttr-dt * 4
 
 header
@@ -21,24 +21,21 @@ nav .segment.type.ghost
 		padding-bottom: $gttr-ph
 
 
-
-// dl.feed
-	// padding-top: $gttr-dt
-	// padding-bottom: $gttr-dt
-	
-// @media (max-width: $phone-max)
-	// dl.feed
-		// padding-top: $gttr-ph
-		// padding-bottom: $gttr-ph
-
 footer .segment.type
 	padding-top: $gttr-dt
-	padding-bottom: $gttr-dt
+	padding-bottom: $gttr-ph
+	dl.feed
+		padding-top: $gttr-ph
+		padding-bottom: $gttr-ph
 	
 @media (max-width: $phone-max)
 	footer .segment.type
 		padding-top: $gttr-ph
-		padding-bottom: $gttr-dt
+		padding-bottom: $gttr-ph
+		dl.feed
+			padding-top: 0
+			padding-bottom: $gttr-ph
+
 
 .cover-photo dl.credits
 	padding-top: $gttr-ph

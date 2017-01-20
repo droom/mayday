@@ -159,53 +159,21 @@ module.exports = function(grunt) {
       }
     },
 
-    critical: {
+
+    criticalcss: {
       options: {
-        base: './',
-        css: [
-        'dist/css/style.css'
-        ],
-        width: 1400,
-        height: 1200,
-        minify: true,
-
-        excludeSelectors: [
-        'html, body, div'
-        ],
-
+        width: 1200,
+        height: 900,
       },
-
-      src: 'dist/*.html',
-      dest: 'dist/critical/'
-    },
-
-
-    yslow: {
-      options: {
-        thresholds: {
-          weight: 180,
-          speed: 1000,
-          score: 80,
-          requests: 15
-        }
+      your_target: {
+        url: 'http://localhost:8888/',
+        dest: 'dist/css/screen.css',    
       },
-      pages: {
-        files: [
-        {
-          src: 'dist/'
-        },
-        {
-          src: 'http://droom.io',
-          thresholds: {
-            weight: 100
-          }
-        }
-        ]
-      }
     },
 
 
   });
+
 
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-jade');
@@ -215,9 +183,8 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-autoprefixer');
   grunt.loadNpmTasks('grunt-postcss');
-  grunt.loadNpmTasks('grunt-critical');
-  grunt.loadNpmTasks('grunt-yslow');
+  grunt.loadNpmTasks('grunt-criticalcss');
 
-  grunt.registerTask('default', [ 'concat', 'uglify', 'jade', 'sass', 'postcss', 'imagemin', 'critical' ]);
+  grunt.registerTask('default', [ 'concat', 'uglify', 'jade', 'sass', 'postcss', 'imagemin' ]);
 
 };

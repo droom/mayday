@@ -24,6 +24,7 @@ html.cssanimations
 
 
 
+
 html.konami
 	div
 		outline: 1px solid $ink
@@ -32,11 +33,35 @@ html.konami
 	.band.head
 		background: url('../img/components/ps.gif') repeat #ebeeee
 
+		#top
+			background: none
 
-				
+	.band.ref
+		background: none
+
 	body
-
 		color: $ink
+
+		.plain.cta
+			color: #2e4dd2
+			background: rgba(255,255,0,0.4)
+			outline: 2px solid #2e4dd2
+
+		a.menu-btn-img
+			opacity: 1
+			
+			&:hover
+				opacity: 1
+
+			.unit
+				outline: none
+
+				.tile,
+				.list
+					svg
+						fill: $ink
+
+
 
 		.dark dt, .dark dd, .dark p, .dark a, .dark small, .dark h1, .dark h2, .dark h3, .dark h4
 			color: $ink
@@ -115,7 +140,13 @@ html.konami
 		.band.hr.relative.pager .segment.type a:hover
 			background-color: rgba(255,255,0,0.15)
 
+		ul.menu.tile li .segment.work.blank
+			background-image: url("../img/cover/blank-konami.svg")
+
+
+
 		ul.menu
+
 			li.disable
 				&:active,
 				&:hover
