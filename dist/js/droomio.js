@@ -3492,8 +3492,8 @@ jQuery.extend( jQuery.easing,
   }
 }())
 ;;/*! modernizr 3.3.1 (Custom Build) | MIT *
- * https://modernizr.com/download/?-cssgradients-flexbox-multiplebgs-setclasses !*/
-!function(e,n,t){function r(e){var n=C.className,t=Modernizr._config.classPrefix||"";if(b&&(n=n.baseVal),Modernizr._config.enableJSClass){var r=new RegExp("(^|\\s)"+t+"no-js(\\s|$)");n=n.replace(r,"$1"+t+"js$2")}Modernizr._config.enableClasses&&(n+=" "+t+e.join(" "+t),b?C.className.baseVal=n:C.className=n)}function s(e,n){return typeof e===n}function o(){var e,n,t,r,o,i,a;for(var l in x)if(x.hasOwnProperty(l)){if(e=[],n=x[l],n.name&&(e.push(n.name.toLowerCase()),n.options&&n.options.aliases&&n.options.aliases.length))for(t=0;t<n.options.aliases.length;t++)e.push(n.options.aliases[t].toLowerCase());for(r=s(n.fn,"function")?n.fn():n.fn,o=0;o<e.length;o++)i=e[o],a=i.split("."),1===a.length?Modernizr[a[0]]=r:(!Modernizr[a[0]]||Modernizr[a[0]]instanceof Boolean||(Modernizr[a[0]]=new Boolean(Modernizr[a[0]])),Modernizr[a[0]][a[1]]=r),y.push((r?"":"no-")+a.join("-"))}}function i(){return"function"!=typeof n.createElement?n.createElement(arguments[0]):b?n.createElementNS.call(n,"http://www.w3.org/2000/svg",arguments[0]):n.createElement.apply(n,arguments)}function a(e,n){return!!~(""+e).indexOf(n)}function l(e){return e.replace(/([a-z])-([a-z])/g,function(e,n,t){return n+t.toUpperCase()}).replace(/^-/,"")}function f(e,n){return function(){return e.apply(n,arguments)}}function u(e,n,t){var r;for(var o in e)if(e[o]in n)return t===!1?e[o]:(r=n[e[o]],s(r,"function")?f(r,t||n):r);return!1}function d(e){return e.replace(/([A-Z])/g,function(e,n){return"-"+n.toLowerCase()}).replace(/^ms-/,"-ms-")}function c(){var e=n.body;return e||(e=i(b?"svg":"body"),e.fake=!0),e}function p(e,t,r,s){var o,a,l,f,u="modernizr",d=i("div"),p=c();if(parseInt(r,10))for(;r--;)l=i("div"),l.id=s?s[r]:u+(r+1),d.appendChild(l);return o=i("style"),o.type="text/css",o.id="s"+u,(p.fake?p:d).appendChild(o),p.appendChild(d),o.styleSheet?o.styleSheet.cssText=e:o.appendChild(n.createTextNode(e)),d.id=u,p.fake&&(p.style.background="",p.style.overflow="hidden",f=C.style.overflow,C.style.overflow="hidden",C.appendChild(p)),a=t(d,e),p.fake?(p.parentNode.removeChild(p),C.style.overflow=f,C.offsetHeight):d.parentNode.removeChild(d),!!a}function m(n,r){var s=n.length;if("CSS"in e&&"supports"in e.CSS){for(;s--;)if(e.CSS.supports(d(n[s]),r))return!0;return!1}if("CSSSupportsRule"in e){for(var o=[];s--;)o.push("("+d(n[s])+":"+r+")");return o=o.join(" or "),p("@supports ("+o+") { #modernizr { position: absolute; } }",function(e){return"absolute"==getComputedStyle(e,null).position})}return t}function g(e,n,r,o){function f(){d&&(delete z.style,delete z.modElem)}if(o=s(o,"undefined")?!1:o,!s(r,"undefined")){var u=m(e,r);if(!s(u,"undefined"))return u}for(var d,c,p,g,h,v=["modernizr","tspan","samp"];!z.style&&v.length;)d=!0,z.modElem=i(v.shift()),z.style=z.modElem.style;for(p=e.length,c=0;p>c;c++)if(g=e[c],h=z.style[g],a(g,"-")&&(g=l(g)),z.style[g]!==t){if(o||s(r,"undefined"))return f(),"pfx"==n?g:!0;try{z.style[g]=r}catch(y){}if(z.style[g]!=h)return f(),"pfx"==n?g:!0}return f(),!1}function h(e,n,t,r,o){var i=e.charAt(0).toUpperCase()+e.slice(1),a=(e+" "+k.join(i+" ")+i).split(" ");return s(n,"string")||s(n,"undefined")?g(a,n,r,o):(a=(e+" "+P.join(i+" ")+i).split(" "),u(a,n,t))}function v(e,n,r){return h(e,t,t,n,r)}var y=[],x=[],w={_version:"3.3.1",_config:{classPrefix:"",enableClasses:!0,enableJSClass:!0,usePrefixes:!0},_q:[],on:function(e,n){var t=this;setTimeout(function(){n(t[e])},0)},addTest:function(e,n,t){x.push({name:e,fn:n,options:t})},addAsyncTest:function(e){x.push({name:null,fn:e})}},Modernizr=function(){};Modernizr.prototype=w,Modernizr=new Modernizr;var C=n.documentElement,b="svg"===C.nodeName.toLowerCase(),_=w._config.usePrefixes?" -webkit- -moz- -o- -ms- ".split(" "):["",""];w._prefixes=_,Modernizr.addTest("cssgradients",function(){for(var e,n="background-image:",t="gradient(linear,left top,right bottom,from(#9f9),to(white));",r="",s=0,o=_.length-1;o>s;s++)e=0===s?"to ":"",r+=n+_[s]+"linear-gradient("+e+"left top, #9f9, white);";Modernizr._config.usePrefixes&&(r+=n+"-webkit-"+t);var a=i("a"),l=a.style;return l.cssText=r,(""+l.backgroundImage).indexOf("gradient")>-1});var S="Moz O ms Webkit",k=w._config.usePrefixes?S.split(" "):[];w._cssomPrefixes=k;var P=w._config.usePrefixes?S.toLowerCase().split(" "):[];w._domPrefixes=P,Modernizr.addTest("multiplebgs",function(){var e=i("a").style;return e.cssText="background:url(https://),url(https://),red url(https://)",/(url\s*\(.*?){3}/.test(e.background)});var T={elem:i("modernizr")};Modernizr._q.push(function(){delete T.elem});var z={style:T.elem.style};Modernizr._q.unshift(function(){delete z.style}),w.testAllProps=h,w.testAllProps=v,Modernizr.addTest("flexbox",v("flexBasis","1px",!0)),o(),r(y),delete w.addTest,delete w.addAsyncTest;for(var E=0;E<Modernizr._q.length;E++)Modernizr._q[E]();e.Modernizr=Modernizr}(window,document);;/*
+ * https://modernizr.com/download/?-backgroundblendmode-cssanimations-cssgradients-flexbox-multiplebgs-setclasses !*/
+!function(e,n,t){function r(e,n){return typeof e===n}function o(){var e,n,t,o,s,i,a;for(var f in x)if(x.hasOwnProperty(f)){if(e=[],n=x[f],n.name&&(e.push(n.name.toLowerCase()),n.options&&n.options.aliases&&n.options.aliases.length))for(t=0;t<n.options.aliases.length;t++)e.push(n.options.aliases[t].toLowerCase());for(o=r(n.fn,"function")?n.fn():n.fn,s=0;s<e.length;s++)i=e[s],a=i.split("."),1===a.length?Modernizr[a[0]]=o:(!Modernizr[a[0]]||Modernizr[a[0]]instanceof Boolean||(Modernizr[a[0]]=new Boolean(Modernizr[a[0]])),Modernizr[a[0]][a[1]]=o),y.push((o?"":"no-")+a.join("-"))}}function s(e){var n=b.className,t=Modernizr._config.classPrefix||"";if(w&&(n=n.baseVal),Modernizr._config.enableJSClass){var r=new RegExp("(^|\\s)"+t+"no-js(\\s|$)");n=n.replace(r,"$1"+t+"js$2")}Modernizr._config.enableClasses&&(n+=" "+t+e.join(" "+t),w?b.className.baseVal=n:b.className=n)}function i(){return"function"!=typeof n.createElement?n.createElement(arguments[0]):w?n.createElementNS.call(n,"http://www.w3.org/2000/svg",arguments[0]):n.createElement.apply(n,arguments)}function a(e){return e.replace(/([a-z])-([a-z])/g,function(e,n,t){return n+t.toUpperCase()}).replace(/^-/,"")}function f(e,n){return!!~(""+e).indexOf(n)}function l(e,n){return function(){return e.apply(n,arguments)}}function u(e,n,t){var o;for(var s in e)if(e[s]in n)return t===!1?e[s]:(o=n[e[s]],r(o,"function")?l(o,t||n):o);return!1}function d(e){return e.replace(/([A-Z])/g,function(e,n){return"-"+n.toLowerCase()}).replace(/^ms-/,"-ms-")}function p(){var e=n.body;return e||(e=i(w?"svg":"body"),e.fake=!0),e}function c(e,t,r,o){var s,a,f,l,u="modernizr",d=i("div"),c=p();if(parseInt(r,10))for(;r--;)f=i("div"),f.id=o?o[r]:u+(r+1),d.appendChild(f);return s=i("style"),s.type="text/css",s.id="s"+u,(c.fake?c:d).appendChild(s),c.appendChild(d),s.styleSheet?s.styleSheet.cssText=e:s.appendChild(n.createTextNode(e)),d.id=u,c.fake&&(c.style.background="",c.style.overflow="hidden",l=b.style.overflow,b.style.overflow="hidden",b.appendChild(c)),a=t(d,e),c.fake?(c.parentNode.removeChild(c),b.style.overflow=l,b.offsetHeight):d.parentNode.removeChild(d),!!a}function m(n,r){var o=n.length;if("CSS"in e&&"supports"in e.CSS){for(;o--;)if(e.CSS.supports(d(n[o]),r))return!0;return!1}if("CSSSupportsRule"in e){for(var s=[];o--;)s.push("("+d(n[o])+":"+r+")");return s=s.join(" or "),c("@supports ("+s+") { #modernizr { position: absolute; } }",function(e){return"absolute"==getComputedStyle(e,null).position})}return t}function g(e,n,o,s){function l(){d&&(delete z.style,delete z.modElem)}if(s=r(s,"undefined")?!1:s,!r(o,"undefined")){var u=m(e,o);if(!r(u,"undefined"))return u}for(var d,p,c,g,h,v=["modernizr","tspan","samp"];!z.style&&v.length;)d=!0,z.modElem=i(v.shift()),z.style=z.modElem.style;for(c=e.length,p=0;c>p;p++)if(g=e[p],h=z.style[g],f(g,"-")&&(g=a(g)),z.style[g]!==t){if(s||r(o,"undefined"))return l(),"pfx"==n?g:!0;try{z.style[g]=o}catch(y){}if(z.style[g]!=h)return l(),"pfx"==n?g:!0}return l(),!1}function h(e,n,t,o,s){var i=e.charAt(0).toUpperCase()+e.slice(1),a=(e+" "+k.join(i+" ")+i).split(" ");return r(n,"string")||r(n,"undefined")?g(a,n,o,s):(a=(e+" "+T.join(i+" ")+i).split(" "),u(a,n,t))}function v(e,n,r){return h(e,t,t,n,r)}var y=[],x=[],C={_version:"3.3.1",_config:{classPrefix:"",enableClasses:!0,enableJSClass:!0,usePrefixes:!0},_q:[],on:function(e,n){var t=this;setTimeout(function(){n(t[e])},0)},addTest:function(e,n,t){x.push({name:e,fn:n,options:t})},addAsyncTest:function(e){x.push({name:null,fn:e})}},Modernizr=function(){};Modernizr.prototype=C,Modernizr=new Modernizr;var b=n.documentElement,w="svg"===b.nodeName.toLowerCase(),_=C._config.usePrefixes?" -webkit- -moz- -o- -ms- ".split(" "):["",""];C._prefixes=_,Modernizr.addTest("cssgradients",function(){for(var e,n="background-image:",t="gradient(linear,left top,right bottom,from(#9f9),to(white));",r="",o=0,s=_.length-1;s>o;o++)e=0===o?"to ":"",r+=n+_[o]+"linear-gradient("+e+"left top, #9f9, white);";Modernizr._config.usePrefixes&&(r+=n+"-webkit-"+t);var a=i("a"),f=a.style;return f.cssText=r,(""+f.backgroundImage).indexOf("gradient")>-1}),Modernizr.addTest("multiplebgs",function(){var e=i("a").style;return e.cssText="background:url(https://),url(https://),red url(https://)",/(url\s*\(.*?){3}/.test(e.background)});var S="Moz O ms Webkit",k=C._config.usePrefixes?S.split(" "):[];C._cssomPrefixes=k;var T=C._config.usePrefixes?S.toLowerCase().split(" "):[];C._domPrefixes=T;var P=function(n){var r,o=_.length,s=e.CSSRule;if("undefined"==typeof s)return t;if(!n)return!1;if(n=n.replace(/^@/,""),r=n.replace(/-/g,"_").toUpperCase()+"_RULE",r in s)return"@"+n;for(var i=0;o>i;i++){var a=_[i],f=a.toUpperCase()+"_"+r;if(f in s)return"@-"+a.toLowerCase()+"-"+n}return!1};C.atRule=P;var E={elem:i("modernizr")};Modernizr._q.push(function(){delete E.elem});var z={style:E.elem.style};Modernizr._q.unshift(function(){delete z.style}),C.testAllProps=h,C.testAllProps=v,Modernizr.addTest("cssanimations",v("animationName","a",!0)),Modernizr.addTest("flexbox",v("flexBasis","1px",!0));var N=C.prefixed=function(e,n,t){return 0===e.indexOf("@")?P(e):(-1!=e.indexOf("-")&&(e=a(e)),n?h(e,n,t):h(e,"pfx"))};Modernizr.addTest("backgroundblendmode",N("backgroundBlendMode","text")),o(),s(y),delete C.addTest,delete C.addAsyncTest;for(var j=0;j<Modernizr._q.length;j++)Modernizr._q[j]();e.Modernizr=Modernizr}(window,document);;/*
  * Konami-JS ~ 
  * :: Now with support for touch events and multiple instances for 
  * :: those situations that call for multiple easter eggs!
@@ -3663,51 +3663,6 @@ var Konami = function (callback) {
 
 
 	}
-
-});;$(document).ready(function() {
-
-	if (localStorage.context === "backwards"){
-		$( "#context" ).addClass('right');
-	};
-
-	if (localStorage.context === "forwards"){
-		$( "#context" ).addClass('left');
-	};
-
-	if (localStorage.context === "upwards"){
-		$( "#context" ).addClass('up');
-	};
-
-	if (localStorage.context === "normal"){
-		$( "#context" ).removeClass('left');
-		$( "#context" ).removeClass('right');
-		$( "#context" ).removeClass('up');
-	};
-
-	$(".move-left").click(function(){
-		localStorage.context = "backwards";
-		console.log("localStorage.context", localStorage.context); 
-	});
-
-	$(".move-right").click(function(){
-		localStorage.context = "forwards";
-		console.log("localStorage.context", localStorage.context); 
-	});
-
-	$(".move-return").click(function(){
-		localStorage.context = "upwards";
-		console.log("localStorage.context", localStorage.context); 
-	});
-
-	$("a.plain").click(function(){
-		localStorage.context = "normal";
-		console.log("localStorage.context", localStorage.context); 
-	});
-
-	$("a.target").click(function(){
-		localStorage.context = "normal";
-		console.log("localStorage.context", localStorage.context); 
-	});
 
 });;$(document).ready(function() {
 	function cover(){
