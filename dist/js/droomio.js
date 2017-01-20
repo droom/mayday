@@ -3749,7 +3749,6 @@ var Konami = function (callback) {
 		} else {
 			menu.removeClass('tile');
 			buttonUnit.removeClass('rotate');
-			
 		};
 	};
 
@@ -3763,6 +3762,7 @@ var Konami = function (callback) {
 
 		if (menu.hasClass('tile')){
 			localStorage.menu = "tile";
+			
 		} else {
 			localStorage.menu = "list";
 		};

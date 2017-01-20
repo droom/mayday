@@ -15,7 +15,6 @@ $(document).ready(function() {
 		} else {
 			menu.removeClass('tile');
 			buttonUnit.removeClass('rotate');
-			
 		};
 	};
 
@@ -29,6 +28,7 @@ $(document).ready(function() {
 
 		if (menu.hasClass('tile')){
 			localStorage.menu = "tile";
+			
 		} else {
 			localStorage.menu = "list";
 		};

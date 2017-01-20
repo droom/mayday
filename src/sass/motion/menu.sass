@@ -1,10 +1,10 @@
-@keyframes fade-in-menu-list
+@keyframes slow
 	0%
 		opacity: 0
 	100%
 		opacity: 1
 
-@keyframes fade-in-menu-tile
+@keyframes fast
 	0%
 		opacity: 0
 	100%
@@ -14,8 +14,7 @@ html.cssanimations
 	ul.menu
 		li
 			opacity: 0
-
-			animation-name: 			fade-in-menu-list
+			animation-name: 			slow
 			animation-fill-mode: 		forwards
 			animation-iteration-count: 	1
 			animation-timing-function: 	ease-out
@@ -35,8 +34,7 @@ html.cssanimations
 	ul.menu.tile
 		li
 			opacity: 0
-
-			animation-name: 			fade-in-menu-tile
+			animation-name: 			fast
 			animation-fill-mode: 		forwards
 			animation-iteration-count: 	1
 			animation-timing-function: 	ease-out
