@@ -23,12 +23,15 @@ $(document).ready(function() {
 	$(button).click(function(e) {
 		e.preventDefault();
 
+		menu.toggleClass('animate-1');
+		menu.toggleClass('animate-2');
+
 		buttonUnit.toggleClass('rotate');
 		menu.toggleClass('tile');
 
+
 		if (menu.hasClass('tile')){
 			localStorage.menu = "tile";
-			
 		} else {
 			localStorage.menu = "list";
 		};
