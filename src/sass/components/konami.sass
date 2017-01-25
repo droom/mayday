@@ -29,7 +29,6 @@ html.konami
 		background: none
 		border: none
 		text-decoration: underline
-
 	.hand
 		outline: none
 		svg
@@ -37,7 +36,9 @@ html.konami
 
 	body,
 	.band.head
-		background: url('../img/components/ps.gif') repeat #ebeeee
+		background: repeat #fff url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDE2IDE2Ij48cGF0aCBmaWxsPSIjRjZGNkY2IiBkPSJNMCAwaDh2OEgwek04IDhoOHY4SDh6Ii8+PC9zdmc+")
+		// background: url('../img/components/ps.gif') repeat #ebeeee
+
 		#top
 			background: none
 
@@ -100,8 +101,10 @@ html.konami
 		.gg.sitemap .row .unit
 			outline: none
 
-		.gg.sitemap .row .unit.joiner .inner
-			background: url('../img/components/ps.gif') repeat transparent
+		.gg.sitemap .row .unit.joiner .inner,
+		.segment.type.relative.mast
+			background: repeat #fff url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDE2IDE2Ij48cGF0aCBmaWxsPSIjRjZGNkY2IiBkPSJNMCAwaDh2OEgwek04IDhoOHY4SDh6Ii8+PC9zdmc+")
+			// background: url('../img/components/ps.gif') repeat transparent
 
 		.pager
 			a:nth-child(1)
@@ -140,9 +143,6 @@ html.konami
 		a.move.move-right:hover
 			background-color: rgba(255,255,0,0.15)
 
-		.segment.type.relative.mast
-			background: url('../img/components/ps.gif') repeat transparent
-
 		.band.hr.relative.pager .segment.type a:hover
 			background-color: rgba(255,255,0,0.15)
 
@@ -156,7 +156,7 @@ html.konami
 					background: none
 					
 			li
-				border-top: 1px dotted $ink
+				border-top: 1px solid $ink
 				&:active,
 				&:hover
 					background-color: rgba(255,255,0,0.15)
