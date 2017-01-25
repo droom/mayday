@@ -3703,14 +3703,13 @@ var Konami = function (callback) {
 
 	console.log("konami load");
 	var audioElement = document.createElement('audio');
-	audioElement.setAttribute('src', 'audio/22H.wav');
+	audioElement.setAttribute('src', 'konami/coin.wav');
 	audioElement.load();
 	if (localStorage.konami === "true"){
 		$( "html" ).addClass('konami');
 	};
 
 	var easter_egg = new Konami(function() { 
-
 		if (localStorage.konami !== "true"){
 			console.log('konami fire');
 			$("html").addClass("konami");
@@ -3719,7 +3718,6 @@ var Konami = function (callback) {
 			localStorage.konami = "true";
 			audioElement.play();
 			return;
-
 		};
 	});
 

@@ -36,13 +36,12 @@
           dd 
             a(itemprop="URL" href=liveURL aria-label=project).inline.dark=liveTitle
 
-  
   a(href=nextURL tabindex="-1").move.move-right
-
 
 .band.js.hr
   .segment.type
-    h4 
-      = "Some parts of this site need JavaScript to work properly. Please enable it for the full experience. "
-      a(href="http://enable-javascript.com/").inline How
-      = "?"
+    p
+      strong JavaScript not loaded. 
+      = "Some parts of this site need JavaScript to work properly. "
+      a(href="http://enable-javascript.com/").inline Please enable it
+      = " for the full experience. If already enabled, try refreshing the page."

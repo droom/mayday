@@ -1,20 +1,18 @@
 html.cssanimations
 	.flash
-		position: fixed
-		top: 0
-		left: 0
-
-		width: 100vw
-		height: 100vh
-
-		background: white
+		position: 		fixed
+		top: 			0
+		left: 			0
+		width: 			100vw
+		height: 		100vh
+		background: 	white
 		animation-fill-mode: forwards
 		animation-iteration-count: 1
 		animation-timing-function: ease-out
 		animation-duration: 1s
 		animation-name: flash-out
 		pointer-events: none
-		z-index: 99999999
+		z-index: 		99999999
 
 	@keyframes flash-out
 		0%
@@ -30,7 +28,6 @@ html.konami
 	.inline.dark
 		background: none
 		border: none
-		// border-bottom: 1px solid $ink
 		text-decoration: underline
 
 	.hand
@@ -41,7 +38,6 @@ html.konami
 	body,
 	.band.head
 		background: url('../img/components/ps.gif') repeat #ebeeee
-
 		#top
 			background: none
 
@@ -50,11 +46,12 @@ html.konami
 
 	body
 		color: $ink
-
 		.plain.cta
-			color: #2e4dd2
-			background: rgba(255,255,0,0.4)
-			outline: 2px solid #2e4dd2
+			outline: 				2px solid #2e4dd2
+			background-color: 		rgba(255,255,0,0.15)
+			color: 					#2e4dd2
+			&:hover
+				background-color: 	rgba(255,255,0,0.45)
 
 		a.menu-btn-img
 			opacity: 1
@@ -152,25 +149,19 @@ html.konami
 		ul.menu.tile li .segment.work.blank
 			background-image: url("../img/cover/blank-konami.svg")
 
-
-
 		ul.menu
-
 			li.disable
 				&:active,
 				&:hover
 					background: none
 					
 			li
+				border-top: 1px dotted $ink
 				&:active,
 				&:hover
 					background-color: rgba(255,255,0,0.15)
-					
-				border-top: 1px dotted $ink
-				
 				&:first-child
 					border-top: none
-					
 				a.plain
 					.segment.work
 						background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNi4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iNjBweCIgaGVpZ2h0PSI1NnB4IiB2aWV3Qm94PSIwIDAgNjAgNTYiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDYwIDU2IiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxwYXRoIGZpbGw9IiMyRjRFRDIiIGQ9Ik02MCwyOC4xMTRMMjkuMDksNTZsLTAuMDYxLTAuMDc0bC0wLjAzMSwwLjAyOWwtMS40NTUtMS43ODlsLTIuMjU2LTIuNjc2bDAuMDQxLTAuMDM5bC0wLjA0MS0wLjA1OA0KCWwyMy4wNzItMjAuNDJIMHYtNi4zNDNoNDcuNzY3TDI1LjI4Nyw0LjgzNGwwLjE2Ni0wLjIxMWwtMC4xNjYtMC4xNDVMMjkuMDksMGwzMC45MDYsMjguMDE1djAuMSIvPg0KPC9zdmc+DQo=")

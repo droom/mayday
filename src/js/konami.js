@@ -7,14 +7,13 @@ $(document).ready(function() {
 
 	console.log("konami load");
 	var audioElement = document.createElement('audio');
-	audioElement.setAttribute('src', 'audio/22H.wav');
+	audioElement.setAttribute('src', 'konami/coin.wav');
 	audioElement.load();
 	if (localStorage.konami === "true"){
 		$( "html" ).addClass('konami');
 	};
 
 	var easter_egg = new Konami(function() { 
-
 		if (localStorage.konami !== "true"){
 			console.log('konami fire');
 			$("html").addClass("konami");
@@ -23,7 +22,6 @@ $(document).ready(function() {
 			localStorage.konami = "true";
 			audioElement.play();
 			return;
-
 		};
 	});
 
