@@ -23,10 +23,10 @@ $(document).ready(function() {
 	$(button).click(function(e) {
 		e.preventDefault();
 
+		buttonUnit.toggleClass('rotate');
+
 		menu.toggleClass('animate-1');
 		menu.toggleClass('animate-2');
-
-		buttonUnit.toggleClass('rotate');
 		menu.toggleClass('tile');
 
 
