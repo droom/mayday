@@ -19,6 +19,26 @@ html.cssanimations
 			opacity: 1
 		100%
 			opacity: 0
+	@-webkit-keyframes flash-out
+		0%
+			opacity: 1
+		100%
+			opacity: 0
+	@-moz-keyframes flash-out
+		0%
+			opacity: 1
+		100%
+			opacity: 0
+	@-o-keyframes flash-out
+		0%
+			opacity: 1
+		100%
+			opacity: 0
+	@keyframes flash-out
+		0%
+			opacity: 1
+		100%
+			opacity: 0
 
 html.konami
 	div
@@ -37,11 +57,8 @@ html.konami
 	body,
 	.band.head
 		background: repeat #fff url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDE2IDE2Ij48cGF0aCBmaWxsPSIjRjZGNkY2IiBkPSJNMCAwaDh2OEgwek04IDhoOHY4SDh6Ii8+PC9zdmc+")
-		// background: url('../img/components/ps.gif') repeat #ebeeee
-
 		#top
 			background: none
-
 	.band.ref
 		background: none
 
@@ -67,8 +84,6 @@ html.konami
 				.list
 					svg
 						fill: $ink
-
-
 
 		.dark dt, .dark dd, .dark p, .dark a, .dark small, .dark h1, .dark h2, .dark h3, .dark h4
 			color: $ink

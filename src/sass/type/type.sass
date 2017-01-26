@@ -104,9 +104,19 @@ hgroup, .hgroup
 table, th, td, p
   @include p()
 
+footer .flex .unit
+  @include small()
+
 @media (max-width: $phone-max)
   table, th, td
     @include small()
 
 ol li, ul li, dl, dd, dt, label, figcaption, small, label, sup
+  @include small()
+
+@media (max-width: $phone-max)
+  ul.menu li dl.credits dd.project
+    @include small()
+    
+ul.menu.tile li .segment.work dl.credits dd.project.h3
   @include small()

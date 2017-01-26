@@ -18,6 +18,159 @@ $note-add-left: 85px
 $note-rotate: rotate(90deg)
 $radius: 4px
 
+
+@mixin add-1-animation
+  0%
+    top: $note-1-top
+    left: $note-1-left
+    transform: $note-rotate
+
+  100%
+    top: $note-add-top
+    left: $note-add-left
+
+@mixin add-2-animation
+  0%
+    top: $note-2-top
+    left: $note-2-left
+    transform: $note-rotate
+
+  100%
+    top: $note-add-top
+    left: $note-add-left
+
+@mixin add-3-animation
+  0%
+    top: $note-3-top
+    left: $note-3-left
+    transform: $note-rotate
+
+  100%
+    top: $note-add-top
+    left: $note-add-left
+
+@mixin add-4-animation
+  0%
+    top: $note-4-top
+    left: $note-4-left
+    transform: $note-rotate
+
+  100%
+    top: $note-add-top
+    left: $note-add-left
+
+@mixin return-1-animation
+  0%
+    top: $note-add-top
+    left: $note-add-left
+
+  100%
+    top: $note-1-top
+    left: $note-1-left
+    transform: $note-rotate
+
+@mixin return-2-animation
+  0%
+    top: $note-add-top
+    left: $note-add-left
+
+  100%
+    top: $note-2-top
+    left: $note-2-left
+    transform: $note-rotate
+
+@mixin return-3-animation
+  0%
+    top: $note-add-top
+    left: $note-add-left
+
+  100%
+    top: $note-3-top
+    left: $note-3-left
+    transform: $note-rotate
+
+@mixin return-4-animation
+  0%
+    top: $note-add-top
+    left: $note-add-left
+
+  100%
+    top: $note-4-top
+    left: $note-4-left
+    transform: $note-rotate
+
+@-webkit-keyframes add-1
+  @include add-1-animation
+@-moz-keyframes add-1
+  @include add-1-animation
+@-o-keyframes add-1
+  @include add-1-animation
+@keyframes add-1
+  @include add-1-animation
+
+@-webkit-keyframes add-2
+  @include add-2-animation
+@-moz-keyframes add-2
+  @include add-2-animation
+@-o-keyframes add-2
+  @include add-2-animation
+@keyframes add-2
+  @include add-2-animation
+
+@-webkit-keyframes add-3
+  @include add-3-animation
+@-moz-keyframes add-3
+  @include add-3-animation
+@-o-keyframes add-3
+  @include add-3-animation
+@keyframes add-3
+  @include add-3-animation
+
+@-webkit-keyframes add-4
+  @include add-4-animation
+@-moz-keyframes add-4
+  @include add-4-animation
+@-o-keyframes add-4
+  @include add-4-animation
+@keyframes add-4
+  @include add-4-animation
+
+@-webkit-keyframes return-1
+  @include return-1-animation
+@-moz-keyframes return-1
+  @include return-1-animation
+@-o-keyframes return-1
+  @include return-1-animation
+@keyframes return-1
+  @include return-1-animation
+  
+@-webkit-keyframes return-2
+  @include return-2-animation
+@-moz-keyframes return-2
+  @include return-2-animation
+@-o-keyframes return-2
+  @include return-2-animation
+@keyframes return-2
+  @include return-2-animation
+
+@-webkit-keyframes return-3
+  @include return-3-animation
+@-moz-keyframes return-3
+  @include return-3-animation
+@-o-keyframes return-3
+  @include return-3-animation
+@keyframes return-3
+  @include return-3-animation
+  
+@-webkit-keyframes return-4
+  @include return-4-animation
+@-moz-keyframes return-4
+  @include return-4-animation
+@-o-keyframes return-4
+  @include return-4-animation
+@keyframes return-4
+  @include return-4-animation
+
 section.diagram.money
   .screen
     background: rgba(0, 0, 0, 0.5)
@@ -170,83 +323,4 @@ section.diagram.money
   .note-4:before
     content: 'RM5'
 
-  @keyframes add-1
-    0%
-      top: $note-1-top
-      left: $note-1-left
-      transform: $note-rotate
-
-    100%
-      top: $note-add-top
-      left: $note-add-left
-
-  @keyframes add-2
-    0%
-      top: $note-2-top
-      left: $note-2-left
-      transform: $note-rotate
-
-    100%
-      top: $note-add-top
-      left: $note-add-left
-
-  @keyframes add-3
-    0%
-      top: $note-3-top
-      left: $note-3-left
-      transform: $note-rotate
-
-    100%
-      top: $note-add-top
-      left: $note-add-left
-
-  @keyframes add-4
-    0%
-      top: $note-4-top
-      left: $note-4-left
-      transform: $note-rotate
-
-    100%
-      top: $note-add-top
-      left: $note-add-left
-
-  @keyframes return-1
-    0%
-      top: $note-add-top
-      left: $note-add-left
-
-    100%
-      top: $note-1-top
-      left: $note-1-left
-      transform: $note-rotate
-
-  @keyframes return-2
-    0%
-      top: $note-add-top
-      left: $note-add-left
-
-    100%
-      top: $note-2-top
-      left: $note-2-left
-      transform: $note-rotate
-
-  @keyframes return-3
-    0%
-      top: $note-add-top
-      left: $note-add-left
-
-    100%
-      top: $note-3-top
-      left: $note-3-left
-      transform: $note-rotate
-
-  @keyframes return-4
-    0%
-      top: $note-add-top
-      left: $note-add-left
-
-    100%
-      top: $note-4-top
-      left: $note-4-left
-      transform: $note-rotate
 

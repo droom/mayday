@@ -1,10 +1,21 @@
-@keyframes wiggle
+@mixin wiggle-animation
   0%
     transform: rotate3d(1, 0, 0, 0deg)  perspective(1000px)
   25%
     transform: rotate3d(1, 0, 0, 40deg) perspective(1000px)
   100%
     transform: rotate3d(1, 0, 0, 0deg)  perspective(1000px)
+
+@-webkit-keyframes wiggle
+  @include wiggle-animation()
+@-moz-keyframes wiggle
+  @include wiggle-animation()
+@-o-keyframes wiggle
+  @include wiggle-animation()
+@keyframes wiggle
+  @include wiggle-animation()
+
+
 
 .interactive
   position: relative
