@@ -7,28 +7,7 @@ module.exports = function(grunt) {
       options: {
         livereload: true,
       },
-      sass: {
-        files: [
-        'src/sass/*.sass',
-        'src/sass/lib/*.sass',
-        'src/sass/partials/*',
-        'src/sass/projects/*',
-        'src/sass/projects/at/*',
-        'src/sass/projects/ih/*',
-        'src/sass/projects/gg/*',
-        'src/sass/projects/gr/*',
-        'src/sass/projects/gg/views/*',
-        'src/sass/projects/shared/*',
-        'src/sass/a11y/*',
-        'src/sass/components/*',
-        'src/sass/grid/*',
-        'src/sass/type/*',
-        'src/sass/motion/*',
-        'src/sass/images/*',
-        'src/sass/rhythm/*'
-        ],
-        tasks: ['sass'],
-      },
+
 
       jade: {
         files: [
@@ -45,6 +24,14 @@ module.exports = function(grunt) {
         tasks: ['jade'],
       },
 
+
+      sass: {
+        files: [
+        'src/sass/*.sass'
+        ],
+        tasks: ['sass'],
+      },
+
       concat: {
         files: [
         'src/js/*.js'
@@ -52,18 +39,17 @@ module.exports = function(grunt) {
         tasks: ['concat']
       },
 
-      postcss: {
-        files: ['dist/css/screen.css'],
-        tasks: ['postcss']
-      },
-
       uglify: {
         files: ['src/js/*.js'],
         tasks: ['uglify']
       },
 
-    },
+      postcss: {
+        files: ['dist/css/screen.css'],
+        tasks: ['postcss']
+      },
 
+    },
 
     sass: {
       dist: {
@@ -81,21 +67,23 @@ module.exports = function(grunt) {
 
     postcss: {
       options: {
-        map: false,
         map: {
-          inline: false,
-          annotation: 'dist/css/maps/'
+          inline: false, // save all sourcemaps as separate files...
+          annotation: 'dist/css/maps/' // ...to the specified directory
         },
+
         processors: [
         require('pixrem')(), // add fallbacks for rem units
-        require('autoprefixer')({add: false, browsers: 'last 2 versions'}), // add vendor prefixes
+        require('autoprefixer')({browsers: 'last 3 versions'}), // add vendor prefixes
         require('cssnano')() // minify the result
         ]
       },
       dist: {
-        src: 'dist/css/screen.css'
+        src: 'dist/css/*.css'
+
       }
     },
+
 
     jade: {
       compile: {
@@ -116,17 +104,6 @@ module.exports = function(grunt) {
       }
     },
 
-    imagemin: {
-      dynamic: {
-        files: [{
-          expand: true,
-          cwd: 'src/img/',
-          src: ['**/*.{png,jpg,gif,svg}'],
-          dest: 'dist/img/'
-        }]
-      }
-    },
-
     concat: {
       options: {
         separator: ';',
@@ -139,11 +116,8 @@ module.exports = function(grunt) {
         'src/lib/jquery.waypoints.js',
         // 'src/lib/modernizr-2.8.3.min.js',
         'src/lib/modernizr-custom.js',
-        // 'src/lib/isotope.js',
         'src/lib/konami.js',
         'src/js/*.js'
-        // 'src/lib/css-polyfills.min'
-
         ],
         dest: 'dist/js/droomio.js',
       },
@@ -160,18 +134,6 @@ module.exports = function(grunt) {
     },
 
 
-    criticalcss: {
-      options: {
-        width: 1200,
-        height: 900,
-      },
-      your_target: {
-        url: 'http://localhost:8888/',
-        dest: 'dist/css/screen.css',    
-      },
-    },
-
-
   });
 
 
@@ -180,11 +142,8 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-concat');
-  grunt.loadNpmTasks('grunt-contrib-imagemin');
-  grunt.loadNpmTasks('grunt-autoprefixer');
   grunt.loadNpmTasks('grunt-postcss');
-  grunt.loadNpmTasks('grunt-criticalcss');
 
-  grunt.registerTask('default', [ 'concat', 'uglify', 'jade', 'sass', 'postcss', 'imagemin' ]);
+  grunt.registerTask('default', [ 'concat', 'uglify', 'jade', 'sass', 'postcss' ]);
 
 };
