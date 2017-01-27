@@ -21,83 +21,99 @@ $radius: 4px
 
 @mixin add-1-animation
   0%
-    top: $note-1-top
+    top:  $note-1-top
     left: $note-1-left
-    transform: $note-rotate
-
+    -ms-transform:        $note-rotate
+    -webkit-transform:    $note-rotate
+    -o-transform:         $note-rotate
+    transform:            $note-rotate
   100%
-    top: $note-add-top
+    top:  $note-add-top
     left: $note-add-left
 
 @mixin add-2-animation
   0%
-    top: $note-2-top
-    left: $note-2-left
-    transform: $note-rotate
-
+    top:                $note-2-top
+    left:               $note-2-left
+    -ms-transform:      $note-rotate
+    -webkit-transform:  $note-rotate
+    -o-transform:       $note-rotate
+    transform:          $note-rotate
   100%
-    top: $note-add-top
+    top:  $note-add-top
     left: $note-add-left
 
 @mixin add-3-animation
   0%
-    top: $note-3-top
-    left: $note-3-left
-    transform: $note-rotate
-
+    top:                $note-3-top
+    left:               $note-3-left
+    -ms-transform:      $note-rotate
+    -webkit-transform:  $note-rotate
+    -o-transform:       $note-rotate
+    transform:          $note-rotate
   100%
-    top: $note-add-top
+    top:  $note-add-top
     left: $note-add-left
 
 @mixin add-4-animation
   0%
-    top: $note-4-top
-    left: $note-4-left
-    transform: $note-rotate
-
+    top:                $note-4-top
+    left:               $note-4-left
+    -ms-transform:      $note-rotate
+    -webkit-transform:  $note-rotate
+    -o-transform:       $note-rotate
+    transform:          $note-rotate
   100%
-    top: $note-add-top
+    top:  $note-add-top
     left: $note-add-left
 
 @mixin return-1-animation
   0%
-    top: $note-add-top
+    top:  $note-add-top
     left: $note-add-left
-
   100%
-    top: $note-1-top
+    top:  $note-1-top
     left: $note-1-left
-    transform: $note-rotate
+    -ms-transform:      $note-rotate
+    -webkit-transform:  $note-rotate
+    -o-transform:       $note-rotate
+    transform:          $note-rotate
 
 @mixin return-2-animation
   0%
-    top: $note-add-top
+    top:  $note-add-top
     left: $note-add-left
-
   100%
-    top: $note-2-top
-    left: $note-2-left
-    transform: $note-rotate
+    top:                $note-2-top
+    left:               $note-2-left
+    -ms-transform:      $note-rotate
+    -webkit-transform:  $note-rotate
+    -o-transform:       $note-rotate
+    transform:          $note-rotate
 
 @mixin return-3-animation
   0%
-    top: $note-add-top
+    top:  $note-add-top
     left: $note-add-left
-
   100%
-    top: $note-3-top
+    top:  $note-3-top
     left: $note-3-left
-    transform: $note-rotate
+    -ms-transform:      $note-rotate
+    -webkit-transform:  $note-rotate
+    -o-transform:       $note-rotate
+    transform:          $note-rotate
 
 @mixin return-4-animation
   0%
-    top: $note-add-top
+    top:  $note-add-top
     left: $note-add-left
-
   100%
-    top: $note-4-top
+    top:  $note-4-top
     left: $note-4-left
-    transform: $note-rotate
+    -ms-transform:      $note-rotate
+    -webkit-transform:  $note-rotate
+    -o-transform:       $note-rotate
+    transform:          $note-rotate
 
 @-webkit-keyframes add-1
   @include add-1-animation

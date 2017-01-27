@@ -26,9 +26,18 @@ a.menu-btn-img
     height:       15px
     display:      block
     transition:   215ms ease-out all
+    
+
+    -ms-transform:    rotate(90deg)
+    -ms-transform-origin: center center
+    -webkit-transform:    rotate(90deg)
+    -webkit-transform-origin: center center
+    -o-transform:    rotate(90deg)
+    -o-transform-origin: center center
     transform:    rotate(90deg)
     transform-origin: center center
-    
+
+
     .tile,
     .list
       background:   none
@@ -54,7 +63,11 @@ a.menu-btn-img
     opacity: 0
 
   .unit.rotate
-    transform: rotate(0deg)
+    -ms-transform:       rotate(90deg)
+    -webkit-transform:   rotate(90deg)
+    -o-transform:        rotate(90deg)
+    transform:           rotate(90deg)
+
 
   .unit.rotate .tile
     opacity: 0
