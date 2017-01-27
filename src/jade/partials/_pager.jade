@@ -1,15 +1,16 @@
 if project
   .band.hr.relative.pager
-    
     nav
       .segment.type
+
         a(href=prevURL tabindex="-1").move.move-left
         a(href=nextURL tabindex="-1").move.move-right
-
-        ul.reset.flex.page.ghost
-          li.unit.ghost
+        
+        ol.flex.reset.page.ghost
+          li.unit.border.ghost
             label.prise.block.caps Previous
             a(href=prevURL).plain.ghost=prevTitle
           li.unit.right.ghost.align-r
             label.prise.block.caps Next 
             a(href=nextURL).plain.ghost=nextTitle
+

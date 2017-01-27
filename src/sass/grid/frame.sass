@@ -61,20 +61,25 @@ body main
     max-width: $wide-unit
 
   &.blueprint
+    background-color: #e9eae9
+    background-image: url('../img/components/graph.gif')
+    background-repeat: repeat
+    background-position: -1px 0 
+    background-size:  70px 70px
+
+html.multiplebgs
+  .segment.blueprint
     background: url('../img/components/graph-large.svg') repeat -1px 0 , url('../img/components/graph-small.svg') repeat -1px 0  
     background-color: $grey
 
-    &.mat
-      background: none
+
 
 @media (max-width: $phone-max)
-      
   body main
     h2,
     h3,
     p,
     table,
-    ul.controls,
     hgroup,
     figcaption,
     section.diagram.gg.sitemap,

@@ -1,0 +1,36 @@
+// .flex
+  // outline: 1px solid red
+
+figure.ally-flex
+  section.diagram
+    display:    none
+  figcaption::after
+    content:    "Sorry, your browser doesn't support Flexbox. :("
+    background: pink
+    display:    block
+
+html.flexbox
+  figure.ally-flex
+    section.diagram
+      display:    block
+    figcaption::after
+      content:    ""
+      background: none
+      display:    inline
+      
+figure .flex
+  display: block
+  .unit
+    width: 50%
+    display: inline-block
+  .unit:nth-child(2)
+    float: right
+
+html.flexbox
+  figure .flex
+    display: flex
+    .unit
+      display: block
+    .unit:nth-child(1),
+    .unit:nth-child(2)
+      float: none

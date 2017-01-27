@@ -34,6 +34,23 @@ ul.swatch,
 pre ::selection
   @include theme-A(0.7)
 
+nav,
+footer
+  ol
+    display:  block
+    width:    100%
+    li
+      width:    50%
+      vertical-align: top
+      display:  inline-block
+
+      &.border
+        border-right: $border
+
+    li:nth-child(2)
+      float: right
+      
+      
 .block
   display: block
 .inline

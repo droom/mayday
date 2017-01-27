@@ -69,20 +69,28 @@ html(class="no-js" lang="en")
         .segment.surface
           figure
             .flex
-              .unit.pad
+              .unit
                 img(src="img/projects/gg/gg-research-1.jpg").max
-              .unit.pad
+              .unit
                 img(src="img/projects/gg/gg-research-2.jpg").max
 
         .segment.blueprint
           figure
-            include projects/gg/ui
-            figcaption
+            picture.max
+              source(srcset="img/projects/gg/ui-large.png"   media="(min-width: 501px)")
+              source(srcset="img/projects/gg/ui-med.png"     media="(max-width: 500px)")
+              img(src="img/projects/gg/ui-large.png").max
+            figcaption UI derived from heavy goods vehicles and signage spotted around the city.
 
         .segment.blueprint
           figure
-            include projects/gg/wordmark
-            figcaption
+            picture.max
+              source(srcset="img/projects/gg/marks-large.png"   media="(min-width: 700px)")
+              source(srcset="img/projects/gg/marks-med.png"     media="(min-width: 500px)")
+              source(srcset="img/projects/gg/marks-small.png"   media="(min-width: 350px)")
+              img(src="img/projects/gg/marks-large.png").max
+
+            figcaption Exploratory wordmarks
 
         p A note about changing brand colours: When possible, I would attempt to carry brand colours thorough a refresh.  More than any other ingredient, colours build familiarity, and are the most jarring change to get used to (think hunting for the Foursqaure icon after their refresh). In this case, the change was justified,  even crucial. Being a compound of regular English words, it’s perhaps not surprising that there’s another company operating under the same name: a car sharing service in Australia. They were using this same blue/orange palette and although the two companies aren’t stepping on each others’ toes (in function or proximity), the close ties of the two countries meant we needed to be a distinct as possible visually.
 
@@ -99,7 +107,7 @@ html(class="no-js" lang="en")
 
         p 
           = "I used a "
-          a(href="https://gist.github.com/droom/96381e758de1a927671b").inline.glide-slow modified version 
+          a(href="https://gist.github.com/droom/96381e758de1a927671b").inline.glide-slow modified version
           sup
           = " of Google Ventures’ Design Sprint methodology to dig in and conduct research to figure out where the app was failing. Crucially, this was conducted with the product owners, with everyone’s input valued and the founders' insights extensively called upon."
           p We decided there were two separate user journeys, GoGetter (‘I run errands’) and Poster (‘I need someone to run an errand’) with the ability for the user to switch between the two. These distinct use cases offered us two well defined personas to work with. As we only had 3 months with GoGet, we had to hone in on one journey per persona: Create a job + Claim a job.
@@ -108,19 +116,20 @@ html(class="no-js" lang="en")
           figure.gg.flow
             picture.max
               source(srcset="img/projects/gg/story-large.jpg" media="(min-width: 900px)")
-              source(srcset="img/projects/gg/story-mid.jpg" media="(min-width: 500px)")
+              source(srcset="img/projects/gg/story-med.jpg" media="(min-width: 500px)")
               source(srcset="img/projects/gg/story-small.jpg")
               img(src="img/projects/gg/story-large.jpg").max
-            figcaption Initital storyboarding.
+            figcaption Initital storyboarding. As I mentioned earler, everyone pitched in during this phase and these are way too neat to be my scribbles.
 
         .segment.blueprint.pad.chart
           figure.gg.flow
             hgroup Create a job user flow (Poster)
-            picture.max.blend
-              source(srcset="img/projects/gg/flow-v.png" media="(max-width: 750px)")
-              source(srcset="img/projects/gg/flow-h.png" media="(min-width: 751px)")
+            picture.max
+              source(srcset="img/projects/gg/flow-v.png" media="(max-width: 750px)").blend
+              source(srcset="img/projects/gg/flow-h.png" media="(min-width: 751px)").blend
               img(src="img/projects/gg/flow-h.png").max.blend
             figcaption
+
 
         h3 Prototyping
         p When sketching  out possible interfaces, I figured the multiple stages for creating a new job could be whittled down into one view, with the most common options preselected. The best way to communicate this was to use paper prototypes. These were great at getting the point across without spending too much time crafting things that might not be taken forward.
@@ -133,16 +142,16 @@ html(class="no-js" lang="en")
         .segment.blueprint.pad.interactive.border#gg-views
           include components/interactive
           hgroup Open job prototype
-          figure
+          figure.ally-flex
             include projects/gg/views
             figcaption Each job in progress could be displayed within one view, this being slightly different depending on your relationship to the job. As the GoGetter, you’re able to update your progress as you go, keeping the Poster informed along the way. For jobs with more than one stop/task. The GoGetter can prioritise as they see fit.
 
         .segment.surface
           figure
             .flex
-              .unit.pad
+              .unit
                 img(src="img/projects/gg/gg-app-1.jpg").max
-              .unit.pad
+              .unit
                 img(src="img/projects/gg/gg-app-2.jpg").max
 
         p One crucial part to this flow is letting the GoGetter know how much they’ll need to cover the cost of the transaction (to be reimbursed upon completion). This is straightforward with set prices and prior knowledge, but without those, a rough estimate is all that’s possible. If you were to ask someone in real life to run an errand for you, the natural flow would be to give them enough money to cover the errand, with increments of note denominations. Using this as a starting point, I came up with this payment interaction.
@@ -194,7 +203,7 @@ html(class="no-js" lang="en")
                 |  on Google Drive.
 
         .segment.blueprint.pad
-          figure
+          figure.ally-flex
             hgroup Revised Sitemap
             include projects/gg/sitemap
             figcaption Alongside insight from the team, I used SEO Spider to audit and identify existing architectural problems. The original IA was a little confusing, with overlapping and broken content. We streamlined this before adding new content.

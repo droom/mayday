@@ -1,61 +1,54 @@
-.flex
-  display:  flex
-  margin:   auto
+html.flexbox
+  .flex
+    display:  flex
+    margin:   auto
 
-  .start
-    justify-content: flex-start
+    .start
+      justify-content: flex-start
+    .end
+      justify-content: flex-end
+    .center
+      justify-content: center
+    .between
+      justify-content: space-between
+    .around
+      justify-content: space-around
+    &.wrap
+      flex-flow: row wrap
 
-  .end
-    justify-content: flex-end
+    .unit
+      flex-grow: 1
+      &.end
+        justify-self: flex-end
+        text-align:   right
+      &.pad
+        margin: 0 $gttr-ph
+        &:first-child
+          margin-left: 0
+        &:last-child
+          margin-right: 0
+      &.unit-12
+        flex-basis: calc(100%/6)
 
-  .center
-    justify-content: center
+  @media (max-width: 780px)
+    html.flexbox
+      .flex
+        .unit
+          &.pad
+            margin: 0 $gttr-ph / 2
+            
+          &.unit-12
+            flex-basis: calc(100%/4)
 
-  .between
-    justify-content: space-between
-  
-  .around
-    justify-content: space-around
+  @media (max-width: $phone-max)
+    html.flexbox
+      .flex
+        .unit
+          &.pad
+            margin: 0
 
-  &.wrap
-    flex-flow: row wrap
-
-  .unit
-    flex-grow: 1
-
-    &.end
-      justify-self: flex-end
-      text-align:   right
-
-    &.pad
-      margin: 0 $gttr-ph
-
-      &:first-child
-        margin-left: 0
+          &.unit-12
+            flex-basis: calc(100%/3)
       
-      &:last-child
-        margin-right: 0
 
-    &.unit-12
-      flex-basis: calc(100%/6)
 
-@media (max-width: 780px)
-  .flex
-    .unit
-      &.pad
-        margin: 0 $gttr-ph / 2
-        
-      &.unit-12
-        flex-basis: calc(100%/4)
-
-@media (max-width: $phone-max)
-  .flex
-    .unit
-      &.pad
-        margin: 0
-
-      &.unit-12
-        flex-basis: calc(100%/3)
-        
-footer .flex .unit
-  width: 50vw

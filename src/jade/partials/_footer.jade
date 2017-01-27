@@ -2,17 +2,16 @@ footer(role="contentinfo")
 	if index
 		.band.hr
 			include ../partials/_feed
-
 	.band
 		.segment.type
-			.flex
-				.unit
+			ol.reset.flex
+				li.unit
 					small
 						&copy;
 						= "2016/7 "
 						a(href="mailto:yo@droom.io").plain Chris Droom
 
 				if index
-					.unit.end
+					li.unit.align-r
 						small
 							a(href="https://github.com/droom/mayday" aria-label="View code on GitHub").plain Source

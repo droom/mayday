@@ -1,24 +1,32 @@
-.inline
-  border: none
-  background-image: -linear-gradient(top,transparent 85%,#81d3eb 0,#81d3eb 95%,transparent 0)
-  background-image: -moz-linear-gradient(top,transparent 85%,#81d3eb 0,#81d3eb 95%,transparent 0)
-  background-image: -webkit-linear-gradient(top,transparent 85%,#81d3eb 0,#81d3eb 95%,transparent 0)
-  &.dark
-    border: none
-    background-image: -linear-gradient(transparent 88%, rgba(0,0,0,0.3) 0,rgba(0,0,0,0.3) 97%,transparent 0)
-    background-image: -moz-linear-gradient(transparent 88%, rgba(0,0,0,0.3) 0,rgba(0,0,0,0.3) 97%,transparent 0)
-    background-image: -webkit-linear-gradient(transparent 88%, rgba(0,0,0,0.3) 0,rgba(0,0,0,0.3) 97%,transparent 0)
+html
+  .inline,
+  figure figcaption .inline
+    border-bottom: $accent solid 0.14em
+    &.dark
+      border-bottom: $copy solid 0.14em
 
-figure figcaption
+html.cssgradients
   .inline
+    border: none
+    background-image: -linear-gradient(top,transparent 85%,#81d3eb 0,#81d3eb 95%,transparent 0)
+    background-image: -moz-linear-gradient(top,transparent 85%,#81d3eb 0,#81d3eb 95%,transparent 0)
+    background-image: -webkit-linear-gradient(top,transparent 85%,#81d3eb 0,#81d3eb 95%,transparent 0)
+    &.dark
+      border: none
+      background-image: -linear-gradient(transparent 88%, rgba(0,0,0,0.3) 0,rgba(0,0,0,0.3) 97%,transparent 0)
+      background-image: -moz-linear-gradient(transparent 88%, rgba(0,0,0,0.3) 0,rgba(0,0,0,0.3) 97%,transparent 0)
+      background-image: -webkit-linear-gradient(transparent 88%, rgba(0,0,0,0.3) 0,rgba(0,0,0,0.3) 97%,transparent 0)
+
+html.cssgradients
+  figure figcaption .inline
     border: none
     background-image: -linear-gradient(top,transparent 85%, $ink 0, $ink 95%,transparent 0)
     background-image: -moz-linear-gradient(top,transparent 85%, $ink 0, $ink 95%,transparent 0)
     background-image: -webkit-linear-gradient(top,transparent 85%, $ink 0, $ink 95%,transparent 0)
 
+
 .plain
   border: none
-  
   &.btn
     user-select: none
     &:active,

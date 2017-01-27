@@ -1,4 +1,4 @@
-@keyframes bounce-in
+@mixin bounce-in-animation
   0%
     transform: scale(0,0)
   50%
@@ -6,15 +6,15 @@
   100%
     transform: scale(1, 1)
 
-@keyframes bounce-out
+@mixin bounce-out-animation
   0%
     transform: scale(1,1)
   50%
     transform: scale(1.4,1.4)
   100%
     transform: scale(0, 0)
-
-@keyframes fader
+    
+@mixin fader-animation
   0%
     opacity: 0
   50%
@@ -22,35 +22,122 @@
   100%
     opacity: 1
 
-@keyframes fader-rev
+@mixin fader-rev-animation
   0%
     opacity: 1
   100%
     opacity: 0
-    
+
+@-webkit-keyframes bounce-in
+  @include bounce-in-animation
+@-moz-keyframes bounce-in
+  @include bounce-in-animation
+@-o-keyframes bounce-in
+  @include bounce-in-animation
+@keyframes bounce-in
+  @include bounce-in-animation
+
+@-webkit-keyframes bounce-out
+  @include bounce-out-animation
+@-moz-keyframes bounce-out
+  @include bounce-out-animation
+@-o-keyframes bounce-out
+  @include bounce-out-animation
+@keyframes bounce-out
+  @include bounce-out-animation
+  
+@-webkit-keyframes fader
+  @include fader-animation
+@-moz-keyframes fader
+  @include fader-animation
+@-o-keyframes fader
+  @include fader-animation
+@keyframes fader
+  @include fader-animation
+
+@-webkit-keyframes fader-rev
+  @include fader-rev-animation
+@-moz-keyframes fader-rev
+  @include fader-rev-animation
+@-o-keyframes fader-rev
+  @include fader-rev-animation
+@keyframes fader-rev
+  @include fader-rev-animation
+
 
 @mixin bounce-in-set
+  -webkit-animation-fill-mode: forwards
+  -webkit-animation-iteration-count: 1
+  -webkit-animation-duration: 300ms
+  -webkit-animation-name: bounce-in
+  -moz-animation-fill-mode: forwards
+  -moz-animation-iteration-count: 1
+  -moz-animation-duration: 300ms
+  -moz-animation-name: bounce-in
+  -o-animation-fill-mode: forwards
+  -o-animation-iteration-count: 1
+  -o-animation-duration: 300ms
+  -o-animation-name: bounce-in
   animation-fill-mode: forwards
   animation-iteration-count: 1
   animation-duration: 300ms
   animation-name: bounce-in
 
+
 @mixin bounce-out-set
-  transition: all ease 300ms
-  transform: scale(0,0)
-  transform-origin:     center center
-  animation-fill-mode:  forwards
+  -webkit-animation-fill-mode: forwards
+  -webkit-animation-iteration-count: 1
+  -webkit-animation-duration: 300ms
+  -webkit-animation-name: bounce-out
+  -moz-animation-fill-mode: forwards
+  -moz-animation-iteration-count: 1
+  -moz-animation-duration: 300ms
+  -moz-animation-name: bounce-out
+  -o-animation-fill-mode: forwards
+  -o-animation-iteration-count: 1
+  -o-animation-duration: 300ms
+  -o-animation-name: bounce-out
+  animation-fill-mode: forwards
   animation-iteration-count: 1
-  animation-duration:   300ms
-  animation-name:       bounce-out
+  animation-duration: 300ms
+  animation-name: bounce-out
+  
+  transition:           all ease 300ms
+  transform:            scale(0,0)
+  transform-origin:     center center
+
 
 @mixin fader-set
+  -webkit-animation-fill-mode: forwards
+  -webkit-animation-iteration-count: 1
+  -webkit-animation-duration: 1000ms
+  -webkit-animation-name: fader
+  -moz-animation-fill-mode: forwards
+  -moz-animation-iteration-count: 1
+  -moz-animation-duration: 1000ms
+  -moz-animation-name: fader
+  -o-animation-fill-mode: forwards
+  -o-animation-iteration-count: 1
+  -o-animation-duration: 1000ms
+  -o-animation-name: fader
   animation-fill-mode: forwards
   animation-iteration-count: 1
   animation-duration: 1000ms
   animation-name: fader
-  
+
 @mixin fader-rev-set
+  -webkit-animation-fill-mode: forwards
+  -webkit-animation-iteration-count: 1
+  -webkit-animation-duration: 5ms
+  -webkit-animation-name: fader-rev
+  -moz-animation-fill-mode: forwards
+  -moz-animation-iteration-count: 1
+  -moz-animation-duration: 5ms
+  -moz-animation-name: fader-rev
+  -o-animation-fill-mode: forwards
+  -o-animation-iteration-count: 1
+  -o-animation-duration: 5ms
+  -o-animation-name: fader-rev
   animation-fill-mode: forwards
   animation-iteration-count: 1
   animation-duration: 5ms
@@ -64,7 +151,7 @@ section.diagram.views
     &:nth-child(1)
       .tick-btn
         outline: 1px solid $ink
-        background: #fbf395
+        background: #ff0
         opacity: 0.25
         
         &.enabled
@@ -113,6 +200,7 @@ section.diagram.views
       background: white
       border-radius: 3px
       padding: 5px 10px 5px 5px
+      
       &::before
         display: block
         width: 100%
@@ -139,21 +227,22 @@ section.diagram.views
         display: none
 
         .flex
-          align-items: flex-end
-          justify-content: flex-end
-          height: 100%
-          width: 100%
+          align-items:      flex-end
+          justify-content:  flex-end
+          height:           100%
+          width:            100%
           .tick-wrap
-            align-self: flex-end
+            align-self:     flex-end
 
         &.term
-          width: 25px
-          position: relative
+          width:            25px
+          position:         relative
           .joinery
-            position: absolute
-            width:    100%
-            height:   calc(100% - 25px)
-            transition: all ease 300ms
+            position:       absolute
+            width:          100%
+            height:         calc(100% - 25px)
+            transition:     all ease 300ms
+            
             @include joiner()
 
         &.contact,
@@ -184,59 +273,55 @@ section.diagram.views
             margin-right: 5px
 
         &.contact
-          width: 100%
+          width:      100%
           min-height: 60px
           label:before,
           label:after
             text-align: center
-            display: block
+            display:  block
 
         &.done
-          width: 35px
-          padding: 0 0 10px 0
+          width:      35px
+          padding:    0 0 10px 0
 
           .tick-btn
             position: relative
-            width: 35px
-            height: 30px
-            
-            // &.disable
-            //   opacity: 0.25
+            width:    35px
+            height:   30px
 
             .tick
               opacity: 0
               &.set
                 opacity: 1
 
-
 section.diagram.views
+  background: url("../img/projects/gg/views/data.png") center 60% no-repeat
   .view
-    &:nth-child(1)
-      padding-right: 6vw
-    &:nth-child(2)
-      padding-left: 6vw
-      border-left: 1px solid $outline
+    width:    50%
+    display:  inline-block
 
+@media (max-width: 800px)
+  section.diagram.views
+    .view
+      &:nth-child(1)
+        zoom: 0.9
+      &:nth-child(2)
+        zoom: 0.9
 
 @media (max-width: $narrow-unit)
   section.diagram.views
     .view
       &:nth-child(1)
         zoom: 0.8
-        padding-right: 5vw
-        
       &:nth-child(2)
         zoom: 0.8
-        padding-left: 5vw
 
 @media (max-width: 586px)
   section.diagram.views
     border-bottom: none
-
     .view
       &:nth-child(1)
         z-index: 70
-
         .but-r-1
           display: none
           
@@ -248,14 +333,10 @@ section.diagram.views
           background: rgba(255,255,255,0.6)
 
       &:nth-child(2)
-        z-index: 50
-        margin-left: -120px
-        opacity: 0.55
-        border-left: none
+        z-index:      50
+        margin-left:  -60px
+        opacity:      0.55
+        border-left:  none
 
         .chrome-1
           min-height: 355px
-    
-
-
-

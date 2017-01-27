@@ -3,14 +3,14 @@
 		opacity: 0
 	100%
 		opacity: 1
-		background-color: rgba(241, 241, 241, 0)
+		z-index: 999
 
 @mixin fade-in-menu-2-animation
 	0%
 		opacity: 0
 	100%
 		opacity: 1
-		background-color: rgba(129, 211, 235, 0)
+		z-index: 998
 
 @-webkit-keyframes fade-in-menu-1
 	@include fade-in-menu-1-animation()
@@ -30,49 +30,125 @@
 @keyframes fade-in-menu-2
 	@include fade-in-menu-2-animation()
 
-
+// @supports (animation-play-state: paused)
 html.cssanimations
 	ul.menu.animate-1
 		li
 			opacity: 0
-			animation-name: 			fade-in-menu-1
-			animation-fill-mode: 		forwards
-			animation-iteration-count: 	1
-			animation-timing-function: 	ease-out
-			animation-duration:  		250ms
+			
+			-webkit-animation-name: 			fade-in-menu-1
+			-webkit-animation-fill-mode: 		forwards
+			-webkit-animation-iteration-count: 	1
+			-webkit-animation-timing-function: 	ease-out
+			-webkit-animation-duration:  		250ms
+		
+			-moz-animation-name: 				fade-in-menu-1
+			-moz-animation-fill-mode: 			forwards
+			-moz-animation-iteration-count: 	1
+			-moz-animation-timing-function: 	ease-out
+			-moz-animation-duration:  			250ms
+			
+			-o-animation-name: 					fade-in-menu-1
+			-o-animation-fill-mode: 			forwards
+			-o-animation-iteration-count: 		1
+			-o-animation-timing-function: 		ease-out
+			-o-animation-duration:  			250ms
+
+			animation-name: 					fade-in-menu-1
+			animation-fill-mode: 				forwards
+			animation-iteration-count: 			1
+			animation-timing-function: 			ease-out
+			animation-duration:  				250ms
+
 
 			&:nth-child(1)
-				animation-delay: 50ms
+				-webkit-animation-delay: 	50ms
+				-moz-animation-delay: 		50ms
+				-o-animation-delay: 		50ms
+				animation-delay: 			50ms
 			&:nth-child(2)
-				animation-delay: 100ms
+				-webkit-animation-delay: 	100ms
+				-moz-animation-delay: 		100ms
+				-o-animation-delay: 		100ms
+				animation-delay: 			100ms
 			&:nth-child(3)
-				animation-delay: 150ms
+				-webkit-animation-delay: 	150ms
+				-moz-animation-delay: 		150ms
+				-o-animation-delay: 		150ms
+				animation-delay: 			150ms
 			&:nth-child(4)
-				animation-delay: 200ms
+				-webkit-animation-delay: 	200ms
+				-moz-animation-delay: 		200ms
+				-o-animation-delay: 		200ms
+				animation-delay: 			200ms
 			&:nth-child(5)
-				animation-delay: 250ms
+				-webkit-animation-delay: 	250ms
+				-moz-animation-delay: 		250ms
+				-o-animation-delay: 		250ms
+				animation-delay: 			250ms
 			&:nth-child(6)
-				animation-delay: 300ms
+				-webkit-animation-delay: 	250ms
+				-moz-animation-delay: 		250ms
+				-o-animation-delay: 		250ms
+				animation-delay: 			250ms
+
 
 	ul.menu.animate-2
 		li
 			opacity: 0
-			animation-name: 			fade-in-menu-2
-			animation-fill-mode: 		forwards
-			animation-iteration-count: 	1
-			animation-timing-function: 	ease-out
-			animation-duration:  		200ms
+			
+			animation-name: 					fade-in-menu-2
+			animation-fill-mode: 				forwards
+			animation-iteration-count: 			1
+			animation-timing-function: 			ease-out
+			animation-duration:  				250ms
+
+			-webkit-animation-name: 			fade-in-menu-2
+			-webkit-animation-fill-mode: 		forwards
+			-webkit-animation-iteration-count: 	1
+			-webkit-animation-timing-function: 	ease-out
+			-webkit-animation-duration:  		250ms
+
+			-moz-animation-name: 				fade-in-menu-2
+			-moz-animation-fill-mode: 			forwards
+			-moz-animation-iteration-count: 	1
+			-moz-animation-timing-function: 	ease-out
+			-moz-animation-duration:  			250ms
+			
+			-o-animation-name: 					fade-in-menu-2
+			-o-animation-fill-mode: 			forwards
+			-o-animation-iteration-count: 		1
+			-o-animation-timing-function: 		ease-out
+			-o-animation-duration:  			250ms
+
 
 			&:nth-child(1)
-				animation-delay: 50ms
+				-webkit-animation-delay: 	50ms
+				-moz-animation-delay: 		50ms
+				-o-animation-delay: 		50ms
+				animation-delay: 			50ms
 			&:nth-child(2)
-				animation-delay: 100ms
+				-webkit-animation-delay: 	100ms
+				-moz-animation-delay: 		100ms
+				-o-animation-delay: 		100ms
+				animation-delay: 			100ms
 			&:nth-child(3)
-				animation-delay: 150ms
+				-webkit-animation-delay: 	150ms
+				-moz-animation-delay: 		150ms
+				-o-animation-delay: 		150ms
+				animation-delay: 			150ms
 			&:nth-child(4)
-				animation-delay: 200ms
+				-webkit-animation-delay: 	200ms
+				-moz-animation-delay: 		200ms
+				-o-animation-delay: 		200ms
+				animation-delay: 			200ms
 			&:nth-child(5)
-				animation-delay: 250ms
+				-webkit-animation-delay: 	250ms
+				-moz-animation-delay: 		250ms
+				-o-animation-delay: 		250ms
+				animation-delay: 			250ms
 			&:nth-child(6)
-				animation-delay: 300ms
-
+				-webkit-animation-delay: 	250ms
+				-moz-animation-delay: 		250ms
+				-o-animation-delay: 		250ms
+				animation-delay: 			250ms
