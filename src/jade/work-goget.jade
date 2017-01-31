@@ -68,11 +68,7 @@ html(class="no-js" lang="en")
 
         .segment.surface
           figure
-            .flex
-              .unit
-                img(src="img/projects/gg/gg-research-1.jpg").max
-              .unit
-                img(src="img/projects/gg/gg-research-2.jpg").max
+            img(src="img/projects/gg/gg-research.jpg").max
 
         .segment.blueprint
           figure
@@ -124,8 +120,8 @@ html(class="no-js" lang="en")
         .segment.blueprint.pad.chart
           figure.align-c.gg.flow
             hgroup.align-l Create a job user flow (Poster)
-            picture
-              source(srcset="img/projects/gg/flow-v.png" media="(max-width: 550px)").max
+            picture.max
+              source(srcset="img/projects/gg/flow-v.png" media="(max-width: 550px)")
               source(srcset="img/projects/gg/flow-h.png" media="(min-width: 551px)")
               img(src="img/projects/gg/flow-h.png").max
             figcaption
@@ -142,23 +138,19 @@ html(class="no-js" lang="en")
         .segment.blueprint.pad.interactive.border#gg-views
           include components/interactive
           hgroup Open job prototype
-          figure.ally-flex
+          figure.only-flex
             include projects/gg/views
             figcaption Each job in progress could be displayed within one view, this being slightly different depending on your relationship to the job. As the GoGetter, you’re able to update your progress as you go, keeping the Poster informed along the way. For jobs with more than one stop/task. The GoGetter can prioritise as they see fit.
 
         .segment.surface
           figure
-            .flex
-              .unit
-                img(src="img/projects/gg/gg-app-1.jpg").max
-              .unit
-                img(src="img/projects/gg/gg-app-2.jpg").max
+            img(src="img/projects/gg/gg-app.jpg").max
 
         p One crucial part to this flow is letting the GoGetter know how much they’ll need to cover the cost of the transaction (to be reimbursed upon completion). This is straightforward with set prices and prior knowledge, but without those, a rough estimate is all that’s possible. If you were to ask someone in real life to run an errand for you, the natural flow would be to give them enough money to cover the errand, with increments of note denominations. Using this as a starting point, I came up with this payment interaction.
 
         .segment.blueprint.pad.interactive.border#gg-money
           include components/interactive
-          figure
+          figure.only-flex
             hgroup Rejected: Payment interaction concept
             include projects/gg/money
             figcaption Payment interaction concept: In all honesty it is a little goofy and this particular feature wasn‘t taken further than concept in the original web build.
@@ -203,10 +195,10 @@ html(class="no-js" lang="en")
                 |  on Google Drive.
 
         .segment.blueprint.pad
-          figure.ally-flex
+          figure.only-flex
             hgroup Revised Sitemap
             include projects/gg/sitemap
-            figcaption Alongside insight from the team, I used SEO Spider to audit and identify existing architectural problems. The original IA was a little confusing, with overlapping and broken content. We streamlined this before adding new content.
+            figcaption Alongside insight from the team, I used SEO Spider to audit and identify existing architectural problems. The original IA was a little confusing, with overlapping and broken content. We streamlined this before adding amything new.
 
         h3 A Singular Hero
         p
@@ -214,11 +206,12 @@ html(class="no-js" lang="en")
           a(href="https://en.wikipedia.org/wiki/Dont_repeat_yourself").inline
             abbr(title="Don't repeat yourself") DRY 
             | this all out
-          | , despite having different content on each of them (and a carousel on one). This will be made available on GitHub.
+          | , despite having different content on each of them (and a carousel on one).
         
         .segment.surface
-          figure
+          figure.only-flex
             include projects/gg/singular
+            figcaption This will be made available on GitHub.
 
         .segment.surface
           figure
@@ -227,12 +220,12 @@ html(class="no-js" lang="en")
         .segment.surface
           figure
             .flex
-              .unit.pad
+              .unit
                 img(src="img/projects/gg/gg-layout-3.jpg").max
               .unit.pad
                 img(src="img/projects/gg/gg-layout-2.jpg").max
 
-        p The public face I’m designing is currently in production and is set to go live Winter 2016.
+        p The public face is currently being rolled out but you're able to view the staging site, which is pretty much there.
 
         .segment.surface.align-c
           a(href="http://clients.droom.io/go").plain.cta

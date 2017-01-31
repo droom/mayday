@@ -1,62 +1,22 @@
+label .type
+	padding:  0.25em 0.75em
+	margin:   0.5em 0 0.6em 0
+
 section.diagram.gg.singular
-  margin:     auto
-  .modules
-    max-width: $narrow-unit
-    margin: 0 auto
-    .laylines
-      width:      100%
-      height:     15vw
-      max-height: 120px
-      min-height: 35px
-    .flex
-      max-width:  $narrow-unit
-      .unit
-        width:      calc(100%/3)
-        align-self: stretch
-        padding:    0.5em
-        label
-          .type
-            padding:  0.25em 0.75em
-            margin:   0.5em 0 0.6em 0
-            
+	margin:     auto
+	.modules
+		max-width: $narrow-unit
+		margin: 0 auto
+		.laylines
+			width:      100%
+			height:     15vw
+			max-height: 120px
+			min-height: 35px
+		.flex
+			display: flex
+			max-width:  $narrow-unit
+			.unit
+				width:      calc(100%/3)
+				align-self: stretch
+				padding:    0.5em
 
-
-
-// html.flexbox
-//   section.diagram.gg.singular .modules
-//     .flex
-//       display: flex
-//       .unit
-//         display: block
-//         span.br
-//           display: inline
-//       .unit:nth-child(1),
-//       .unit:nth-child(2),
-//       .unit:nth-child(3)
-//         float: none
-//       .unit:nth-child(2)
-//         border-left: 0
-//         border-right: 0
-
-// section.diagram.gg.singular .modules
-//     .flex
-//       .unit
-
-// section.diagram.gg.singular .modules
-//   .flex
-//     display: block
-//     .unit
-//       display: inline-block
-//       span.br
-//         display: block
-//     // .unit:nth-child(1)
-//     //   float: left
-//     // .unit:nth-child(3)
-//     //   float: right
-
-// @media (max-width: $phone-max)
-//   section.diagram.gg.singular
-//     .flex
-//       .unit:nth-child(2)
-//         border-left: none
-//         border-right: none

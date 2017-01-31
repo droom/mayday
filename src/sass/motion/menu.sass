@@ -30,8 +30,9 @@
 @keyframes fade-in-menu-2
 	@include fade-in-menu-2-animation()
 
-// @supports (animation-play-state: paused)
-html.cssanimations
+// html.cssanimations
+
+@supports (animation-play-state: paused) or (-webkit-animation-play-state: paused)
 	ul.menu.animate-1
 		li
 			opacity: 0

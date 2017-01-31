@@ -190,35 +190,35 @@ $radius: 4px
 section.diagram.money
   .screen
     background: rgba(0, 0, 0, 0.5)
-    overflow: hidden
-    width: 310px
-    margin: 60px auto
-    height: 520px
+    overflow:   hidden
+    width:      310px
+    margin:     60px auto
+    height:     520px
 
   .note, .pot
     cursor: pointer
 
   .wrap
-    width: 245px
-    height: 280px
-    margin: 10px auto 0 auto
-    position: relative
+    width:      245px
+    height:     280px
+    margin:     10px auto 0 auto
+    position:   relative
     background-color: rgba(255,255,255,0.5)
-    overflow: visible
-    border: 2px solid rgba(0,0,255,0.5)
+    overflow:   visible
+    border:     2px solid rgba(0,0,255,0.5)
     border-radius: 3px
 
     &:nth-child(1)
-      height: 22px
-      margin-top: 0
-      border: none
+      height:         22px
+      margin-top:     0
+      border:         none
       border-top-left-radius: 0
       border-top-right-radius: 0
 
     &:nth-child(3)
-      height: 22px
-      margin-bottom: 0
-      border: none
+      height:         22px
+      margin-bottom:  0
+      border:         none
       border-bottom-left-radius: 0
       border-bottom-right-radius: 0
 
@@ -240,54 +240,101 @@ section.diagram.money
     left: -13px
     
     .note
-      z-index: 1
-      width: 100px
-      height: 50px
-      border-radius: 2px
-      text-align: center
-      padding: 5px
-      transition: all 200ms ease
-      position: absolute
-      transform: rotate(90deg)
-      transform-style: preserve-3d
-      border: 1px solid rgba(0,0,255,0.1)
+      z-index:        1
+      width:          100px
+      height:         50px
+      border-radius:  2px
+      text-align:     center
+      padding:        5px
+      position:       absolute
+      border:         1px solid rgba(0,0,255,0.1)
+      transition:     all 200ms ease
+
+      -ms-transform:            rotate(90deg)
+      -ms-transform-style:      preserve-3d
+      -webkit-transform:        rotate(90deg)
+      -webkit-transform-style:  preserve-3d
+      -o-transform:             rotate(90deg)
+      -o-transform-style:       preserve-3d
+      transform:                rotate(90deg)
+      transform-style:          preserve-3d
+
 
       &[data-add='1'], &[data-add='2'], &[data-add='3'], &[data-add='4']
         z-index: 2
-        transition: all 400ms ease
-        animation: 300ms ease-out forwards
         pointer-events: none
+        transition: all 400ms ease
+
+        -ms-animation: 300ms ease-out forwards
+        -webkit-animation: 300ms ease-out forwards
+        -o-animation: 300ms ease-out forwards
+        animation: 300ms ease-out forwards
+        
       &[data-add='1']
+        -ms-animation-name: add-1
+        -webkit-animation-name: add-1
+        -o-animation-name: add-1
         animation-name: add-1
+
       &[data-add='2']
+        -ms-animation-name: add-2
+        -webkit-animation-name: add-2
+        -o-animation-name: add-2
         animation-name: add-2
+
       &[data-add='3']
+        -ms-animation-name: add-3
+        -webkit-animation-name: add-3
+        -o-animation-name: add-3
         animation-name: add-3
+
       &[data-add='4']
+        -ms-animation-name: add-4
+        -webkit-animation-name: add-4
+        -o-animation-name: add-4
         animation-name: add-4
+
       &[data-return='1'], &[data-return='2'], &[data-return='3'], &[data-return='4']
         transition: all 400ms ease
+        -ms-animation: 300ms ease-out forwards
+        -webkit-animation: 300ms ease-out forwards
+        -o-animation: 300ms ease-out forwards
         animation: 300ms ease-out forwards
-      &[data-return='1']
-        animation-name: return-1
-      &[data-return='2']
-        animation-name: return-2
-      &[data-return='3']
-        animation-name: return-3
-      &[data-return='4']
-        animation-name: return-4
-        
 
+      &[data-return='1']
+        -ms-animation-name: return-1
+        -webkit-animation-name: return-1
+        -o-animation-name: return-1
+        animation-name: return-1
+
+      &[data-return='2']
+        -ms-animation-name: return-2
+        -webkit-animation-name: return-2
+        -o-animation-name: return-2
+        animation-name: return-2
+
+      &[data-return='3']
+        -ms-animation-name: return-3
+        -webkit-animation-name: return-3
+        -o-animation-name: return-3
+        animation-name: return-3
+
+      &[data-return='4']
+        -ms-animation-name: return-4
+        -webkit-animation-name: return-4
+        -o-animation-name: return-4
+        animation-name: return-4
 
   .pot
-    user-select: none    
+    user-select:    none
+        
     background-color: rgba(0,0,0,0.2)
-    border-top: 1px solid blue
-    border-bottom: 1px solid blue
-    text-align: center
-    z-index: 5
-    height: 120px
-    padding: 8px
+    border-top:     1px solid blue
+    border-bottom:  1px solid blue
+    text-align:     center
+    z-index:        5
+    height:         120px
+    padding:        8px
     p
       margin: 0
     
@@ -295,35 +342,47 @@ section.diagram.money
     top: $note-1-top
     left: $note-1-left
     background: $note-1-colour
-    transform-style: preserve-3d
+    -ms-transform-style:      preserve-3d
+    -webkit-transform-style:  preserve-3d
+    -o-transform-style:       preserve-3d
+    transform-style:          preserve-3d
 
   .note-2
     top: $note-2-top
     left: $note-2-left
     background: $note-2-colour
-    transform-style: preserve-3d
+    -ms-transform-style:      preserve-3d
+    -webkit-transform-style:  preserve-3d
+    -o-transform-style:       preserve-3d
+    transform-style:          preserve-3d
 
   .note-3
     top: $note-3-top
     left: $note-3-left
     background: $note-3-colour
-    transform-style: preserve-3d
+    -ms-transform-style:      preserve-3d
+    -webkit-transform-style:  preserve-3d
+    -o-transform-style:       preserve-3d
+    transform-style:          preserve-3d
 
   .note-4
     top: $note-4-top
     left: $note-4-left
     background: $note-4-colour
-    transform-style: preserve-3d
+    -ms-transform-style:      preserve-3d
+    -webkit-transform-style:  preserve-3d
+    -o-transform-style:       preserve-3d
+    transform-style:          preserve-3d
 
   .note-1:before,
   .note-2:before,
   .note-3:before,
   .note-4:before
-    padding: 7px 4px
-    float: left
-    font-size: 13px
-    font-weight: 400
-    opacity: 0.8
+    padding:        7px 4px
+    float:          left
+    font-size:      13px
+    font-weight:    400
+    opacity:        0.8
     letter-spacing: 0.05em
 
   .note-1:before

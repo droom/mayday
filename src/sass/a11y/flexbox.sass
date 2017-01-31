@@ -1,7 +1,4 @@
-// .flex
-  // outline: 1px solid red
-
-figure.ally-flex
+figure.only-flex
   section.diagram
     display:    none
   figcaption::after
@@ -9,8 +6,8 @@ figure.ally-flex
     background: pink
     display:    block
 
-html.flexbox
-  figure.ally-flex
+@supports (display: flex)
+  figure.only-flex
     section.diagram
       display:    block
     figcaption::after
@@ -21,16 +18,31 @@ html.flexbox
 figure .flex
   display: block
   .unit
-    width: 50%
     display: inline-block
-  .unit:nth-child(2)
-    float: right
+    &.half
+      width: 50%
+    &.third
+      width: calc(100%/3)
+    &.pad
+      margin: 0
+    &:nth-child(1)
+      float: left
+    &:nth-child(2)
+      float: right
 
-html.flexbox
+@supports (display: flex)
   figure .flex
     display: flex
+    width: auto
     .unit
       display: block
-    .unit:nth-child(1),
-    .unit:nth-child(2)
-      float: none
+        
+      &.half,
+      &.third
+        width: auto
+        
+      &.pad
+        margin: 0 0 0 $gttr-ph / 2
+      &:nth-child(1),
+      &:nth-child(2)
+        float: none

@@ -13,7 +13,7 @@ include partials/_order
 - var model       = "SaaS"
 - var role        = [ 'Identity', '<abbr title=\"User Experience\">UX</abbr>+<abbr title=\"User Interface\">UI</abbr>', 'Front-End' ]
 - var stack       = [ 'Balsamiq', 'Paper', 'Adobe© Illustrator', 'Adobe© Photoshop', 'Adobe© InDesign', 'HTML (Ruby Slim)' ]
-- var collab      = [ 'Hassanin Ahmed (RoR)', 'Jessica Tzy (Icons)' ]
+- var collab      = [ 'Hassanin Ahmed (RoR)', 'Jessica Tzy (Icons)', 'Isa Ghani (Strategy)' ]
 
 - var live        = true
 - var liveTitle   = "givereceipt.com"
@@ -56,11 +56,11 @@ html(class="no-js" lang="en")
               source(srcset="img/projects/gr/flow-v.png" media="(max-width: 750px)").blend
               source(srcset="img/projects/gr/flow-h.png" media="(min-width: 751px)").blend
               img(src="img/projects/gr/flow-h.png").max.blend
-            figcaption Lorem 
+            figcaption Initial user flow. We prompt the user for company info after they've created the account. Chances are they'll be selling a few of the same item, in which case they can create a new receipt via modifying an old one.     
 
 
         h3 Creating an identity
-        p Professional accounting software is usually very staid. GiveReceipt aims to be more accessible, especially for small sole-traders. The name itself is comparatively informal, and we visuals that worked alongside that. 
+        p Professional accounting software is usually very staid. GiveReceipt aims to be more accessible, especially for small sole-traders. The name itself is comparatively informal, and I created visuals to compliment that. 
         
         p If we were to pare a physical POS ribbon receipt down to its essence, we’d have a few ingredients: its form factor, the perforated edge caused my the blade, the light GSM of the stock. The perforation and aspect is something we could take forward as the basis for the identity. We're still dealing with money so the bright teal is grounded with sensible dark grey/white.
 
@@ -75,38 +75,25 @@ html(class="no-js" lang="en")
             li.colour
             li.colour
 
+        .segment.surface
+          figure
+            img(src="img/projects/gr/block.jpg").max
+            figcaption 20mm × 230mm, 240gsm namecards. Die-cut to show off our corrigated motif.
 
         .segment.blueprint.pad
           figure
             img(src="img/projects/gr/app.png").max
-            figcaption
-
-        .segment.surface
-          figure
-            .flex
-              .unit.pad
-                img(src="img/projects/gr/block-0.png").max
-              .unit.pad.tuck
-                img(src="img/projects/gr/block-1.png").max
-            figcaption 20mm × 230mm, 240gsm namecards. Die-cut to show off our corrigated motif.
+            figcaption Ionic (IoS/Android) app 'Creation' views.
 
         .segment.surface
           figure
             img(src="img/projects/gr/invoice.png").max
-            figcaption
-
-        //- .segment.surface
-        //-   figure
-        //-     .flex
-        //-       .unit.pad
-        //-         img(src="img/projects/gr/people-1.jpg").max
-        //-       .unit.pad.tuck
-        //-         img(src="img/projects/gr/people-2.jpg").max
-
+            figcaption Going forwards, optional printout templates for premium users.
 
         .segment.surface.squash
           figure
             img(src="img/projects/gr/layout.jpg").max
+            //- figcaption
 
         .segment.surface.align-c
           a(href="http://www.givereceipt.com/").plain.cta
