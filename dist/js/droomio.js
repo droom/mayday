@@ -3755,11 +3755,12 @@ var Konami = function (callback) {
 	$(button).click(function(e) {
 		e.preventDefault();
 
+		buttonUnit.toggleClass('rotate');
+
 		menu.toggleClass('animate-1');
 		menu.toggleClass('animate-2');
 		menu.toggleClass('tile');
 
-		buttonUnit.toggleClass('rotate');
 
 		if (menu.hasClass('tile')){
 			localStorage.menu = "tile";

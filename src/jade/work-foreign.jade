@@ -20,10 +20,8 @@ include partials/_order
 
 - var prevTitle   = order1[2]
 - var prevURL     = order2[2]
-
 - var nextTitle   = order1[0]
 - var nextURL     = order2[0]
-
 
 doctype html
 html(class="no-js" lang="en")
@@ -61,7 +59,9 @@ html(class="no-js" lang="en")
         p 
           = "There were (and still are) a wealth of themes to choose from, but I couldn’t find precisely what I was looking for. Either the type choices didn't jive with me, it had artefacts or detailing I found superfluous, or it was just too gimmicky. (On reflection, this whole exercise might have just have been a subconscious avoidance strategy to keep me from doing what I feared"
           &hellip; 
-          = "). So began my first forary into desiging for CMSes and ‘the known unknowns.’"
+          = "). So began my first forary into desiging for CMSes and ‘"
+          a(href="https://adactio.com/articles/4938").inline the known unknowns
+          = ".’"
           a(href="#ref").plain.glide-slow
             sup
 
@@ -97,8 +97,11 @@ html(class="no-js" lang="en")
         .segment.surface.align-c
           ul.swatch.fo
             li.colour
+              span.hex 154B0D
             li.colour
+              span.hex C14D4D
             li.colour
+              span.hex FFFFFF
 
         .segment.surface.squash
           figure
