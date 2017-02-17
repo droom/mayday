@@ -7,6 +7,18 @@ This theme is based on the signage at Mayday hospital.
 
 I'm going to turn this into a Jekyll theme at some point but you are free to use this as you like.
 
+##Typography
+
+— Transport New (Heavy) by K-Type
+— Transport New (Medium) by K-Type
+
+MyFonts Webfont Build ID 3345287
+2017-02-15T08:32:50-0500
+
+*K-Type's redrawing of the UK Transport font originally designed for British road signs by Jock Kinneir and Margaret Calvert, and first published on the Preston bypass in 1958.*
+
+[License](http://www.myfonts.com/viewlicense?type=web&buildid=3345287), Pageviews: 20,000
+
 ##License
 
 Copyright (c) 2016
