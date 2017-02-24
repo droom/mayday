@@ -5,13 +5,12 @@ html
     &.dark
       border-bottom: $copy solid 0.14em
 
-
 html.cssgradients
   .inline
     border: none
-    background-image: -linear-gradient(top,transparent 85%,#81d3eb 0,#81d3eb 95%,transparent 0)
-    background-image: -moz-linear-gradient(top,transparent 85%,#81d3eb 0,#81d3eb 95%,transparent 0)
-    background-image: -webkit-linear-gradient(top,transparent 85%,#81d3eb 0,#81d3eb 95%,transparent 0)
+    background-image: -linear-gradient(top,transparent 85%, $theme-A-hex 0, $theme-A-hex 95%,transparent 0)
+    background-image: -moz-linear-gradient(top,transparent 85%, $theme-A-hex 0, $theme-A-hex 95%,transparent 0)
+    background-image: -webkit-linear-gradient(top,transparent 85%, $theme-A-hex 0, $theme-A-hex 95%,transparent 0)
     &.dark
       border: none
       background-image: -linear-gradient(transparent 88%, rgba(0,0,0,0.3) 0,rgba(0,0,0,0.3) 97%,transparent 0)
@@ -25,7 +24,6 @@ html.cssgradients
     background-image: -moz-linear-gradient(top,transparent 85%, $ink 0, $ink 95%,transparent 0)
     background-image: -webkit-linear-gradient(top,transparent 85%, $ink 0, $ink 95%,transparent 0)
 
-
 .plain
   border: none
   &.btn
@@ -34,7 +32,6 @@ html.cssgradients
     &:focus,
     &:hover
       background: none
-
 
 a
   color: $copy
