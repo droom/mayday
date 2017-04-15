@@ -1,0 +1,112 @@
+$display1:      "TransportNewHeavy","Helvetica Neue", Helvetica, Arial, sans-serif
+$display2:      "TransportNewMedium", "Helvetica Neue", Helvetica, Arial, sans-serif
+$running:		-apple-system, BlinkMacSystemFont, "hndi-std", "Roboto", "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif
+$technical:		"Roboto Mono", "Consolas", "Monaco", "Lucida Console", "Andale Mono"
+$entity:		Arial, Helvetica, sans-serif
+
+$bg:	    	rgba(241, 241, 241, 1)
+$maths:			#2199e7
+
+$copy:		   	rgba(0, 0, 0, 0.8)
+$hover:		  	rgba(255, 255, 255, 0.3)
+$ink:      		rgba(46, 77, 210, 1)
+$grey:  		rgba(0,0,0,0.04)
+$outline: 		rgba(0,0,0,.3)
+$salmon: 		#fad7ae
+
+$wide-unit:    	1118px
+$narrow-unit:	710px
+$phone-max:		500px
+$gttr-dt:	 	28px
+$gttr-ph:	 	28px / 2
+
+$border:		1px solid rgba(0, 0, 0, 0.08)
+$dashed:		1px dashed $ink
+
+$theme-A-hex:   #81d3eb
+$theme-A-hex:   #f1f1f1
+
+@mixin theme-A($alpha)
+	// background-color: rgba(129, 211, 235, $alpha)
+	background-color: rgba(86, 217, 255, $alpha)
+	// background-color: rgba(255, 237, 145, $alpha)
+	// rgba(86,217,255,.7)
+
+@mixin theme-B($alpha)
+	background-color: rgba(228, 176, 113, $alpha)
+@mixin tween($speed)
+	transition: all $speed ease
+
+@charset "UTF-8"
+
+@import "components/menu.sass"
+@import "components/menu-btn-img.sass"
+
+@import "grid/base.sass"
+@import "grid/frame.sass"
+@import "grid/flex.sass"
+@import "grid/stacking.sass"
+
+@import "rhythm/base.sass"
+@import "rhythm/iso.sass"
+@import "rhythm/menu.sass"
+
+@import "type/includes.sass"
+@import "type/type.sass"
+@import "type/details.sass"
+@import "type/colour.sass"
+
+@import "images/base.sass"
+@import "images/jacket.sass"
+
+@import "components/band.sass"
+@import "components/lists.sass"
+@import "components/cv.sass"
+@import "components/links.sass"
+@import "components/nav.sass"
+@import "components/counters.sass"
+@import "components/table.sass"
+@import "components/feed.sass"
+@import "components/pager.sass"
+@import "components/slick.sass"
+@import "components/konami.sass"
+@import "components/appendix.sass"
+
+// @import "page/index.sass"
+
+@import "projects/shared/diagrams.sass"
+@import "projects/shared/swatch.sass"
+@import "projects/shared/cover.sass"
+@import "projects/shared/interactive.sass"
+@import "projects/gg/sitemap.sass"
+@import "projects/gg/singular.sass"
+@import "projects/gg/ui.sass"
+@import "projects/gg/views/views.sass"
+@import "projects/gg/flow.sass"
+@import "projects/gg/money.sass"
+@import "projects/gr/flow.sass"
+@import "projects/ih/reflow.sass"
+@import "projects/ih/breadcrumb.sass"
+@import "projects/ih/modal.sass"
+
+@import "motion/elements.sass"
+@import "motion/menu.sass"
+@import "a11y/flexbox.sass"
+@import "a11y/js.sass"
+
+nav .segment.type
+	padding-top: 26px !important
+	padding-bottom: 22px !important
+
+
+#top nav .segment.type
+	padding-top: 23px !important
+	padding-bottom: 22px !important
+	
+
+ul.menu li
+	border-top: 1px solid rgba(0,0,0,0.15)
+
+a.menu-btn-img .unit .list svg,
+a.menu-btn-img .unit .tile svg
+	fill: #333 !important
