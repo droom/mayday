@@ -45,7 +45,7 @@ module.exports = function(grunt) {
       },
 
       postcss: {
-        files: ['dist/css/screen.css'],
+        files: ['dist/css/v8.css'],
         tasks: ['postcss']
       },
 
@@ -57,8 +57,8 @@ module.exports = function(grunt) {
           style: 'compressed'
         },
         files: {
-          'dist/css/screen.css': 'src/sass/screen.sass',
-          'dist/css/print.css': 'src/sass/print.sass',
+          'dist/css/v8.css': 'src/sass/v8.sass',
+          'dist/css/v8-print.css': 'src/sass/v8-print.sass',
 
         }
       }

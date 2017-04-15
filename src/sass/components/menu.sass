@@ -3,8 +3,6 @@ ul.menu
 		border-top: $border
 		transition: background ease-out 50ms
 
-		dt.project
-			display: 	none
 		&:active,
 		&:hover
 			background-color: rgba(255, 255, 255, 0.45)
@@ -21,9 +19,8 @@ ul.menu
 				background-position: 	96% 50%
 				transition: 			300ms background-position ease, 300ms opacity ease
 			
-		dl.credits
-			dd.project
-				display: block
+		// dl.credits
+			// padding-bottom: 2em
 
 		&.disable
 			border-top: $border
@@ -84,7 +81,7 @@ ul.menu.tile
 
 			&:focus > .segment.type.work,
 			&:hover > .segment.type.work,
-				background-position: 50% 50%
+				background-position: 	50% 50%
 				background-size: 		cover
 
 				dl.credits
@@ -136,14 +133,16 @@ ul.menu.tile
 				margin: 	0 0 26px 0
 				transition: 200ms ease background
 				
-				dt,
-				dt.project
-					display: block
-					min-width: auto
-				dd.project.h3
+				// dt,
+				// dt.project
+				// dt
+					// display: block
+					// min-width: auto
+				
+				// dd.project.h3
 					// @include small()
-					margin-bottom:  0
-					padding-bottom: 0
+					// margin-bottom:  0
+					// padding-bottom: 0
 
 
 @media (min-width: $wide-unit)
@@ -206,7 +205,6 @@ ul.menu.tile
 			&.disable
 				display: none
 
-
 			a.plain .segment.work dl.credits
 				margin: 0 0 26px -10px
 
@@ -234,10 +232,9 @@ ul.menu.tile
 
 			&.disable
 				display: none
-				
 
 			a.plain .segment.work dl.credits
-				max-width: 200px
-				margin: 0 0 26px -15px
-				padding: inherit
+				max-width: 	200px
+				margin: 	0 0 26px -15px
+				padding: 	inherit
 
