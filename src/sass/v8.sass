@@ -4,7 +4,7 @@ $running:		-apple-system, BlinkMacSystemFont, "hndi-std", "Roboto", "Droid Sans"
 $technical:		"Roboto Mono", "Consolas", "Monaco", "Lucida Console", "Andale Mono"
 $entity:		Arial, Helvetica, sans-serif
 
-$bg:	    	rgba(241, 241, 241, 1)
+$bg:	    	#f1f1f1
 $maths:			#2199e7
 
 $copy:		   	rgba(0, 0, 0, 0.8)
@@ -24,16 +24,10 @@ $border:		1px solid rgba(0, 0, 0, 0.08)
 $dashed:		1px dashed $ink
 
 $theme-A-hex:   #81d3eb
-$theme-A-hex:   #f1f1f1
 
 @mixin theme-A($alpha)
-	// background-color: rgba(129, 211, 235, $alpha)
-	background-color: rgba(86, 217, 255, $alpha)
-	// background-color: rgba(255, 237, 145, $alpha)
-	// rgba(86,217,255,.7)
+	background-color: rgba(129, 211, 235, $alpha)
 
-@mixin theme-B($alpha)
-	background-color: rgba(228, 176, 113, $alpha)
 @mixin tween($speed)
 	transition: all $speed ease
 
@@ -57,7 +51,7 @@ $theme-A-hex:   #f1f1f1
 @import "type/colour.sass"
 
 @import "images/base.sass"
-@import "images/jacket.sass"
+// @import "images/jacket.sass"
 
 @import "components/band.sass"
 @import "components/lists.sass"
@@ -93,6 +87,16 @@ $theme-A-hex:   #f1f1f1
 @import "motion/menu.sass"
 @import "a11y/flexbox.sass"
 @import "a11y/js.sass"
+
+
+body.work.iso
+	.band.head
+		background: $theme-A-hex
+
+body.article.iso
+	h2
+		text-align: left
+
 
 nav .segment.type
 	padding-top: 26px !important
