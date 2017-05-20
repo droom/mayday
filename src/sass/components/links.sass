@@ -1,12 +1,12 @@
 html
-  .inline,
-  figure figcaption .inline
+  a.inline,
+  figure figcaption a.inline
     border-bottom: $theme-A-hex solid 0.14em
     &.dark
       border-bottom: $copy solid 0.14em
 
 html.cssgradients
-  .inline
+  a.inline
     border: none
     background-image: -linear-gradient(top,transparent 85%, $theme-A-hex 0, $theme-A-hex 95%,transparent 0)
     background-image: -moz-linear-gradient(top,transparent 85%, $theme-A-hex 0, $theme-A-hex 95%,transparent 0)
@@ -18,20 +18,33 @@ html.cssgradients
       background-image: -webkit-linear-gradient(transparent 88%, rgba(0,0,0,0.3) 0,rgba(0,0,0,0.3) 97%,transparent 0)
 
 html.cssgradients
-  figure figcaption .inline
+  figure figcaption a.inline
     border: none
     background-image: -linear-gradient(top,transparent 85%, $ink 0, $ink 95%,transparent 0)
     background-image: -moz-linear-gradient(top,transparent 85%, $ink 0, $ink 95%,transparent 0)
     background-image: -webkit-linear-gradient(top,transparent 85%, $ink 0, $ink 95%,transparent 0)
 
-.plain
-  border: none
-  &.btn
-    user-select: none
-    &:active,
-    &:focus,
-    &:hover
-      background: none
+
+// .plain
+//   border: none
+//   &.btn
+//     user-select: none
+//     &:active,
+//     &:focus,
+//     &:hover
+//       background: none
+// a
+  // &:focus,
+  // &:hover
+    // background-color: $hover
+// a
+//   &:hover
+//     color: blue
+//     border-bottom-color: blue
+
+//   &:focus
+//     outline: 2px solid orange
+
 
 a
   color: $copy
@@ -44,10 +57,6 @@ a
     background: #e8e8e8
     padding: 14px 20px
     border-radius: 2px
-
-  &:focus,
-  &:hover
-    background-color: $hover
 
   &.move
     position: absolute
