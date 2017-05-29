@@ -1,0 +1,140 @@
+- var fTitle    = "v8.droom.io"
+- var workiso   = false
+- var work      = false
+- var index     = true
+- var page      = "index"
+
+doctype html
+html(class="no-js" lang="en")
+  head
+    include partials/_head
+
+  body.timeline
+    article(data-project="profile")#context
+      .cover-title
+        include partials/_nav
+        
+        .band.head.relative.hr
+          .segment.type
+            header
+              h1
+                = "Chris Droom is a UX"
+                &nbsp;
+                = "Designer working at housing charity Shelter, in London."
+
+      main(role='main')
+        .mix-controls
+          .segment.type
+              button.control(type='button', data-filter='all') All
+              button.control(type='button', data-filter='.green') Case Studies
+              button.control(type='button', data-filter='.blue') Blog
+              button.control(type='button', data-filter='.pink') Articles
+
+        ul.menu.reset.hello
+          li.mix.green
+            a(href="work-goget.html").plain
+              .segment.type.work.gg
+                dl.reset.credits
+                  dt.project Project
+                  dd.project
+                    = "GoGet Brand "
+                    span.entity.accent.slim /
+                    = " App "
+                    span.entity.accent.slim /
+                    = " Web"
+                  dt.client Client
+                  dd.client GoGet
+                  dt.model Model
+                  dd.model Marketplace
+
+          li.mix.blue
+            .segment.type.work.blank
+              dl.reset.credits
+                dt 19.09.16
+                dd
+                  a(href="http://codepen.io/droom/details/dXxmmE/").inline.dark CodePen 'Picked Pen'
+                  | , selected by Chris Coyier(!) 
+
+          li.mix.blue
+            a(href="work-ideahouse.html").plain
+              .segment.type.work.ih
+                dl.reset.credits
+                  dt.project Project
+                  dd.project Ideahouse Web
+                  dt.client Client
+                  dd.client Ideahouse
+                  dt.model Model
+                  dd.model Wholesaler
+
+          li.mix.green
+            a(href="work-givereceipt.html").plain
+              .segment.type.work.gr
+                dl.reset.credits
+                  dt.project Project
+                  dd.project
+                    = "GiveReceipt Brand "
+                    span.entity.accent.slim /
+                    = " App "
+                    span.entity.accent.slim /
+                    = " Web"
+                  dt.client Client
+                  dd.client DVG Web
+                  dt.model Model
+                  dd.model SaaS
+
+
+          li.mix.blue
+            .segment.type.work.blank
+              dl.reset.credits
+                dt 12.09.16
+                dd
+                  | Project (Behance): ‘
+                  a(href="https://www.behance.net/gallery/42759827/Reformistio").inline.dark Reformist.io
+                  | ’.
+
+          li.mix.pink
+            a(href="work-foreign.html").plain
+              .segment.type.work.fo
+                dl.reset.credits
+                  dt.project Project
+                  dd.project Foreign Office Theme
+                  dt.client Client
+                  dd.client Self initiated
+                  dt.model Model
+                  dd.model Editorial
+
+
+          li.mix.blue
+            .segment.type.work.blank
+              dl.reset.credits
+                dt 12.09.16
+                dd
+                  | Featured in 
+                  a(href="http://codepen.io/droom/pen/grBPYq").inline.dark CSS Animation Weekly Issue #7
+
+
+
+          li.mix.blue
+            .segment.type.work.blank
+              dl.reset.credits
+                dt 04.09.16
+                dd
+                  | Exhibition: 
+                  a(href="http://news.droom.name/post/150930613259/under-the-same-sun-art-from-latin-america-today").inline.dark Under the Same Sun
+                  | , Camberwell
+
+    include partials/_pager
+    include partials/_top
+    //- include partials/_footer
+      
+  include partials/_scripts
+  script.
+    var containerEl = document.querySelector('.hello');
+    //- var mixer = mixitup(containerEl);
+    var mixer = mixitup(containerEl, {
+      animation: {
+        effects: 'fade translateY(200px)'
+      }
+    });
+
+

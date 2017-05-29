@@ -9,8 +9,6 @@ $(document).on('ready', function() {
 		}
 	});
 
-
-
 	var tick1btn = $('.tick-btn.tick-1#tick-1');
 	var tick2btn = $('.tick-btn.tick-2#tick-2');
 	var tick3btn = $('.tick-btn.tick-3#tick-3');
@@ -83,8 +81,6 @@ $(document).on('ready', function() {
 		term2.removeClass('set');
 	};
 
-
-
 	function fStage3Enable(){
 		tick3.addClass('enabled');
 		tickFilter.css('display', 'block');
@@ -104,7 +100,6 @@ $(document).on('ready', function() {
 		tick3.children().removeClass('set');
 		term3.removeClass('set');
 	};
-
 
 	function fStage4Enable(){
 		tick4.addClass('enabled');

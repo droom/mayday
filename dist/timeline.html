@@ -44,7 +44,7 @@
     <meta content="img/touch/browserconfig.xml" name="msapplication-config">
     <meta content="#da532c" name="msapplication-TileColor">
   </head>
-  <body class="index">
+  <body class="timeline">
     <article data-project="profile" id="context">
       <div class="cover-title">
         <div id="head" class="band head relative">
@@ -61,39 +61,22 @@
           <div class="segment type">
             <header>
               <h1>Chris Droom is a UX&nbsp;Designer working at housing charity Shelter, in London.
-              </h1><a href="#" id="menu-btn-img" class="plain menu-btn-img">
-                <div class="unit">
-                  <div class="tile">
-                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="15px" height="15px" viewbox="-297 405 15 15" enable-background="new -297 405 15 15" xml:space="preserve">
-                      <rect height="4" width="4" x="-297" y="405"></rect>
-                      <rect height="4" width="4" x="-286" y="405"></rect>
-                      <rect height="4" width="4" x="-297" y="416"></rect>
-                      <rect height="4" width="4" x="-286" y="416"></rect>
-                      <rect height="4" width="4" x="-297" y="410.5"></rect>
-                      <rect height="4" width="4" x="-291.5" y="405"></rect>
-                      <rect height="4" width="4" x="-291.5" y="416"></rect>
-                      <rect height="4" width="4" x="-291.5" y="410.5"></rect>
-                      <rect height="4" width="4" x="-286" y="410.5"></rect>
-                    </svg>
-                  </div>
-                  <div class="list">
-                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="15px" height="15px" viewbox="-297 405 15 15" enable-background="new -297 405 15 15" xml:space="preserve">
-                      <rect height="4" width="4" x="-297" y="405"></rect>
-                      <rect height="4" width="9.5" x="-291.5" y="405"></rect>
-                      <rect height="4" width="4" x="-297" y="416"></rect>
-                      <rect height="4" width="9.5" x="-291.5" y="416"></rect>
-                      <rect height="4" width="4" x="-297" y="410.5"></rect>
-                      <rect height="4" width="9.5" x="-291.5" y="410.5"></rect>
-                    </svg>
-                  </div>
-                </div></a>
+              </h1>
             </header>
           </div>
         </div>
       </div>
       <main role="main">
-        <ul id="menu" class="menu reset animate-1">
-          <li><a href="work-goget.html" class="plain">
+        <div class="mix-controls">
+          <div class="segment type">
+            <button type="button" data-filter="all" class="control">All</button>
+            <button type="button" data-filter=".green" class="control">Case Studies</button>
+            <button type="button" data-filter=".blue" class="control">Blog</button>
+            <button type="button" data-filter=".pink" class="control">Articles</button>
+          </div>
+        </div>
+        <ul class="menu reset hello">
+          <li class="mix green"><a href="work-goget.html" class="plain">
               <div class="segment type work gg">
                 <dl class="reset credits">
                   <dt class="project">Project</dt>
@@ -105,7 +88,15 @@
                   <dd class="model">Marketplace</dd>
                 </dl>
               </div></a></li>
-          <li><a href="work-ideahouse.html" class="plain">
+          <li class="mix blue">
+            <div class="segment type work blank">
+              <dl class="reset credits">
+                <dt>19.09.16</dt>
+                <dd><a href="http://codepen.io/droom/details/dXxmmE/" class="inline dark">CodePen 'Picked Pen'</a>, selected by Chris Coyier(!) </dd>
+              </dl>
+            </div>
+          </li>
+          <li class="mix blue"><a href="work-ideahouse.html" class="plain">
               <div class="segment type work ih">
                 <dl class="reset credits">
                   <dt class="project">Project</dt>
@@ -116,7 +107,7 @@
                   <dd class="model">Wholesaler</dd>
                 </dl>
               </div></a></li>
-          <li><a href="work-givereceipt.html" class="plain">
+          <li class="mix green"><a href="work-givereceipt.html" class="plain">
               <div class="segment type work gr">
                 <dl class="reset credits">
                   <dt class="project">Project</dt>
@@ -128,7 +119,15 @@
                   <dd class="model">SaaS</dd>
                 </dl>
               </div></a></li>
-          <li><a href="work-foreign.html" class="plain">
+          <li class="mix blue">
+            <div class="segment type work blank">
+              <dl class="reset credits">
+                <dt>12.09.16</dt>
+                <dd>Project (Behance): ‘<a href="https://www.behance.net/gallery/42759827/Reformistio" class="inline dark">Reformist.io</a>’.</dd>
+              </dl>
+            </div>
+          </li>
+          <li class="mix pink"><a href="work-foreign.html" class="plain">
               <div class="segment type work fo">
                 <dl class="reset credits">
                   <dt class="project">Project</dt>
@@ -139,27 +138,19 @@
                   <dd class="model">Editorial</dd>
                 </dl>
               </div></a></li>
-          <li class="disable">
+          <li class="mix blue">
             <div class="segment type work blank">
               <dl class="reset credits">
-                <dt class="project">Project</dt>
-                <dd class="project">ATOP Watches</dd>
-                <dt class="client">Client</dt>
-                <dd class="client">Ideahouse</dd>
-                <dt class="model">Model</dt>
-                <dd class="model">Store</dd>
+                <dt>12.09.16</dt>
+                <dd>Featured in <a href="http://codepen.io/droom/pen/grBPYq" class="inline dark">CSS Animation Weekly Issue #7</a></dd>
               </dl>
             </div>
           </li>
-          <li class="disable">
+          <li class="mix blue">
             <div class="segment type work blank">
               <dl class="reset credits">
-                <dt class="project">Project</dt>
-                <dd class="project">Rainbow Theme</dd>
-                <dt class="client">Client</dt>
-                <dd class="client">Self initiated</dd>
-                <dt class="model">Model</dt>
-                <dd class="model">Editorial</dd>
+                <dt>04.09.16</dt>
+                <dd>Exhibition: <a href="http://news.droom.name/post/150930613259/under-the-same-sun-art-from-latin-america-today" class="inline dark">Under the Same Sun</a>, Camberwell</dd>
               </dl>
             </div>
           </li>
@@ -175,17 +166,16 @@
         </div>
       </nav>
     </div>
-    <footer role="contentinfo">
-      <div class="band">
-        <div class="segment type">
-          <ol class="reset flex">
-            <li class="unit"><small>&copy;2016/7 <a href="https://twitter.com/droomio" class="plain">Chris Droom</a></small></li>
-            <li class="unit align-r"><small><a href="https://github.com/droom/mayday" aria-label="View code on GitHub" class="plain">Source</a></small></li>
-          </ol>
-        </div>
-      </div>
-    </footer>
   </body>
   <script src="js/droomio.min.js"></script>
   <script src="js/mixitup.min.js"></script>
+  <script>
+    var containerEl = document.querySelector('.hello');
+    //- var mixer = mixitup(containerEl);
+    var mixer = mixitup(containerEl, {
+      animation: {
+        effects: 'fade translateY(200px)'
+      }
+    });
+  </script>
 </html>
