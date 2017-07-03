@@ -24,7 +24,6 @@ html.cssgradients
     background-image: -moz-linear-gradient(top,transparent 85%, $ink 0, $ink 95%,transparent 0)
     background-image: -webkit-linear-gradient(top,transparent 85%, $ink 0, $ink 95%,transparent 0)
 
-
 // .plain
 //   border: none
 //   &.btn
@@ -41,10 +40,8 @@ html.cssgradients
 //   &:hover
 //     color: blue
 //     border-bottom-color: blue
-
 //   &:focus
 //     outline: 2px solid orange
-
 
 a
   color: $copy
@@ -53,10 +50,14 @@ a
   outline: 0
 
   &.cta
-    display: inline-block
-    background: #e8e8e8
-    padding: 14px 20px
-    border-radius: 2px
+    display:        inline-block
+    background:     #e8e8e8
+    padding:        14px 20px
+    border-bottom:  none
+    border-radius:  2px
+    
+    // &:hover
+      // border: $theme-A-hex solid 0.14em
 
   &.move
     position: absolute

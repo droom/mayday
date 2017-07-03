@@ -63,41 +63,30 @@
               <h1>Chris Droom is a UX&nbsp;Designer working at housing charity Shelter, in London.
               </h1>
             </header>
+            <div class="mix-controls">
+              <button type="button" data-filter="all" class="control">All</button>
+              <button type="button" data-filter=".study" class="control">Case Studies</button>
+              <button type="button" data-filter=".event" class="control">Event</button>
+              <button type="button" data-filter=".yellow" class="control">Articles</button>
+              <button type="button" data-filter=".codepen" class="control">Codepen</button>
+            </div>
           </div>
         </div>
       </div>
       <main role="main">
-        <div class="mix-controls">
-          <div class="segment type">
-            <button type="button" data-filter="all" class="control">All</button>
-            <button type="button" data-filter=".green" class="control">Case Studies</button>
-            <button type="button" data-filter=".blue" class="control">Blog</button>
-            <button type="button" data-filter=".pink" class="control">Articles</button>
-          </div>
-        </div>
-        <ul class="menu reset hello">
-          <li class="mix green"><a href="work-goget.html" class="plain">
-              <div class="segment type work gg">
-                <dl class="reset credits">
-                  <dt class="project">Project</dt>
-                  <dd class="project">GoGet Brand <span class="entity accent slim">/</span> App <span class="entity accent slim">/</span> Web
-                  </dd>
-                  <dt class="client">Client</dt>
-                  <dd class="client">GoGet</dd>
-                  <dt class="model">Model</dt>
-                  <dd class="model">Marketplace</dd>
-                </dl>
-              </div></a></li>
-          <li class="mix blue">
-            <div class="segment type work blank">
+        <ul id="hello" class="menu reset">
+          <li class="mix codepen">
+            <div class="segment type work">
               <dl class="reset credits">
-                <dt>19.09.16</dt>
-                <dd><a href="http://codepen.io/droom/details/dXxmmE/" class="inline dark">CodePen 'Picked Pen'</a>, selected by Chris Coyier(!) </dd>
+                <dt class="date">Date</dt>
+                <dd class="date">19.09.16 </dd>
+                <dt class="project">Project</dt>
+                <dd class="project"><a href="http://codepen.io/droom/details/dXxmmE/" class="inline dark">Clockwerk CodePen 'Picked Pen'</a>, selected by Chris Coyier(!) </dd>
               </dl>
             </div>
           </li>
-          <li class="mix blue"><a href="work-ideahouse.html" class="plain">
-              <div class="segment type work ih">
+          <li class="mix study"><a href="work-ideahouse.html" class="plain">
+              <div class="segment type work">
                 <dl class="reset credits">
                   <dt class="project">Project</dt>
                   <dd class="project">Ideahouse Web</dd>
@@ -107,8 +96,8 @@
                   <dd class="model">Wholesaler</dd>
                 </dl>
               </div></a></li>
-          <li class="mix green"><a href="work-givereceipt.html" class="plain">
-              <div class="segment type work gr">
+          <li class="mix study"><a href="work-givereceipt.html" class="plain">
+              <div class="segment type work">
                 <dl class="reset credits">
                   <dt class="project">Project</dt>
                   <dd class="project">GiveReceipt Brand <span class="entity accent slim">/</span> App <span class="entity accent slim">/</span> Web
@@ -119,41 +108,44 @@
                   <dd class="model">SaaS</dd>
                 </dl>
               </div></a></li>
-          <li class="mix blue">
+          <li class="mix codepen">
             <div class="segment type work blank">
               <dl class="reset credits">
-                <dt>12.09.16</dt>
-                <dd>Project (Behance): ‘<a href="https://www.behance.net/gallery/42759827/Reformistio" class="inline dark">Reformist.io</a>’.</dd>
+                <dt class="date">Date</dt>
+                <dd class="date">12.09.16</dd>
+                <dt class="project">Project</dt>
+                <dd class="project">Project (Behance): ‘<a href="https://www.behance.net/gallery/42759827/Reformistio" class="inline dark">Reformist.io</a>’.</dd>
               </dl>
             </div>
           </li>
-          <li class="mix pink"><a href="work-foreign.html" class="plain">
-              <div class="segment type work fo">
+          <li class="mix study"><a href="work-foreign.html" class="plain">
+              <div class="segment type work">
                 <dl class="reset credits">
                   <dt class="project">Project</dt>
                   <dd class="project">Foreign Office Theme</dd>
-                  <dt class="client">Client</dt>
-                  <dd class="client">Self initiated</dd>
                   <dt class="model">Model</dt>
                   <dd class="model">Editorial</dd>
                 </dl>
               </div></a></li>
-          <li class="mix blue">
+          <li class="mix codepen">
             <div class="segment type work blank">
               <dl class="reset credits">
-                <dt>12.09.16</dt>
-                <dd>Featured in <a href="http://codepen.io/droom/pen/grBPYq" class="inline dark">CSS Animation Weekly Issue #7</a></dd>
+                <dt class="date">Date</dt>
+                <dd class="date">12.09.16</dd>
+                <dt class="project">Project</dt>
+                <dd class="project">Featured in <a href="http://codepen.io/droom/pen/grBPYq" class="inline dark">CSS Animation Weekly Issue #7</a></dd>
               </dl>
             </div>
           </li>
-          <li class="mix blue">
-            <div class="segment type work blank">
-              <dl class="reset credits">
-                <dt>04.09.16</dt>
-                <dd>Exhibition: <a href="http://news.droom.name/post/150930613259/under-the-same-sun-art-from-latin-america-today" class="inline dark">Under the Same Sun</a>, Camberwell</dd>
-              </dl>
-            </div>
-          </li>
+          <li class="mix event"><a href="work-foreign.html" class="plain">
+              <div class="segment type work blank">
+                <dl class="reset credits">
+                  <dt class="project">Date</dt>
+                  <dd class="project">04.09.16</dd>
+                  <dt>Event</dt>
+                  <dd>Exhibition: <a href="http://news.droom.name/post/150930613259/under-the-same-sun-art-from-latin-america-today" class="inline dark">Under the Same Sun</a>, Camberwell</dd>
+                </dl>
+              </div></a></li>
         </ul>
       </main>
     </article>
@@ -170,7 +162,7 @@
   <script src="js/droomio.min.js"></script>
   <script src="js/mixitup.min.js"></script>
   <script>
-    var containerEl = document.querySelector('.hello');
+    var containerEl = document.querySelector('#hello');
     //- var mixer = mixitup(containerEl);
     var mixer = mixitup(containerEl, {
       animation: {

@@ -1,5 +1,5 @@
-$display1:      "TransportNewHeavy","Helvetica Neue", Helvetica, Arial, sans-serif
-$display2:      "TransportNewMedium", "Helvetica Neue", Helvetica, Arial, sans-serif
+$display1:      "CircularStd-Bold", "TransportNewHeavy","Helvetica Neue", Helvetica, Arial, sans-serif
+$display2:      "CircularStd-Bold","TransportNewMedium", "Helvetica Neue", Helvetica, Arial, sans-serif
 $running:		-apple-system, BlinkMacSystemFont, "hndi-std", "Roboto", "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif
 $technical:		"Roboto Mono", "Consolas", "Monaco", "Lucida Console", "Andale Mono"
 $entity:		Arial, Helvetica, sans-serif
@@ -86,23 +86,101 @@ $theme-A-hex:   #81d3eb
 @import "a11y/flexbox.sass"
 @import "a11y/js.sass"
 
+.mix-controls
+	padding: 50px 0 25px 0
+
 button.control
 	background: 	none
 	border: 		1px solid #ddd
-	border-radius: 	2px
-	padding: 		8px 14px
+	padding: 		5px 7px 6px 7px
 	
-button.control:hover
-	pointer: 	cursor
+	&:hover
+		cursor: pointer
+	&:focus
+		outline: 		none
+		background: 	white
+		border: 		1px solid #ccc
 
-button.control:focus
-	outline: 	none
-	background: white
-	border: 	1px solid #ccc
+.relative
+	position: relative
 
-.mix-controls
-	margin: 30px 0 10px 0
-	border-bottom: 2px solid grey
+header.timeline-grid
+	display: 				grid
+	grid-template-columns: 	1fr 1fr 1fr 1fr
+	grid-column-gap: 		8px
+	grid-row-gap: 			8px
 
-.segment.type.work dl.credits
-	padding-bottom: 0 !important
+	h1
+		font-size: 32px
+		line-height: 36px
+		grid-column-span: 2
+		
+	h1:nth-child(1)
+		grid-column-start: 1
+		grid-column-end: 3
+
+	h1:nth-child(2)
+		grid-column-start: 3
+		grid-column-end: 5
+
+.blog:hover
+	background: #7effc7
+.codepen:hover
+	background: #ffd325
+.study:hover
+	background: #6baaff
+
+
+.outbrain
+	display: 				grid
+	grid-template-columns: 	1fr 1fr 1fr 1fr
+	grid-column-gap: 		8px
+	grid-row-gap: 			8px
+
+	.card
+		height: 198px
+		border: 1px solid rgba(0,0,0,0.12)
+		&:hover
+			border: 	1px solid rgba(0,0,0,0.3)
+			box-shadow: 3px 1px 3px #ccc
+		.mast
+			padding: 	8px 10px
+			label
+				opacity: 0.6
+				font-size: 9px
+			h4
+				font-size: 1.2em
+				line-height: 1.255em 
+
+			label + h4
+				padding-top: 4px
+		.intro
+			padding: 		8px 10px 15px 8px
+			overflow: 		hidden
+			font-size: 		12px
+			line-height: 	17px
+
+		.intro,
+		.img
+			position: 	absolute
+			bottom: 	0
+			left: 		0
+			height: 	99px
+			width: 		100%
+			overflow: 	hidden
+			border-top: 1px solid rgba(0,0,0,0.12)
+
+@media (max-width: 650px)
+	.testgrid
+		display: 				grid
+		grid-template-columns: 	1fr 1fr
+		grid-template-rows: 	auto auto
+		grid-column-gap: 		8px
+
+
+
+
+
+
+
+	

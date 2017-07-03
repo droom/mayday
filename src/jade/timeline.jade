@@ -21,43 +21,30 @@ html(class="no-js" lang="en")
                 = "Chris Droom is a UX"
                 &nbsp;
                 = "Designer working at housing charity Shelter, in London."
+                
+            .mix-controls
+              button.control(type='button', data-filter='all') All
+              button.control(type='button', data-filter='.study') Case Studies
+              button.control(type='button', data-filter='.event') Event
+              button.control(type='button', data-filter='.yellow') Articles
+              button.control(type='button', data-filter='.codepen') Codepen
 
       main(role='main')
-        .mix-controls
-          .segment.type
-              button.control(type='button', data-filter='all') All
-              button.control(type='button', data-filter='.green') Case Studies
-              button.control(type='button', data-filter='.blue') Blog
-              button.control(type='button', data-filter='.pink') Articles
+        ul.menu.reset#hello
 
-        ul.menu.reset.hello
-          li.mix.green
-            a(href="work-goget.html").plain
-              .segment.type.work.gg
-                dl.reset.credits
-                  dt.project Project
-                  dd.project
-                    = "GoGet Brand "
-                    span.entity.accent.slim /
-                    = " App "
-                    span.entity.accent.slim /
-                    = " Web"
-                  dt.client Client
-                  dd.client GoGet
-                  dt.model Model
-                  dd.model Marketplace
-
-          li.mix.blue
-            .segment.type.work.blank
+          li.mix.codepen
+            .segment.type.work
               dl.reset.credits
-                dt 19.09.16
-                dd
-                  a(href="http://codepen.io/droom/details/dXxmmE/").inline.dark CodePen 'Picked Pen'
+                dt.date Date
+                dd.date 19.09.16 
+                dt.project Project
+                dd.project
+                  a(href="http://codepen.io/droom/details/dXxmmE/").inline.dark Clockwerk CodePen 'Picked Pen'
                   | , selected by Chris Coyier(!) 
 
-          li.mix.blue
+          li.mix.study
             a(href="work-ideahouse.html").plain
-              .segment.type.work.ih
+              .segment.type.work
                 dl.reset.credits
                   dt.project Project
                   dd.project Ideahouse Web
@@ -66,9 +53,9 @@ html(class="no-js" lang="en")
                   dt.model Model
                   dd.model Wholesaler
 
-          li.mix.green
+          li.mix.study
             a(href="work-givereceipt.html").plain
-              .segment.type.work.gr
+              .segment.type.work
                 dl.reset.credits
                   dt.project Project
                   dd.project
@@ -83,45 +70,48 @@ html(class="no-js" lang="en")
                   dd.model SaaS
 
 
-          li.mix.blue
+          li.mix.codepen
             .segment.type.work.blank
               dl.reset.credits
-                dt 12.09.16
-                dd
+                dt.date Date
+                dd.date 12.09.16
+                dt.project Project
+                dd.project
                   | Project (Behance): ‘
                   a(href="https://www.behance.net/gallery/42759827/Reformistio").inline.dark Reformist.io
                   | ’.
 
-          li.mix.pink
+          li.mix.study
             a(href="work-foreign.html").plain
-              .segment.type.work.fo
+              .segment.type.work
                 dl.reset.credits
                   dt.project Project
                   dd.project Foreign Office Theme
-                  dt.client Client
-                  dd.client Self initiated
                   dt.model Model
                   dd.model Editorial
 
-
-          li.mix.blue
+          li.mix.codepen
             .segment.type.work.blank
               dl.reset.credits
-                dt 12.09.16
-                dd
+                dt.date Date
+                dd.date 12.09.16
+                dt.project Project
+                dd.project
                   | Featured in 
                   a(href="http://codepen.io/droom/pen/grBPYq").inline.dark CSS Animation Weekly Issue #7
 
+          li.mix.event
+            a(href="work-foreign.html").plain
+              .segment.type.work.blank
+                dl.reset.credits
+                  dt.project Date
+                  dd.project 04.09.16
+                  dt Event
+                  dd
+                    | Exhibition: 
+                    a(href="http://news.droom.name/post/150930613259/under-the-same-sun-art-from-latin-america-today").inline.dark Under the Same Sun
+                    | , Camberwell
 
-
-          li.mix.blue
-            .segment.type.work.blank
-              dl.reset.credits
-                dt 04.09.16
-                dd
-                  | Exhibition: 
-                  a(href="http://news.droom.name/post/150930613259/under-the-same-sun-art-from-latin-america-today").inline.dark Under the Same Sun
-                  | , Camberwell
 
     include partials/_pager
     include partials/_top
@@ -129,7 +119,7 @@ html(class="no-js" lang="en")
       
   include partials/_scripts
   script.
-    var containerEl = document.querySelector('.hello');
+    var containerEl = document.querySelector('#hello');
     //- var mixer = mixitup(containerEl);
     var mixer = mixitup(containerEl, {
       animation: {

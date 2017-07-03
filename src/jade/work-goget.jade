@@ -232,11 +232,10 @@ html(class="no-js" lang="en")
         p The public face is currently being rolled out but you're able to view the staging site, which is pretty much there.
 
         .segment.surface.align-c
-          a(href="http://clients.droom.io/go").plain.cta
-            span View staging project on 
-            span.inline clients.droom.io/go
+          a(href="http://clients.droom.io/go").plain.cta View project [staging] 
+            //- span.inline clients.droom.io/go
 
-      .band.ref
+      .band.ref.hr
         .segment.type
           ol.ref
             li
@@ -246,7 +245,50 @@ html(class="no-js" lang="en")
             li 
               a(href="https://en.wikipedia.org/wiki/Don%27t_repeat_yourself").inline Don’t repeat yourself (Wikipedia)
 
-    include partials/_pager
+      .band.elsewhere
+        nav
+          .segment.type.outbrain
+            a(href="#").card.codepen.relative
+              .mast
+                label.prise CODEPEN
+                h4 Kickstart
+              .img
+                img(src="img/outpost/outpost-amiga.gif").max
+
+            a(href="#").card.codepen.relative
+              .mast
+                label.prise CODEPEN
+                h4 Wim Crouel's Calendar
+              .img
+                img(src="img/outpost/outpost-wim.jpg").max
+
+            a(href="#").card.study.relative
+              .mast
+                label.prise CASE STUDY
+                h4 Clockwerk
+              .img
+                img(src="img/outpost/outpost-clockwerk-1.gif").max
+
+
+            a(href="#").card.study.relative
+              .mast
+                label.prise CASE STUDY
+                h4 Foreign Office
+              .img
+                img(src="img/outpost/outpost-sixleaves.gif").max
+
+            //- a(href="#").card.article.relative
+            //-   .mast
+            //-     label.prise ARTICLE
+            //-     h4 Genuine Fakes
+            //-   p.intro The case against obliques.
+            //- a(href="#").card.codepen.relative
+            //-   .mast
+            //-     label.prise CODEPEN
+            //-     h4 Clockwerk
+            //-   .img
+            //-     img(src="img/cover/outpost-clockwerk.gif").max
+
     include partials/_top
     include partials/_footer
       
