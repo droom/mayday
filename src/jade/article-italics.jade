@@ -1,0 +1,110 @@
+include partials/_order
+
+- var workiso     = true
+- var work        = false
+
+- var fTitle      = "droom.io/articles"
+- var project     = "Genuine Fakes"
+//- - var client      = "GoGet"
+//- - var studio      = "VLT Labs"
+- var date        = "13.05.2017"
+//- // - var status      = "In Production"
+//- // - var model       = "Marketplace"
+//- // - var role        = [ "Identity", "<abbr title=\"User Experience\">UX</abbr>+<abbr title=\"User Interface\">UI</abbr>", 'Front-End (Public face)' ]
+//- // - var stack       = [ 'Balsamiq', 'Paper', 'Adobe© Illustrator', 'Adobe© Photoshop', 'Adobe© InDesign', 'InVision' ]
+//- // - var collab      = [ 'Hassanin Ahmed (Back-End)', 'Looi Ferng Yi (Back-End)' , 'Fai Wong (Back-End)' ]
+
+//- // - var live        = false
+- var topic      = "Webtype"
+- var demo       = true
+- var demoTitle  = "codepen/droom/09273"
+- var demoURL    = "codepen/droom/09273"
+
+
+- var prevTitle   = order1[3]
+- var prevURL     = order2[3]
+- var nextTitle   = order1[1]
+- var nextURL     = order2[1]
+
+doctype html
+html(class="no-js" lang="en")
+  head
+    include partials/_head
+
+  body.article.iso.italics
+    article(data-project="goget" itemscope itemtype="http://schema.org/CreativeWork")#context
+      .cover-title
+        include partials/_nav
+        //- include partials/_mast
+        .band.head.hr.relative.move
+          a(href=prevURL tabindex="-1").move.move-left
+          .segment.type.relative.mast
+            header
+              h1(itemprop="name")!=project
+              dl.reset.credits
+                if topic
+                  dt Topic
+                  dd(itemprop="copyrightHolder")=topic
+
+                if date
+                  dt Date
+                  dd(itemprop="datePublished")=date
+
+                if demo
+                  dt Demo
+                  dd 
+                    a(itemprop="URL" href=demoURL aria-label=project).inline.dark=demoTitle
+          a(href=nextURL tabindex="-1").move.move-right
+
+      //- .cover-photo.gg(itemprop="image")#checkpoint
+        .segment.type
+          dl.reset.credits
+            dt Photo
+            dd
+              &copy;
+              = "GoGet"
+      //- .cover-aside
+        include partials/_role
+
+      main(role="main")#checkpoint
+        //- h2(itemprop="description") GoGet is a community-focused errands and delivery marketplace, starting life in the founders’ hometown of Kuala Lumpur and recently expanding to Hong Kong.
+
+        p Obliques. I’ve started to see these muthas more and more recently. The reasons for this post is that the problem is so widespread, I’ve even seen it on sites from web luminaries. Used to save space.
+        p Not too long ago, all we had were what we were given. There has been a shift from calling on entire families resting on the user’s machine, to serving up _individual_ weights housed elsewhere.
+        p If for whatever reason the italic cut isn’t served, the browser will do its best to approximate one with what it does have. This results in an artificial, synthetic excuse. Whilst sans-serifs are somewhat passable, the serifs are an abomonation.
+        p If you’re using a webfont, make sure you’ve got the inclined version available, across all devices. If you don’t this needs to be a decision not an oversight.
+
+        p 
+          = "As " 
+          a(href="https://www.youtube.com/watch?v=lL1_xwe8x0c").inline.glide-slow Francesca explains to Bloomberg.tv
+          sup
+          = ", GoGet is more ‘logistics and human resource’ than straight-up tech. After the first meeting it was clear that ‘speed’ and ‘dispatch’ needed to be primarily communicated in the new identity."
+
+        p When driving around (or rather being driven around) KL, I had always been drawn to the markings I’d seen on the side HGV’s hauling materials around the city, taking photographs of them as I do with other bits of interesting type. I hit upon the idea of using these to inform the new identity.
+
+        .segment.surface
+          figure
+            img(src="img/projects/gg/gg-research.jpg").max
+
+        p A note about changing brand colours: When possible, I would attempt to carry brand colours thorough a refresh.  More than any other ingredient, colours build familiarity, and are the most jarring change to get used to (think hunting for the Foursqaure icon after their refresh). In this case, the change was justified,  even crucial. Being a compound of regular English words, it’s perhaps not surprising that there’s another company operating under the same name: a car sharing service in Australia. They were using this same blue/orange palette and although the two companies aren’t stepping on each others’ toes (in function or proximity), the close ties of the two countries meant we needed to be a distinct as possible visually.
+
+
+        .segment.surface.align-c
+          a(href="#").plain.cta
+            span View example on CodePen 
+
+      .band.ref
+        .segment.type
+          ol.ref
+            li
+              a(href="https://www.youtube.com/watch?v=lL1_xwe8x0c").inline Bloomberg.tv Malaysia: ‘Leapfrogging’ to Grow Errands Market: GoGet’s Chia
+            li 
+              a(href="https://gist.github.com/droom/96381e758de1a927671b").inline 3 Day Sprint
+            li 
+              a(href="https://en.wikipedia.org/wiki/Don%27t_repeat_yourself").inline Don’t repeat yourself (Wikipedia)
+
+    include partials/_pager
+    include partials/_top
+    include partials/_footer
+      
+  include partials/_scripts

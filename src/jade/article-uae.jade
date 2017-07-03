@@ -1,0 +1,92 @@
+include partials/_order
+
+- var workiso     = true
+- var work        = false
+
+- var fTitle      = "droom.io/articles"
+- var project     = "How to run turn off those floppy disk sounds in FS-UAE"
+//- - var client      = "GoGet"
+//- - var studio      = "VLT Labs"
+- var date        = "13.05.2017"
+//- // - var status      = "In Production"
+//- // - var model       = "Marketplace"
+//- // - var role        = [ "Identity", "<abbr title=\"User Experience\">UX</abbr>+<abbr title=\"User Interface\">UI</abbr>", 'Front-End (Public face)' ]
+//- // - var stack       = [ 'Balsamiq', 'Paper', 'Adobe© Illustrator', 'Adobe© Photoshop', 'Adobe© InDesign', 'InVision' ]
+//- // - var collab      = [ 'Hassanin Ahmed (Back-End)', 'Looi Ferng Yi (Back-End)' , 'Fai Wong (Back-End)' ]
+
+//- // - var live        = false
+- var topic      = "Amiga"
+
+//- - var demo       = true
+//- // - var demoTitle  = "codepen/droom/09273"
+//- // - var demoURL    = "codepen/droom/09273"
+
+
+- var prevTitle   = order1[3]
+- var prevURL     = order2[3]
+- var nextTitle   = order1[1]
+- var nextURL     = order2[1]
+
+doctype html
+html(class="no-js" lang="en")
+  head
+    include partials/_head
+
+  body.article.iso.italics
+    article(data-project="goget" itemscope itemtype="http://schema.org/CreativeWork")#context
+      .cover-title
+        include partials/_nav
+        //- include partials/_mast
+        .band.head.hr.relative.move
+          //- a(href=prevURL tabindex="-1").move.move-left
+          .segment.type.relative.mast
+            header
+              h1(itemprop="name")!=project
+              dl.reset.credits
+                if topic
+                  dt Topic
+                  dd(itemprop="copyrightHolder")=topic
+
+                if date
+                  dt Date
+                  dd(itemprop="datePublished")=date
+
+                if demo
+                  dt Demo
+                  dd 
+                    a(itemprop="URL" href=demoURL aria-label=project).inline.dark=demoTitle
+          //- a(href=nextURL tabindex="-1").move.move-right
+
+      //- .cover-photo.gg(itemprop="image")#checkpoint
+        .segment.type
+          dl.reset.credits
+            dt Photo
+            dd
+              &copy;
+              = "GoGet"
+      //- .cover-aside
+        include partials/_role
+
+      main(role="main")#checkpoint
+        //- h2(itemprop="description") GoGet is a community-focused errands and delivery marketplace, starting life in the founders’ hometown of Kuala Lumpur and recently expanding to Hong Kong.
+
+        .segment.surface
+          figure
+            img(src="img/articles/fsuae/step1.png").max
+            figcaption Click on the settings button/tab
+
+          figure
+            img(src="img/articles/fsuae/step2.png").max
+            figcaption Click on the settings button/tab
+
+          figure
+            img(src="img/articles/fsuae/step3.png").max
+            figcaption
+              code floppy_drive_sounds = 0
+
+
+    include partials/_pager
+    include partials/_top
+    include partials/_footer
+      
+  include partials/_scripts
