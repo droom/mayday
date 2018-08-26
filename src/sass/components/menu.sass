@@ -5,8 +5,9 @@ ul.menu
 
 		&:active,
 		&:hover
-			// @include theme-A(1)
-			background-color: rgba(255, 255, 255, 0.45)
+			@include theme-A(1)
+			// background: yellow
+			// background-color: rgba(255, 255, 255, 0.45)
 
 		a.plain
 			&:focus > .segment.type.work,
@@ -43,10 +44,10 @@ ul.menu
 				&:hover > .segment.type.work,
 				&:active > .segment.type.work
 					background-size: 		30px
-					background-position: 	96% 20%
+					background-position: 	96% 12%
 				.segment.work
 					background-size: 		30px
-					background-position: 	96% 20%
+					background-position: 	96% 12%
 					
 			dl.credits
 				dt.project

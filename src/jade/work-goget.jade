@@ -2,6 +2,7 @@ include partials/_order
 
 - var workiso     = true
 - var work        = false
+- var profile     = false
 
 - var fTitle      = "droom.io/work/goget"
 - var project     = "GoGet.my <span class=\"scope\">Brand<span class=\"entity accent slash\">/</span>App<span class=\"entity accent slash\">/</span>Web</span>"
@@ -232,7 +233,9 @@ html(class="no-js" lang="en")
         p The public face is currently being rolled out but you're able to view the staging site, which is pretty much there.
 
         .segment.surface.align-c
-          a(href="http://clients.droom.io/go").plain.cta View project [staging] 
+          a(href="http://clients.droom.io/go/").plain.cta
+            span View staging project on 
+            span.inline.dark clients.droom.io/go
 
       .band.ref.hr
         .segment.type

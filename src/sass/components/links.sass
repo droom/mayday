@@ -6,6 +6,7 @@ html
       border-bottom: $copy solid 0.14em
 
 html.cssgradients
+  span.inline,
   a.inline
     border: none
     background-image: -linear-gradient(top,transparent 85%, $theme-A-hex 0, $theme-A-hex 95%,transparent 0)
@@ -17,6 +18,22 @@ html.cssgradients
       background-image: -moz-linear-gradient(transparent 88%, rgba(0,0,0,0.3) 0,rgba(0,0,0,0.3) 97%,transparent 0)
       background-image: -webkit-linear-gradient(transparent 88%, rgba(0,0,0,0.3) 0,rgba(0,0,0,0.3) 97%,transparent 0)
 
+  h1
+    a.inline
+      border: none
+      background-image: -linear-gradient(top,transparent 88%, $theme-A-hex 0, $theme-A-hex 93%,transparent 0)
+      background-image: -moz-linear-gradient(top,transparent 88%, $theme-A-hex 0, $theme-A-hex 93%,transparent 0)
+      background-image: -webkit-linear-gradient(top,transparent 88%, $theme-A-hex 0, $theme-A-hex 93%,transparent 0)
+      &.dark
+        border: none
+        background-image: -linear-gradient(transparent 88%, rgba(0,0,0,0.3) 0,rgba(0,0,0,0.3) 97%,transparent 0)
+        background-image: -moz-linear-gradient(transparent 88%, rgba(0,0,0,0.3) 0,rgba(0,0,0,0.3) 97%,transparent 0)
+        background-image: -webkit-linear-gradient(transparent 88%, rgba(0,0,0,0.3) 0,rgba(0,0,0,0.3) 97%,transparent 0)
+
+
+
+
+
 html.cssgradients
   figure figcaption a.inline
     border: none
@@ -24,9 +41,6 @@ html.cssgradients
     background-image: -moz-linear-gradient(top,transparent 85%, $ink 0, $ink 95%,transparent 0)
     background-image: -webkit-linear-gradient(top,transparent 85%, $ink 0, $ink 95%,transparent 0)
 
-
-.plain
-    background: green
 
 // .plain
 //   border: none
@@ -55,7 +69,8 @@ a
 
   &.cta
     display:        inline-block
-    background:     #e8e8e8
+    // background:     #e8e8e8
+    background:     #ff0
     padding:        14px 20px
     border-bottom:  none
     border-radius:  2px

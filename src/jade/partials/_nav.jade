@@ -9,7 +9,9 @@
 					if index
 						| droom.io
 					else
-						a(href="index.html").target#profile droom.io
+						a(href="index.html").inline.dark.target#profile droom.io
 				//- li.unit.align-r.ghost.work
-					a(href="index.html").target#work Work 
-					a(href="cv.html").target#work Profile
+				//- 	if index
+				//- 		a(href="cv.html").inline.dark.target#work Profile
+				//- 	else
+				//- 		| Profile

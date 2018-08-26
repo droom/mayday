@@ -20,9 +20,11 @@ html(class="no-js" lang="en")
               h1
                 = "Chris Droom is a UX"
                 &nbsp;
-                = "Designer working at housing charity Shelter, in London."
+                = "Designer working at housing non-profit "
+                a(href="https://england.shelter.org.uk/").inline Shelter
+                = ", in London."
 
-              include components/menu-btn-img
+              //- include components/menu-btn-img
 
       main(role='main')
         ul.menu.reset.animate-1#menu
@@ -32,11 +34,12 @@ html(class="no-js" lang="en")
                 dl.reset.credits
                   dt.project Project
                   dd.project
-                    = "GoGet Brand "
-                    span.entity.accent.slim /
-                    = " App "
-                    span.entity.accent.slim /
-                    = " Web"
+                    span.inline.dark
+                      = "GoGet Brand "
+                      span.entity.accent.slim /
+                      = " App "
+                      span.entity.accent.slim /
+                      = " Web"
                   dt.client Client
                   dd.client GoGet
                   dt.model Model
@@ -47,7 +50,8 @@ html(class="no-js" lang="en")
               .segment.type.work.ih
                 dl.reset.credits
                   dt.project Project
-                  dd.project Ideahouse Web
+                  dd.project
+                    span.inline.dark Ideahouse Web
                   dt.client Client
                   dd.client Ideahouse
                   dt.model Model
@@ -59,11 +63,12 @@ html(class="no-js" lang="en")
                 dl.reset.credits
                   dt.project Project
                   dd.project
-                    = "GiveReceipt Brand "
-                    span.entity.accent.slim /
-                    = " App "
-                    span.entity.accent.slim /
-                    = " Web"
+                    span.inline.dark
+                      = "GiveReceipt Brand "
+                      span.entity.accent.slim /
+                      = " App "
+                      span.entity.accent.slim /
+                      = " Web"
                   dt.client Client
                   dd.client DVG Web
                   dt.model Model
@@ -74,7 +79,8 @@ html(class="no-js" lang="en")
               .segment.type.work.fo
                 dl.reset.credits
                   dt.project Project
-                  dd.project Foreign Office Theme
+                  dd.project
+                    span.inline.dark Foreign Office Theme
                   dt.client Client
                   dd.client Self initiated
                   dt.model Model
