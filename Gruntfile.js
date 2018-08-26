@@ -8,7 +8,6 @@ module.exports = function(grunt) {
         livereload: true,
       },
 
-
       jade: {
         files: [
         'src/jade/*.jade', 
